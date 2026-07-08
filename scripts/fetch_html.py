@@ -101,43 +101,125 @@ def _walk_ld(node, found: list[dict]) -> None:
             found.append(node)
 
 
-def parse_jsonld(src: dict, d0: date, d1: date) -> list[Event]:
-    html = _get(src["url"]).text
-    raw_events: list[dict] = []
+def _ld_to_event(ev: dict, src: dict, d0: date, d1: date) -> Event | None:
+    """Convert one schema.org Event object to our Event (windowed)."""
+    start = str(ev.get("startDate", ""))
+    sday = start[:10]
+    if not sday or not (d0.isoformat() <= sday <= d1.isoformat()):
+        return None
+    loc = ev.get("location") or {}
+    if isinstance(loc, list):
+        loc = loc[0] if loc else {}
+    venue = loc.get("name") if isinstance(loc, dict) else None
+    offers = ev.get("offers") or {}
+    if isinstance(offers, list):
+        offers = offers[0] if offers else {}
+    price = offers.get("price") if isinstance(offers, dict) else None
+    is_free = (str(price) in ("0", "0.0", "0.00")) if price is not None else None
+    e = Event(
+        title=clean(ev.get("name", "")),
+        start=start,
+        source=src["id"],
+        source_name=src["name"],
+        venue=clean(venue or "") or None,
+        town=src.get("town") if src.get("town") not in ("county", "regional") else None,
+        url=ev.get("url") or src["url"],
+        description=clean(str(ev.get("description", "")))[:1500],
+        cost="free" if is_free else ("paid" if price else "unknown"),
+        is_free=is_free,
+    )
+    return enrich(e, src.get("audience", "general"))
+
+
+def _extract_ld_events(html: str) -> list[dict]:
+    found: list[dict] = []
     for block in _LD.findall(html):
         try:
-            _walk_ld(json.loads(block), raw_events)
+            _walk_ld(json.loads(block), found)
         except (json.JSONDecodeError, TypeError):
             continue
+    return found
 
+
+def parse_jsonld(src: dict, d0: date, d1: date) -> list[Event]:
+    events = (_ld_to_event(ev, src, d0, d1) for ev in _extract_ld_events(_get(src["url"]).text))
+    return [e for e in events if e]
+
+
+# --- WhoFi (North Liberty & Solon libraries) ---------------------------------
+# ICS export is disabled; the featured list links to event pages that each carry
+# schema.org JSON-LD. Fetch the list, then each event page (capped).
+
+def parse_whofi(src: dict, d0: date, d1: date, cap: int = 40) -> list[Event]:
+    listing = _get(src["feed"]).text
+    host = src["feed"].split("/calendar")[0]
+    ids: list[str] = []
+    for m in re.findall(r"/calendar/event/(\d+)", listing):
+        if m not in ids:
+            ids.append(m)
     out: list[Event] = []
-    for ev in raw_events:
-        start = str(ev.get("startDate", ""))
-        sday = start[:10]
-        if not sday or not (d0.isoformat() <= sday <= d1.isoformat()):
+    for eid in ids[:cap]:
+        try:
+            html = _get(f"{host}/calendar/event/{eid}").text
+        except requests.RequestException:
             continue
-        loc = ev.get("location") or {}
-        if isinstance(loc, list):
-            loc = loc[0] if loc else {}
-        venue = loc.get("name") if isinstance(loc, dict) else None
-        offers = ev.get("offers") or {}
-        if isinstance(offers, list):
-            offers = offers[0] if offers else {}
-        price = offers.get("price") if isinstance(offers, dict) else None
-        is_free = (str(price) in ("0", "0.0", "0.00")) if price is not None else None
+        for ev in _extract_ld_events(html):
+            e = _ld_to_event(ev, src, d0, d1)
+            if e:
+                out.append(e)
+    return out
+
+
+# --- ICPL (Iowa City Public Library) custom vbapi ----------------------------
+
+_ICPL_AGE = {
+    "babies": "0-4", "toddlers": "0-4", "preschool": "0-4", "preschoolers": "0-4",
+    "kids": "5-11", "children": "5-11", "school age": "5-11",
+    "tweens": "12-18", "teens": "12-18", "young adults": "12-18",
+    "families": "all", "all ages": "all", "everyone": "all",
+}
+
+
+def parse_icpl_vbapi(src: dict, d0: date, d1: date) -> list[Event]:
+    body = _get(src["feed"], {"start": d0.isoformat(), "end": d1.isoformat()}).json()
+    out: list[Event] = []
+    for ev in body.get("events", []):
+        if str(ev.get("visible_to_public")) not in ("1", "True", "true"):
+            continue
+        title = clean(ev.get("title", ""))
+        start = str(ev.get("start", ""))
+        if not title or not start[:10]:
+            continue
+        if not (d0.isoformat() <= start[:10] <= d1.isoformat()):
+            continue
+        bands: list[str] = []
+        age = ev.get("age")
+        labels = age.values() if isinstance(age, dict) else (age if isinstance(age, list) else [])
+        for lbl in labels:
+            b = _ICPL_AGE.get(str(lbl).strip().lower())
+            if b and b not in bands:
+                bands.append(b)
+        locs = ev.get("locations")
+        venue = "Iowa City Public Library"
+        if isinstance(locs, dict) and locs:
+            venue = str(next(iter(locs.values())))
+        elif isinstance(locs, list) and locs:
+            first = locs[0]
+            venue = first.get("name") if isinstance(first, dict) else str(first)
+        path = ev.get("path") or ""
         e = Event(
-            title=clean(ev.get("name", "")),
+            title=title,
             start=start,
+            end=str(ev.get("end")) or None,
             source=src["id"],
             source_name=src["name"],
-            venue=clean(venue or "") or None,
-            town=src.get("town") if src.get("town") not in ("county", "regional") else None,
-            url=ev.get("url") or src["url"],
+            venue=clean(venue),
+            town="Iowa City",
+            url=("https://www.icpl.org" + path) if path.startswith("/") else (path or src["url"]),
             description=clean(str(ev.get("description", "")))[:1500],
-            cost="free" if is_free else ("paid" if price else "unknown"),
-            is_free=is_free,
+            age_bands=bands,
         )
-        out.append(enrich(e, src.get("audience", "general")))
+        out.append(enrich(e, src.get("audience", "family")))
     return out
 
 
@@ -232,6 +314,8 @@ PARSERS = {
     "jsonld": parse_jsonld,
     "scenethink": parse_scenethink,
     "civicplus_rss": parse_civicplus_rss,
+    "whofi": parse_whofi,
+    "icpl_vbapi": parse_icpl_vbapi,
 }
 
 

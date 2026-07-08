@@ -25,44 +25,55 @@ sources:
     name: Iowa City Public Library
     town: Iowa City
     url: https://www.icpl.org/calendar
-    feed: null            # VERIFY: check for LibCal .ics export or RSS
+    feed: https://www.icpl.org/vbapi/events/index   # VERIFIED custom Drupal JSON API
     method: html
+    parser: icpl_vbapi
     tier: 1
     audience: family
     notes: >
-      Storytimes, family, and teen event categories. Highest-volume family
-      source in the county. Check /events/categories/storytimes and
-      /events/ages/families for filtered feeds.
+      Highest-volume family source in the county (~150 events/month). Custom
+      vbapi JSON: ?start=&end=. Has an `age` dict (Babies/Kids/Families) mapped
+      straight to age bands. Filter visible_to_public==1. Verified live.
 
   - id: coralville-pl
     name: Coralville Public Library
     town: Coralville
-    url: https://www.coralville.lib.ia.us/
-    feed: null            # VERIFY
+    url: https://coralvillepubliclibrary.libnet.info/events
+    feed: null            # Communico — no public feed (needs API creds)
     method: html
     tier: 1
     audience: family
-    notes: Book Bike storytimes, kids programming. Confirm calendar platform.
+    notes: >
+      Communico (Attend) platform — no usable public RSS/ICS/JSON (data behind
+      authenticated api.communico.co). BUT Coralville library events also appear
+      in the city's CivicPlus RSS (coralville-events), so they're largely covered
+      there. Wire directly only if we get Communico API credentials.
 
   - id: north-liberty-library
     name: North Liberty Library
     town: North Liberty
-    url: https://www.northlibertyiowa.org/library/
-    feed: null            # VERIFY
+    url: https://northliberty-ia.whofi.com/calendar/full
+    feed: https://northliberty-ia.whofi.com/calendar/featured   # WhoFi (ICS disabled)
     method: html
+    parser: whofi
     tier: 1
     audience: family
-    notes: Part of city site; events may share the city events calendar.
+    notes: >
+      WhoFi platform. ICS export is disabled, so the parser reads the featured
+      list then each event page's schema.org JSON-LD. Verified live.
 
   - id: solon-pl
     name: Solon Public Library
     town: Solon
-    url: https://www.solon.lib.ia.us/
-    feed: null            # VERIFY
+    url: https://solon-ia.whofi.com/calendar/full
+    feed: https://solon-ia.whofi.com/calendar/featured   # WhoFi (ICS disabled)
     method: html
+    parser: whofi
     tier: 1
     audience: family
-    notes: Smaller; covers the CCA/Solon side of the county.
+    notes: >
+      WhoFi platform (same as North Liberty). ICS disabled; parser reads featured
+      list + per-event JSON-LD. Covers the CCA/Solon side of the county.
 
   # --- Parks & Recreation ---
   - id: ic-parks-rec
