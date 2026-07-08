@@ -6,7 +6,7 @@ with frontmatter) so a new edition is produced by conversation:
 - ccc-research  (Phase 1, DONE) — coverage pipeline + editorial curation/discovery
                                     → data/editions/<date>/research.json
 - ccc-writer    (Phase 2) — research.json → draft.md in house voice
-- ccc-preview   (Phase 3) — draft.md → edition.html (email + web)
+- ccc-preview   (Phase 3, DONE) — draft.md → edition.html (email + web)
 - ccc-publish   (Phase 4) — hand off to beehiiv (paste-ready HTML)
 
 The editorial thesis (PLAN.md §2.5): calendars are the FLOOR. The value is

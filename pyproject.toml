@@ -5,12 +5,13 @@ description = "A weekly newsletter for parents of kids in Johnson County, Iowa"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "requests>=2.32",       # HTTP for calendars, APIs, weather
-    "icalendar>=6.0",       # parse ICS feeds (libraries, parks & rec)
+    "requests>=2.32", # HTTP for calendars, APIs, weather
+    "icalendar>=6.0", # parse ICS feeds (libraries, parks & rec)
     "beautifulsoup4>=4.12", # HTML scraping fallback
-    "pyyaml>=6.0",          # sources.yaml / evergreen.yaml
+    "pyyaml>=6.0", # sources.yaml / evergreen.yaml
     "python-dateutil>=2.9", # fuzzy date parsing + tz handling
-    "rapidfuzz>=3.9",       # fuzzy dedupe of overlapping events
+    "rapidfuzz>=3.9", # fuzzy dedupe of overlapping events
+    "markdown>=3.10.2",
 ]
 
 [dependency-groups]
