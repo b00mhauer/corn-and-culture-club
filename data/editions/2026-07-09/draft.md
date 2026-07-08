@@ -1,101 +1,84 @@
 ---
-subject: "🌽 BBQ, a blues band, and free music in the park"
-preheader: "The calendars are quiet this week. The town is not — here's the good stuff."
-critter: "🌽"
+subject: "Free BBQ, blues, and music in the park this week"
+preheader: "The calendars are thin. The good stuff this week is free and outside."
 edition_start: "2026-07-09"
 holds: []
 ---
 
-## 👋 The Huddle
+## The Huddle
 
-It's the deep-summer stretch where the official calendars go quiet and it feels like nothing's happening. Don't believe it. This week the good stuff is free and outside: a barbecue-and-blues Saturday in North Liberty, live music in the parks, and two farmers markets worth the early alarm. One housekeeping note before we go — a few times below are still firming up, so we've flagged those. Call ahead if you're driving across the county for one.
+Mid-July, and the official calendars go quiet. The town does not. The worthwhile stuff this week is free and outdoors: barbecue and a blues band in North Liberty, live music in the parks, and two farmers markets. A few times below still need confirming. They are marked where they do.
 
-🌽 🌽 🌽
+## The Forecast
 
-## 🌤️ The Forecast
+Hot and humid to start, low 90s and sunny. Afternoon storms build midweek, the usual July pattern. Saturday is the question mark. If it holds, it is a good day for the market and the barbecue. If it does not, the Children's Museum is the backup. Water and sunscreen either way.
 
-Hot and sticky to start — low 90s and sunny, so Thursday's a splash-pad-or-shade day. Storms bubble up in the afternoons midweek, the usual Iowa-July radar roulette. **Saturday's the wildcard**: if it holds it's perfect for BBQ and the market, and if it doesn't, keep the Children's Museum in your back pocket. Water bottles, sunscreen, and don't trust the sky past noon.
-
-🌽 🌽 🌽
-
-## 🌽 The Week Ahead
+## The Week Ahead
 
 **Friday, July 10**
 
-> **North Liberty Concert Series** · `FREE` · 👨‍👩‍👧 all ages
+> **North Liberty Concert Series**  `FREE`  `ALL AGES`
 > Fri evening · Ranshaw House porch, North Liberty
-> A low-key front-porch concert to kick off the weekend — the kind of easy Friday you didn't know you needed. *(Time still firming up — confirm before you head over.)*
-> [details ↗](https://northlibertyiowa.org/residents/community-events/)
+> A free front-porch concert to open the weekend. Low-key and easy with kids. Confirm the time before you go.
+> [details](https://northlibertyiowa.org/residents/community-events/)
 
 **Saturday, July 11**
 
-> **North Liberty Blues & BBQ** · `FREE` · 👨‍👩‍👧 all ages
-> Sat · North Liberty
-> Live blues, actual barbecue, and enough open grass to let the kids burn off a morning. This is the free Saturday North Liberty does best — our pick of the week. *(Double-check the start time.)*
-> [details ↗](https://northlibertyiowa.org/residents/community-events/)
+> **North Liberty Blues & BBQ**  `FREE`  `ALL AGES`
+> Sat 10am · North Liberty
+> Live blues, barbecue, and open grass for the kids. The best free Saturday in the county this week.
+> [details](https://northlibertyiowa.org/residents/community-events/)
 
-> **Iowa City Farmers Market** · `FREE` · 👨‍👩‍👧 all ages
-> Sat morning · Chauncey Swan ramp, Iowa City
-> The Saturday ritual: kolaches, a dollar for the kid to spend on their own, and you're home before it gets hot. *(Confirm hours.)*
-> [details ↗](https://www.icgov.org/)
+> **Iowa City Farmers Market**  `FREE`  `ALL AGES`
+> Sat 8am · Chauncey Swan ramp, Iowa City
+> Produce, baked goods, and enough going on to keep a kid busy. Home before it gets hot.
+> [details](https://www.icgov.org/)
 
 **Sunday, July 12**
 
-> **Art Play Sundays** · `$` · 👶 0–4 · 🎒 5–11
-> Sun · 11am · Iowa Children's Museum, Coralville
-> Open-ended, messy art with zero cleanup for you — the good kind of tired-out, and a solid rain plan if Saturday washes out.
-> [details ↗](https://theicm.org/event/art-play-sundays-2/)
+> **Art Play Sundays**  `$`  `AGES 0-4`
+> Sun 11am · Iowa Children's Museum, Coralville
+> Open art time, indoors and air-conditioned. A good Sunday plan if Saturday washes out.
+> [details](https://theicm.org/event/art-play-sundays-2/)
 
 **Wednesday, July 15**
 
-> **Summer of the Arts: Music on the Move** · `FREE` · 👨‍👩‍👧 all ages
-> Wed · 6:30–8pm · a neighborhood park
-> Free live music in a park, early enough to still make bedtime. Pack a blanket and dinner. *(Which park rotates each week — confirm this one.)*
-> [details ↗](https://www.summerofthearts.org/)
+> **Summer of the Arts: Music on the Move**  `FREE`  `ALL AGES`
+> Wed 6:30pm · a neighborhood park
+> Free live music in a park, done by 8. Bring a blanket and dinner. Confirm which park this week.
+> [details](https://www.summerofthearts.org/)
 
-> **Coralville Farmers Market** · `FREE` · 👨‍👩‍👧 all ages
-> Wed evening · Iowa River Landing, Coralville
-> Midweek market with live music down at the Landing — dinner by food truck and a lap of the shops. *(Confirm hours.)*
-> [details ↗](https://www.coralville.org/)
+> **Coralville Farmers Market**  `FREE`  `ALL AGES`
+> Wed 5pm · Iowa River Landing, Coralville
+> The midweek market at the Landing, with live music. Food trucks handle dinner. Confirm hours.
+> [details](https://www.coralville.org/)
 
-🌽 🌽 🌽
+## Free & Cheap Five
 
-## 🆓 Free & Cheap Five
+1. **Blues & BBQ, North Liberty (Sat).** Music, food, and room to run. Build the weekend around it.
+2. **Music on the Move (Wed).** A free park concert that ends before bedtime.
+3. **North Liberty porch concert (Fri).** The easiest Friday night out with kids.
+4. **Iowa City Farmers Market (Sat).** Free to walk, cheap to snack.
+5. **Coralville Farmers Market (Wed).** The midweek version, with music and the river.
 
-The five best things you can do this week without opening your wallet:
+## School Notes
 
-1. **Blues & BBQ, North Liberty (Sat)** — music, food trucks, and room to run. The one to build the weekend around.
-2. **Music on the Move (Wed)** — a free park concert that ends before the meltdown hour.
-3. **North Liberty porch concert (Fri)** — easiest possible Friday night out with the kids.
-4. **Iowa City Farmers Market (Sat)** — free to wander, cheap to snack, home by mid-morning.
-5. **Coralville Farmers Market (Wed)** — the midweek version, with music and the riverfront.
+Summer break runs on. Fall registration and back-to-school dates land soon, and this section will carry the ICCSD, Clear Creek Amana, and Solon deadlines as the districts post them. Nothing due this week.
 
-🌽 🌽 🌽
+## The Deep Dive: Get ready for the Johnson County Fair
 
-## 🏫 School Notes
+Mark it now. July 25 to 29 at the fairgrounds on Oak Crest Hill Road, just south of Iowa City. It is the biggest family event of the summer and one of the cheapest. Admission is free most of the time, with a small paid window in the evenings, Saturday through Monday after 8. Parking is free on the south side.
 
-Summer break rolls on — enjoy the quiet while it lasts. Fall registration and back-to-school windows open sooner than you'd think, and we'll flag the ICCSD, Clear Creek Amana, and Solon deadlines here the moment they land (this section pulls straight from the district calendars once they post). For now: no folders, no forms, no early bus. Savor it.
+The useful part for parents is timing. With little kids, go in the morning or early afternoon. It is cooler and calmer, and the animal barns, the barrel train, and the petting area are the whole show at that age. You can be home before the nap wall. With older kids, go in the evening for the Bill Riley Talent Show, the RC racing, and the games. The livestock judging is a free, plain lesson in where food comes from, and the 4-H exhibits reward a slow walk.
 
-🌽 🌽 🌽
+It is a fair, so it is dusty and there is a fried-food stand every thirty feet. Bring water, sunscreen, and a charged phone for the where-are-you texts. The full schedule and our picks run next week, once the 2026 lineup is set. For now, clear the calendar.
 
-## 🚜 The Deep Dive: Get ready for the Johnson County Fair
+Schedule: [thejohnsoncountyfair.com](https://www.thejohnsoncountyfair.com/fair-schedule)
 
-Mark it now: **July 25–29** at the fairgrounds on Oak Crest Hill Road, just south of Iowa City. The Johnson County Fair is the biggest family thing of the summer, and one of the best deals going — admission is **free** most of the time, with only a small paid window in the evenings (Saturday through Monday, 8 p.m., a couple bucks), and **parking's free** on the south side.
+## The Bulletin
 
-Here's the insider version for parents. With little kids, go in the mornings or early afternoon when it's calmer and cooler — the barrel train, the animal barns, and the petting-zoo energy are the whole show at that age, and you can be out before the nap wall. With older kids, aim for the evenings: the Bill Riley Talent Show, the RC racing, the games (chicken toss, hay-bale toss — genuinely funny to watch a nine-year-old commit fully to a hay-bale toss). The livestock judging is a quietly great, free education in where food comes from, and the 4-H exhibits are worth a slow walk.
+- **Standing stuff, all summer.** Storytimes, open gyms, and tot time run every week. The full rundown lives on our [standing-events page].
+- **Got a tip?** A pop-up, a new play spot, a place worth knowing. Reply and tell us.
+- **Opening or closing in town?** Let us know and we will spread the word.
 
-It's a fair, so it's dusty and there's a fried-everything stand every thirty feet — bring water, sunscreen, and a fully-charged phone for the "where are you" texts. We'll run the full day-by-day schedule and our picks in next week's edition, once the 2026 lineup is locked. For now, just clear the calendar.
-
-*Hours & schedule: [thejohnsoncountyfair.com](https://www.thejohnsoncountyfair.com/fair-schedule)*
-
-🌽 🌽 🌽
-
-## 📌 The Bulletin
-
-- **Standing stuff, always on:** storytimes, open gyms, and tot times run all summer — the full weekly rundown lives on our [standing-events page].
-- **Got a tip?** A pop-up, a new play café, a birthday-party spot worth knowing? Hit reply — the best finds in here come from you.
-- **New in town or closing up?** Tell us and we'll spread the word.
-
-## ✌️
-
-See you out there. 🌽
+See you around the county.

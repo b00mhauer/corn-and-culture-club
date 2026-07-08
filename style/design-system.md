@@ -1,79 +1,65 @@
-# Corn & Culture Club — Design System (v1)
+# Corn & Culture Club — Design System
 
-> Seed values. The `ccc-preview` skill (Phase 3) will encode these into one HTML
-> template used for both email and web. Refine against real Catskill Crew editions
-> and real Gmail rendering before locking anything.
+Modern, clean, editorial. The reference points are local brands that already read
+right here: **Big Grove Brewery**, **Wilson's Orchard & Farm**, **Field Day**, and
+**Hawkeye black-and-gold**. That means: confident type, restrained natural palette,
+lots of whitespace, hairline rules, and almost no ornament. Not rustic, not folksy,
+not emoji-laden. The `ccc-preview` skill encodes this in one HTML template
+(`scripts/render_preview.py`).
 
-## Feel
+## Principles
 
-County-fair-meets-college-town. Warm, tactile, a little handmade — not a slick
-SaaS newsletter. Single column, big friendly section headers, emoji dividers,
-generous whitespace. Steal Catskill Crew's *bones* (layout, rhythm, scannability),
-give it an Iowa *skin* (palette, icons, references).
+- **Modern and quiet.** Whitespace and type do the work. If a divider, badge, or
+  emoji isn't earning its place, cut it.
+- **One accent, used with discipline.** Deep green primary, gold secondary. Not both
+  loud at once.
+- **Editorial, not decorative.** Uppercase eyebrow labels, a newspaper-style
+  nameplate, flat cards. It should look like a well-made local magazine, not a
+  scrapbook.
+- **No emoji as structure.** No corn dividers, no emoji age icons. (A rare emoji in
+  body copy is fine if it's genuinely useful, but the chrome stays clean.)
 
 ## Palette
 
 | Token | Hex | Use |
 |---|---|---|
-| `corn-gold` | `#F2B705` | primary accent, dividers, FREE badge |
-| `barn-red` | `#A62B1F` | headers, links, emphasis |
-| `prairie-green` | `#3E6B3A` | secondary accent, age tags |
-| `sky` | `#5B8FB0` | tertiary / cold-weather forecast accents |
-| `cream` | `#FBF7EC` | page/background |
-| `ink` | `#2A2622` | body text |
-| `stone` | `#6E655B` | captions, metadata, "double-check" notes |
-
-Keep contrast AA-legible on `cream`. FREE badge = `corn-gold` bg + `ink` text so
-it pops in the skim.
+| `bg` | `#F4F1EA` | warm bone background |
+| `surface` | `#FFFFFF` | cards |
+| `ink` | `#1B1A17` | near-black text, nameplate |
+| `muted` | `#6E675B` | meta text, captions |
+| `line` | `#E4DDCF` | hairline rules, card borders |
+| `green` | `#2E5A3E` | primary accent (section labels, FREE, links) |
+| `gold` | `#C0891F` | secondary accent (ampersand, day kickers, `$`) |
 
 ## Type
 
-- Headers: a warm slab or friendly display face (web-safe fallback: Georgia /
-  serif). Confirm what renders in email — for the email build, prefer a system
-  serif stack over a webfont that Gmail may strip.
-- Body: readable sans (system stack: -apple-system, Segoe UI, Roboto, sans-serif).
-- Listings: same body font, bold event name, regular blurb.
+System sans only (email-safe, no webfonts): `-apple-system, Segoe UI, Roboto,
+Helvetica, Arial`. The modern feel comes from *weight and spacing*, not a fancy face:
+- **Nameplate:** uppercase, extra-bold, wide letter-spacing (~2px).
+- **Section labels:** small uppercase green eyebrow, letter-spaced.
+- **Day kickers:** small uppercase gold.
+- **Card meta:** small uppercase muted (day / time / venue).
+- **Body:** 16px, line-height ~1.6.
 
-## Dividers (the Catskill Crew move, Iowa-fied)
+## Layout
 
-Emoji rule between sections. Primary: 🌽. Rotating supporting cast so editions
-feel alive: 🚜 🐷 🦅 🎪 🧺 🌾. One divider style per edition (pick a "critter of
-the week") is a fun, low-effort signature — mirrors Catskill Crew's animal emoji
-in the subject line (🦅 🐻 🦉).
+- Single column, max 600px, generous padding.
+- **Nameplate:** wordmark left, edition date right, a 2px ink rule under, then a small
+  uppercase tagline. Newspaper masthead energy.
+- **Sections:** a hairline rule, then the uppercase eyebrow label, then content.
+  Whitespace separates sections. No emoji dividers.
+- **Event card:** flat white, 1px `line` border, 10px radius, no drop shadow.
+  - line 1: **bold name** + chips
+  - line 2: uppercase muted meta (day · time · venue)
+  - line 3: the one-line hook
+  - line 4: the source link
+- **Chips** (written as `` `TOKEN` `` in the draft):
+  - `FREE` → filled green
+  - `$` / `$$` → filled gold
+  - `AGES 0-4`, `ALL AGES`, etc. → outlined, muted
+- **Footer:** hairline, uppercase wordmark, one plain line, the tip line.
 
-## Section header pattern
+## Email vs. web
 
-Each bucket gets: emoji + short ALL-ish-CAPS or title-case label, e.g.
-
-```
-🌽  THE WEEK AHEAD
-🆓  FREE & CHEAP FIVE
-🏫  SCHOOL NOTES
-```
-
-## Event listing block (the atom)
-
-```
-[Bold Event Name]                          [FREE]  [👶 0–4]
-Sat · 10:30am · Iowa Children's Museum, Coralville
-One punchy sentence on why it's worth your Saturday. ↗ source
-```
-
-- Age band chips: `👶 0–4` · `🎒 5–11` · `🎧 12–18` · `👨‍👩‍👧 all`
-- Cost chip: `FREE` (gold) / `$` / `$$`. FREE always visually loudest.
-- Every block ends with a source link — non-negotiable (accuracy = trust).
-
-## Layout tokens
-
-- Max content width ~600px (email-safe).
-- Section spacing generous; dividers give breathing room.
-- Mobile-first: everything single-column, tap targets comfortable, no side-by-side.
-- Images: optional per event; if used, keep small and lazy — email clients are
-  finicky. Alt text always.
-
-## Email-vs-web notes
-
-- Email: inline CSS, table-based layout, no external fonts, test in Gmail +
-  Apple Mail. beehiiv handles a lot of this if we publish there.
-- Web (archive page): same template, can be a touch richer (webfonts, the
-  evergreen standing-events page, an event-submission link).
+Inline-ish styles, table layout, system fonts, no external assets, ≤600px. Works in a
+browser now; beehiiv does final CSS inlining at send. Test in Gmail before launch.
