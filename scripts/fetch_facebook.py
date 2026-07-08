@@ -47,16 +47,19 @@ def _local_date(ts: int | None) -> str:
 
 
 def _in_county(place_name: str, title: str) -> bool:
-    """Keep events whose PLACE or TITLE carries a local signal. Do NOT trust the
-    search query (FB search bleeds in far-flung fuzzy matches, e.g. Youngstown OH
-    for an 'Iowa City' query). Precision matters more than recall here — the town
-    queries and other sources catch anything dropped, and curation reviews the rest.
+    """True if PLACE or TITLE carries a clear county signal (a town name).
+
+    We keep this STRICT (drop when false) for Facebook specifically. FB's search
+    bleeds in global junk — a lenient 'keep and flag' pass was tested and let in
+    Denmark, Idaho, and Ohio events, because those venues carry no local signal.
+    Real local FB events reliably include their city in the place data, so
+    'no county signal' almost always means 'not local'. Measured: strict drops
+    ~0 legitimate local events. (Calendar sources, which lack reliable place
+    data, use the softer keep-and-flag in build_edition's keep() instead.)
     """
     hay = f"{place_name} {title}".lower()
     if any(alias.strip() in hay for aliases in TOWNS.values() for alias in aliases):
         return True
-    # A bare "..., IA" address is NOT enough — that lets in statewide results
-    # (Des Moines, Storm Lake). Require a county town name or Johnson County.
     return "iowa city" in hay or "johnson county" in hay
 
 
