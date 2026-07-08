@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#F1ECDF; }
+  ::selection { background:#D9A408; color:#17150F; }
+  a { color:#345E3B; }
+  a:hover { color:#17150F; }
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="--cc-accent:#D9A408; --cc-link:#345E3B; background:#F1ECDF; color:#17150F; font-family:'Work Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <!-- ============ COVER ============ -->
+  <section style="background:#17150F; color:#F1ECDF; padding:72px 40px 64px; position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; background-image:radial-gradient(circle at 1px 1px, rgba(217,164,8,0.12) 1px, transparent 0); background-size:22px 22px; opacity:0.5;"></div>
+    <div style="max-width:1120px; margin:0 auto; position:relative;">
+      <div style="display:flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--cc-accent);">
+        <span style="width:26px; height:1px; background:var(--cc-accent); display:inline-block;"></span>
+        Brand &amp; Style Guide
+        <span style="color:#B9AE93; font-weight:600;">v1 · 2026</span>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:40px; margin-top:44px; flex-wrap:wrap;">
+        <!-- Emblem seal -->
+        <div style="flex:0 0 auto;">
+          <svg width="180" height="180" viewBox="0 0 200 200" aria-label="Corn and Culture Club emblem">
+            <defs>
+              <clipPath id="earClip"><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z"/></clipPath>
+              <path id="ringTop" d="M100,100 m-74,0 a74,74 0 1,1 148,0" fill="none"/>
+              <path id="ringBot" d="M100,100 m74,0 a74,74 0 1,1 -148,0" fill="none"/>
+            </defs>
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#D9A408" stroke-width="2"/>
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#B9AE93" stroke-width="1" stroke-opacity="0.5"/>
+            <!-- ring text -->
+            <text font-family="'Work Sans',sans-serif" font-size="12.5" font-weight="700" letter-spacing="4" fill="#F1ECDF">
+              <textPath href="#ringTop" startOffset="50%" text-anchor="middle">CORN &amp; CULTURE CLUB</textPath>
+            </text>
+            <text font-family="'Work Sans',sans-serif" font-size="10.5" font-weight="600" letter-spacing="3.5" fill="#B9AE93">
+              <textPath href="#ringBot" startOffset="50%" text-anchor="middle">GREATER IOWA CITY · EST. 2026</textPath>
+            </text>
+            <!-- star dividers -->
+            <g fill="#D9A408">
+              <circle cx="30" cy="100" r="2"/><circle cx="170" cy="100" r="2"/>
+            </g>
+            <!-- husks -->
+            <path d="M96 140 C78 150 66 150 54 146 C68 142 82 136 92 130 Z" fill="#345E3B"/>
+            <path d="M104 140 C122 150 134 150 146 146 C132 142 118 136 108 130 Z" fill="#345E3B"/>
+            <path d="M100 138 C97 146 96 152 98 158 C102 150 103 143 102 132 Z" fill="#2B4E31"/>
+            <!-- ear body -->
+            <path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z" fill="#D9A408"/>
+            <!-- kernel lattice -->
+            <g clip-path="url(#earClip)" stroke="#17150F" stroke-width="2" stroke-opacity="0.82">
+              <path d="M70 60 H130 M70 74 H130 M70 88 H130 M70 102 H130 M70 116 H130 M70 130 H130 M70 144 H130"/>
+              <path d="M82 46 V154 M100 46 V154 M118 46 V154"/>
+            </g>
+            <path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z" fill="none" stroke="#17150F" stroke-width="2.5"/>
+          </svg>
+        </div>
+
+        <!-- Wordmark -->
+        <div style="flex:1 1 380px; min-width:280px;">
+          <div style="font-family:'Zilla Slab',Georgia,serif; font-weight:700; font-size:64px; line-height:0.98; letter-spacing:-0.5px; color:#F1ECDF;">
+            Corn <span style="color:var(--cc-accent);">&amp;</span> Culture<br>Club
+          </div>
+          <div style="margin-top:22px; font-size:14px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--cc-accent);">Ears to the ground on the good stuff around town</div>
+          <div style="margin-top:14px; max-width:520px; font-family:'Newsreader',Georgia,serif; font-size:18px; line-height:1.55; color:#D8CFB8;">
+            A weekly dispatch of what's worth your time around town — shows, food, patios, park nights, the odd dinosaur exhibit. One email a week, curated with a point of view.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POSITIONING ============ -->
+  <section style="max-width:1120px; margin:0 auto; padding:64px 40px 8px;">
+    <div style="display:flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#A67C00;">
+      <span style="width:26px; height:1px; background:var(--cc-accent); display:inline-block;"></span> 01 — The Idea
+    </div>
+    <h2 style="font-family:'Zilla Slab',Georgia,serif; font-weight:700; font-size:40px; line-height:1.05; margin:18px 0 8px; max-width:820px;">A well-connected friend, in your inbox once a week.</h2>
+    <p style="font-family:'Newsreader',Georgia,serif; font-size:20px; line-height:1.55; color:#3A362C; max-width:760px; margin:0 0 40px;">Corn &amp; Culture Club is a social club and a weekly newsletter for people in their late thirties around greater Iowa City. We track fifteen calendars so you don't have to, then tell you the handful actually worth showing up for — date nights, nights out with the crew, and the good stuff to do with the kids in tow.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; margin-bottom:8px;">
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:14px; padding:22px 22px 24px;">
+        <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:20px; color:var(--cc-accent);">Curated, not aggregated</div>
+        <p style="font-size:15px; line-height:1.55; color:#4A4535; margin:8px 0 0;">The calendars are the floor. The point is a point of view — skip this, rearrange your Saturday for that.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:14px; padding:22px 22px 24px;">
+        <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:20px; color:var(--cc-accent);">Modes, not ages</div>
+        <p style="font-size:15px; line-height:1.55; color:#4A4535; margin:8px 0 0;">Whatever mode you're in this week — date night, out with friends, or the kids in tow — there's a lane for it.</p>
+      </div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:14px; padding:22px 22px 24px;">
+        <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:20px; color:var(--cc-accent);">Warm, dry, local</div>
+        <p style="font-size:15px; line-height:1.55; color:#4A4535; margin:8px 0 0;">A neighbor with a good memory and a spreadsheet. Never a brand, never breathless, honest about the duds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGO SYSTEM ============ -->
+  <section style="max-width:1120px; margin:0 auto; padding:56px 40px 8px;">
+    <div style="display:flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#A67C00;">
+      <span style="width:26px; height:1px; background:var(--cc-accent); display:inline-block;"></span> 02 — Logo System
+    </div>
+    <h2 style="font-family:'Zilla Slab',Georgia,serif; font-weight:700; font-size:40px; line-height:1.05; margin:18px 0 28px;">Three marks, one club.</h2>
+
+    <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:20px;">
+      <!-- Primary lockup -->
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:16px; padding:36px; display:flex; flex-direction:column;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8C8064; margin-bottom:26px;">Primary lockup</div>
+        <div style="flex:1; display:flex; align-items:center; justify-content:center; gap:22px; flex-wrap:wrap; padding:16px 0 26px;">
+          <svg width="96" height="96" viewBox="0 0 200 200">
+            <defs><clipPath id="earClip2"><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z"/></clipPath></defs>
+            <path d="M96 140 C78 150 66 150 54 146 C68 142 82 136 92 130 Z" fill="#345E3B"/>
+            <path d="M104 140 C122 150 134 150 146 146 C132 142 118 136 108 130 Z" fill="#345E3B"/>
+            <path d="M100 138 C97 146 96 152 98 158 C102 150 103 143 102 132 Z" fill="#2B4E31"/>
+            <path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z" fill="#D9A408"/>
+            <g clip-path="url(#earClip2)" stroke="#17150F" stroke-width="2" stroke-opacity="0.82">
+              <path d="M70 60 H130 M70 74 H130 M70 88 H130 M70 102 H130 M70 116 H130 M70 130 H130 M70 144 H130"/>
+              <path d="M82 46 V154 M100 46 V154 M118 46 V154"/>
+            </g>
+            <path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z" fill="none" stroke="#17150F" stroke-width="2.5"/>
+          </svg>
+          <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:30px; line-height:1; color:#17150F;">Corn <span style="color:var(--cc-accent);">&amp;</span> Culture<br>Club</div>
+        </div>
+        <div style="font-size:13px; line-height:1.5; color:#6E6454; border-top:1px solid #EFE7D6; padding-top:16px;">The default. Emblem left of a two-line wordmark. Use on cream or white with generous clear space.</div>
+      </div>
+
+      <!-- Monogram -->
+      <div style="background:#17150F; border:1px solid #17150F; border-radius:16px; padding:36px; display:flex; flex-direction:column; color:#F1ECDF;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#B9AE93; margin-bottom:26px;">Monogram · app / favicon / merch</div>
+        <div style="flex:1; display:flex; align-items:center; justify-content:center; padding:10px 0 26px;">
+          <div style="width:120px; height:120px; border-radius:26px; background:var(--cc-accent); display:flex; align-items:center; justify-content:center; box-shadow:0 10px 30px rgba(0,0,0,0.35);">
+            <span style="font-family:'Zilla Slab',serif; font-weight:700; font-size:52px; color:#17150F; letter-spacing:-1px;">C<span style="font-size:34px; vertical-align:super;">&amp;</span>C</span>
+          </div>
+        </div>
+        <div style="font-size:13px; line-height:1.5; color:#C7BCA1; border-top:1px solid #2C281E; padding-top:16px;">Ink "C&amp;C" on corn-gold, rounded square. For anywhere the full lockup won't read — favicons, avatars, a hat.</div>
+      </div>
+    </div>
+
+    <!-- variants row -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; margin-top:20px;">
+      <div style="background:#F1ECDF; border:1px solid #E4DAC6; border-radius:14px; padding:26px; text-align:center;">
+        <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:19px; letter-spacing:1px; text-transform:uppercase; color:#17150F;">Corn <span style="color:var(--cc-accent);">&amp;</span> Culture Club</div>
+        <div style="font-size:10.5px; letter-spacing:2px; text-transform:uppercase; color:#8C8064; margin-top:8px;">On cream</div>
+      </div>
+      <div style="background:#17150F; border:1px solid #17150F; border-radius:14px; padding:26px; text-align:center;">
+        <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:19px; letter-spacing:1px; text-transform:uppercase; color:#F1ECDF;">Corn <span style="color:var(--cc-accent);">&amp;</span> Culture Club</div>
+        <div style="font-size:10.5px; letter-spacing:2px; text-transform:uppercase; color:#B9AE93; margin-top:8px;">On ink</div>
+      </div>
+      <div style="background:var(--cc-accent); border:1px solid var(--cc-accent); border-radius:14px; padding:26px; text-align:center;">
+        <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:19px; letter-spacing:1px; text-transform:uppercase; color:#17150F;">Corn &amp; Culture Club</div>
+        <div style="font-size:10.5px; letter-spacing:2px; text-transform:uppercase; color:#7A5C00; margin-top:8px;">On gold</div>
+      </div>
+      <div style="background:#345E3B; border:1px solid #345E3B; border-radius:14px; padding:26px; text-align:center;">
+        <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:19px; letter-spacing:1px; text-transform:uppercase; color:#F1ECDF;">Corn <span style="color:#F2C63D;">&amp;</span> Culture Club</div>
+        <div style="font-size:10.5px; letter-spacing:2px; text-transform:uppercase; color:#B7CBAE; margin-top:8px;">On green</div>
+      </div>
+    </div>
+
+    <!-- do / dont -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px;">
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:14px; padding:22px 24px;">
+        <div style="font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#345E3B; margin-bottom:10px;">Do</div>
+        <ul style="margin:0; padding-left:18px; font-size:14.5px; line-height:1.7; color:#4A4535;">
+          <li>Keep clear space equal to the emblem's width on all sides.</li>
+          <li>Use the gold ampersand as the one bright note in the wordmark.</li>
+          <li>Minimum emblem size 28px; below that, use the monogram.</li>
+        </ul>
+      </div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:14px; padding:22px 24px;">
+        <div style="font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#A63A28; margin-bottom:10px;">Don't</div>
+        <ul style="margin:0; padding-left:18px; font-size:14.5px; line-height:1.7; color:#4A4535;">
+          <li>Recolor the corn to anything but gold, or add gradients / shadows to the mark.</li>
+          <li>Stretch, rotate, or outline the wordmark.</li>
+          <li>Set the wordmark in any face but Zilla Slab.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COLOR ============ -->
+  <section style="max-width:1120px; margin:0 auto; padding:56px 40px 8px;">
+    <div style="display:flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#A67C00;">
+      <span style="width:26px; height:1px; background:var(--cc-accent); display:inline-block;"></span> 03 — Color
+    </div>
+    <h2 style="font-family:'Zilla Slab',Georgia,serif; font-weight:700; font-size:40px; line-height:1.05; margin:18px 0 6px;">Warm paper, dark ink, one bright kernel of gold.</h2>
+    <p style="font-size:15px; color:#6E6454; max-width:640px; margin:0 0 28px;">A tight, tactile palette. Gold is the star and stays rare; green carries links and "free"; brick is for the rare alarm.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px;">
+      <div style="border:1px solid #E4DAC6; border-radius:14px; overflow:hidden; background:#fff;">
+        <div style="height:96px; background:#D9A408;"></div>
+        <div style="padding:12px 14px;"><div style="font-weight:700; font-size:14px;">Corn Gold</div><div style="font-size:12px; color:#8C8064; margin-top:2px;">#D9A408 · accent</div></div>
+      </div>
+      <div style="border:1px solid #E4DAC6; border-radius:14px; overflow:hidden; background:#fff;">
+        <div style="height:96px; background:#345E3B;"></div>
+        <div style="padding:12px 14px;"><div style="font-weight:700; font-size:14px;">Prairie Green</div><div style="font-size:12px; color:#8C8064; margin-top:2px;">#345E3B · links / free</div></div>
+      </div>
+      <div style="border:1px solid #E4DAC6; border-radius:14px; overflow:hidden; background:#fff;">
+        <div style="height:96px; background:#A63A28;"></div>
+        <div style="padding:12px 14px;"><div style="font-weight:700; font-size:14px;">Brick</div><div style="font-size:12px; color:#8C8064; margin-top:2px;">#A63A28 · alarm (rare)</div></div>
+      </div>
+      <div style="border:1px solid #E4DAC6; border-radius:14px; overflow:hidden; background:#fff;">
+        <div style="height:96px; background:#17150F;"></div>
+        <div style="padding:12px 14px;"><div style="font-weight:700; font-size:14px;">Ink</div><div style="font-size:12px; color:#8C8064; margin-top:2px;">#17150F · text / dark bg</div></div>
+      </div>
+      <div style="border:1px solid #E4DAC6; border-radius:14px; overflow:hidden; background:#fff;">
+        <div style="height:96px; background:#F1ECDF; border-bottom:1px solid #E4DAC6;"></div>
+        <div style="padding:12px 14px;"><div style="font-weight:700; font-size:14px;">Paper</div><div style="font-size:12px; color:#8C8064; margin-top:2px;">#F1ECDF · background</div></div>
+      </div>
+      <div style="border:1px solid #E4DAC6; border-radius:14px; overflow:hidden; background:#fff;">
+        <div style="height:96px; background:#F7ECC9; border-bottom:1px solid #E4DAC6;"></div>
+        <div style="padding:12px 14px;"><div style="font-weight:700; font-size:14px;">Gold Wash</div><div style="font-size:12px; color:#8C8064; margin-top:2px;">#F7ECC9 · icon chips</div></div>
+      </div>
+      <div style="border:1px solid #E4DAC6; border-radius:14px; overflow:hidden; background:#fff;">
+        <div style="height:96px; background:#6E6454;"></div>
+        <div style="padding:12px 14px;"><div style="font-weight:700; font-size:14px;">Stone</div><div style="font-size:12px; color:#8C8064; margin-top:2px;">#6E6454 · meta / captions</div></div>
+      </div>
+      <div style="border:1px solid #E4DAC6; border-radius:14px; overflow:hidden; background:#fff;">
+        <div style="height:96px; background:#E4DAC6;"></div>
+        <div style="padding:12px 14px;"><div style="font-weight:700; font-size:14px;">Hairline</div><div style="font-size:12px; color:#8C8064; margin-top:2px;">#E4DAC6 · borders / rules</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TYPE ============ -->
+  <section style="max-width:1120px; margin:0 auto; padding:56px 40px 8px;">
+    <div style="display:flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#A67C00;">
+      <span style="width:26px; height:1px; background:var(--cc-accent); display:inline-block;"></span> 04 — Typography
+    </div>
+    <h2 style="font-family:'Zilla Slab',Georgia,serif; font-weight:700; font-size:40px; line-height:1.05; margin:18px 0 28px;">Slab headlines, clean sans, a reading serif.</h2>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px;">
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:16px; padding:28px 30px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8C8064;">Display · Zilla Slab</div>
+        <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:52px; line-height:1; margin:14px 0 4px;">Aa</div>
+        <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:26px; line-height:1.1;">The good stuff to do</div>
+        <div style="font-size:13px; color:#6E6454; margin-top:12px;">Masthead, section titles, headlines. Weights 600 / 700.</div>
+      </div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:16px; padding:28px 30px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8C8064;">Interface · Work Sans</div>
+        <div style="font-family:'Work Sans',sans-serif; font-weight:800; font-size:52px; line-height:1; margin:14px 0 4px;">Aa</div>
+        <div style="font-size:12px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase;">Date Night · Free · All Ages</div>
+        <div style="font-size:13px; color:#6E6454; margin-top:12px;">Eyebrows, labels, badges, event meta. Caps + letter-spacing.</div>
+      </div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:16px; padding:28px 30px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8C8064;">Reading · Newsreader</div>
+        <div style="font-family:'Newsreader',serif; font-weight:400; font-size:52px; line-height:1; margin:14px 0 4px;">Aa</div>
+        <div style="font-family:'Newsreader',serif; font-size:18px; line-height:1.5;">Longer stretches — the Huddle, the Deep Dive — read in a warm serif.</div>
+        <div style="font-size:13px; color:#6E6454; margin-top:12px;">Body prose on the web archive.</div>
+      </div>
+    </div>
+    <div style="background:#F7F2E6; border:1px dashed #D9C9A6; border-radius:12px; padding:16px 20px; margin-top:16px; font-size:14px; line-height:1.6; color:#5A5140;">
+      <strong style="color:#17150F;">Email-safe fallback.</strong> Gmail and Apple Mail strip webfonts, so the <em>sent</em> newsletter uses a system stack: <code style="background:#EDE3CC; padding:1px 6px; border-radius:4px;">Georgia, serif</code> for headlines and <code style="background:#EDE3CC; padding:1px 6px; border-radius:4px;">-apple-system, Segoe UI, Roboto, sans-serif</code> for everything else. Zilla Slab / Work Sans / Newsreader are for the web archive, signup page, and social assets only.
+    </div>
+  </section>
+
+  <!-- ============ SECTION SYSTEM ============ -->
+  <section style="max-width:1120px; margin:0 auto; padding:56px 40px 8px;">
+    <div style="display:flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#A67C00;">
+      <span style="width:26px; height:1px; background:var(--cc-accent); display:inline-block;"></span> 05 — The Sections
+    </div>
+    <h2 style="font-family:'Zilla Slab',Georgia,serif; font-weight:700; font-size:40px; line-height:1.05; margin:18px 0 6px;">Every edition, the same eight beats.</h2>
+    <p style="font-size:15px; color:#6E6454; max-width:640px; margin:0 0 28px;">Each section leads with a hairline rule, a gold line-icon, and an uppercase Work Sans label. No emoji — the icons carry the personality.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px;">
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:12px; padding:18px 20px;"><div style="display:flex; align-items:center; gap:10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D9A408" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21v-7M19 21v-7M4 14h16M6 14v-4M9 14v-4M15 14v-4M18 14v-4M4.5 10h15L12 4.5 4.5 10ZM12 4.5V2.2"/></svg><span style="font-weight:800; font-size:12.5px; letter-spacing:1.4px; text-transform:uppercase;">The Huddle</span></div><p style="font-size:13.5px; line-height:1.5; color:#6E6454; margin:10px 0 0;">2–4 sentence hello. One real observation, zero throat-clearing.</p></div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:12px; padding:18px 20px;"><div style="display:flex; align-items:center; gap:10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D9A408" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.2 4.2l1.5 1.5M18.3 18.3l1.5 1.5M2 12h2M20 12h2M4.2 19.8l1.5-1.5M18.3 5.7l1.5-1.5"/></svg><span style="font-weight:800; font-size:12.5px; letter-spacing:1.4px; text-transform:uppercase;">The Forecast</span></div><p style="font-size:13.5px; line-height:1.5; color:#6E6454; margin:10px 0 0;">Weather as decisions — patio night, storm backup, pool day.</p></div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:12px; padding:18px 20px;"><div style="display:flex; align-items:center; gap:10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D9A408" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5S3.5 14.6 3.5 8.9A4.4 4.4 0 0 1 12 6.9a4.4 4.4 0 0 1 8.5 2c0 5.7-8.5 11.6-8.5 11.6Z"/></svg><span style="font-weight:800; font-size:12.5px; letter-spacing:1.4px; text-transform:uppercase;">Date Night &amp; Out</span></div><p style="font-size:13.5px; line-height:1.5; color:#6E6454; margin:10px 0 0;">The grown-up lane — shows, dinners, drinks, nights with friends.</p></div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:12px; padding:18px 20px;"><div style="display:flex; align-items:center; gap:10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D9A408" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 6.5a3 3 0 0 1 0 5.8M21.5 20a5.5 5.5 0 0 0-4-5.3"/></svg><span style="font-weight:800; font-size:12.5px; letter-spacing:1.4px; text-transform:uppercase;">Community &amp; Outdoors</span></div><p style="font-size:13.5px; line-height:1.5; color:#6E6454; margin:10px 0 0;">Festivals, markets, park concerts, the weekend's anchor event.</p></div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:12px; padding:18px 20px;"><div style="display:flex; align-items:center; gap:10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D9A408" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M12 13v5M10.5 20.5 12 18l1.5 2.5"/></svg><span style="font-weight:800; font-size:12.5px; letter-spacing:1.4px; text-transform:uppercase;">With the Kids</span></div><p style="font-size:13.5px; line-height:1.5; color:#6E6454; margin:10px 0 0;">Same week, kid mode. Storytimes, museums, slime labs.</p></div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:12px; padding:18px 20px;"><div style="display:flex; align-items:center; gap:10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D9A408" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span style="font-weight:800; font-size:12.5px; letter-spacing:1.4px; text-transform:uppercase;">Free &amp; Cheap Five</span></div><p style="font-size:13.5px; line-height:1.5; color:#6E6454; margin:10px 0 0;">A confident, ranked five. The skimmer's favorite section.</p></div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:12px; padding:18px 20px;"><div style="display:flex; align-items:center; gap:10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D9A408" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8ZM17 9h2.2a2.3 2.3 0 0 1 0 4.6H17"/></svg><span style="font-weight:800; font-size:12.5px; letter-spacing:1.4px; text-transform:uppercase;">The Deep Dive</span></div><p style="font-size:13.5px; line-height:1.5; color:#6E6454; margin:10px 0 0;">One short feature — a preview, a place, a person. Room to breathe.</p></div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:12px; padding:18px 20px;"><div style="display:flex; align-items:center; gap:10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D9A408" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l16-6v14L3 13v5H6l1 3M14 6.8v10.4"/></svg><span style="font-weight:800; font-size:12.5px; letter-spacing:1.4px; text-transform:uppercase;">The Bulletin</span></div><p style="font-size:13.5px; line-height:1.5; color:#6E6454; margin:10px 0 0;">Community shorts — openings, shout-outs, "got a tip?"</p></div>
+    </div>
+  </section>
+
+  <!-- ============ COMPONENTS ============ -->
+  <section style="max-width:1120px; margin:0 auto; padding:56px 40px 8px;">
+    <div style="display:flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#A67C00;">
+      <span style="width:26px; height:1px; background:var(--cc-accent); display:inline-block;"></span> 06 — Components
+    </div>
+    <h2 style="font-family:'Zilla Slab',Georgia,serif; font-weight:700; font-size:40px; line-height:1.05; margin:18px 0 28px;">The building blocks.</h2>
+
+    <div style="display:grid; grid-template-columns:1.2fr 0.8fr; gap:20px;">
+      <!-- event card -->
+      <div>
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8C8064; margin-bottom:12px;">Event card · the atom</div>
+        <div style="background:#fff; border:1px solid #E4DAC6; border-radius:12px; padding:16px 18px; display:flex; gap:14px;">
+          <div style="flex:0 0 auto; width:44px; height:44px; border-radius:11px; background:#F7ECC9; border:1px solid #E4DAC6; display:flex; align-items:center; justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#17150F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 6.5a3 3 0 0 1 0 5.8M21.5 20a5.5 5.5 0 0 0-4-5.3"/></svg>
+          </div>
+          <div style="flex:1;">
+            <div style="display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:5px;">
+              <span style="font-weight:800; font-size:16px; color:#17150F;">North Liberty Blues &amp; BBQ</span>
+              <span style="background:#345E3B; color:#fff; font-size:10px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; padding:2px 8px; border-radius:4px;">Free</span>
+              <span style="border:1px solid #E4DAC6; color:#6E6454; font-size:10px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; padding:2px 8px; border-radius:4px;">All Ages</span>
+            </div>
+            <div style="font-size:11px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:#6E6454; margin-bottom:7px;">Sat 10:00am · North Liberty</div>
+            <div style="font-size:14.5px; line-height:1.55; color:#2A2622;">Barbecue, open grass, and live music into the evening. The weekend's anchor.</div>
+            <div style="margin-top:8px;"><a href="#" style="color:#345E3B; font-weight:700; font-size:13px; text-decoration:none; border-bottom:1.5px solid #D9A408;">details</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- badges + divider -->
+      <div>
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8C8064; margin-bottom:12px;">Badges &amp; tags</div>
+        <div style="background:#fff; border:1px solid #E4DAC6; border-radius:12px; padding:18px; display:flex; flex-wrap:wrap; gap:8px; align-content:flex-start;">
+          <span style="background:#345E3B; color:#fff; font-size:10px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; padding:3px 9px; border-radius:4px;">Free</span>
+          <span style="border:1px solid #E4DAC6; color:#6E6454; font-size:10px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; padding:3px 9px; border-radius:4px;">Date Night</span>
+          <span style="border:1px solid #E4DAC6; color:#6E6454; font-size:10px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; padding:3px 9px; border-radius:4px;">Night Out</span>
+          <span style="border:1px solid #E4DAC6; color:#6E6454; font-size:10px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; padding:3px 9px; border-radius:4px;">All Ages</span>
+          <span style="border:1px solid #E4DAC6; color:#6E6454; font-size:10px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; padding:3px 9px; border-radius:4px;">$</span>
+          <span style="background:#A63A28; color:#fff; font-size:10px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; padding:3px 9px; border-radius:4px;">Deadline</span>
+        </div>
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8C8064; margin:18px 0 12px;">Section divider</div>
+        <div style="background:#fff; border:1px solid #E4DAC6; border-radius:12px; padding:20px 18px;">
+          <div style="border-top:1px solid #E4DAC6; margin-bottom:14px;"></div>
+          <div style="display:flex; align-items:center; gap:9px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D9A408" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.2 4.2l1.5 1.5M18.3 18.3l1.5 1.5M2 12h2M20 12h2M4.2 19.8l1.5-1.5M18.3 5.7l1.5-1.5"/></svg><span style="font-weight:800; font-size:12.5px; letter-spacing:1.4px; text-transform:uppercase;">The Forecast</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VOICE ============ -->
+  <section style="max-width:1120px; margin:0 auto; padding:56px 40px 8px;">
+    <div style="display:flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#A67C00;">
+      <span style="width:26px; height:1px; background:var(--cc-accent); display:inline-block;"></span> 07 — Voice
+    </div>
+    <h2 style="font-family:'Zilla Slab',Georgia,serif; font-weight:700; font-size:40px; line-height:1.05; margin:18px 0 28px;">Warm, dry, and honest. Never a brand.</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:14px; padding:24px 26px;">
+        <div style="font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#345E3B; margin-bottom:14px;">Sounds like us</div>
+        <p style="font-family:'Newsreader',serif; font-size:17px; line-height:1.5; color:#2A2622; margin:0 0 12px;">"Free, indoors, and the good kind of tired-out-the-kids."</p>
+        <p style="font-family:'Newsreader',serif; font-size:17px; line-height:1.5; color:#2A2622; margin:0 0 12px;">"Skip if your crew melts down past 7 — it runs late."</p>
+        <p style="font-family:'Newsreader',serif; font-size:17px; line-height:1.5; color:#2A2622; margin:0;">"This one's worth rearranging your Saturday for."</p>
+      </div>
+      <div style="background:#fff; border:1px solid #E4DAC6; border-radius:14px; padding:24px 26px;">
+        <div style="font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#A63A28; margin-bottom:14px;">Doesn't</div>
+        <p style="font-family:'Newsreader',serif; font-size:17px; line-height:1.5; color:#8C8064; margin:0 0 12px; text-decoration:line-through; text-decoration-color:#D8B7AF;">"A wonderful family-friendly experience for all ages!"</p>
+        <p style="font-family:'Newsreader',serif; font-size:17px; line-height:1.5; color:#8C8064; margin:0 0 12px; text-decoration:line-through; text-decoration-color:#D8B7AF;">"Dive into a curated, immersive celebration."</p>
+        <p style="font-family:'Newsreader',serif; font-size:17px; line-height:1.5; color:#8C8064; margin:0; text-decoration:line-through; text-decoration-color:#D8B7AF;">"Fun for the whole family!!!"</p>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px;">
+      <div style="background:#F3EFE2; border:1px solid #E4DAC6; border-radius:14px; padding:18px 22px;"><span style="font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#345E3B;">Words we like</span><p style="font-size:14.5px; line-height:1.7; color:#4A4535; margin:8px 0 0;">worth it · skip · bring · free · hidden · the good · our pick · double-checked · call ahead</p></div>
+      <div style="background:#F3EFE2; border:1px solid #E4DAC6; border-radius:14px; padding:18px 22px;"><span style="font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#A63A28;">Words we avoid</span><p style="font-size:14.5px; line-height:1.7; color:#4A4535; margin:8px 0 0;">vibrant · curated · elevate · immersive · nestled · make memories · "something for everyone" · dive in</p></div>
+    </div>
+  </section>
+
+  <!-- ============ BEEHIIV ASSET KIT ============ -->
+  <section style="max-width:1120px; margin:0 auto; padding:56px 40px 8px;">
+    <div style="display:flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#A67C00;">
+      <span style="width:26px; height:1px; background:var(--cc-accent); display:inline-block;"></span> 08 — beehiiv Asset Kit
+    </div>
+    <h2 style="font-family:'Zilla Slab',Georgia,serif; font-weight:700; font-size:40px; line-height:1.05; margin:18px 0 6px;">Everything you upload, ready to cut.</h2>
+    <p style="font-size:15px; color:#6E6454; max-width:680px; margin:0 0 28px;">Each frame below is designed at its real export size. I can hand you these as PNGs on request.</p>
+
+    <!-- publication logo -->
+    <div id="exp-header" style="margin-bottom:20px;">
+      <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8C8064; margin-bottom:10px;">Email header / masthead · 600 × 200</div>
+      <div style="border:1px solid #E4DAC6; border-radius:14px; overflow:hidden; display:inline-block;">
+        <div style="width:600px; height:200px; background:#17150F; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; position:relative;">
+          <div style="position:absolute; inset:0; background-image:radial-gradient(circle at 1px 1px, rgba(217,164,8,0.12) 1px, transparent 0); background-size:20px 20px; opacity:0.5;"></div>
+          <svg width="40" height="40" viewBox="0 0 200 200" style="position:relative;"><defs><clipPath id="ec3"><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z"/></clipPath></defs><path d="M96 140 C78 150 66 150 54 146 C68 142 82 136 92 130 Z" fill="#345E3B"/><path d="M104 140 C122 150 134 150 146 146 C132 142 118 136 108 130 Z" fill="#345E3B"/><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z" fill="#D9A408"/><g clip-path="url(#ec3)" stroke="#17150F" stroke-width="2.4" stroke-opacity="0.82"><path d="M70 60 H130 M70 74 H130 M70 88 H130 M70 102 H130 M70 116 H130 M70 130 H130 M70 144 H130"/><path d="M82 46 V154 M100 46 V154 M118 46 V154"/></g><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z" fill="none" stroke="#17150F" stroke-width="3"/></svg>
+          <div style="position:relative; font-family:'Zilla Slab',serif; font-weight:700; font-size:30px; letter-spacing:2px; text-transform:uppercase; color:#F1ECDF;">Corn <span style="color:#D9A408;">&amp;</span> Culture Club</div>
+          <div style="position:relative; font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#D9A408;">The good stuff to do in greater Iowa City</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px;">
+      <!-- OG / social -->
+      <div id="exp-og">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8C8064; margin-bottom:10px;">Social share (OG) · 1200 × 630</div>
+        <div style="border:1px solid #E4DAC6; border-radius:14px; overflow:hidden;">
+          <div style="width:100%; aspect-ratio:1200/630; background:#F1ECDF; display:flex; flex-direction:column; justify-content:center; padding:0 8%; box-sizing:border-box; position:relative;">
+            <div style="position:absolute; top:0; left:0; right:0; height:10px; background:#D9A408;"></div>
+            <div style="display:flex; align-items:center; gap:16px;">
+              <svg width="72" height="72" viewBox="0 0 200 200"><defs><clipPath id="ec4"><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z"/></clipPath></defs><path d="M96 140 C78 150 66 150 54 146 C68 142 82 136 92 130 Z" fill="#345E3B"/><path d="M104 140 C122 150 134 150 146 146 C132 142 118 136 108 130 Z" fill="#345E3B"/><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z" fill="#D9A408"/><g clip-path="url(#ec4)" stroke="#17150F" stroke-width="2.4" stroke-opacity="0.82"><path d="M70 60 H130 M70 74 H130 M70 88 H130 M70 102 H130 M70 116 H130 M70 130 H130 M70 144 H130"/><path d="M82 46 V154 M100 46 V154 M118 46 V154"/></g><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z" fill="none" stroke="#17150F" stroke-width="3"/></svg>
+              <div style="font-family:'Work Sans',sans-serif; font-size:12px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#A67C00;">Weekly · greater Iowa City</div>
+            </div>
+            <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:min(6.5vw,52px); line-height:1.02; color:#17150F; margin-top:12px;">Corn <span style="color:#D9A408;">&amp;</span> Culture Club</div>
+            <div style="font-family:'Newsreader',serif; font-size:min(2.6vw,20px); color:#4A4535; margin-top:8px;">The good stuff to do around town — one email a week.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- subscribe cover -->
+      <div id="exp-cover">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8C8064; margin-bottom:10px;">Subscribe cover · 1200 × 1500</div>
+        <div style="border:1px solid #E4DAC6; border-radius:14px; overflow:hidden; max-width:360px;">
+          <div style="width:100%; aspect-ratio:1200/1500; background:#17150F; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; padding:10% 12%; box-sizing:border-box; position:relative; text-align:center;">
+            <div style="position:absolute; inset:0; background-image:radial-gradient(circle at 1px 1px, rgba(217,164,8,0.12) 1px, transparent 0); background-size:24px 24px; opacity:0.5;"></div>
+            <svg width="130" height="130" viewBox="0 0 200 200" style="position:relative;"><defs><clipPath id="ec5"><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z"/></clipPath></defs><circle cx="100" cy="100" r="92" fill="none" stroke="#D9A408" stroke-width="2.4"/><path d="M96 140 C78 150 66 150 54 146 C68 142 82 136 92 130 Z" fill="#345E3B"/><path d="M104 140 C122 150 134 150 146 146 C132 142 118 136 108 130 Z" fill="#345E3B"/><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z" fill="#D9A408"/><g clip-path="url(#ec5)" stroke="#17150F" stroke-width="2.4" stroke-opacity="0.82"><path d="M70 60 H130 M70 74 H130 M70 88 H130 M70 102 H130 M70 116 H130 M70 130 H130 M70 144 H130"/><path d="M82 46 V154 M100 46 V154 M118 46 V154"/></g><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z" fill="none" stroke="#17150F" stroke-width="3"/></svg>
+            <div style="position:relative; font-family:'Zilla Slab',serif; font-weight:700; font-size:32px; line-height:1.02; letter-spacing:1px; text-transform:uppercase; color:#F1ECDF;">Corn <span style="color:#D9A408;">&amp;</span> Culture Club</div>
+            <div style="position:relative; font-family:'Newsreader',serif; font-size:16px; line-height:1.5; color:#D8CFB8;">Every week, the handful of things around greater Iowa City actually worth showing up for.</div>
+            <div style="position:relative; font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:#17150F; background:#D9A408; padding:11px 22px; border-radius:8px;">Join the club — it's free</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- favicon + pub logo -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; margin-top:20px;">
+      <div id="exp-favicon">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8C8064; margin-bottom:10px;">Favicon / app icon · 512 × 512</div>
+        <div style="border:1px solid #E4DAC6; border-radius:14px; padding:24px; display:flex; align-items:center; gap:22px; background:#fff;">
+          <div style="width:120px; height:120px; border-radius:26px; background:#D9A408; display:flex; align-items:center; justify-content:center;">
+            <span style="font-family:'Zilla Slab',serif; font-weight:700; font-size:52px; color:#17150F; letter-spacing:-1px;">C<span style="font-size:34px; vertical-align:super;">&amp;</span>C</span>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="width:48px; height:48px; border-radius:11px; background:#D9A408; display:flex; align-items:center; justify-content:center;"><span style="font-family:'Zilla Slab',serif; font-weight:700; font-size:22px; color:#17150F;">C<span style="font-size:14px; vertical-align:super;">&amp;</span>C</span></div>
+            <div style="width:28px; height:28px; border-radius:7px; background:#D9A408; display:flex; align-items:center; justify-content:center;"><span style="font-family:'Zilla Slab',serif; font-weight:700; font-size:13px; color:#17150F;">C<span style="font-size:9px; vertical-align:super;">&amp;</span>C</span></div>
+          </div>
+        </div>
+      </div>
+      <div id="exp-publogo">
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8C8064; margin-bottom:10px;">Publication logo (light bg) · transparent PNG</div>
+        <div style="border:1px solid #E4DAC6; border-radius:14px; padding:30px; background:#fff; display:flex; align-items:center; justify-content:center; gap:16px;">
+          <svg width="56" height="56" viewBox="0 0 200 200"><defs><clipPath id="ec6"><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z"/></clipPath></defs><path d="M96 140 C78 150 66 150 54 146 C68 142 82 136 92 130 Z" fill="#345E3B"/><path d="M104 140 C122 150 134 150 146 146 C132 142 118 136 108 130 Z" fill="#345E3B"/><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z" fill="#D9A408"/><g clip-path="url(#ec6)" stroke="#17150F" stroke-width="2.4" stroke-opacity="0.82"><path d="M70 60 H130 M70 74 H130 M70 88 H130 M70 102 H130 M70 116 H130 M70 130 H130 M70 144 H130"/><path d="M82 46 V154 M100 46 V154 M118 46 V154"/></g><path d="M100 46 C120 46 130 62 130 96 C130 128 118 150 100 154 C82 150 70 128 70 96 C70 62 80 46 100 46 Z" fill="none" stroke="#17150F" stroke-width="3"/></svg>
+          <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:26px; letter-spacing:1px; text-transform:uppercase; color:#17150F;">Corn <span style="color:#D9A408;">&amp;</span> Culture Club</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <section style="background:#17150F; color:#B9AE93; margin-top:56px; padding:40px; text-align:center;">
+    <div style="font-family:'Zilla Slab',serif; font-weight:700; font-size:16px; letter-spacing:2px; text-transform:uppercase; color:#F1ECDF;">Corn <span style="color:#D9A408;">&amp;</span> Culture Club</div>
+    <div style="font-size:13px; margin-top:8px;">Brand &amp; Style Guide · v1 · 2026 — see you around the county.</div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1120,&quot;height&quot;:900},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#D9A408&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Brand&quot;,&quot;options&quot;:[&quot;#D9A408&quot;,&quot;#345E3B&quot;,&quot;#A63A28&quot;]},&quot;linkColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#345E3B&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Brand&quot;,&quot;options&quot;:[&quot;#345E3B&quot;,&quot;#A63A28&quot;,&quot;#17150F&quot;]}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { rootRef: (el) => { this.root = el; } };
+  }
+  componentDidMount() {
+    if (!this.root) return;
+    if (this.props.accent) this.root.style.setProperty('--cc-accent', this.props.accent);
+    if (this.props.linkColor) this.root.style.setProperty('--cc-link', this.props.linkColor);
+  }
+  componentDidUpdate() { this.componentDidMount(); }
+}
+</script>
+</body>
+</html>
