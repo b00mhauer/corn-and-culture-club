@@ -159,13 +159,15 @@ def parse_whofi(src: dict, d0: date, d1: date, cap: int = 40) -> list[Event]:
             ids.append(m)
     out: list[Event] = []
     for eid in ids[:cap]:
+        event_url = f"{host}/calendar/event/{eid}"
         try:
-            html = _get(f"{host}/calendar/event/{eid}").text
+            html = _get(event_url).text
         except requests.RequestException:
             continue
         for ev in _extract_ld_events(html):
             e = _ld_to_event(ev, src, d0, d1)
             if e:
+                e.url = event_url  # link to the event's own page, not the generic list
                 out.append(e)
     return out
 

@@ -18,29 +18,29 @@ Hot and humid to start, around 90, with afternoon storms Thursday and Friday. It
 > **Steve Hofstetter (comedy)**  `DATE NIGHT`  `NIGHT OUT`
 > Fri 7pm · Iowa City
 > A touring stand-up with a real following. Line up a sitter. Confirm the venue and tickets.
-> [details](https://littlevillage.scenethink.com/)
+> [details](https://www.facebook.com/events/25190188423972493/)
 
 > **Forest Bathing with Kayaks**  `DATE NIGHT`
 > Fri · Solon
 > A slow paddle and a guided nature walk. The rare date that isn't just dinner. Confirm the time.
-> [details](https://www.solon.lib.ia.us/)
+> [details](https://www.facebook.com/events/3290635047811649/)
 
 > **Modern Calligraphy at Bluebird Cafe**  `NIGHT OUT`
 > Tue evening · Solon
 > A hands-on class at the cafe. Good low-key hang with friends, coffee in hand. Confirm the time.
-> [details](https://www.solon.lib.ia.us/)
+> [details](https://www.facebook.com/events/1674723710518430/)
 
 > **Karaoke at Micky's**  `NIGHT OUT`
 > Fri night · North Liberty
 > The reliable no-plan plan. Grab the crew and embarrass yourselves. Confirm the start.
-> [details](https://northlibertyiowa.org/residents/community-events/)
+> [details](https://www.facebook.com/events/1687936322284987/)
 
 ## Community & Outdoors
 
 > **North Liberty Blues and BBQ**  `FREE`  `ALL AGES`
 > Sat · North Liberty
 > Live music, barbecue, and room to spread out. Works for the crew or the kids. The weekend's anchor. Confirm the start time.
-> [details](https://northlibertyiowa.org/residents/community-events/)
+> [details](https://www.facebook.com/events/994910476293550/)
 
 > **Summer of the Arts: Music on the Move**  `FREE`  `ALL AGES`
 > Wed early evening · a neighborhood park
@@ -50,24 +50,24 @@ Hot and humid to start, around 90, with afternoon storms Thursday and Friday. It
 > **Concerts in the Park: Dean and Bob Duo**  `FREE`  `ALL AGES`
 > Wed evening · Solon
 > Solon's free summer concert series, the CCA-side version of a park night. Confirm the time.
-> [details](https://www.solon.lib.ia.us/)
+> [details](https://www.facebook.com/events/1312852904022429/)
 
 > **National Fry Day at The Halal Guys**  `FREE`
 > Fri · Coralville
 > Free fries, no catch. A small, silly errand to build a Friday around. Confirm the hours.
-> [details](https://www.coralville.org/Calendar.aspx)
+> [details](https://www.facebook.com/events/1736178371011361/)
 
 ## With the Kids
 
 > **North Liberty Blues and BBQ**  `FREE`  `ALL AGES`
 > Sat · North Liberty
 > Same anchor, kid mode: music, food trucks, and grass to burn off a morning.
-> [details](https://northlibertyiowa.org/residents/community-events/)
+> [details](https://www.facebook.com/events/994910476293550/)
 
 > **Toby's Mesozoic Adventures (dinosaurs)**  `KIDS`  `AGES 5-11`
 > Mon afternoon · Tiffin
 > A dinosaur show on the CCA side. Confirm time and cost before you drive over.
-> [details](https://www.ccaschools.org/)
+> [details](https://www.facebook.com/events/1489712675794724/)
 
 > **Art Play Sundays**  `$`  `KIDS`  `AGES 0-4`  `AGES 5-11`
 > Sun 11am · Iowa Children's Museum, Coralville
@@ -77,12 +77,12 @@ Hot and humid to start, around 90, with afternoon storms Thursday and Friday. It
 > **Friday Flick: Toy Story**  `FREE`  `KIDS`  `AGES 5-11`
 > Fri 1pm · Iowa City Public Library
 > Toy Story on the big screen, indoors and cool. Your rainy-afternoon insurance.
-> [details](https://www.icpl.org/calendar)
+> [details](https://www.icpl.org/events/66358/friday-flick-toy-story)
 
 > **Make Your Own Slime**  `KIDS`  `ALL AGES`
 > Mon evening · Solon Public Library
 > Slime, made at the library, cleaned up by the library. Confirm the time.
-> [details](https://solon-ia.whofi.com/calendar/full)
+> [details](https://solon-ia.whofi.com/calendar/event/5650751)
 
 ## Free & Cheap Five
 
