@@ -145,13 +145,14 @@ sources:
     name: Iowa Children's Museum
     town: Coralville
     url: https://theicm.org/events/
-    feed: null            # VERIFY: Tribe/Modern Events Calendar often has /?ical=1
-    method: html
+    feed: https://theicm.org/events/?ical=1   # VERIFIED live — The Events Calendar ICS
+    method: ics
     tier: 1
     audience: family
     notes: >
       Coral Ridge Mall. Community events, free-admission Fridays, STEM nights.
-      Anchor family venue in the county.
+      Anchor family venue in the county. WordPress + The Events Calendar (Tribe);
+      ?ical=1 returns a clean VCALENDAR. Confirmed 30 VEVENTs on first fetch.
 
   # ------------------------------------------------------------------
   # TIER 2 — school & seasonal (add after Tier 1 pipeline is solid)
@@ -231,6 +232,20 @@ sources:
     tier: 2
     audience: general
     notes: Family matinees, Saturday morning kids' series.
+
+  - id: gabes
+    name: Gabe's
+    town: Iowa City
+    url: https://gabesiowacity.com/
+    feed: null            # VERIFY
+    method: html
+    tier: 2
+    audience: general
+    notes: >
+      Music venue. Mostly 19+/21+ shows, but all-ages/early shows and matinees
+      happen — filter for those. Principle: EVERY event venue in town has a
+      calendar worth mining; add them as discovered (Public Space One, The Mill,
+      Trumpet Blossom, etc.).
 
   - id: hancher
     name: Hancher Auditorium

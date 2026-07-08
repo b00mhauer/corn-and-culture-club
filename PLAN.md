@@ -59,6 +59,35 @@ write → preview → publish) so a new edition is created by conversation, not 
 Standing-events reference (weekly storytimes, open gyms, tot time at the rec centers) lives
 as an **evergreen page on the website**, not repeated in every email — link to it instead.
 
+## 2.5 Editorial thesis — why this isn't a calendar aggregator
+
+**The calendars are the floor, not the product.** Anyone can scrape the library and
+parks feeds; doing only that produces something sterile, bloated with junk, and — worst
+of all — it *misses the interesting stuff*, because the interesting stuff was never on an
+`.ics` feed in the first place. The reason to subscribe is not "here is everything," it's
+"here is what's actually worth your time, including things you'd never have found." The
+research engine therefore has **three jobs**, in ascending order of value:
+
+1. **Coverage (automated floor).** Pull the structured calendars so we never miss an
+   obvious big thing. Filter hard for family relevance, de-dupe, tag by age + cost. This
+   is deterministic Python. It is necessary and it is *not* the point.
+2. **Discovery (the interesting engine).** Actively hunt the non-obvious: new business
+   openings, pop-ups, one-off social occasions, a brewery's family afternoon, a farm
+   event, a maker meetup, a parent-group gathering. This lives on Instagram/Facebook,
+   local parent FB groups, Little Village's editorial picks, Reddit (r/IowaCity), and
+   reader tips — *not* on official feeds. This is where "oh cool, I didn't know about
+   that" comes from.
+3. **Curation (the soul).** Score every candidate on "would a busy parent actually
+   care?", rank, and *cut the junk*. The newsletter has a point of view — skip this, do
+   that, this one's worth rearranging your Saturday for. A calendar has no POV; that's
+   exactly why calendars are boring. This is LLM editorial judgment and it is the real
+   product.
+
+**Division of labor:** Python does the mechanical gathering (coverage) and hands up a
+*candidate pool*. The `ccc-research` skill (Claude, at edition time) does the discovery
+and the curation — the parts that require taste. Automation serves the editorial voice;
+it does not replace it.
+
 ## 3. Source map (research targets)
 
 ### Tier 1 — structured calendars, scrape every week (most have ICS/RSS)
@@ -72,10 +101,21 @@ as an **evergreen page on the website**, not repeated in every email — link to
 - University of Iowa: athletics family events (Kids' Day at Kinnick, gymnastics/wrestling meets = cheap kid entertainment), Museum of Natural History, Stanley Museum of Art family days, Pentacrest events
 - Seasonal heavy-hitters: Wilson's Orchard & Farm, Colony Pumpkin Patch, Iowa City Farmers Market, Coralville Farmers Market, Johnson County Fair (late July!), Party in the Park series, Jazz Fest / Arts Fest / Soul Fest, Rec Center pools & splash pads
 
-### Tier 3 — social & long tail (add later, costs money or scraping effort)
-- Instagram/Facebook: @thinkiowacity, @icgov, @northlibertyiowa, @theicm, @icpubliclibrary, school PTO pages, local parent Facebook groups (manual skim at first)
-- Eventbrite within ~20 miles of Iowa City; AllEvents; Macaroni KID (competitor scan — note what they miss)
-- Instagram automation via Scrape Creators API + image analysis, exactly as in the video — **deferred until Tier 1/2 pipelines are solid**, because unlike the Catskills, most family events here are on real websites first.
+### Tier 3 — the discovery lane (NOT "deferred junk" — this is the interesting engine)
+Renamed from "social & long tail." Per the editorial thesis (§2.5), this is where the
+*non-obvious* stuff lives, so it's first-class, not an afterthought. The automation is
+harder, so early editions do this via **guided Claude web search + manual skim inside the
+`ccc-research` skill**, graduating to API automation later.
+- Instagram/Facebook: @thinkiowacity, @icgov, @northlibertyiowa, @theicm, @icpubliclibrary,
+  local breweries/coffee shops/farms with family hours, school PTO pages, local parent
+  Facebook groups. (Claude web-search first; Scrape Creators API + image analysis later,
+  per the video.)
+- Reddit r/IowaCity, Little Village *editorial* features (not just their calendar),
+  new-business-opening coverage, reader tips inbox.
+- Eventbrite within ~20 miles; AllEvents; Macaroni KID (competitor scan — note what they
+  miss, because the gaps are our opportunities).
+- **Coolness beats completeness here.** One genuinely surprising find outranks twenty
+  calendar rows.
 
 All sources live in `data/sources.yaml` with per-source scrape method (`ics` / `html` /
 `api` / `manual`), so adding a source never means writing new orchestration.
@@ -158,11 +198,20 @@ skill encodes all of this in one HTML template used for both email and web.
 Repo layout above, `uv` project, `data/sources.yaml` seeded from the source map, `.gitignore`
 (secrets, scratch), `style/voice.md` v1.
 
-### Phase 1 — Research pipeline
-`fetch_ics.py` + `fetch_html.py` against **Tier 1 sources only** (start with ~8: ICPL,
-Coralville PL, North Liberty Library, Think Iowa City, Little Village, ICM, JC Conservation,
-North Liberty rec). Normalizer + dedupe + age tagging. `ccc-research` skill wrapping it all.
-**Milestone: one command produces a clean `research.json` for a real week.**
+### Phase 1 — Research pipeline (coverage floor + curation brain)
+Two halves, matching the editorial thesis:
+- **Coverage (Python):** `ccc_core.py` (schema, tagging heuristics, dedupe) + `fetch_ics.py`
+  + `fetch_weather.py` (NWS, keyless) + `build_edition.py`. Runs Tier 1 sources and emits a
+  de-duped, family-filtered, age/cost-tagged **candidate pool** → `candidates.json`.
+  (Verified live feeds so far: **ICM** `theicm.org/events/?ical=1` ✓, **NWS** weather ✓.)
+- **Curation + discovery (the `ccc-research` skill):** takes the candidate pool, then does
+  the parts that need taste — hunts the non-obvious (discovery lane), scores every
+  candidate for "would a busy parent care?", cuts junk, ranks, and writes the one-line
+  hook → `research.json`. This is the brain; the Python is just its hands.
+
+**Milestone: one command builds the candidate pool from live feeds, and the skill turns it
+into a curated `research.json` for a real week — with at least a few finds that were NOT on
+any calendar.**
 
 ### Phase 2 — Writer
 `style/voice.md` fleshed out (steal structure from Catskill Crew editions, rewrite the soul
