@@ -23,18 +23,23 @@ You do three things, in ascending order of value: **Coverage → Discovery → C
 
 ---
 
-## Step 1 — Coverage (run the floor)
+## Step 1 — Coverage + structured discovery (one command)
 
 ```bash
-uv run python scripts/build_edition.py --start <YYYY-MM-DD of the Monday> --days 7
+uv run python scripts/build_edition.py --start <YYYY-MM-DD> --days 7 --discover
 ```
 
-This writes `data/editions/<start>/candidates.json` (the de-duped, tagged candidate
-pool + NWS weather) and `research.md` (a scaffold). The candidates are calendars
-only. **Do not stop here** — this is the boring part.
+`--discover` pulls the paid sources (uses Scrape Creators credits); drop it for a
+free ICS/HTML-only run. This writes `data/editions/<start>/candidates.json`:
+- **candidates** — de-duped, tagged pool from ICS feeds (ICM), HTML/API sources
+  (Localist where reachable), AND structured **Facebook events** (the biggest
+  coverage source; town + venue queries across the county).
+- **instagram_signals** — recent post captions/images to mine for the non-obvious.
+- **weather** — NWS forecast.
 
-Read `candidates.json`. Skim `dropped_for_review` too; sometimes the junk filter is
-wrong and a real event got dropped.
+Read `candidates.json`. Skim `dropped_for_review` (the junk filter can be wrong).
+The pool is tuned for recall, so it includes some noise on purpose — your curation
+is what makes it precise. **Do not stop here.**
 
 ## Step 2 — Discovery (hunt the non-obvious — this is why people subscribe)
 

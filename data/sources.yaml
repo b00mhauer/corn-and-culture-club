@@ -194,14 +194,16 @@ sources:
     name: University of Iowa — family-friendly events
     town: Iowa City
     url: https://calendar.uiowa.edu/
-    feed: null            # VERIFY: Localist calendars expose /api and .ics
+    feed: https://calendar.uiowa.edu   # Localist JSON API base ({feed}/api/2/events)
     method: html
+    parser: localist
     tier: 2
     audience: general
     notes: >
-      Localist platform (usually has JSON API + ICS). Kids' Day at Kinnick,
-      gymnastics/wrestling meets, Museum of Natural History, Stanley Museum
-      family days, Pentacrest events. Cheap kid entertainment.
+      Localist platform, clean JSON API. Museum of Natural History, Stanley
+      Museum family days, Kids' Day at Kinnick, gymnastics/wrestling meets,
+      Pentacrest events. NOTE: this environment's proxy currently 502s on
+      calendar.uiowa.edu; the parser is correct and runs from an open network.
 
   - id: wilsons-orchard
     name: Wilson's Orchard & Farm
@@ -251,11 +253,13 @@ sources:
     name: Hancher Auditorium
     town: Iowa City
     url: https://hancher.uiowa.edu/events
-    feed: null            # VERIFY
+    feed: null            # NOT Localist — runs Tessitura ticketing; needs its own handling
     method: html
     tier: 2
     audience: general
-    notes: Family series performances; often Localist-based like calendar.uiowa.
+    notes: >
+      Family series performances. Tessitura-based (not Localist), so no simple
+      JSON API. Covered via Facebook events + web-search discovery for now.
 
   # ------------------------------------------------------------------
   # TIER 3 — social & long-tail (deferred; needs scraping effort or $)
@@ -356,24 +360,73 @@ sources:
     audience: general
     notes: ""
 
-  - id: fb-family-johnson-county
-    name: "Facebook Events — Johnson County family/kids"
-    town: county
-    fb_query: "Johnson County Iowa kids family"
-    method: facebook
-    tier: 3
-    audience: family
-    notes: Family-scoped query to surface kid-specific happenings.
-
-  # Example venue-page pull (fb_url). Add specific venue pages as discovered.
-  - id: fb-englert
-    name: "Facebook Events — The Englert Theatre (page)"
-    town: Iowa City
-    fb_url: "https://www.facebook.com/englert"
+  - id: fb-solon
+    name: "Facebook Events — Solon"
+    town: Solon
+    fb_query: "Solon Iowa"
     method: facebook
     tier: 3
     audience: general
-    notes: Pull a specific venue page's events. Verify the page URL/slug.
+    notes: ""
+
+  - id: fb-tiffin
+    name: "Facebook Events — Tiffin"
+    town: Tiffin
+    fb_query: "Tiffin Iowa"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: ""
+
+  - id: fb-johnson-county
+    name: "Facebook Events — Johnson County"
+    town: county
+    fb_query: "Johnson County Iowa"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: >
+      Broad county query. Keep queries simple place names — FB search returns
+      little for over-specific strings like "kids family".
+
+  # Venue / org searches (act like keyword searches, surface that org's events).
+  - id: fb-wilsons-orchard
+    name: "Facebook Events — Wilson's Orchard"
+    town: Iowa City
+    fb_query: "Wilson's Orchard Iowa City"
+    method: facebook
+    tier: 3
+    audience: family
+    notes: Seasonal family draw. Query-based; add fb_url once the page slug is confirmed.
+
+  - id: fb-childrens-museum
+    name: "Facebook Events — Iowa Children's Museum"
+    town: Coralville
+    fb_query: "Iowa Children's Museum"
+    method: facebook
+    tier: 3
+    audience: family
+    notes: Cross-checks the ICM ICS feed and catches events not on it.
+
+  - id: fb-summer-of-arts
+    name: "Facebook Events — Summer of the Arts"
+    town: Iowa City
+    fb_query: "Summer of the Arts Iowa City"
+    method: facebook
+    tier: 3
+    audience: family
+    notes: Free festivals + Music on the Move park concerts.
+
+  - id: fb-englert
+    name: "Facebook Events — The Englert Theatre"
+    town: Iowa City
+    fb_query: "Englert Theatre Iowa City"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: >
+      Query-based (reliable). The fb_url page-pull variant 500'd on the guessed
+      slug; add fb_url only with a confirmed numeric page id or exact slug.
 
   - id: eventbrite-ic
     name: Eventbrite — Iowa City area (~20mi)

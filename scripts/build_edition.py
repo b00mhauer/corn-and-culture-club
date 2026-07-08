@@ -21,23 +21,52 @@ import json
 import sys
 from pathlib import Path
 
+import fetch_facebook
+import fetch_html
 import fetch_ics
+import fetch_instagram
 import fetch_weather
 from ccc_core import DATA, dedupe, parse_window
 
 
-def build(start: str | None, days: int, min_relevance: int = 1) -> dict:
+def build(start: str | None, days: int, min_relevance: int = 1, discover: bool = False) -> dict:
     d0, d1 = parse_window(start, days)
 
-    raw_events, report = fetch_ics.fetch_all(d0, d1)
+    # Free coverage floor: ICS feeds + HTML/API sources (Localist, JSON-LD).
+    ics_events, ics_report = fetch_ics.fetch_all(d0, d1)
+    html_events, html_report = fetch_html.fetch_all(d0, d1)
+    report = ics_report + html_report
+    raw_events = ics_events + html_events
+
+    # Paid discovery (opt-in, uses Scrape Creators credits): structured Facebook
+    # events merge into the pool; Instagram returns caption signals for the skill.
+    fb_report: list[dict] = []
+    ig_signals: dict = {}
+    if discover:
+        try:
+            fb = fetch_facebook.fetch_all(d0, d1, max_calls=None)
+            raw_events += [_dict_to_event(e) for e in fb["events"]]
+            fb_report = fb["report"]
+        except Exception as exc:  # noqa: BLE001
+            fb_report = [{"status": "error", "error": str(exc)[:160]}]
+        try:
+            ig_signals = fetch_instagram.fetch_all(days=max(days, 21), max_handles=None)
+        except Exception as exc:  # noqa: BLE001
+            ig_signals = {"error": str(exc)[:160]}
+
     deduped = dedupe(raw_events)
 
-    # Coverage filter: drop obvious non-family + obvious non-events from the
-    # pool. Anything borderline stays IN with a flag — the skill decides, not us.
+    # Coverage filter: drop only genuine junk. Community events (festivals,
+    # markets, park concerts) often don't trip the kid-keyword heuristic but are
+    # exactly what a family newsletter wants, so DO NOT drop on family_relevance.
+    # Borderline stays IN with a flag — the curation skill decides, not this filter.
     def keep(ev) -> bool:
         if "likely_non_event" in ev.auto_flags:
             return False
-        return ev.family_relevance >= min_relevance
+        # clearly adults-only (21+ / bar shows) with zero family signal
+        if any(f.startswith("adult_signal") for f in ev.auto_flags) and ev.family_relevance == 0:
+            return False
+        return True
 
     kept = [e for e in deduped if keep(e)]
     dropped = [e for e in deduped if not keep(e)]
@@ -50,6 +79,7 @@ def build(start: str | None, days: int, min_relevance: int = 1) -> dict:
     return {
         "edition": {"start": d0.isoformat(), "end": d1.isoformat(), "days": days},
         "coverage_report": report,
+        "facebook_report": fb_report,
         "counts": {
             "raw": len(raw_events),
             "after_dedupe": len(deduped),
@@ -62,7 +92,18 @@ def build(start: str | None, days: int, min_relevance: int = 1) -> dict:
             {"title": e.title, "start": e.start, "source": e.source, "flags": e.auto_flags}
             for e in dropped
         ],
+        "instagram_signals": ig_signals,
     }
+
+
+def _dict_to_event(d: dict):
+    """Rebuild an Event from a fetch_facebook dict so it can be deduped."""
+    from dataclasses import fields
+
+    from ccc_core import Event
+
+    allowed = {f.name for f in fields(Event)}
+    return Event(**{k: v for k, v in d.items() if k in allowed})
 
 
 RESEARCH_SCAFFOLD = """# Research scaffold — edition {start} → {end}
@@ -106,10 +147,12 @@ def main() -> int:
     ap.add_argument("--start", help="YYYY-MM-DD (default: today)")
     ap.add_argument("--days", type=int, default=7)
     ap.add_argument("--min-relevance", type=int, default=1)
+    ap.add_argument("--discover", action="store_true",
+                    help="also pull Facebook events + Instagram signals (uses Scrape Creators credits)")
     ap.add_argument("--outdir", help="override output dir")
     args = ap.parse_args()
 
-    result = build(args.start, args.days, args.min_relevance)
+    result = build(args.start, args.days, args.min_relevance, discover=args.discover)
     start = result["edition"]["start"]
 
     outdir = Path(args.outdir) if args.outdir else (DATA / "editions" / start)
@@ -127,6 +170,10 @@ def main() -> int:
     print(f"Wrote {outdir}/candidates.json  ({result['counts']['kept_candidates']} candidates)")
     print(f"Wrote {outdir}/research.md      (discovery + curation scaffold)")
     print(f"Coverage report: {result['coverage_report']}")
+    if args.discover:
+        print(f"Facebook report: {result['facebook_report']}")
+        ig = result.get("instagram_signals", {})
+        print(f"Instagram: {ig.get('report', ig.get('error', 'n/a'))}")
     return 0
 
 
