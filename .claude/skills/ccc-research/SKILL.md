@@ -50,9 +50,18 @@ NOT on any calendar.** Use web search + WebFetch. Hunt across:
   `references/facebook.md` for how to actually get them). Search public FB event pages
   and venue/business pages for the week; extract with WebFetch. Many also cross-post to
   their own site or a ticketing platform we can read directly.
-- **Instagram** — venues, local breweries/coffee shops/farms with family hours, maker
-  spaces, @thinkiowacity, @theicm, school PTOs. (Manual/web-search now; Scrape Creators
-  API later, per the Catskill Crew video.)
+- **Instagram (automated — Scrape Creators is wired).** Run:
+  ```bash
+  uv run python scripts/fetch_instagram.py --days 21 --max-handles 6 > data/editions/<start>/instagram.json
+  ```
+  This pulls recent post captions + images for the curated handles in
+  `sources.yaml` (method: instagram). Local orgs routinely post **dated event
+  round-ups in captions** (e.g. @thinkiowacity's weekly list, @summerofthearts).
+  Read every caption; extract any event into an event object with
+  `"source": "discovery:ig:<handle>"` and the post URL. For **image-only flyers**
+  (`caption` empty, `is_video` false), fetch `image_url` and read the flyer text
+  yourself — you have vision; that's the video's exact move. Costs ~1 credit/handle,
+  so keep the handle list curated. See `references/instagram.md`.
 - **Reddit** r/IowaCity and local **parent Facebook groups** — word-of-mouth, pop-ups,
   the informal social occasions that never hit a calendar.
 - **New & seasonal firsts** — a new business opening a play corner, first pumpkin-patch

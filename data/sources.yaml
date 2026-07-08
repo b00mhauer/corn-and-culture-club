@@ -261,25 +261,68 @@ sources:
   # TIER 3 — social & long-tail (deferred; needs scraping effort or $)
   # ------------------------------------------------------------------
 
+  # Instagram discovery via Scrape Creators (method: instagram, needs
+  # SCRAPE_CREATORS_API_KEY in .env). These are SIGNAL sources: fetch_instagram
+  # pulls recent post captions/images; the ccc-research skill reads them and
+  # extracts real events (many local orgs post dated event lists in captions).
+  # Cost ~1 credit per handle per run. Curate hard — quality over quantity.
   - id: ig-think-iowa-city
     name: "@thinkiowacity (Instagram)"
     town: county
+    handle: thinkiowacity
     url: https://www.instagram.com/thinkiowacity/
     feed: null
-    method: manual        # later: Scrape Creators API + image analysis
+    method: instagram
     tier: 3
     audience: general
-    notes: Manual skim at first. Automate per Catskill Crew video only later.
+    notes: CVB — frequently posts dated round-ups of the week's events in captions. High value.
+
+  - id: ig-little-village
+    name: "@littlevillagemag (Instagram)"
+    town: county
+    handle: littlevillagemag
+    url: https://www.instagram.com/littlevillagemag/
+    feed: null
+    method: instagram
+    tier: 3
+    audience: general
+    notes: Alt-weekly; arts/music/culture, good for the non-obvious.
 
   - id: ig-theicm
     name: "@theicm (Instagram)"
     town: Coralville
+    handle: theicm
     url: https://www.instagram.com/theicm/
     feed: null
-    method: manual
+    method: instagram
     tier: 3
     audience: family
-    notes: Event flyers often image-only; good candidate for image analysis.
+    notes: >
+      Event flyers often image-only — good candidate for image analysis (per the
+      video). NOTE: returned 0 recent posts on first probe; verify the handle is
+      active before relying on it.
+
+  - id: ig-summer-of-the-arts
+    name: "@summerofthearts (Instagram)"
+    town: Iowa City
+    handle: summerofthearts
+    url: https://www.instagram.com/summerofthearts/
+    feed: null
+    method: instagram
+    tier: 3
+    audience: family
+    notes: Free festivals + Music on the Move park concerts. Verify handle.
+
+  - id: ig-north-liberty
+    name: "@northlibertyiowa (Instagram)"
+    town: North Liberty
+    handle: northlibertyiowa
+    url: https://www.instagram.com/northlibertyiowa/
+    feed: null
+    method: instagram
+    tier: 3
+    audience: general
+    notes: City events — Blues & BBQ, concert series, Second Saturdays. Verify handle.
 
   - id: eventbrite-ic
     name: Eventbrite — Iowa City area (~20mi)

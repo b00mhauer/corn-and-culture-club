@@ -103,13 +103,15 @@ it does not replace it.
 
 ### Tier 3 — the discovery lane (NOT "deferred junk" — this is the interesting engine)
 Renamed from "social & long tail." Per the editorial thesis (§2.5), this is where the
-*non-obvious* stuff lives, so it's first-class, not an afterthought. The automation is
-harder, so early editions do this via **guided Claude web search + manual skim inside the
-`ccc-research` skill**, graduating to API automation later.
-- Instagram/Facebook: @thinkiowacity, @icgov, @northlibertyiowa, @theicm, @icpubliclibrary,
-  local breweries/coffee shops/farms with family hours, school PTO pages, local parent
-  Facebook groups. (Claude web-search first; Scrape Creators API + image analysis later,
-  per the video.)
+*non-obvious* stuff lives, so it's first-class, not an afterthought. Uses guided Claude web
+search + manual skim inside the `ccc-research` skill, **plus automated Instagram** (below).
+- **Instagram (Scrape Creators — WIRED & LIVE):** `fetch_instagram.py` pulls recent post
+  captions + images for curated handles; the research skill extracts events (captions are
+  often dated event lists) and reads image-only flyers with vision, per the video. Verified
+  live: @thinkiowacity, @littlevillagemag, @summerofthearts. ~1 credit/handle/run; key in
+  `.env`. See `.claude/skills/ccc-research/references/instagram.md`.
+- **Facebook:** venue cross-post capture + manual-assist now; scraper API later
+  (`references/facebook.md`).
 - Reddit r/IowaCity, Little Village *editorial* features (not just their calendar),
   new-business-opening coverage, reader tips inbox.
 - Eventbrite within ~20 miles; AllEvents; Macaroni KID (competitor scan — note what they

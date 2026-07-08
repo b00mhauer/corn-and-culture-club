@@ -136,6 +136,35 @@ class Event:
 
 # --- source config -----------------------------------------------------------
 
+def load_env(path: Path | None = None) -> dict[str, str]:
+    """Minimal .env reader (no extra dep). Values already in os.environ win."""
+    import os
+
+    path = path or (REPO / ".env")
+    if path.exists():
+        for line in path.read_text().splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, v = line.split("=", 1)
+            os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+    return dict(os.environ)
+
+
+def require_key(name: str) -> str:
+    """Fetch a secret from env/.env or fail with a clear, key-free message."""
+    import os
+
+    load_env()
+    val = os.environ.get(name, "").strip()
+    if not val:
+        raise SystemExit(
+            f"Missing {name}. Add it to .env (copy .env.example). "
+            f"This source needs a paid API key; it's opt-in and off by default."
+        )
+    return val
+
+
 def load_sources(path: Path | None = None) -> list[dict]:
     path = path or (DATA / "sources.yaml")
     with open(path) as fh:
