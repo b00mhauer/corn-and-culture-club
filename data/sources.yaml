@@ -88,35 +88,45 @@ sources:
   - id: coralville-events
     name: City of Coralville — Events
     town: Coralville
-    url: https://www.coralville.org/
-    feed: null            # VERIFY
+    url: https://www.coralville.org/Calendar.aspx
+    feed: https://www.coralville.org/RSSFeed.aspx?ModID=58&CID=all   # VERIFIED CivicPlus RSS
     method: html
+    parser: civicplus_rss
     tier: 1
     audience: general
-    notes: 4thFest, farmers market, splash pads, Coral Ridge area programming.
+    notes: >
+      CivicPlus calendar RSS (verified live, 54 items). Event date is in the
+      description ("Event date: ..."), NOT pubDate (that's the post date).
+      4thFest, farmers market, splash pads, Coral Ridge area programming.
 
   # --- Aggregators (county-wide; overlap heavily, so dedupe hard) ---
   - id: think-iowa-city
     name: Think Iowa City (CVB)
     town: county
-    url: https://thinkiowacity.com/events/
-    feed: null            # VERIFY: CVB calendars often have iCal/JSON export
-    method: html
+    url: https://thinkiowacity.com/events-calendar/
+    feed: https://thinkiowacity.com/events-calendar/?ical=1   # The Events Calendar ICS
+    method: ics
     tier: 1
     audience: general
     notes: >
-      Convention & Visitors Bureau — broadest single county calendar. Great
-      coverage but promotional; cross-check against primary sources.
+      Broadest single county calendar. Actually WordPress + The Events Calendar
+      (same plugin as ICM), so ?ical=1 works — but Cloudflare 403s this env's
+      datacenter IP. Runs fine from a normal network / the real deployment.
+      JSON alt: /wp-json/tribe/events/v1/events. Cross-check vs primary sources.
 
   - id: little-village
     name: Little Village — Event Calendar
     town: county
-    url: https://littlevillage.scenethink.com/
-    feed: null            # VERIFY: SceneThink may expose a feed/API
+    url: https://little-village.scenethink.com/little-village/calendars/all-events
+    feed: https://little-village.scenethink.com/little-village/search   # VERIFIED SceneThink JSON
     method: html
+    parser: scenethink
     tier: 1
     audience: general
-    notes: Alt-weekly calendar; strong on arts, music, downtown IC.
+    notes: >
+      SceneThink JSON API (verified live, ~83 events). Alt-weekly calendar,
+      strong on arts/music/downtown IC. Covers a wide region, so the parser
+      filters to county towns via venue city. Events under events[]._source.
 
   - id: johnson-county-gov
     name: Johnson County (government) Events

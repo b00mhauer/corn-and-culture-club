@@ -141,7 +141,98 @@ def parse_jsonld(src: dict, d0: date, d1: date) -> list[Event]:
     return out
 
 
-PARSERS = {"localist": parse_localist, "jsonld": parse_jsonld}
+# --- SceneThink (Little Village) ---------------------------------------------
+
+def _local_signal(*parts: str) -> bool:
+    """True if any county-town name appears (SceneThink/aggregators bleed regional)."""
+    from ccc_core import TOWNS
+
+    hay = " ".join(p.lower() for p in parts if p)
+    if any(a.strip() in hay for al in TOWNS.values() for a in al):
+        return True
+    return "iowa city" in hay or "johnson county" in hay
+
+
+def parse_scenethink(src: dict, d0: date, d1: date) -> list[Event]:
+    body = _get(src["feed"], {"limit": 300}).json()
+    out: list[Event] = []
+    for wrap in body.get("events", []):
+        s = wrap.get("_source", {})
+        start = str(s.get("starttime", ""))
+        sday = start[:10]
+        if not sday or not (d0.isoformat() <= sday <= d1.isoformat()):
+            continue
+        venue = s.get("venue") or {}
+        vname = venue.get("name") if isinstance(venue, dict) else None
+        vcity = venue.get("city") if isinstance(venue, dict) else None
+        title = clean(s.get("name", ""))
+        if not _local_signal(vname or "", vcity or "", title):
+            continue  # drop regional bleed (Des Moines, etc.)
+        eid = s.get("id")
+        e = Event(
+            title=title,
+            start=start,
+            source=src["id"],
+            source_name=src["name"],
+            venue=clean(vname or "") or None,
+            town=vcity if vcity else None,
+            url=(f"https://little-village.scenethink.com/little-village/calendars/all-events/{eid}"
+                 if eid else src["url"]),
+            description=clean(s.get("summary") or s.get("description") or "")[:1500],
+        )
+        out.append(enrich(e, src.get("audience", "general")))
+    return out
+
+
+# --- CivicPlus event RSS (Coralville) ----------------------------------------
+
+_EVENT_DATE = re.compile(r"Event date:\s*</strong>\s*([A-Za-z]+ \d{1,2},? \d{4})", re.I)
+_EVENT_TIME = re.compile(r"Event Time:\s*</strong>\s*(\d{1,2}:\d{2}\s*[AP]M)", re.I)
+
+
+def parse_civicplus_rss(src: dict, d0: date, d1: date) -> list[Event]:
+    import xml.etree.ElementTree as ET
+    from datetime import datetime as _dt
+
+    xml = _get(src["feed"]).content
+    root = ET.fromstring(xml)
+    out: list[Event] = []
+    for item in root.findall(".//item"):
+        title = clean(item.findtext("title") or "")
+        desc = item.findtext("description") or ""
+        link = (item.findtext("link") or src["url"]).strip()
+        # The event date lives in the description, NOT in pubDate (that's the post date).
+        md = _EVENT_DATE.search(desc)
+        if not md:
+            continue
+        try:
+            day = _dt.strptime(md.group(1).replace(",", ""), "%B %d %Y").date()
+        except ValueError:
+            continue
+        if not (d0 <= day <= d1):
+            continue
+        mt = _EVENT_TIME.search(desc)
+        start = f"{day.isoformat()}T{_dt.strptime(mt.group(1).strip(), '%I:%M %p').strftime('%H:%M:%S')}" \
+            if mt else day.isoformat()
+        e = Event(
+            title=title,
+            start=start,
+            source=src["id"],
+            source_name=src["name"],
+            town=src.get("town"),
+            url=link,
+            description=clean(desc)[:1500],
+        )
+        out.append(enrich(e, src.get("audience", "general")))
+    return out
+
+
+PARSERS = {
+    "localist": parse_localist,
+    "jsonld": parse_jsonld,
+    "scenethink": parse_scenethink,
+    "civicplus_rss": parse_civicplus_rss,
+}
 
 
 def fetch_all(d0: date, d1: date, only: str | None = None) -> tuple[list[Event], list[dict]]:

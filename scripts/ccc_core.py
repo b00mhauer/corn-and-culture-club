@@ -37,7 +37,8 @@ AGE_BANDS = ("0-4", "5-11", "12-18", "all")
 
 # Towns we cover, plus loose aliases seen in venue/description text.
 TOWNS = {
-    "Iowa City": ["iowa city", "ic ", "downtown ic", "ped mall", "pedestrian mall"],
+    # NB: no bare "ic " alias — it false-matches "botaniC Garden", "musiC ", etc.
+    "Iowa City": ["iowa city", "downtown ic", "ped mall", "pedestrian mall"],
     "Coralville": ["coralville", "coral ridge"],
     "North Liberty": ["north liberty"],
     "Solon": ["solon"],
