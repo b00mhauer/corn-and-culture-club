@@ -344,6 +344,34 @@ def search_url(title: str, town: str | None = None, when: str | None = None) -> 
     return f"https://www.google.com/search?q={quote_plus(q)}"
 
 
+def to_central(ts: float | None = None, iso: str | None = None) -> str:
+    """Normalize a time to America/Chicago local ISO (no tz suffix).
+
+    Source times arrive in a mess of zones: Facebook gives a UTC unix timestamp,
+    WhoFi/Localist give offset-aware ISO, some feeds give naive strings. Storing
+    UTC put evening events on the wrong DAY (an 8:30pm CDT show became 1:30am the
+    next day). Everything local-Central fixes both the time and the date.
+    """
+    from datetime import datetime, timezone
+    from zoneinfo import ZoneInfo
+
+    central = ZoneInfo("America/Chicago")
+    if ts is not None:
+        dt = datetime.fromtimestamp(ts, tz=timezone.utc)
+    elif iso:
+        from dateutil import parser as _dp
+
+        try:
+            dt = _dp.parse(iso)
+        except (ValueError, TypeError):
+            return iso
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)  # assume UTC when unspecified
+    else:
+        return ""
+    return dt.astimezone(central).replace(tzinfo=None).isoformat()
+
+
 def clean(text: str | None) -> str:
     if not text:
         return ""

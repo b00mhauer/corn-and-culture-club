@@ -35,6 +35,7 @@ from ccc_core import (
     enrich,
     parse_window,
     sources_by,
+    to_central,
 )
 
 
@@ -61,7 +62,7 @@ def parse_localist(src: dict, d0: date, d1: date) -> list[Event]:
         insts = ev.get("event_instances") or []
         start = ""
         if insts:
-            start = insts[0].get("event_instance", {}).get("start", "")
+            start = to_central(iso=insts[0].get("event_instance", {}).get("start", "") or None)
         sday = start[:10]
         if not (d0.isoformat() <= sday <= d1.isoformat()):
             continue
@@ -103,7 +104,7 @@ def _walk_ld(node, found: list[dict]) -> None:
 
 def _ld_to_event(ev: dict, src: dict, d0: date, d1: date) -> Event | None:
     """Convert one schema.org Event object to our Event (windowed)."""
-    start = str(ev.get("startDate", ""))
+    start = to_central(iso=str(ev.get("startDate", "")) or None)
     sday = start[:10]
     if not sday or not (d0.isoformat() <= sday <= d1.isoformat()):
         return None
@@ -242,7 +243,7 @@ def parse_scenethink(src: dict, d0: date, d1: date) -> list[Event]:
     out: list[Event] = []
     for wrap in body.get("events", []):
         s = wrap.get("_source", {})
-        start = str(s.get("starttime", ""))
+        start = to_central(iso=str(s.get("starttime", "")) or None)
         sday = start[:10]
         if not sday or not (d0.isoformat() <= sday <= d1.isoformat()):
             continue

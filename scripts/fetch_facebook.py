@@ -19,7 +19,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import date, datetime, timezone
+from datetime import date
 
 import requests
 
@@ -33,6 +33,7 @@ from ccc_core import (
     guess_town,
     parse_window,
     require_key,
+    to_central,
 )
 
 SEARCH = "https://api.scrapecreators.com/v1/facebook/events/search"
@@ -40,10 +41,9 @@ PAGE = "https://api.scrapecreators.com/v1/facebook/events"
 
 
 def _local_date(ts: int | None) -> str:
-    if not ts:
-        return ""
-    # FB timestamps are UTC seconds; date-level is all we need for windowing.
-    return datetime.fromtimestamp(ts, tz=timezone.utc).isoformat()
+    # FB timestamps are UTC seconds; store as America/Chicago local (fixes the
+    # day/time, e.g. an 8:30pm CDT show is 01:30 UTC the next day).
+    return to_central(ts=ts) if ts else ""
 
 
 def _in_county(place_name: str, title: str) -> bool:
@@ -68,8 +68,8 @@ def _to_event(raw: dict, source_id: str, d0: date, d1: date) -> Event | None:
         return None
     ts = raw.get("start_timestamp")
     start_iso = _local_date(ts)
-    if ts:
-        sday = datetime.fromtimestamp(ts, tz=timezone.utc).date()
+    if start_iso:
+        sday = date.fromisoformat(start_iso[:10])  # Central date
         if not (d0 <= sday <= d1):
             return None
 

@@ -87,7 +87,12 @@ Rules:
 - Chips are backtick tokens on the name line. Mode: `DATE NIGHT`, `NIGHT OUT`, `KIDS`,
   `ALL AGES`. Cost: `FREE` (green), `$`/`$$` (gold). Age (for kids items): `AGES 0-4` etc.
   All outlined except FREE/`$`. No emoji chips.
-- Meta line is plain: `Fri 7pm · Venue, Town`. The renderer uppercases it.
+- Meta line is plain: `Fri 7:00pm · Venue, Town`. The renderer uppercases it. **State the
+  real time** — it's in the event data (`start`, now normalized to Central, and FB's
+  `when_text`). Do NOT write "confirm the time" as a reflex; that reads lazy and
+  uncredible. Only add a note when a detail is *genuinely variable*, and make it useful and
+  specific ("the park rotates weekly, this week's is on the X calendar"), not a blanket
+  hedge. Never invent a time, venue, or price to fill a gap — omit what you don't know.
 - Every card ends with a link. Preference order:
   1. The event's OWN page when it's a real one (a Facebook event `/events/<id>`, an
      ICPL `/events/<id>/<slug>`, a venue event page, a `Calendar.aspx?EID=` link).
