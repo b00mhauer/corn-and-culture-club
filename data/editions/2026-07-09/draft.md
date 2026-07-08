@@ -1,143 +1,113 @@
 ---
-subject: "Storytimes in the park, a Toy Story matinee, and Blues & BBQ"
-preheader: "Hot week with afternoon storms. The good stuff is mostly free and mostly outdoors."
+subject: "Comedy, BBQ, two park concerts, and a dinosaur show"
+preheader: "Date night, a night with friends, or the kids in tow. Something for the whole week."
 edition_start: "2026-07-09"
 holds: []
 ---
 
 ## The Huddle
 
-Deep summer, and the libraries are carrying the week. Storytime has moved out to the parks most mornings, there's a Toy Story matinee for a hot afternoon, and North Liberty's Blues and BBQ anchors Saturday. Most of what is worth doing is free. A few times below still need a quick confirm, and those are marked.
+A good week whatever mode you're in. There's a comedy show and a couple of low-key date nights, North Liberty's Blues and BBQ for the whole crew on Saturday, free live music in two parks, and if the kids are with you, a dinosaur show and a slime lab. Most of it is free or close to it. A few times still need a quick confirm, marked below.
 
 ## The Forecast
 
-Hot and humid to start, around 90 with afternoon storms likely Thursday and Friday. It settles down and cools off by the weekend. Early in the week is splash pad and shade. Check the radar before any outdoor plan, and keep an indoor backup ready.
+Hot and humid to start, around 90, with afternoon storms Thursday and Friday. It cools off and settles down for the weekend, which is patio-and-park weather and good timing for the barbecue. Check the radar before anything outdoors and keep a backup in your pocket.
 
-## The Week Ahead
+## Date Night & Out With Friends
 
-**Thursday, July 9**
+> **Steve Hofstetter (comedy)**  `DATE NIGHT`  `NIGHT OUT`
+> Fri 7pm · Iowa City
+> A touring stand-up with a real following. Line up a sitter. Confirm the venue and tickets.
+> [details](https://littlevillage.scenethink.com/)
 
-> **Play Daze at Calder Park**  `FREE`  `AGES 0-4`  `AGES 5-11`
-> Thu 10am · Calder Park, Iowa City
-> Free drop-in play at the park, run by the library. Bring water and let them loose.
-> [details](https://www.icpl.org/calendar)
+> **Forest Bathing with Kayaks**  `DATE NIGHT`
+> Fri · Solon
+> A slow paddle and a guided nature walk. The rare date that isn't just dinner. Confirm the time.
+> [details](https://www.solon.lib.ia.us/)
 
-> **Wee Read for babies and toddlers**  `FREE`  `AGES 0-4`
-> Thu 10:30am · Coralville Public Library
-> The under-2 crowd's morning out. Songs, board books, and other tired parents.
-> [details](https://www.coralville.org/Calendar.aspx)
+> **Modern Calligraphy at Bluebird Cafe**  `NIGHT OUT`
+> Tue evening · Solon
+> A hands-on class at the cafe. Good low-key hang with friends, coffee in hand. Confirm the time.
+> [details](https://www.solon.lib.ia.us/)
 
-> **Party in the Park at Calder Park**  `FREE`  `ALL AGES`
-> Thu evening · Calder Park, Iowa City
-> Free activities in the park after dinner. A good way to wear everyone out before bed.
-> [details](https://www.icpl.org/calendar)
+> **Karaoke at Micky's**  `NIGHT OUT`
+> Fri night · North Liberty
+> The reliable no-plan plan. Grab the crew and embarrass yourselves. Confirm the start.
+> [details](https://northlibertyiowa.org/residents/community-events/)
 
-**Friday, July 10**
-
-> **Stories in the Park at Mercer Park**  `FREE`  `AGES 0-4`  `AGES 5-11`
-> Fri 9:30am · Mercer Park, Iowa City
-> Storytime outdoors, early enough to beat the heat. Stay for the playground after.
-> [details](https://www.icpl.org/calendar)
-
-> **Friday Flick: Toy Story**  `FREE`  `AGES 5-11`
-> Fri 1pm · Iowa City Public Library
-> Toy Story on the big screen, indoors and air-conditioned. The rainy-afternoon backup.
-> [details](https://www.icpl.org/calendar)
-
-**Saturday, July 11**
+## Community & Outdoors
 
 > **North Liberty Blues and BBQ**  `FREE`  `ALL AGES`
 > Sat · North Liberty
-> Live music, barbecue, and room to run. The weekend's anchor. Confirm the start time before you go.
+> Live music, barbecue, and room to spread out. Works for the crew or the kids. The weekend's anchor. Confirm the start time.
 > [details](https://northlibertyiowa.org/residents/community-events/)
 
-> **Latin American Music and Storytelling**  `FREE`  `ALL AGES`
-> Sat 10:30am · Iowa City Public Library
-> Music and stories together, all ages, free and indoors if the morning is hot.
-> [details](https://www.icpl.org/calendar)
+> **Summer of the Arts: Music on the Move**  `FREE`  `ALL AGES`
+> Wed early evening · a neighborhood park
+> Free live music in a park. Blanket, dinner, done before dark. Confirm which park this week.
+> [details](https://www.summerofthearts.org/)
 
-> **Guided Hike through F.W. Kent Park**  `$`  `AGES 5-11`
-> Sat 9am · F.W. Kent Park, Oxford
-> A led hike with a naturalist along. Good for kids who like to know what they're looking at.
-> [details](https://www.icpl.org/calendar)
+> **Concerts in the Park: Dean and Bob Duo**  `FREE`  `ALL AGES`
+> Wed evening · Solon
+> Solon's free summer concert series, the CCA-side version of a park night. Confirm the time.
+> [details](https://www.solon.lib.ia.us/)
 
-**Sunday, July 12**
+> **National Fry Day at The Halal Guys**  `FREE`
+> Fri · Coralville
+> Free fries, no catch. A small, silly errand to build a Friday around. Confirm the hours.
+> [details](https://www.coralville.org/Calendar.aspx)
 
-> **Art Play Sundays**  `$`  `AGES 0-4`  `AGES 5-11`
+## With the Kids
+
+> **North Liberty Blues and BBQ**  `FREE`  `ALL AGES`
+> Sat · North Liberty
+> Same anchor, kid mode: music, food trucks, and grass to burn off a morning.
+> [details](https://northlibertyiowa.org/residents/community-events/)
+
+> **Toby's Mesozoic Adventures (dinosaurs)**  `KIDS`  `AGES 5-11`
+> Mon afternoon · Tiffin
+> A dinosaur show on the CCA side. Confirm time and cost before you drive over.
+> [details](https://www.ccaschools.org/)
+
+> **Art Play Sundays**  `$`  `KIDS`  `AGES 0-4`  `AGES 5-11`
 > Sun 11am · Iowa Children's Museum, Coralville
 > Open, messy art with no cleanup on you. A good Sunday if the weather turns.
 > [details](https://theicm.org/event/art-play-sundays-2/)
 
-> **Sunday Fun Day: Popsicle Craft**  `FREE`  `AGES 5-11`
-> Sun 2pm · Iowa City Public Library
-> A simple afternoon craft at the library. In and out, nothing to buy.
+> **Friday Flick: Toy Story**  `FREE`  `KIDS`  `AGES 5-11`
+> Fri 1pm · Iowa City Public Library
+> Toy Story on the big screen, indoors and cool. Your rainy-afternoon insurance.
 > [details](https://www.icpl.org/calendar)
 
-**Monday, July 13**
-
-> **Toby's Mesozoic Adventures (dinosaurs)**  `AGES 5-11`
-> Mon afternoon · Tiffin
-> A dinosaur show for the CCA side of the county. Confirm time and cost before you drive over.
-> [details](https://www.ccaschools.org/)
-
-> **Game On Club: D&D Meetup**  `$`  `AGES 5-11`
-> Mon 3pm · Iowa City Public Library
-> A kid-level Dungeons and Dragons meetup. For the ones who are into it, they are all the way in.
-> [details](https://www.icpl.org/calendar)
-
-> **Make Your Own Slime**  `ALL AGES`
+> **Make Your Own Slime**  `KIDS`  `ALL AGES`
 > Mon evening · Solon Public Library
 > Slime, made at the library, cleaned up by the library. Confirm the time.
 > [details](https://solon-ia.whofi.com/calendar/full)
 
-**Tuesday, July 14**
-
-> **How-To Tuesday: Sew a Stuffie**  `FREE`  `AGES 5-11`
-> Tue 1pm · Iowa City Public Library
-> Kids sew a small stuffed animal to take home. A real skill and a keepsake.
-> [details](https://www.icpl.org/calendar)
-
-> **Kids Switch Party: Mario Kart and Just Dance**  `AGES 5-11`
-> Tue afternoon · Solon Public Library
-> Mario Kart and Just Dance on the big screen. Confirm the time.
-> [details](https://solon-ia.whofi.com/calendar/full)
-
-**Wednesday, July 15**
-
-> **Music on the Move**  `FREE`  `ALL AGES`
-> Wed early evening · a neighborhood park
-> Free live music in a park. Pack a blanket and dinner. Confirm which park this week.
-> [details](https://www.summerofthearts.org/)
-
-> **Wildcard Wednesday: Toad Abode**  `AGES 5-11`
-> Wed 1pm · Coralville Public Library
-> Build a little backyard toad house. Odd, hands-on, and the kind of thing kids remember.
-> [details](https://www.coralville.org/Calendar.aspx)
-
 ## Free & Cheap Five
 
 1. **Blues and BBQ, North Liberty (Sat).** Music, food, and room to run. Build the weekend around it.
-2. **Stories in the Park (Fri).** Free storytime plus a new playground, done before the heat.
-3. **Play Daze at Calder Park (Thu).** Free drop-in play, then Party in the Park the same evening.
-4. **Music on the Move (Wed).** A free park concert that ends before bedtime.
-5. **Friday Flick: Toy Story (Fri).** Free, indoors, and a fair-weather insurance policy.
+2. **Music on the Move (Wed).** A free park concert on the Iowa City side.
+3. **Concerts in the Park, Solon (Wed).** The free park concert on the CCA side.
+4. **Karaoke at Micky's (Fri).** The cheapest night out there is, if the crew's around.
+5. **National Fry Day (Fri).** Free fries. Sometimes that is the whole plan.
 
 ## School Notes
 
 Summer break runs on, nothing due this week. Fall registration and back-to-school dates land soon, and this section will carry the ICCSD, Clear Creek Amana, and Solon deadlines as the districts post them.
 
-## The Deep Dive: Stories in the Park is the summer sleeper
+## The Deep Dive: Solon Beef Days is next weekend
 
-Most parents know the library's indoor storytime. Fewer know that in the summer the library takes it outside, to a rotating list of parks most mornings. This week it is Mercer Park on Friday and Willow Creek on Monday, usually around 9:30.
+Block off next weekend. Solon Beef Days runs July 17 to 19, and it is the kind of small-town festival that turns a whole town into a fairground: a parade, a carnival, live music, a 5K, a beer tent, and a lot of beef.
 
-Here is why it is worth the early alarm. A 20-minute storytime turns into a whole morning. You get the songs and the books, and then you are already at a playground you might not visit otherwise, before the heat sets in and before the crowds. It is free, there is no registration, and if your kid melts down halfway through, you just walk to the swings. Rotating the park each week also solves the summer problem of running out of new places to go.
+It flexes to whatever mode you're in. With friends, the evenings are the draw, with bands and the beer tent and the run if you're feeling it. With the kids, the daytime is the sweet spot, parade and carnival rides and calmer crowds before the evening fills in. Either way, parking gets tight, so walk or bike in if you're close, and bring cash and sunscreen.
 
-Bring water, bug spray, and a blanket to sit on. Check the library's calendar the night before, since a storm can move it indoors. If mornings are hard at your house, the same storytime runs indoors later in the week, air-conditioned, no bug spray required.
+We'll run the confirmed 2026 daily schedule and our picks next week. For now, just know it's coming, and the good early hours go fast.
 
 ## The Bulletin
 
-- **Rain plan, always on.** The Iowa Children's Museum in Coralville runs member drop-in hours most mornings. A reliable place to burn off a stormy day.
-- **Got a tip?** A pop-up, a new play spot, a place worth knowing. Reply and tell us.
-- **Times marked "confirm"** come from event pages we could not fully verify. Call ahead before you load the car.
+- **Library storytimes, most mornings.** ICPL takes storytime to the parks in summer (Mercer Park Friday, Willow Creek Monday, around 9:30), and every library in the county runs baby, toddler, and family times through the week. Full list on our [standing-events page].
+- **Rain plan, always on.** The Iowa Children's Museum in Coralville runs member drop-in hours most mornings.
+- **Got a tip?** A show, a pop-up, a new patio, a place worth knowing. Reply and tell us.
 
 See you around the county.

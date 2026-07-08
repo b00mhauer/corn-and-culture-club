@@ -86,9 +86,25 @@ Record each discovery as an event object (same schema as candidates), with
 
 Now be the editor. For every candidate AND discovery:
 
-1. **Would a busy parent actually care?** If not, cut it. Be ruthless — better to send
-   eight great things than forty rows. Cut duplicates, filler, closures, and
-   `age_uncertain` items you can't resolve.
+0. **Cover the whole life, and balance the mix.** The reader is a connected local adult
+   (see `style/voice.md`), not just a parent. Every edition should span the modes:
+   - **Date night / grown-up:** shows, comedy, live music, a dinner, wine-and-paint, a
+     brewery release.
+   - **Out with friends:** trivia, a band, a patio, karaoke, a run club, a festival.
+   - **Family & kids:** storytimes, museums, park programs, kid shows (tag by age).
+   - **Community & outdoors:** festivals, farmers markets, concerts in the park, fairs.
+   Tag each kept event with who it's for (chips like `DATE NIGHT`, `NIGHT OUT`, `KIDS`,
+   `ALL AGES`). Do NOT drop "adult" events — comedy, breweries, bars are in scope.
+   - **Lead with the interesting one-offs**, not the recurring calendar filler. A comedy
+     show, a festival, a concert in the park, a new opening beats the fifth storytime.
+   - **Cap recurring library/storytime items** at ~2–3 in Week Ahead; collapse the rest
+     ("storytimes run most mornings — full list on the standing-events page"). Libraries
+     are the reliable floor, never the whole edition.
+   - Aim for a spread across modes, sources, and towns — not 90% from one calendar.
+1. **Would this reader actually care?** If not, cut it. Be ruthless — better eight great
+   things than forty rows. Cut duplicates, closures, government admin meetings, and
+   private/members-only holds. But do NOT cut a good night-out or social event just
+   because the coarse score is low — those scores under-rate adult and community events.
 2. **Fix the auto-tags.** The Python guesses coarsely. Trust your read of the
    description over the heuristic for `age_bands`, `cost`/`is_free`, `town`.
 3. **Score `interest_score` 1–5.** 5 = "rearrange your Saturday." 1 = "fine, filler."

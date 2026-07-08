@@ -63,22 +63,36 @@ Translate `weather_summary` into decisions, not meteorology. 2 to 3 sentences. N
 specific backup plan. "Saturday is the question mark. If it holds, it is a market day.
 If not, the Children's Museum is the backup."
 
-### The Week Ahead
-The heart of it. Group `section: week_ahead` events **by day**. Day heading is a lone
-bold line (`**Friday, July 10**`). Each event is one blockquote card:
+### The Week Ahead — grouped by MODE (not by day)
+The heart of it. The reader is a connected local adult (see `style/voice.md`), so group
+events by what mode they're in, using `## H2` sections. Use whichever of these apply this
+week (skip an empty one); order them by where the week's strongest stuff is:
 
-> **Event Name**  `FREE`  `AGES 0-4`
+- **## Date Night & Out With Friends** — shows, comedy, live music, dinners, wine-and-paint,
+  breweries, trivia, karaoke, a run club.
+- **## Community & Outdoors** — festivals, farmers markets, concerts in the park, fairs,
+  fireworks, town celebrations.
+- **## With the Kids** — storytimes (capped), museums, park programs, kid shows.
+
+An event that works for more than one mode can appear in two sections with a different
+hook each (e.g. Blues & BBQ as both a crew night and a kids' afternoon). Each event is one
+blockquote card:
+
+> **Event Name**  `DATE NIGHT`  `FREE`
 > Day time · Venue, Town
-> One plain line on what it is and why it's worth the trip (from the research `hook`).
+> One plain line on what it is and why it's worth it (from the research `hook`).
 > [details](url)
 
 Rules:
-- Chips are backtick tokens on the name line: `FREE` (green), `$`/`$$` (gold),
-  `ALL AGES` / `AGES 0-4` / `AGES 5-11` / `AGES 12-18` (outlined). No emoji chips.
-- Meta line is plain: `Sat 10am · Venue, Town`. The renderer uppercases it.
+- Chips are backtick tokens on the name line. Mode: `DATE NIGHT`, `NIGHT OUT`, `KIDS`,
+  `ALL AGES`. Cost: `FREE` (green), `$`/`$$` (gold). Age (for kids items): `AGES 0-4` etc.
+  All outlined except FREE/`$`. No emoji chips.
+- Meta line is plain: `Fri 7pm · Venue, Town`. The renderer uppercases it.
 - Every card ends with a source link. No link, it doesn't run.
 - `needs_confirm` items get a plain hedge ("Confirm the time before you go").
 - Lead the hook with the point. Keep it to one or two short sentences.
+- **Cap recurring library/storytime items** (~2-3, or collapse to the Bulletin). Lead each
+  section with the interesting one-offs, not the calendar filler.
 
 ### Free & Cheap Five
 Pull the five `free_cheap_five: true` events into a plain ranked list. Front-end bold

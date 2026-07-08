@@ -92,6 +92,17 @@ _FAMILY_POSITIVE = [
     "craft", "lego", "stem", "petting", "pumpkin", "trick or treat", "santa",
     "egg hunt", "read", "playground", "splash", "carousel", "zoo", "animal",
 ]
+# Community/social occasions that are family-friendly even without kid words.
+# These are the *interesting* events (the whole point of the newsletter), and the
+# kid-keyword list above scores them 0, which biases curation toward libraries.
+# This signal keeps them in contention. NB: kept outdoor/community-flavored so it
+# doesn't sweep in bar shows (those get caught by _ADULT_SIGNALS).
+_SOCIAL_POSITIVE = [
+    "festival", "fair", "parade", "farmers market", "market", "in the park",
+    "party in the park", "block party", "bbq", "barbecue", "fireworks",
+    "concert", "live music", "music in the park", "food truck", "celebration",
+    "community", "beef days", "summer social", "art walk", "open house",
+]
 # Words that suggest adults-only unless "family" also present.
 _ADULT_SIGNALS = [
     "21+", "21 and over", "wine", "cocktail", "beer tasting", "happy hour",
@@ -219,9 +230,15 @@ def guess_town(text: str, default: str | None = None) -> str | None:
 
 
 def score_family_relevance(text: str, source_audience: str) -> tuple[int, list[str]]:
-    """Coarse 0..3. Flags uncertain calls for the skill/human to review."""
+    """Coarse 0..3. Flags uncertain calls for the skill/human to review.
+
+    Rewards both explicit kid-programming AND community-social occasions, so a
+    free concert-in-the-park isn't scored 0 next to a library storytime. A
+    `social_event` flag marks the community picks so curation can feature them.
+    """
     flags: list[str] = []
     pos = sum(1 for k in _FAMILY_POSITIVE if k in text)
+    social = [k for k in _SOCIAL_POSITIVE if k in text]
     adult = [k for k in _ADULT_SIGNALS if k in text]
     has_family_word = any(k in text for k in ("family", "all ages", "kid", "child"))
 
@@ -229,8 +246,11 @@ def score_family_relevance(text: str, source_audience: str) -> tuple[int, list[s
     if source_audience == "family":
         score += 1  # source is a family venue → baseline lean
     score += min(pos, 2)  # up to +2 for kid words
+    if social:
+        score += 1  # a community/social occasion counts too
+        flags.append("social_event")
 
-    if adult and not has_family_word:
+    if adult and not has_family_word and not social:
         score = max(0, score - 2)
         flags.append(f"adult_signal:{adult[0]}")
     if score == 0:

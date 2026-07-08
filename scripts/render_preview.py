@@ -194,7 +194,7 @@ TEMPLATE = """<!doctype html>
         <td align="right" style="font-family:{sans};font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:{muted};">{week}</td>
       </tr></table>
       <div style="border-top:2px solid {ink};margin-top:10px;"></div>
-      <div style="font-family:{sans};font-size:11px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:{muted};padding-top:8px;">The good stuff to do with your kids in Johnson County, Iowa</div>
+      <div style="font-family:{sans};font-size:11px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:{muted};padding-top:8px;">The good stuff to do in Johnson County, Iowa</div>
     </td></tr>
     <!-- body -->
     <tr><td class="pad" style="padding:8px 4px 8px;">
@@ -204,7 +204,7 @@ TEMPLATE = """<!doctype html>
     <tr><td style="padding:34px 4px 10px;color:{muted};font-size:12px;line-height:1.7;">
       <div style="border-top:1px solid {line};margin-bottom:18px;"></div>
       <span style="font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:{ink};">Corn &amp; Culture Club</span><br>
-      Johnson County, Iowa. Written for parents, by a local who did the legwork.<br>
+      Johnson County, Iowa. The good stuff to do, from a local who did the legwork.<br>
       Reply with a tip. Forward to a fellow parent.
     </td></tr>
   </table>

@@ -56,17 +56,13 @@ def build(start: str | None, days: int, min_relevance: int = 1, discover: bool =
 
     deduped = dedupe(raw_events)
 
-    # Coverage filter: drop only genuine junk. Community events (festivals,
-    # markets, park concerts) often don't trip the kid-keyword heuristic but are
-    # exactly what a family newsletter wants, so DO NOT drop on family_relevance.
-    # Borderline stays IN with a flag — the curation skill decides, not this filter.
+    # Coverage filter: drop ONLY genuine non-events (closures, admin). The
+    # audience is a connected local adult — date nights, friends, family, and
+    # community are ALL in scope, so we do NOT drop "adult" events. That was the
+    # old kids-only mistake. Curation decides what's interesting; this just cuts
+    # things that aren't events at all.
     def keep(ev) -> bool:
-        if "likely_non_event" in ev.auto_flags:
-            return False
-        # clearly adults-only (21+ / bar shows) with zero family signal
-        if any(f.startswith("adult_signal") for f in ev.auto_flags) and ev.family_relevance == 0:
-            return False
-        return True
+        return "likely_non_event" not in ev.auto_flags
 
     kept = [e for e in deduped if keep(e)]
     dropped = [e for e in deduped if not keep(e)]

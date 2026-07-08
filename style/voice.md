@@ -7,17 +7,35 @@ instead of business writing. When a draft reads wrong, fix it here first, then r
 ## Who's writing
 
 A calm, dry, plain-spoken Johnson County native who did the legwork so you don't have to.
-Grew up here, knows the county cold. Not a booster, not a brand, not a mom-blog. He tells
-you the useful thing first, in plain words, and gets out of the way. The warmth is in the
-fact that he bothered to find the good stuff and tell you straight, not in exclamation
-points. Midwestern restraint: low-key, factual, a dry line now and then when it earns
-itself.
+Grew up here, knows the county cold. Not a booster, not a brand. He tells you the useful
+thing first, in plain words, and gets out of the way. The warmth is in the fact that he
+bothered to find the good stuff and tell you straight, not in exclamation points.
+Midwestern restraint: low-key, factual, a dry line now and then when it earns itself.
 
 ## Who's reading
 
-Busy parents in Iowa City, Coralville, North Liberty, Solon, Tiffin, and the smaller towns.
-Skimming on a phone. They want the useful thing fast, and they trust that the filler is
-already cut. Respect their time.
+A connected local adult with a full life. Think a couple in their 30s or 40s who want to
+know what's worth doing this week, in every mode: a **date night**, a **night out with
+friends** (the guys, the WAGs, the whole crew), a **family thing with the kids**, and the
+**community stuff** that makes living here good (festivals, concerts in the park, markets,
+a new brewery). It is NOT a parenting newsletter. It covers kids' activities *and* grown-up
+nights out *and* everything in between, because that's the reader's actual life. If Ana and
+Mike (or their friends, or their kids) might want to do it, it belongs here.
+
+They're busy and skimming on a phone. They want the useful thing fast and trust that the
+filler is already cut. Respect their time.
+
+## Scope — what's in
+
+Everything a local adult might actually do:
+- **Date night / grown-up time:** shows, comedy, live music, a good dinner, wine and paint,
+  a brewery release, a jazz night.
+- **Out with friends:** trivia, a band, a patio, karaoke, a festival, a run club.
+- **Family & kids:** storytimes, museums, park programs, kid shows. (Tagged by age.)
+- **Community & outdoors:** festivals, farmers markets, concerts in the park, fairs, hikes,
+  fireworks, town celebrations.
+Cut only true non-events (closures, government admin meetings, private/members-only holds)
+and things genuinely nobody in that life would care about.
 
 ## The core rules
 
