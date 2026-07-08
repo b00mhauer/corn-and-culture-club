@@ -1,65 +1,90 @@
-# Corn & Culture Club — Design System
+# Corn & Culture Club — Design System (v2)
 
-Modern, clean, editorial. The reference points are local brands that already read
-right here: **Big Grove Brewery**, **Wilson's Orchard & Farm**, **Field Day**, and
-**Hawkeye black-and-gold**. That means: confident type, restrained natural palette,
-lots of whitespace, hairline rules, and almost no ornament. Not rustic, not folksy,
-not emoji-laden. The `ccc-preview` skill encodes this in one HTML template
-(`scripts/render_preview.py`).
+> Drop-in replacement for `style/design-system.md` in the repo. This supersedes the v1
+> seed. It matches the brand kit in `Brand & Style Guide.dc.html` and the exported
+> `/assets`. The ccc-preview skill should encode the **email-safe** column of Type below;
+> the web archive + signup page may use the brand webfonts.
 
-## Principles
+## Positioning
 
-- **Modern and quiet.** Whitespace and type do the work. If a divider, badge, or
-  emoji isn't earning its place, cut it.
-- **One accent, used with discipline.** Deep green primary, gold secondary. Not both
-  loud at once.
-- **Editorial, not decorative.** Uppercase eyebrow labels, a newspaper-style
-  nameplate, flat cards. It should look like a well-made local magazine, not a
-  scrapbook.
-- **No emoji as structure.** No corn dividers, no emoji age icons. (A rare emoji in
-  body copy is fine if it's genuinely useful, but the chrome stays clean.)
+A social club and weekly newsletter for people in their late thirties around **greater
+Iowa City**. Going-out and culture first — date nights, nights out with friends — with a
+kids-in-tow lane as one tagged facet, not the whole product. Voice: a well-connected
+neighbor with a good memory and a spreadsheet. Curated, not aggregated.
 
-## Palette
+**Tagline (primary):** Ears to the ground on the good stuff around town.
+**Tagline (utility/descriptive):** The good stuff to do in greater Iowa City.
+
+## Feel
+
+Modern-editorial with vintage-Midwest warmth. Warm paper, dark ink, one bright kernel of
+gold. Single column, big slab section headers, clean **line-icon dividers (no emoji)**,
+generous whitespace. Confident but never breathless.
+
+## Palette (tokens)
 
 | Token | Hex | Use |
 |---|---|---|
-| `bg` | `#F4F1EA` | warm bone background |
-| `surface` | `#FFFFFF` | cards |
-| `ink` | `#1B1A17` | near-black text, nameplate |
-| `muted` | `#6E675B` | meta text, captions |
-| `line` | `#E4DDCF` | hairline rules, card borders |
-| `green` | `#2E5A3E` | primary accent (section labels, FREE, links) |
-| `gold` | `#C0891F` | secondary accent (ampersand, day kickers, `$`) |
+| `corn-gold` | `#D9A408` | primary accent, ampersand, dividers, FREE-adjacent |
+| `prairie-green` | `#345E3B` | links, `FREE` badge fill |
+| `brick` | `#A63A28` | alarm only (deadlines) — rare |
+| `ink` | `#17150F` | body text + dark backgrounds |
+| `paper` | `#F1ECDF` | page background |
+| `gold-wash` | `#F7ECC9` | event-icon chip backgrounds |
+| `stone` | `#6E6454` | meta, captions, "double-check" notes |
+| `hairline` | `#E4DAC6` | borders, rules, card outlines |
+| `card` | `#FFFFFF` | event card / panel background |
+
+Gold is the star and stays rare. Links are green with a gold underline. Brick appears
+maybe once per edition, on a deadline.
 
 ## Type
 
-System sans only (email-safe, no webfonts): `-apple-system, Segoe UI, Roboto,
-Helvetica, Arial`. The modern feel comes from *weight and spacing*, not a fancy face:
-- **Nameplate:** uppercase, extra-bold, wide letter-spacing (~2px).
-- **Section labels:** small uppercase green eyebrow, letter-spaced.
-- **Day kickers:** small uppercase gold.
-- **Card meta:** small uppercase muted (day / time / venue).
-- **Body:** 16px, line-height ~1.6.
+| Role | Web / brand assets | Email-safe (sent newsletter) |
+|---|---|---|
+| Display / masthead / headlines | **Zilla Slab** 600–700 | `Georgia, 'Times New Roman', serif` |
+| Interface / labels / badges / meta | **Work Sans** 700–800, UPPERCASE + letter-spacing | system: `-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif` |
+| Reading prose (Huddle, Deep Dive) | **Newsreader** 400 | `Georgia, serif` |
 
-## Layout
+Gmail/Apple Mail strip webfonts — the **email build uses the system stacks**. Zilla Slab /
+Work Sans / Newsreader are for the web archive, signup page, and social images only.
 
-- Single column, max 600px, generous padding.
-- **Nameplate:** wordmark left, edition date right, a 2px ink rule under, then a small
-  uppercase tagline. Newspaper masthead energy.
-- **Sections:** a hairline rule, then the uppercase eyebrow label, then content.
-  Whitespace separates sections. No emoji dividers.
-- **Event card:** flat white, 1px `line` border, 10px radius, no drop shadow.
-  - line 1: **bold name** + chips
-  - line 2: uppercase muted meta (day · time · venue)
-  - line 3: the one-line hook
-  - line 4: the source link
-- **Chips** (written as `` `TOKEN` `` in the draft):
-  - `FREE` → filled green
-  - `$` / `$$` → filled gold
-  - `AGES 0-4`, `ALL AGES`, etc. → outlined, muted
-- **Footer:** hairline, uppercase wordmark, one plain line, the tip line.
+## Logo system
 
-## Email vs. web
+Three marks, all in `/assets`:
+- **Primary lockup** — corn-ear emblem + two-line Zilla Slab wordmark, gold ampersand.
+- **Emblem** — stylized ear of corn: gold body, ink **kernel grid** (straight rows/cols,
+  not a diagonal crosshatch), small prairie-green leaf husks at the base. Wide/blunt cob,
+  not a narrow rounded one. Ring/seal variant for covers. Min size 28px; below that use the monogram.
+- **Monogram** — ink `C&C` on a corn-gold rounded square. Primary favicon; avatars, merch.
+- **Popcorn (playful register)** — a puffed-kernel cluster tied to the recurring
+  **"What's poppin'"** device (subject lines, stickers, the Free & Cheap icon). Not the
+  formal logo — the fun counterpart to the serious corn mark.
 
-Inline-ish styles, table layout, system fonts, no external assets, ≤600px. Works in a
-browser now; beehiiv does final CSS inlining at send. Test in Gmail before launch.
+Rules: keep clear space ≈ the emblem's width; never recolor the corn off gold; never add
+gradients/shadows; never set the wordmark in any face but Zilla Slab.
+
+## Section header pattern
+
+Hairline rule, then a **gold line-icon + uppercase Work Sans label**. The eight beats:
+The Huddle · The Forecast · Date Night & Out · Community & Outdoors · With the Kids ·
+Free & Cheap Five · The Deep Dive · The Bulletin.
+
+## Event card (the atom)
+
+```
+[gold-wash icon chip]  Bold Event Name  [FREE]  [DATE NIGHT] [ALL AGES]
+                       SAT 10:00AM · NORTH LIBERTY   (Work Sans, uppercase, stone)
+                       One punchy sentence on why it's worth it.
+                       details ↗  (green text, gold underline — always source-linked)
+```
+
+- Tags: cost (`FREE` = green fill; `$`/`$$` = hairline outline), mode/age (`DATE NIGHT`,
+  `NIGHT OUT`, `ALL AGES`, `0–4`…). `FREE` is always the loudest.
+- Every block ends with a source link — non-negotiable.
+
+## Layout tokens
+
+- Email max width 600px; card radius 12px; icon chip 38–44px, radius 10–11px.
+- Section dividers: 1px `hairline` rule + 32px top margin.
+- Mobile-first, single column, comfortable tap targets.

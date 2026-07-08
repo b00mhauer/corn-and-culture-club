@@ -31,10 +31,25 @@ C = {
     "line": "#E4DAC6",
     "gold": "#D9A408",     # deep premium gold
     "goldsoft": "#F7ECC9", # soft gold fill
-    "green": "#345E3B",    # pine (outdoors / free)
+    "green": "#345E3B",    # prairie-green (links / free)
+    "brick": "#A63A28",    # alarm only (deadlines) — rare
     "cream": "#F1ECDF",
 }
-SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
+# Brand type: webfonts for the web page, system stacks as email-safe fallback.
+FONT_DISPLAY = "'Zilla Slab',Georgia,'Times New Roman',serif"   # masthead / headlines
+FONT_LABEL = "'Work Sans',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"  # labels / meta / chips
+FONT_PROSE = "'Newsreader',Georgia,'Times New Roman',serif"     # reading prose
+SANS = FONT_LABEL  # back-compat alias used throughout
+FONTS_LINK = (
+    '<link rel="preconnect" href="https://fonts.googleapis.com">'
+    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+    '<link href="https://fonts.googleapis.com/css2?'
+    'family=Zilla+Slab:wght@600;700&'
+    'family=Work+Sans:wght@600;700;800&'
+    'family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">'
+)
+
+REPO = Path(__file__).resolve().parent.parent
 
 # --- inline SVG line icons (currentColor, stroke) ----------------------------
 _ICONS = {
@@ -51,9 +66,11 @@ _ICONS = {
     "kids": '<circle cx="12" cy="8" r="5"/><path d="M12 13v5M10.5 20.5 12 18l1.5 2.5"/>',
     "community": '<circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 6.5a3 3 0 0 1 0 5.8M21.5 20a5.5 5.5 0 0 0-4-5.3"/>',
     "pin": '<path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/>',
-    # brand: old capitol dome
-    "capitol": '<path d="M3 21h18M5 21v-7M19 21v-7M4 14h16M6 14v-4M9 14v-4M15 14v-4M18 14v-4M4.5 10h15L12 4.5 4.5 10ZM12 4.5V2.2M10.7 6.6a1.3 1.3 0 0 1 2.6 0"/>',
+    # brand: popcorn cluster ("What's poppin'" — Free & Cheap device)
+    "popcorn": '<circle cx="9" cy="7" r="2.3"/><circle cx="14.5" cy="6.5" r="2.3"/><circle cx="12" cy="10" r="2.3"/><path d="M7.5 11.5 9 21h6l1.5-9.5"/>',
     "coffee": '<path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8ZM17 9h2.2a2.3 2.3 0 0 1 0 4.6H17"/>',
+    "school": '<path d="M12 3 2 8l10 5 10-5-10-5ZM6 10.5V16c0 1.3 2.7 3 6 3s6-1.7 6-3v-5.5"/>',
+    "news": '<path d="M4 5h13v14H4zM17 8h3v9a2 2 0 0 1-2 2M8 9h5M8 12h5M8 15h3"/>',
 }
 
 
@@ -228,9 +245,9 @@ def _style_cards(html: str) -> str:
 # section header icons by keyword
 _SECTION_ICON = [
     ("date night", "date"), ("friends", "night"), ("community", "community"),
-    ("outdoor", "community"), ("kids", "kids"), ("free", "pin"),
-    ("school", "pin"), ("deep dive", "coffee"), ("bulletin", "pin"),
-    ("huddle", "capitol"), ("forecast", "sun"),
+    ("outdoor", "community"), ("kids", "kids"), ("free", "popcorn"),
+    ("cheap", "popcorn"), ("school", "school"), ("deep dive", "coffee"),
+    ("bulletin", "news"), ("huddle", "sun"), ("forecast", "sun"),
 ]
 
 
@@ -261,16 +278,18 @@ def _decorate(html: str) -> str:
     html = re.sub(r"<h2>(.*?)</h2>", h2, html, flags=re.S)
     html = re.sub(
         r"<h3>(.*?)</h3>",
-        lambda m: f'<h3 style="font-family:{SANS};color:{C["ink"]};font-size:18px;'
-        f'font-weight:800;margin:22px 0 8px;line-height:1.3;">{m.group(1)}</h3>',
+        lambda m: f'<h3 style="font-family:{FONT_DISPLAY};color:{C["ink"]};font-size:19px;'
+        f'font-weight:700;margin:22px 0 8px;line-height:1.3;">{m.group(1)}</h3>',
         html, flags=re.S,
     )
     html = re.sub(
         r"<a ", f'<a style="color:{C["green"]};font-weight:700;text-decoration:none;'
         f'border-bottom:1.5px solid {C["gold"]};" ', html,
     )
+    # Reading prose (Huddle, Forecast, Deep Dive) in Newsreader; a touch larger.
     html = re.sub(
-        r"<p>", f'<p style="margin:0 0 14px;color:{C["ink"]};font-size:16px;line-height:1.62;">', html,
+        r"<p>", f'<p style="margin:0 0 14px;color:{C["ink"]};font-family:{FONT_PROSE};'
+        f'font-size:17px;line-height:1.6;">', html,
     )
     html = html.replace(
         "<li>", f'<li style="margin:0 0 9px;color:{C["ink"]};font-size:16px;line-height:1.55;">'
@@ -284,37 +303,38 @@ TEMPLATE = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{subject}</title>
+{fonts}
 <style>
   body {{ margin:0; padding:0; background:{bg}; }}
   @media (max-width:620px) {{ .wrap {{ width:100% !important; }} .pad {{ padding:20px !important; }} }}
 </style>
 </head>
-<body style="margin:0;padding:0;background:{bg};font-family:{sans};">
+<body style="margin:0;padding:0;background:{bg};font-family:{prose};">
 <span style="display:none!important;visibility:hidden;opacity:0;height:0;width:0;overflow:hidden;">{preheader}</span>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:{bg};">
 <tr><td align="center" style="padding:24px 12px;">
   <table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:600px;">
 
-    <!-- masthead: black band, gold dome + wordmark -->
-    <tr><td style="background:{ink};border-radius:14px 14px 0 0;padding:22px 20px 18px;text-align:center;">
-      <div style="margin-bottom:6px;">{dome}</div>
-      <div style="font-family:{sans};font-size:24px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:{cream};line-height:1.1;">Corn <span style="color:{gold};">&amp;</span> Culture Club</div>
-      <div style="font-family:{sans};font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:{gold};margin-top:8px;">The good stuff to do in Johnson County, Iowa</div>
-      <div style="font-family:{sans};font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#B9AE93;margin-top:3px;">{week}</div>
+    <!-- masthead: brand header emblem + wordmark -->
+    <tr><td style="padding:0;line-height:0;">
+      <img src="{header_src}" width="600" alt="Corn &amp; Culture Club — the good stuff to do in greater Iowa City" style="display:block;width:100%;max-width:600px;border-radius:14px 14px 0 0;">
+    </td></tr>
+    <tr><td style="background:{ink};padding:0 20px 14px;text-align:center;">
+      <div style="font-family:{label};font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B9AE93;">{week}</div>
     </td></tr>
 
     <!-- headline + weather + body on panel -->
-    <tr><td class="pad" style="background:{bg};padding:18px 6px 8px;">
-      <div style="font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:700;line-height:1.28;color:{ink};margin:2px 4px 16px;">{headline}</div>
+    <tr><td class="pad" style="background:{bg};padding:20px 6px 8px;">
+      <div style="font-family:{display};font-size:26px;font-weight:700;line-height:1.22;color:{ink};margin:2px 4px 16px;">{headline}</div>
       {weather}
       {body}
     </td></tr>
 
     <!-- footer -->
-    <tr><td style="padding:30px 8px 12px;color:{muted};font-size:12px;line-height:1.7;text-align:center;">
+    <tr><td style="padding:30px 8px 12px;color:{muted};font-size:12px;line-height:1.7;text-align:center;font-family:{label};">
       <div style="border-top:1px solid {line};margin-bottom:16px;"></div>
       <span style="font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:{ink};">Corn &amp; Culture Club</span><br>
-      The good stuff to do in Johnson County, Iowa.<br>
+      Ears to the ground on the good stuff around greater Iowa City.<br>
       Reply with a tip. Forward to a friend.
     </td></tr>
   </table>
@@ -333,8 +353,7 @@ def render(draft_path: Path) -> tuple[str, dict]:
         r"<p[^>]*>([^A-Za-z0-9<]+)</p>", "", body_html)
     body_html = _decorate(body_html)
 
-    # Headline: pull the first sentence of The Huddle for a Morning-Brew lead.
-    headline = fm.get("subject", "This week in Johnson County")
+    headline = fm.get("subject", "This week in greater Iowa City")
 
     html = TEMPLATE.format(
         subject=fm.get("subject", "Corn & Culture Club"),
@@ -343,11 +362,27 @@ def render(draft_path: Path) -> tuple[str, dict]:
         headline=headline,
         weather=weather_strip(draft_path.parent),
         body=body_html,
-        dome=svg("capitol", 34, C["gold"], sw=1.5),
+        header_src=_masthead_src(),
+        fonts=FONTS_LINK,
+        display=FONT_DISPLAY,
+        label=FONT_LABEL,
+        prose=FONT_PROSE,
         sans=SANS,
         **C,
     )
     return html, fm
+
+
+def _masthead_src() -> str:
+    """The brand email-header asset, inlined as a data URI for the standalone
+    preview. In production (beehiiv) this becomes a hosted URL."""
+    import base64
+
+    p = REPO / "style" / "assets" / "email-header-600x200.png"
+    if p.exists():
+        b64 = base64.b64encode(p.read_bytes()).decode()
+        return f"data:image/png;base64,{b64}"
+    return ""
 
 
 def main() -> int:
