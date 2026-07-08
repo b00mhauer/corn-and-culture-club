@@ -1,0 +1,69 @@
+# Corn & Culture Club — evergreen / standing weekly events
+# These recur on a fixed weekly schedule. They live on an evergreen WEBSITE PAGE
+# and are NOT repeated in every email — the newsletter links to this list.
+#
+# VERIFY all times/days in Phase 1 (they shift seasonally, esp. summer vs.
+# school-year storytime schedules). Treat these as a starting skeleton.
+#
+# Fields: title, host, town, day, time, age_bands, cost, url, notes
+
+evergreen:
+  - title: Baby & Toddler Storytime
+    host: Iowa City Public Library
+    town: Iowa City
+    day: [Monday, Tuesday, Wednesday, Friday, Saturday]
+    time: "10:30"
+    age_bands: ["0-4"]
+    cost: FREE
+    url: https://www.icpl.org/events/categories/storytimes
+    notes: Schedule shifts summer vs. school year — verify each season.
+
+  - title: Stories & More (all-ages storytime)
+    host: Iowa City Public Library
+    town: Iowa City
+    day: [Thursday]
+    time: "10:30"
+    age_bands: ["0-4", "5-11"]
+    cost: FREE
+    url: https://www.icpl.org/events/categories/storytimes
+    notes: All ages welcome; best for 3-5.
+
+  - title: Stories in the Park (summer)
+    host: Iowa City Public Library
+    town: Iowa City
+    day: [seasonal]
+    time: "09:30"
+    age_bands: ["0-4"]
+    cost: FREE
+    url: https://www.icpl.org/services/kids
+    notes: Summer only, early start to beat the heat. Location rotates.
+
+  - title: Book Bike Storytime
+    host: Coralville Public Library
+    town: Coralville
+    day: [seasonal]
+    time: "TBD"
+    age_bands: ["0-4"]
+    cost: FREE
+    url: https://www.coralville.lib.ia.us/
+    notes: Summer, North Ridge Park w/ ICM educators. Verify day/time.
+
+  - title: Open Gym / Tot Time
+    host: North Liberty Community Center
+    town: North Liberty
+    day: [TBD]
+    time: "TBD"
+    age_bands: ["0-4", "5-11"]
+    cost: LOW
+    url: https://northlibertyiowa.org/
+    notes: "Kids Campsite indoor play — verify schedule & price."
+
+  - title: Party in the Park (summer series)
+    host: Iowa City Parks & Recreation
+    town: Iowa City
+    day: [seasonal]
+    time: "TBD"
+    age_bands: ["0-4", "5-11", "all"]
+    cost: FREE
+    url: https://www.icgov.org/
+    notes: Summer weekly-ish, rotating parks, ICM educators run activities.

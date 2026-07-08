@@ -1,0 +1,25 @@
+# Secrets — never commit
+.env
+.env.local
+*.key
+
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+.ruff_cache/
+
+# Scratch & local working files
+scratch/
+*.log
+
+# Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Generated edition artifacts are kept (they're the archive), but caches are not
+data/cache/
+
+# Plans directory is local-only working notes (per the Catskill Crew approach)
+plans/
