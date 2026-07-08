@@ -1,0 +1,386 @@
+# Corn & Culture Club — source map
+# One entry per source. The research pipeline reads this file; adding a source
+# should never require touching orchestration code.
+#
+# Fields:
+#   id       : stable slug used in event.source
+#   name     : human name
+#   town     : primary town (or "county" / "regional")
+#   url      : human-facing events page
+#   feed     : ICS/RSS/API URL if known, else null. VERIFY in Phase 1 — many of
+#              these are best guesses from the platform (LibCal, etc.) and must
+#              be confirmed by actually fetching them before we trust them.
+#   method   : how to fetch — ics | rss | html | api | manual
+#   tier     : 1 (weekly scrape) | 2 (school/seasonal) | 3 (social/long-tail)
+#   audience : family | general  (general sources get filtered for kid relevance)
+#   notes    : anything the scraper/writer should know
+
+sources:
+  # ------------------------------------------------------------------
+  # TIER 1 — structured calendars, scraped every week
+  # ------------------------------------------------------------------
+
+  # --- Libraries (LibCal / library CMS usually expose ICS) ---
+  - id: icpl
+    name: Iowa City Public Library
+    town: Iowa City
+    url: https://www.icpl.org/calendar
+    feed: null            # VERIFY: check for LibCal .ics export or RSS
+    method: html
+    tier: 1
+    audience: family
+    notes: >
+      Storytimes, family, and teen event categories. Highest-volume family
+      source in the county. Check /events/categories/storytimes and
+      /events/ages/families for filtered feeds.
+
+  - id: coralville-pl
+    name: Coralville Public Library
+    town: Coralville
+    url: https://www.coralville.lib.ia.us/
+    feed: null            # VERIFY
+    method: html
+    tier: 1
+    audience: family
+    notes: Book Bike storytimes, kids programming. Confirm calendar platform.
+
+  - id: north-liberty-library
+    name: North Liberty Library
+    town: North Liberty
+    url: https://www.northlibertyiowa.org/library/
+    feed: null            # VERIFY
+    method: html
+    tier: 1
+    audience: family
+    notes: Part of city site; events may share the city events calendar.
+
+  - id: solon-pl
+    name: Solon Public Library
+    town: Solon
+    url: https://www.solon.lib.ia.us/
+    feed: null            # VERIFY
+    method: html
+    tier: 1
+    audience: family
+    notes: Smaller; covers the CCA/Solon side of the county.
+
+  # --- Parks & Recreation ---
+  - id: ic-parks-rec
+    name: Iowa City Parks & Recreation
+    town: Iowa City
+    url: https://www.icgov.org/government/departments-and-divisions/parks-and-recreation
+    feed: null            # VERIFY
+    method: html
+    tier: 1
+    audience: family
+    notes: Party in the Park series, pools/splash pads, Rec Center open gyms.
+
+  - id: north-liberty-events
+    name: City of North Liberty — Community Events
+    town: North Liberty
+    url: https://northlibertyiowa.org/residents/community-events/
+    feed: null            # VERIFY
+    method: html
+    tier: 1
+    audience: family
+    notes: Second Saturdays, Blues & BBQ, Beat the Bitter, family fun days.
+
+  - id: coralville-events
+    name: City of Coralville — Events
+    town: Coralville
+    url: https://www.coralville.org/
+    feed: null            # VERIFY
+    method: html
+    tier: 1
+    audience: general
+    notes: 4thFest, farmers market, splash pads, Coral Ridge area programming.
+
+  # --- Aggregators (county-wide; overlap heavily, so dedupe hard) ---
+  - id: think-iowa-city
+    name: Think Iowa City (CVB)
+    town: county
+    url: https://thinkiowacity.com/events/
+    feed: null            # VERIFY: CVB calendars often have iCal/JSON export
+    method: html
+    tier: 1
+    audience: general
+    notes: >
+      Convention & Visitors Bureau — broadest single county calendar. Great
+      coverage but promotional; cross-check against primary sources.
+
+  - id: little-village
+    name: Little Village — Event Calendar
+    town: county
+    url: https://littlevillage.scenethink.com/
+    feed: null            # VERIFY: SceneThink may expose a feed/API
+    method: html
+    tier: 1
+    audience: general
+    notes: Alt-weekly calendar; strong on arts, music, downtown IC.
+
+  - id: johnson-county-gov
+    name: Johnson County (government) Events
+    town: county
+    url: https://johnsoncountyiowa.gov/events
+    feed: null            # VERIFY
+    method: html
+    tier: 1
+    audience: general
+    notes: County govt events; catch civic/public-meeting family stuff.
+
+  - id: jc-conservation
+    name: Johnson County Conservation
+    town: county
+    url: https://www.johnsoncountyiowa.gov/department/conservation
+    feed: null            # VERIFY
+    method: html
+    tier: 1
+    audience: family
+    notes: >
+      Kent Park nature programs, Wings & Wild Things Festival, kid-oriented
+      outdoor education. Consistently good family content.
+
+  # --- Venues ---
+  - id: iowa-childrens-museum
+    name: Iowa Children's Museum
+    town: Coralville
+    url: https://theicm.org/events/
+    feed: https://theicm.org/events/?ical=1   # VERIFIED live — The Events Calendar ICS
+    method: ics
+    tier: 1
+    audience: family
+    notes: >
+      Coral Ridge Mall. Community events, free-admission Fridays, STEM nights.
+      Anchor family venue in the county. WordPress + The Events Calendar (Tribe);
+      ?ical=1 returns a clean VCALENDAR. Confirmed 30 VEVENTs on first fetch.
+
+  # ------------------------------------------------------------------
+  # TIER 2 — school & seasonal (add after Tier 1 pipeline is solid)
+  # ------------------------------------------------------------------
+
+  - id: iccsd
+    name: Iowa City Community School District
+    town: Iowa City
+    url: https://www.iowacityschools.org/
+    feed: null            # VERIFY: district calendar ICS
+    method: html
+    tier: 2
+    audience: family
+    notes: >
+      No-school days, conference weeks, registration windows. Drives the
+      School Notes section. Largest district in the county.
+
+  - id: clear-creek-amana
+    name: Clear Creek Amana CSD
+    town: Tiffin
+    url: https://www.ccaschools.org/
+    feed: null            # VERIFY
+    method: html
+    tier: 2
+    audience: family
+    notes: Covers Tiffin / North Liberty (CCA side) / Oxford families.
+
+  - id: solon-csd
+    name: Solon Community School District
+    town: Solon
+    url: https://www.solonschools.org/
+    feed: null            # VERIFY
+    method: html
+    tier: 2
+    audience: family
+    notes: Solon-area families.
+
+  - id: ui-family-events
+    name: University of Iowa — family-friendly events
+    town: Iowa City
+    url: https://calendar.uiowa.edu/
+    feed: null            # VERIFY: Localist calendars expose /api and .ics
+    method: html
+    tier: 2
+    audience: general
+    notes: >
+      Localist platform (usually has JSON API + ICS). Kids' Day at Kinnick,
+      gymnastics/wrestling meets, Museum of Natural History, Stanley Museum
+      family days, Pentacrest events. Cheap kid entertainment.
+
+  - id: wilsons-orchard
+    name: Wilson's Orchard & Farm
+    town: Iowa City
+    url: https://www.wilsonsorchard.com/
+    feed: null            # VERIFY
+    method: html
+    tier: 2
+    audience: family
+    notes: Seasonal — apples/pumpkins fall, events year-round. Big family draw.
+
+  - id: englert
+    name: The Englert Theatre
+    town: Iowa City
+    url: https://www.englert.org/events
+    feed: null            # VERIFY
+    method: html
+    tier: 2
+    audience: general
+    notes: Filter for family/all-ages shows.
+
+  - id: filmscene
+    name: FilmScene
+    town: Iowa City
+    url: https://icfilmscene.org/
+    feed: null            # VERIFY
+    method: html
+    tier: 2
+    audience: general
+    notes: Family matinees, Saturday morning kids' series.
+
+  - id: gabes
+    name: Gabe's
+    town: Iowa City
+    url: https://gabesiowacity.com/
+    feed: null            # VERIFY
+    method: html
+    tier: 2
+    audience: general
+    notes: >
+      Music venue. Mostly 19+/21+ shows, but all-ages/early shows and matinees
+      happen — filter for those. Principle: EVERY event venue in town has a
+      calendar worth mining; add them as discovered (Public Space One, The Mill,
+      Trumpet Blossom, etc.).
+
+  - id: hancher
+    name: Hancher Auditorium
+    town: Iowa City
+    url: https://hancher.uiowa.edu/events
+    feed: null            # VERIFY
+    method: html
+    tier: 2
+    audience: general
+    notes: Family series performances; often Localist-based like calendar.uiowa.
+
+  # ------------------------------------------------------------------
+  # TIER 3 — social & long-tail (deferred; needs scraping effort or $)
+  # ------------------------------------------------------------------
+
+  # Instagram discovery via Scrape Creators (method: instagram, needs
+  # SCRAPE_CREATORS_API_KEY in .env). These are SIGNAL sources: fetch_instagram
+  # pulls recent post captions/images; the ccc-research skill reads them and
+  # extracts real events (many local orgs post dated event lists in captions).
+  # Cost ~1 credit per handle per run. Curate hard — quality over quantity.
+  - id: ig-think-iowa-city
+    name: "@thinkiowacity (Instagram)"
+    town: county
+    handle: thinkiowacity
+    url: https://www.instagram.com/thinkiowacity/
+    feed: null
+    method: instagram
+    tier: 3
+    audience: general
+    notes: CVB — frequently posts dated round-ups of the week's events in captions. High value.
+
+  - id: ig-little-village
+    name: "@littlevillagemag (Instagram)"
+    town: county
+    handle: littlevillagemag
+    url: https://www.instagram.com/littlevillagemag/
+    feed: null
+    method: instagram
+    tier: 3
+    audience: general
+    notes: Alt-weekly; arts/music/culture, good for the non-obvious.
+
+  - id: ig-theicm
+    name: "@theicm (Instagram)"
+    town: Coralville
+    handle: theicm
+    url: https://www.instagram.com/theicm/
+    feed: null
+    method: instagram
+    tier: 3
+    audience: family
+    notes: >
+      Event flyers often image-only — good candidate for image analysis (per the
+      video). NOTE: returned 0 recent posts on first probe; verify the handle is
+      active before relying on it.
+
+  - id: ig-summer-of-the-arts
+    name: "@summerofthearts (Instagram)"
+    town: Iowa City
+    handle: summerofthearts
+    url: https://www.instagram.com/summerofthearts/
+    feed: null
+    method: instagram
+    tier: 3
+    audience: family
+    notes: Free festivals + Music on the Move park concerts. Verify handle.
+
+  - id: ig-north-liberty
+    name: "@northlibertyiowa (Instagram)"
+    town: North Liberty
+    handle: northlibertyiowa
+    url: https://www.instagram.com/northlibertyiowa/
+    feed: null
+    method: instagram
+    tier: 3
+    audience: general
+    notes: City events — Blues & BBQ, concert series, Second Saturdays. Verify handle.
+
+  # Facebook events via Scrape Creators (method: facebook, needs
+  # SCRAPE_CREATORS_API_KEY). The events/search endpoint returns STRUCTURED
+  # events (name/date/place/url), so these come back close to finished. Biggest
+  # single source of local happenings. ~1 credit per query/page per run.
+  # fb_query = keyword search; fb_url = a specific page's events.
+  - id: fb-iowa-city
+    name: "Facebook Events — Iowa City"
+    town: Iowa City
+    fb_query: "Iowa City"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: Broad town search; the fetcher filters to our county + date window.
+
+  - id: fb-coralville
+    name: "Facebook Events — Coralville"
+    town: Coralville
+    fb_query: "Coralville Iowa"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: ""
+
+  - id: fb-north-liberty
+    name: "Facebook Events — North Liberty"
+    town: North Liberty
+    fb_query: "North Liberty Iowa"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: ""
+
+  - id: fb-family-johnson-county
+    name: "Facebook Events — Johnson County family/kids"
+    town: county
+    fb_query: "Johnson County Iowa kids family"
+    method: facebook
+    tier: 3
+    audience: family
+    notes: Family-scoped query to surface kid-specific happenings.
+
+  # Example venue-page pull (fb_url). Add specific venue pages as discovered.
+  - id: fb-englert
+    name: "Facebook Events — The Englert Theatre (page)"
+    town: Iowa City
+    fb_url: "https://www.facebook.com/englert"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: Pull a specific venue page's events. Verify the page URL/slug.
+
+  - id: eventbrite-ic
+    name: Eventbrite — Iowa City area (~20mi)
+    town: regional
+    url: https://www.eventbrite.com/d/ia--iowa-city/kids/
+    feed: null
+    method: html
+    tier: 3
+    audience: general
+    notes: Long tail; kid + family category filter within ~20 miles.

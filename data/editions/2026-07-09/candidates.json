@@ -1,0 +1,319 @@
+{
+  "edition": {
+    "start": "2026-07-09",
+    "end": "2026-07-15",
+    "days": 7
+  },
+  "coverage_report": [
+    {
+      "source": "iowa-childrens-museum",
+      "status": "ok",
+      "count": 7
+    }
+  ],
+  "counts": {
+    "raw": 7,
+    "after_dedupe": 7,
+    "kept_candidates": 5,
+    "dropped": 2
+  },
+  "weather": {
+    "location": {
+      "city": "Iowa City",
+      "state": "IA",
+      "grid": "DVN 35,72"
+    },
+    "periods": [
+      {
+        "name": "Today",
+        "start": "2026-07-08T11:00:00-05:00",
+        "is_daytime": true,
+        "temp": 90,
+        "temp_unit": "F",
+        "wind": "5 to 10 mph",
+        "short": "Sunny",
+        "detailed": "Sunny, with a high near 90. Southwest wind 5 to 10 mph.",
+        "precip_pct": 0
+      },
+      {
+        "name": "Tonight",
+        "start": "2026-07-08T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 70,
+        "temp_unit": "F",
+        "wind": "5 to 10 mph",
+        "short": "Partly Cloudy then Slight Chance Showers And Thunderstorms",
+        "detailed": "A slight chance of showers and thunderstorms between 2am and 5am, then a chance of showers and thunderstorms. Partly cloudy, with a low around 70. South wind 5 to 10 mph. Chance of precipitation is 30%.",
+        "precip_pct": 25
+      },
+      {
+        "name": "Thursday",
+        "start": "2026-07-09T06:00:00-05:00",
+        "is_daytime": true,
+        "temp": 86,
+        "temp_unit": "F",
+        "wind": "5 mph",
+        "short": "Chance Showers And Thunderstorms then Slight Chance Showers And Thunderstorms",
+        "detailed": "A chance of showers and thunderstorms before 11am, then a slight chance of showers and thunderstorms. Partly sunny. High near 86, with temperatures falling to around 82 in the afternoon. West wind around 5 mph. Chance of precipitation is 40%.",
+        "precip_pct": 35
+      },
+      {
+        "name": "Thursday Night",
+        "start": "2026-07-09T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 67,
+        "temp_unit": "F",
+        "wind": "0 to 5 mph",
+        "short": "Chance Showers And Thunderstorms",
+        "detailed": "A chance of showers and thunderstorms between 7pm and 10pm, then a chance of showers and thunderstorms. Partly cloudy, with a low around 67. Northwest wind 0 to 5 mph. Chance of precipitation is 30%.",
+        "precip_pct": 26
+      },
+      {
+        "name": "Friday",
+        "start": "2026-07-10T06:00:00-05:00",
+        "is_daytime": true,
+        "temp": 85,
+        "temp_unit": "F",
+        "wind": "5 mph",
+        "short": "Slight Chance Rain Showers then Slight Chance Showers And Thunderstorms",
+        "detailed": "A slight chance of rain showers before 1pm, then a slight chance of showers and thunderstorms. Partly sunny, with a high near 85.",
+        "precip_pct": 17
+      },
+      {
+        "name": "Friday Night",
+        "start": "2026-07-10T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 67,
+        "temp_unit": "F",
+        "wind": "0 to 5 mph",
+        "short": "Slight Chance Showers And Thunderstorms then Chance Showers And Thunderstorms",
+        "detailed": "A slight chance of showers and thunderstorms before 7pm, then a chance of showers and thunderstorms. Mostly cloudy, with a low around 67. Chance of precipitation is 40%.",
+        "precip_pct": 35
+      },
+      {
+        "name": "Saturday",
+        "start": "2026-07-11T06:00:00-05:00",
+        "is_daytime": true,
+        "temp": 86,
+        "temp_unit": "F",
+        "wind": "5 mph",
+        "short": "Chance Rain Showers then Mostly Sunny",
+        "detailed": "A chance of rain showers before 7am. Mostly sunny, with a high near 86. Chance of precipitation is 30%.",
+        "precip_pct": 34
+      },
+      {
+        "name": "Saturday Night",
+        "start": "2026-07-11T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 67,
+        "temp_unit": "F",
+        "wind": "0 to 5 mph",
+        "short": "Slight Chance Rain Showers",
+        "detailed": "A slight chance of rain showers between 7pm and 1am. Mostly clear, with a low around 67.",
+        "precip_pct": 15
+      },
+      {
+        "name": "Sunday",
+        "start": "2026-07-12T06:00:00-05:00",
+        "is_daytime": true,
+        "temp": 88,
+        "temp_unit": "F",
+        "wind": "5 mph",
+        "short": "Sunny",
+        "detailed": "Sunny, with a high near 88.",
+        "precip_pct": 9
+      },
+      {
+        "name": "Sunday Night",
+        "start": "2026-07-12T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 68,
+        "temp_unit": "F",
+        "wind": "0 to 5 mph",
+        "short": "Clear",
+        "detailed": "Clear, with a low around 68.",
+        "precip_pct": 6
+      },
+      {
+        "name": "Monday",
+        "start": "2026-07-13T06:00:00-05:00",
+        "is_daytime": true,
+        "temp": 91,
+        "temp_unit": "F",
+        "wind": "0 to 5 mph",
+        "short": "Sunny",
+        "detailed": "Sunny, with a high near 91.",
+        "precip_pct": 3
+      },
+      {
+        "name": "Monday Night",
+        "start": "2026-07-13T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 70,
+        "temp_unit": "F",
+        "wind": "0 to 5 mph",
+        "short": "Clear",
+        "detailed": "Clear, with a low around 70.",
+        "precip_pct": 3
+      },
+      {
+        "name": "Tuesday",
+        "start": "2026-07-14T06:00:00-05:00",
+        "is_daytime": true,
+        "temp": 93,
+        "temp_unit": "F",
+        "wind": "0 to 10 mph",
+        "short": "Sunny",
+        "detailed": "Sunny, with a high near 93.",
+        "precip_pct": 5
+      },
+      {
+        "name": "Tuesday Night",
+        "start": "2026-07-14T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 72,
+        "temp_unit": "F",
+        "wind": "5 to 10 mph",
+        "short": "Mostly Clear",
+        "detailed": "Mostly clear, with a low around 72.",
+        "precip_pct": 5
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "title": "Member Hour",
+      "start": "2026-07-09T09:00:00-05:00",
+      "source": "iowa-childrens-museum",
+      "source_name": "Iowa Children's Museum",
+      "end": "2026-07-09T10:00:00-05:00",
+      "all_day": false,
+      "venue": "Iowa Children\u2019s Museum, 1451 Coral Ridge Ave., Coralville, IA, 52241, United States",
+      "town": "Coralville",
+      "url": "https://theicm.org/event/member-hour-3-2/2026-07-09/",
+      "description": "Members of The Iowa Children\u2019s Museum are invited to come play when The ICM is ONLY open to members! Member Hour is 9-10 a.m. every Wednesday, Thursday, Friday, and Saturday. Come play early and enjoy a less busy environment! Learn more about membership here.",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "iowa-childrens-museum:22976b53fe"
+    },
+    {
+      "title": "Member Hour",
+      "start": "2026-07-10T09:00:00-05:00",
+      "source": "iowa-childrens-museum",
+      "source_name": "Iowa Children's Museum",
+      "end": "2026-07-10T10:00:00-05:00",
+      "all_day": false,
+      "venue": "Iowa Children\u2019s Museum, 1451 Coral Ridge Ave., Coralville, IA, 52241, United States",
+      "town": "Coralville",
+      "url": "https://theicm.org/event/member-hour-3-2/2026-07-10/",
+      "description": "Members of The Iowa Children\u2019s Museum are invited to come play when The ICM is ONLY open to members! Member Hour is 9-10 a.m. every Wednesday, Thursday, Friday, and Saturday. Come play early and enjoy a less busy environment! Learn more about membership here.",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "iowa-childrens-museum:fac94b4c00"
+    },
+    {
+      "title": "Member Hour",
+      "start": "2026-07-11T09:00:00-05:00",
+      "source": "iowa-childrens-museum",
+      "source_name": "Iowa Children's Museum",
+      "end": "2026-07-11T10:00:00-05:00",
+      "all_day": false,
+      "venue": "Iowa Children\u2019s Museum, 1451 Coral Ridge Ave., Coralville, IA, 52241, United States",
+      "town": "Coralville",
+      "url": "https://theicm.org/event/member-hour-3-2/2026-07-11/",
+      "description": "Members of The Iowa Children\u2019s Museum are invited to come play when The ICM is ONLY open to members! Member Hour is 9-10 a.m. every Wednesday, Thursday, Friday, and Saturday. Come play early and enjoy a less busy environment! Learn more about membership here.",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "iowa-childrens-museum:bb33d4a63e"
+    },
+    {
+      "title": "Art Play Sundays",
+      "start": "2026-07-12T11:00:00-05:00",
+      "source": "iowa-childrens-museum",
+      "source_name": "Iowa Children's Museum",
+      "end": "2026-07-12T13:00:00-05:00",
+      "all_day": false,
+      "venue": "Iowa Children\u2019s Museum, 1451 Coral Ridge Ave., Coralville, IA, 52241, United States",
+      "town": "Coralville",
+      "url": "https://theicm.org/event/art-play-sundays-2/",
+      "description": "Creativity looks different every month in the Art Studio! These drop-in experiences invite kids and families to explore different artistic materials, experiment with new techniques, and create together through hands-on play. In addition to all of the art supplies you\u2019ll typically find in our Art Studio, check out featured materials, collaborative projects, and artist-inspired activities. July Theme: Fiber Art Fun Weave, wrap, stitch, and create with a variety of fiber art materials, including yarn, ribbon, fabric, and string. Kids can contribute to a giant group weaving, practice beginner-friendly stitching techniques with plastic needles, and explore texture and pattern through hands-on making. Featured activities include collaborative weaving and wrapping all month long, inspired by artist Aluaiy Kaumakan, and nature weaving on the 12th",
+      "age_bands": [
+        "5-11",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "iowa-childrens-museum:5597f1bf3e"
+    },
+    {
+      "title": "Member Hour",
+      "start": "2026-07-15T09:00:00-05:00",
+      "source": "iowa-childrens-museum",
+      "source_name": "Iowa Children's Museum",
+      "end": "2026-07-15T10:00:00-05:00",
+      "all_day": false,
+      "venue": "Iowa Children\u2019s Museum, 1451 Coral Ridge Ave., Coralville, IA, 52241, United States",
+      "town": "Coralville",
+      "url": "https://theicm.org/event/member-hour-3-2/2026-07-15/",
+      "description": "Members of The Iowa Children\u2019s Museum are invited to come play when The ICM is ONLY open to members! Member Hour is 9-10 a.m. every Wednesday, Thursday, Friday, and Saturday. Come play early and enjoy a less busy environment! Learn more about membership here.",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "iowa-childrens-museum:aafa4896ee"
+    }
+  ],
+  "dropped_for_review": [
+    {
+      "title": "Museum Closed",
+      "start": "2026-07-13",
+      "source": "iowa-childrens-museum",
+      "flags": [
+        "likely_non_event"
+      ]
+    },
+    {
+      "title": "Summer Camp: Little Dreamers Kinder Camp - SOLD OUT",
+      "start": "2026-07-13T09:00:00-05:00",
+      "source": "iowa-childrens-museum",
+      "flags": [
+        "likely_non_event"
+      ]
+    }
+  ]
+}
