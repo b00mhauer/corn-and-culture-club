@@ -108,7 +108,26 @@ def _get(url: str, params: dict, key: str) -> dict:
     raise last  # type: ignore[misc]
 
 
-def fetch_all(d0: date, d1: date, max_calls: int | None, only: str | None = None) -> dict:
+def _search_paged(query: str, key: str, pages: int) -> tuple[list[dict], int | None]:
+    """Follow the cursor for up to `pages` pages. Each page is ~1 credit, so this
+    trades credits for recall. Stops early when the cursor runs out."""
+    raws: list[dict] = []
+    credits: int | None = None
+    params = {"query": query}
+    for _ in range(max(1, pages)):
+        body = _get(SEARCH, params, key)
+        credits = body.get("credits_remaining", credits)
+        batch = body.get("events", [])
+        raws.extend(batch)
+        cursor = body.get("cursor")
+        if not cursor or not batch:
+            break
+        params = {"query": query, "cursor": cursor}
+    return raws, credits
+
+
+def fetch_all(d0: date, d1: date, max_calls: int | None, only: str | None = None,
+              pages: int = 2) -> dict:
     from ccc_core import load_sources
 
     key = require_key("SCRAPE_CREATORS_API_KEY")
@@ -124,14 +143,14 @@ def fetch_all(d0: date, d1: date, max_calls: int | None, only: str | None = None
     for src in srcs:
         try:
             if src.get("fb_query"):
-                body = _get(SEARCH, {"query": src["fb_query"]}, key)
+                raws, credits = _search_paged(src["fb_query"], key, pages)
             elif src.get("fb_url"):
                 body = _get(PAGE, {"url": src["fb_url"]}, key)
+                credits = body.get("credits_remaining", credits)
+                raws = body.get("events", [])
             else:
                 report.append({"source": src["id"], "status": "skipped_no_query"})
                 continue
-            credits = body.get("credits_remaining", credits)
-            raws = body.get("events", [])
             got = [e for e in (_to_event(r, src["id"], d0, d1) for r in raws) if e]
             events.extend(got)
             report.append({"source": src["id"], "status": "ok", "raw": len(raws), "in_window_local": len(got)})
@@ -152,12 +171,13 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="Fetch public Facebook events via Scrape Creators.")
     ap.add_argument("--start", help="YYYY-MM-DD (default: today)")
     ap.add_argument("--days", type=int, default=7)
-    ap.add_argument("--max-calls", type=int, default=None, help="cap credits spent this run")
+    ap.add_argument("--max-calls", type=int, default=None, help="cap queries run this run")
+    ap.add_argument("--pages", type=int, default=2, help="pages per query (~1 credit each)")
     ap.add_argument("--source", help="only this source id")
     args = ap.parse_args()
 
     d0, d1 = parse_window(args.start, args.days)
-    data = fetch_all(d0, d1, args.max_calls, only=args.source)
+    data = fetch_all(d0, d1, args.max_calls, only=args.source, pages=args.pages)
     print(json.dumps(data, indent=2, ensure_ascii=False))
     return 0
 
