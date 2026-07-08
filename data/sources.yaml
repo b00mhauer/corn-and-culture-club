@@ -324,6 +324,57 @@ sources:
     audience: general
     notes: City events — Blues & BBQ, concert series, Second Saturdays. Verify handle.
 
+  # Facebook events via Scrape Creators (method: facebook, needs
+  # SCRAPE_CREATORS_API_KEY). The events/search endpoint returns STRUCTURED
+  # events (name/date/place/url), so these come back close to finished. Biggest
+  # single source of local happenings. ~1 credit per query/page per run.
+  # fb_query = keyword search; fb_url = a specific page's events.
+  - id: fb-iowa-city
+    name: "Facebook Events — Iowa City"
+    town: Iowa City
+    fb_query: "Iowa City"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: Broad town search; the fetcher filters to our county + date window.
+
+  - id: fb-coralville
+    name: "Facebook Events — Coralville"
+    town: Coralville
+    fb_query: "Coralville Iowa"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: ""
+
+  - id: fb-north-liberty
+    name: "Facebook Events — North Liberty"
+    town: North Liberty
+    fb_query: "North Liberty Iowa"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: ""
+
+  - id: fb-family-johnson-county
+    name: "Facebook Events — Johnson County family/kids"
+    town: county
+    fb_query: "Johnson County Iowa kids family"
+    method: facebook
+    tier: 3
+    audience: family
+    notes: Family-scoped query to surface kid-specific happenings.
+
+  # Example venue-page pull (fb_url). Add specific venue pages as discovered.
+  - id: fb-englert
+    name: "Facebook Events — The Englert Theatre (page)"
+    town: Iowa City
+    fb_url: "https://www.facebook.com/englert"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: Pull a specific venue page's events. Verify the page URL/slug.
+
   - id: eventbrite-ic
     name: Eventbrite — Iowa City area (~20mi)
     town: regional

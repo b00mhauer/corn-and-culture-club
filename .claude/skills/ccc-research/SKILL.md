@@ -46,10 +46,16 @@ NOT on any calendar.** Use web search + WebFetch. Hunt across:
   **Gabe's**, **FilmScene** (family matinees), **The Mill**, **Riverside Theatre**,
   **Coralville Center for the Performing Arts**, **Xtream Arena**, **Public Space One**,
   **Trumpet Blossom**. Filter for all-ages / family-appropriate.
-- **Facebook events** — the single biggest source of local happenings (see
-  `references/facebook.md` for how to actually get them). Search public FB event pages
-  and venue/business pages for the week; extract with WebFetch. Many also cross-post to
-  their own site or a ticketing platform we can read directly.
+- **Facebook events (automated — Scrape Creators is wired).** The single biggest source
+  of local happenings, and it comes back STRUCTURED (name/date/place/url). Run:
+  ```bash
+  uv run python scripts/fetch_facebook.py --start <YYYY-MM-DD> --days 7 > data/editions/<start>/facebook.json
+  ```
+  It searches the town-scoped queries in `sources.yaml` (method: facebook), filters to
+  our county + date window, and de-dupes. These are near-finished events — **dedupe them
+  against the calendar candidates** (same event often appears in both; keep the richer
+  record and prefer FB's `when_text` for the exact time). ~1 credit per query. Add venue
+  `fb_url` pages as you confirm their slugs. See `references/facebook.md`.
 - **Instagram (automated — Scrape Creators is wired).** Run:
   ```bash
   uv run python scripts/fetch_instagram.py --days 21 --max-handles 6 > data/editions/<start>/instagram.json

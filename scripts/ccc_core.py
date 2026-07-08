@@ -111,6 +111,7 @@ class Event:
     source_name: str = ""
     end: str | None = None
     all_day: bool = False
+    when_text: str = ""  # human-readable time as given by source (e.g. FB "Sat, Jul 11 at 1 PM")
     venue: str | None = None
     town: str | None = None
     url: str | None = None

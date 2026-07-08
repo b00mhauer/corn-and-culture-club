@@ -110,8 +110,11 @@ search + manual skim inside the `ccc-research` skill, **plus automated Instagram
   often dated event lists) and reads image-only flyers with vision, per the video. Verified
   live: @thinkiowacity, @littlevillagemag, @summerofthearts. ~1 credit/handle/run; key in
   `.env`. See `.claude/skills/ccc-research/references/instagram.md`.
-- **Facebook:** venue cross-post capture + manual-assist now; scraper API later
-  (`references/facebook.md`).
+- **Facebook (Scrape Creators — WIRED & LIVE):** `fetch_facebook.py` uses the Facebook
+  Events API (`events/search` by town query + `events?url=` by page) — returns STRUCTURED
+  events with real dates/times. The biggest single source of local happenings. Verified
+  live (confirmed Blues & BBQ with exact time). ~1 credit/query/run; key in `.env`. See
+  `references/facebook.md`.
 - Reddit r/IowaCity, Little Village *editorial* features (not just their calendar),
   new-business-opening coverage, reader tips inbox.
 - Eventbrite within ~20 miles; AllEvents; Macaroni KID (competitor scan — note what they
