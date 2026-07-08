@@ -331,6 +331,19 @@ def parse_window(start: str | None, days: int) -> tuple[date, date]:
     return d0, d0 + timedelta(days=days - 1)
 
 
+def search_url(title: str, town: str | None = None, when: str | None = None) -> str:
+    """A Google-search fallback link for when we have no real event page. A search
+    that surfaces the event beats a homepage that buries it."""
+    from urllib.parse import quote_plus
+
+    q = f'"{title}"'
+    if town:
+        q += f" {town}"
+    if when:
+        q += f" {when}"
+    return f"https://www.google.com/search?q={quote_plus(q)}"
+
+
 def clean(text: str | None) -> str:
     if not text:
         return ""

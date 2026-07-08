@@ -1,18 +1,17 @@
-"""Render a draft.md edition into a styled, email-safe edition.html.
+"""Render a draft.md edition into a styled, visual edition.html.
 
-Applies the Corn & Culture Club design system (style/design-system.md): a modern,
-clean, editorial look in the spirit of local brands like Big Grove, Wilson's, and
-Hawkeye black-and-gold. Warm bone background, near-black ink, a disciplined
-green/gold accent, tight uppercase wordmark, airy flat cards, hairline rules,
-minimal ornament. Works in a browser; beehiiv handles final inlining at send.
+Design: Morning Brew editorial energy, Iowa City themed, high-end-outdoors-brand
+restraint. Hawkeye black-and-gold with a warm oat base and a pine-green accent,
+an Old Capitol dome masthead, a per-day weather strip, and clean line-icons per
+event mode. Optimized for the web/preview; beehiiv adapts the email at send.
 
     uv run python scripts/render_preview.py --start 2026-07-09
-    uv run python scripts/render_preview.py data/editions/2026-07-09/draft.md
 """
 
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from datetime import date, datetime, timedelta
@@ -23,19 +22,48 @@ import yaml
 
 from ccc_core import DATA
 
-# --- palette (modern, warm, restrained) --------------------------------------
+# --- palette (Hawkeye black + gold, warm oat, pine) --------------------------
 C = {
-    "bg": "#F4F1EA",       # warm bone
-    "surface": "#FFFFFF",  # cards
-    "ink": "#1B1A17",      # near-black
-    "muted": "#6E675B",    # warm gray, meta text
-    "line": "#E4DDCF",     # hairline
-    "green": "#2E5A3E",    # deep earthy green — primary accent
-    "gold": "#C0891F",     # modern gold — secondary accent (corn + Hawkeye nod)
+    "bg": "#F1ECDF",       # warm oat
+    "panel": "#FFFFFF",
+    "ink": "#17150F",      # warm near-black (Hawkeye black)
+    "muted": "#6E6454",
+    "line": "#E4DAC6",
+    "gold": "#D9A408",     # deep premium gold
+    "goldsoft": "#F7ECC9", # soft gold fill
+    "green": "#345E3B",    # pine (outdoors / free)
+    "cream": "#F1ECDF",
+}
+SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
+
+# --- inline SVG line icons (currentColor, stroke) ----------------------------
+_ICONS = {
+    # weather
+    "sun": '<circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.2 4.2l1.5 1.5M18.3 18.3l1.5 1.5M2 12h2M20 12h2M4.2 19.8l1.5-1.5M18.3 5.7l1.5-1.5"/>',
+    "partly": '<circle cx="8.5" cy="8.5" r="3"/><path d="M8.5 1.8v1.6M2.3 8.5h1.6M4.1 4.1l1.1 1.1M13 4.1l-1.1 1.1"/><path d="M7 19h9a3.2 3.2 0 0 0 .3-6.4A4.5 4.5 0 0 0 8 12.5 3.3 3.3 0 0 0 7 19Z"/>',
+    "cloud": '<path d="M7 18h10a3.5 3.5 0 0 0 .3-7A5 5 0 0 0 8 10.4 3.6 3.6 0 0 0 7 18Z"/>',
+    "rain": '<path d="M7 15h10a3.5 3.5 0 0 0 .3-7A5 5 0 0 0 8 7.4 3.6 3.6 0 0 0 7 15Z"/><path d="M9 18l-1 2.5M13 18l-1 2.5M17 18l-1 2.5"/>',
+    "storm": '<path d="M7 14h10a3.5 3.5 0 0 0 .3-7A5 5 0 0 0 8 6.4 3.6 3.6 0 0 0 7 14Z"/><path d="M12.5 13l-2.5 4h3l-2.5 4"/>',
+    "snow": '<path d="M7 15h10a3.5 3.5 0 0 0 .3-7A5 5 0 0 0 8 7.4 3.6 3.6 0 0 0 7 15Z"/><path d="M9 19h.01M12 20.5h.01M15 19h.01"/>',
+    # event modes
+    "date": '<path d="M12 20.5S3.5 14.6 3.5 8.9A4.4 4.4 0 0 1 12 6.9a4.4 4.4 0 0 1 8.5 2c0 5.7-8.5 11.6-8.5 11.6Z"/>',
+    "night": '<circle cx="7" cy="18" r="2.5"/><circle cx="17" cy="16" r="2.5"/><path d="M9.5 18V5l10-2v13"/>',
+    "kids": '<circle cx="12" cy="8" r="5"/><path d="M12 13v5M10.5 20.5 12 18l1.5 2.5"/>',
+    "community": '<circle cx="9" cy="8" r="3"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 6.5a3 3 0 0 1 0 5.8M21.5 20a5.5 5.5 0 0 0-4-5.3"/>',
+    "pin": '<path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/>',
+    # brand: old capitol dome
+    "capitol": '<path d="M3 21h18M5 21v-7M19 21v-7M4 14h16M6 14v-4M9 14v-4M15 14v-4M18 14v-4M4.5 10h15L12 4.5 4.5 10ZM12 4.5V2.2M10.7 6.6a1.3 1.3 0 0 1 2.6 0"/>',
+    "coffee": '<path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8ZM17 9h2.2a2.3 2.3 0 0 1 0 4.6H17"/>',
 }
 
-# System font stacks (email-safe, no webfonts). Tight sans reads modern.
-SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
+
+def svg(name: str, size: int, color: str, sw: float = 1.7) -> str:
+    inner = _ICONS.get(name, _ICONS["pin"])
+    return (
+        f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="none" '
+        f'stroke="{color}" stroke-width="{sw}" stroke-linecap="round" '
+        f'stroke-linejoin="round" style="vertical-align:middle;">{inner}</svg>'
+    )
 
 
 def split_front_matter(text: str) -> tuple[dict, str]:
@@ -55,36 +83,101 @@ def _week_label(start: str) -> str:
     return f"{d0.strftime('%b %-d')}–{d1.strftime('%-d' if same else '%b %-d')}, {d1.year}"
 
 
-def _strip_emoji_dividers(html: str) -> str:
-    """Delete emoji-only / symbol-only paragraphs. Separation is a design job."""
-    def repl(m: re.Match) -> str:
-        inner = re.sub(r"<br\s*/?>", "", m.group(1)).strip()
-        if inner and not re.search(r"[A-Za-z0-9]", inner):
-            return ""
-        return m.group(0)
+# --- weather strip -----------------------------------------------------------
 
-    return re.sub(r"<p[^>]*>(.*?)</p>", repl, html, flags=re.S)
+def _wx_icon(short: str) -> str:
+    s = short.lower()
+    if "thunder" in s or "storm" in s:
+        return "storm"
+    if "snow" in s or "flurr" in s:
+        return "snow"
+    if "rain" in s or "shower" in s or "drizzle" in s:
+        return "rain"
+    if "partly" in s or "mostly sunny" in s or "mostly clear" in s:
+        return "partly"
+    if "sunny" in s or "clear" in s:
+        return "sun"
+    if "cloud" in s or "overcast" in s:
+        return "cloud"
+    return "partly"
 
+
+def _day_label(name: str) -> str:
+    first = name.split()[0]
+    if first in ("This", "Today", "Tonight", "Overnight", "This"):
+        return "Today"
+    return first[:3]
+
+
+def weather_strip(edition_dir: Path) -> str:
+    cj = edition_dir / "candidates.json"
+    if not cj.exists():
+        return ""
+    try:
+        periods = json.loads(cj.read_text()).get("weather", {}).get("periods", [])
+    except (json.JSONDecodeError, KeyError):
+        return ""
+    days = [p for p in periods if p.get("is_daytime")][:6]
+    if not days:
+        return ""
+    cells = []
+    for p in days:
+        icon = _wx_icon(p.get("short", ""))
+        cells.append(
+            f'<td align="center" style="padding:6px 4px;">'
+            f'<div style="font-size:10.5px;font-weight:800;letter-spacing:.8px;'
+            f'text-transform:uppercase;color:{C["muted"]};">{_day_label(p["name"])}</div>'
+            f'<div style="margin:6px 0 4px;">{svg(icon, 26, C["gold"])}</div>'
+            f'<div style="font-size:15px;font-weight:800;color:{C["ink"]};">{p["temp"]}&deg;</div>'
+            f"</td>"
+        )
+    return (
+        f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
+        f'style="background:{C["panel"]};border:1px solid {C["line"]};border-radius:12px;'
+        f'margin:0 0 6px;"><tr><td style="padding:12px 10px 4px;">'
+        f'<div style="font-size:10.5px;font-weight:800;letter-spacing:1.4px;'
+        f'text-transform:uppercase;color:{C["gold"]};text-align:center;padding-bottom:2px;">'
+        f'This Week’s Forecast</div>'
+        f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>'
+        f'{"".join(cells)}</tr></table>'
+        f"</td></tr></table>"
+    )
+
+
+# --- chips + mode icon -------------------------------------------------------
 
 def _chip(txt: str) -> str:
-    """Render a `backtick token` as a small modern chip."""
     t = txt.strip()
     up = t.upper()
     if up == "FREE":
         style = f"background:{C['green']};color:#FFFFFF;border:1px solid {C['green']};"
     elif t.startswith("$"):
-        style = f"background:{C['gold']};color:#FFFFFF;border:1px solid {C['gold']};"
-    else:  # ages / neutral chips: outlined, quiet
+        style = f"background:{C['gold']};color:{C['ink']};border:1px solid {C['gold']};"
+    else:
         style = f"background:transparent;color:{C['muted']};border:1px solid {C['line']};"
     return (
-        f'<span style="display:inline-block;{style}font-size:10.5px;font-weight:700;'
+        f'<span style="display:inline-block;{style}font-size:10px;font-weight:800;'
         f"letter-spacing:.6px;text-transform:uppercase;padding:2px 8px;border-radius:4px;"
         f'vertical-align:middle;white-space:nowrap;margin:0 4px 4px 0;">{t}</span>'
     )
 
 
+def _mode_icon(name_line: str) -> str:
+    s = name_line.upper()
+    if "DATE NIGHT" in s:
+        return "date"
+    if "NIGHT OUT" in s:
+        return "night"
+    if "KIDS" in s:
+        return "kids"
+    if "ALL AGES" in s:
+        return "community"
+    return "pin"
+
+
+# --- event cards -------------------------------------------------------------
+
 def _one_card(inner: str) -> str:
-    """Render one event (the lines of a single <p>) as a flat card."""
     parts = [p.strip() for p in re.split(r"<br\s*/?>", inner) if p.strip()]
     if not parts:
         return ""
@@ -92,78 +185,92 @@ def _one_card(inner: str) -> str:
     name = parts[0] if parts else ""
     meta = parts[1] if len(parts) > 1 else ""
     hook = " ".join(parts[2:]) if len(parts) > 2 else ""
+    icon = _mode_icon(name)
 
     rows = [
-        f'<div style="font-size:16px;font-weight:700;line-height:1.3;'
+        f'<div style="font-size:16px;font-weight:800;line-height:1.3;'
         f'color:{C["ink"]};margin-bottom:5px;">{name}</div>'
     ]
     if meta:
         rows.append(
-            f'<div style="font-size:11px;font-weight:600;letter-spacing:.7px;'
-            f'text-transform:uppercase;color:{C["muted"]};margin-bottom:8px;">{meta}</div>'
+            f'<div style="font-size:11px;font-weight:700;letter-spacing:.6px;'
+            f'text-transform:uppercase;color:{C["muted"]};margin-bottom:7px;">{meta}</div>'
         )
     if hook:
-        rows.append(
-            f'<div style="font-size:15px;line-height:1.55;color:{C["ink"]};">{hook}</div>'
-        )
+        rows.append(f'<div style="font-size:15px;line-height:1.55;color:{C["ink"]};">{hook}</div>')
     if link:
-        rows.append(f'<div style="margin-top:9px;font-size:13px;">{link}</div>')
+        rows.append(f'<div style="margin-top:8px;font-size:13px;">{link}</div>')
+
+    badge = (
+        f'<div style="width:38px;height:38px;border-radius:10px;background:{C["goldsoft"]};'
+        f'border:1px solid {C["line"]};text-align:center;line-height:38px;">'
+        f'{svg(icon, 20, C["ink"])}</div>'
+    )
     return (
-        f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
-        f'style="margin:0 0 10px;"><tr><td style="background:{C["surface"]};'
-        f'border:1px solid {C["line"]};border-radius:10px;padding:15px 17px;">'
-        f'{"".join(rows)}</td></tr></table>'
+        f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 10px;">'
+        f'<tr><td style="background:{C["panel"]};border:1px solid {C["line"]};border-radius:12px;'
+        f'padding:14px 16px;">'
+        f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>'
+        f'<td valign="top" width="50" style="padding-right:12px;">{badge}</td>'
+        f'<td valign="top">{"".join(rows)}</td>'
+        f"</tr></table></td></tr></table>"
     )
 
 
 def _style_cards(html: str) -> str:
-    """Turn each blockquote into flat cards. Markdown merges adjacent blockquotes
-    into one <blockquote> with several <p> — render one card per <p>."""
     def repl(m: re.Match) -> str:
-        paragraphs = re.findall(r"<p[^>]*>(.*?)</p>", m.group(1), flags=re.S)
-        cards = "".join(_one_card(p) for p in paragraphs)
-        return cards or m.group(0)
+        paras = re.findall(r"<p[^>]*>(.*?)</p>", m.group(1), flags=re.S)
+        return "".join(_one_card(p) for p in paras) or m.group(0)
 
     return re.sub(r"<blockquote>(.*?)</blockquote>", repl, html, flags=re.S)
+
+
+# section header icons by keyword
+_SECTION_ICON = [
+    ("date night", "date"), ("friends", "night"), ("community", "community"),
+    ("outdoor", "community"), ("kids", "kids"), ("free", "pin"),
+    ("school", "pin"), ("deep dive", "coffee"), ("bulletin", "pin"),
+    ("huddle", "capitol"), ("forecast", "sun"),
+]
+
+
+def _section_icon(label: str) -> str:
+    low = label.lower()
+    for kw, name in _SECTION_ICON:
+        if kw in low:
+            return name
+    return "pin"
 
 
 def _decorate(html: str) -> str:
     html = re.sub(r"<code>(.*?)</code>", lambda m: _chip(m.group(1)), html)
     html = _style_cards(html)
 
-    # Section headers: editorial eyebrow — thin rule, green uppercase label.
     def h2(m: re.Match) -> str:
+        label = m.group(1)
+        icon = svg(_section_icon(label), 18, C["gold"])
         return (
-            f'<div style="border-top:1px solid {C["line"]};margin:34px 0 14px;"></div>'
-            f'<h2 style="font-family:{SANS};color:{C["green"]};font-size:13px;'
-            f"font-weight:800;letter-spacing:1.6px;text-transform:uppercase;"
-            f'margin:0 0 14px;line-height:1.2;">{m.group(1)}</h2>'
+            f'<div style="border-top:1px solid {C["line"]};margin:32px 0 0;"></div>'
+            f'<table role="presentation" cellpadding="0" cellspacing="0" style="margin:15px 0 13px;"><tr>'
+            f'<td valign="middle" style="padding-right:8px;">{icon}</td>'
+            f'<td valign="middle"><span style="font-family:{SANS};color:{C["ink"]};'
+            f"font-size:13px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;"
+            f'">{label}</span></td></tr></table>'
         )
 
     html = re.sub(r"<h2>(.*?)</h2>", h2, html, flags=re.S)
     html = re.sub(
         r"<h3>(.*?)</h3>",
         lambda m: f'<h3 style="font-family:{SANS};color:{C["ink"]};font-size:18px;'
-        f'font-weight:700;margin:22px 0 8px;line-height:1.3;">{m.group(1)}</h3>',
-        html,
-        flags=re.S,
+        f'font-weight:800;margin:22px 0 8px;line-height:1.3;">{m.group(1)}</h3>',
+        html, flags=re.S,
     )
-
-    # Day sub-headings in Week Ahead → small gold kicker.
-    html = re.sub(
-        r"<p[^>]*>\s*<strong>([^<]{3,40})</strong>\s*</p>",
-        lambda m: f'<div style="font-size:11px;font-weight:800;text-transform:uppercase;'
-        f'letter-spacing:1.4px;color:{C["gold"]};margin:18px 0 9px;">{m.group(1)}</div>',
-        html,
-    )
-
     html = re.sub(
         r"<a ", f'<a style="color:{C["green"]};font-weight:700;text-decoration:none;'
-        f'border-bottom:1px solid {C["line"]};" ', html
+        f'border-bottom:1.5px solid {C["gold"]};" ', html,
     )
     html = re.sub(
-        r"<p>", f'<p style="margin:0 0 14px;color:{C["ink"]};font-size:16px;'
-        f'line-height:1.62;">', html
+        r"<p>", f'<p style="margin:0 0 14px;color:{C["ink"]};font-size:16px;line-height:1.62;">', html,
     )
     html = html.replace(
         "<li>", f'<li style="margin:0 0 9px;color:{C["ink"]};font-size:16px;line-height:1.55;">'
@@ -179,33 +286,36 @@ TEMPLATE = """<!doctype html>
 <title>{subject}</title>
 <style>
   body {{ margin:0; padding:0; background:{bg}; }}
-  @media (max-width:620px) {{ .wrap {{ width:100% !important; }} .pad {{ padding:22px !important; }} }}
+  @media (max-width:620px) {{ .wrap {{ width:100% !important; }} .pad {{ padding:20px !important; }} }}
 </style>
 </head>
 <body style="margin:0;padding:0;background:{bg};font-family:{sans};">
 <span style="display:none!important;visibility:hidden;opacity:0;height:0;width:0;overflow:hidden;">{preheader}</span>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:{bg};">
-<tr><td align="center" style="padding:30px 12px;">
+<tr><td align="center" style="padding:24px 12px;">
   <table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:600px;">
-    <!-- nameplate -->
-    <tr><td style="padding:2px 4px 16px;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-        <td style="font-family:{sans};font-size:19px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:{ink};">Corn <span style="color:{gold};">&amp;</span> Culture Club</td>
-        <td align="right" style="font-family:{sans};font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:{muted};">{week}</td>
-      </tr></table>
-      <div style="border-top:2px solid {ink};margin-top:10px;"></div>
-      <div style="font-family:{sans};font-size:11px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:{muted};padding-top:8px;">The good stuff to do in Johnson County, Iowa</div>
+
+    <!-- masthead: black band, gold dome + wordmark -->
+    <tr><td style="background:{ink};border-radius:14px 14px 0 0;padding:22px 20px 18px;text-align:center;">
+      <div style="margin-bottom:6px;">{dome}</div>
+      <div style="font-family:{sans};font-size:24px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:{cream};line-height:1.1;">Corn <span style="color:{gold};">&amp;</span> Culture Club</div>
+      <div style="font-family:{sans};font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:{gold};margin-top:8px;">The good stuff to do in Johnson County, Iowa</div>
+      <div style="font-family:{sans};font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#B9AE93;margin-top:3px;">{week}</div>
     </td></tr>
-    <!-- body -->
-    <tr><td class="pad" style="padding:8px 4px 8px;">
+
+    <!-- headline + weather + body on panel -->
+    <tr><td class="pad" style="background:{bg};padding:18px 6px 8px;">
+      <div style="font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:700;line-height:1.28;color:{ink};margin:2px 4px 16px;">{headline}</div>
+      {weather}
       {body}
     </td></tr>
+
     <!-- footer -->
-    <tr><td style="padding:34px 4px 10px;color:{muted};font-size:12px;line-height:1.7;">
-      <div style="border-top:1px solid {line};margin-bottom:18px;"></div>
-      <span style="font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:{ink};">Corn &amp; Culture Club</span><br>
-      Johnson County, Iowa. The good stuff to do, from a local who did the legwork.<br>
-      Reply with a tip. Forward to a fellow parent.
+    <tr><td style="padding:30px 8px 12px;color:{muted};font-size:12px;line-height:1.7;text-align:center;">
+      <div style="border-top:1px solid {line};margin-bottom:16px;"></div>
+      <span style="font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:{ink};">Corn &amp; Culture Club</span><br>
+      The good stuff to do in Johnson County, Iowa.<br>
+      Reply with a tip. Forward to a friend.
     </td></tr>
   </table>
 </td></tr>
@@ -218,14 +328,22 @@ TEMPLATE = """<!doctype html>
 def render(draft_path: Path) -> tuple[str, dict]:
     fm, body_md = split_front_matter(draft_path.read_text())
     body_html = md.markdown(body_md, extensions=["extra", "sane_lists", "nl2br"])
-    body_html = _strip_emoji_dividers(body_html)
+    # drop emoji-only paragraphs (legacy dividers)
+    body_html = re.sub(
+        r"<p[^>]*>([^A-Za-z0-9<]+)</p>", "", body_html)
     body_html = _decorate(body_html)
+
+    # Headline: pull the first sentence of The Huddle for a Morning-Brew lead.
+    headline = fm.get("subject", "This week in Johnson County")
 
     html = TEMPLATE.format(
         subject=fm.get("subject", "Corn & Culture Club"),
         preheader=fm.get("preheader", ""),
         week=_week_label(fm.get("edition_start", "")),
+        headline=headline,
+        weather=weather_strip(draft_path.parent),
         body=body_html,
+        dome=svg("capitol", 34, C["gold"], sw=1.5),
         sans=SANS,
         **C,
     )
@@ -234,17 +352,15 @@ def render(draft_path: Path) -> tuple[str, dict]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Render draft.md into styled edition.html.")
-    ap.add_argument("draft", nargs="?", help="path to draft.md")
-    ap.add_argument("--start", help="edition start date (finds data/editions/<start>/draft.md)")
+    ap.add_argument("draft", nargs="?")
+    ap.add_argument("--start")
     args = ap.parse_args()
-
     if args.draft:
         draft_path = Path(args.draft)
     elif args.start:
         draft_path = DATA / "editions" / args.start / "draft.md"
     else:
         ap.error("provide a draft path or --start")
-
     if not draft_path.exists():
         ap.error(f"no draft at {draft_path}")
 
@@ -252,8 +368,7 @@ def main() -> int:
     out = draft_path.parent / "edition.html"
     out.write_text(html)
     print(f"Wrote {out}  ({len(html):,} bytes)")
-    print(f"Subject:   {fm.get('subject','')}")
-    print(f"Preheader: {fm.get('preheader','')}")
+    print(f"Subject: {fm.get('subject','')}")
     return 0
 
 

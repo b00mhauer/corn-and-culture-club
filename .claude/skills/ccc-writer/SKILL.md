@@ -88,11 +88,15 @@ Rules:
   `ALL AGES`. Cost: `FREE` (green), `$`/`$$` (gold). Age (for kids items): `AGES 0-4` etc.
   All outlined except FREE/`$`. No emoji chips.
 - Meta line is plain: `Fri 7pm · Venue, Town`. The renderer uppercases it.
-- Every card ends with a link to the event's OWN page — use the `url` from
-  research.json verbatim. Never substitute a homepage or a generic calendar page
-  (`littlevillage...com/`, `icpl.org/calendar`). A link that dumps the reader on a
-  homepage where they can't find the event is worse than no link. If an item's only
-  URL is a homepage, either find the real event URL or don't run it.
+- Every card ends with a link. Preference order:
+  1. The event's OWN page when it's a real one (a Facebook event `/events/<id>`, an
+     ICPL `/events/<id>/<slug>`, a venue event page, a `Calendar.aspx?EID=` link).
+     Use the `url` from research.json verbatim.
+  2. If the only URL is a homepage or generic calendar page, DON'T use it — instead
+     link to a Google search that will surface the event:
+     `https://www.google.com/search?q=` + url-encoded `"Event Name" Town Month Year`.
+     A search that lands on the right thing beats a homepage that buries it.
+  Never link to a bare homepage. `scripts/ccc_core.py:search_url()` builds the fallback.
 - `needs_confirm` items get a plain hedge ("Confirm the time before you go").
 - Lead the hook with the point. Keep it to one or two short sentences.
 - **Cap recurring library/storytime items** (~2-3, or collapse to the Bulletin). Lead each

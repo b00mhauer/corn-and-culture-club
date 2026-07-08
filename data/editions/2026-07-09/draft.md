@@ -45,7 +45,7 @@ Hot and humid to start, around 90, with afternoon storms Thursday and Friday. It
 > **Summer of the Arts: Music on the Move**  `FREE`  `ALL AGES`
 > Wed early evening · a neighborhood park
 > Free live music in a park. Blanket, dinner, done before dark. Confirm which park this week.
-> [details](https://www.summerofthearts.org/)
+> [details](https://www.google.com/search?q=%22Music+on+the+Move%22+Summer+of+the+Arts+Iowa+City+July+2026)
 
 > **Concerts in the Park: Dean and Bob Duo**  `FREE`  `ALL AGES`
 > Wed evening · Solon
