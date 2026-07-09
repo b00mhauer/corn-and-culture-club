@@ -1,17 +1,24 @@
 # 🌽 Corn & Culture Club — Build Plan
 
-A weekly newsletter + website for parents of kids (newborn through high school) in Johnson
-County, Iowa — Iowa City, Coralville, North Liberty, Solon, Tiffin, University Heights,
-Hills, Swisher, Oxford, Lone Tree.
+A weekly newsletter + website for connected local adults in Johnson County, Iowa — Iowa
+City, Coralville, North Liberty, Solon, Tiffin, University Heights, Hills, Swisher, Oxford,
+Lone Tree.
+
+**The audience is the whole life, not just parenting.** The reader is an adult (think a
+couple in their 30s-40s and their friends) who wants to know what's worth doing this week
+in every mode: a **date night**, a **night out with friends**, a **family thing with the
+kids**, and the **community stuff** that makes living here good. It covers kids' activities
+*and* grown-up nights out *and* everything in between. If the reader, their partner, their
+friends, or their kids might want to do it, it's in scope.
 
 **The promise:** you're too busy to track fifteen calendars. We do it for you. One email a
-week that tells you what's worth doing with your kids, what's free, what deadline you're
-about to miss, and one cool local thing you didn't know about.
+week with what's worth doing, whatever mode you're in, what's free, and one cool local thing
+you didn't know about.
 
 Modeled on [Catskill Crew](https://catskillcrew.com/) (beehiiv-based, ~40k subscribers,
 built largely with Claude Code — see [the video](https://www.youtube.com/watch?v=GnhNNeUsFdE)),
-but adapted for a family audience in a college-town county. Priorities: **helpful, fun,
-interesting** — monetization later, if ever.
+adapted for a college-town county. Priorities: **helpful, fun, interesting** — monetization
+later, if ever.
 
 ---
 

@@ -1,79 +1,90 @@
-# Corn & Culture Club — Design System (v1)
+# Corn & Culture Club — Design System (v2)
 
-> Seed values. The `ccc-preview` skill (Phase 3) will encode these into one HTML
-> template used for both email and web. Refine against real Catskill Crew editions
-> and real Gmail rendering before locking anything.
+> Drop-in replacement for `style/design-system.md` in the repo. This supersedes the v1
+> seed. It matches the brand kit in `Brand & Style Guide.dc.html` and the exported
+> `/assets`. The ccc-preview skill should encode the **email-safe** column of Type below;
+> the web archive + signup page may use the brand webfonts.
+
+## Positioning
+
+A social club and weekly newsletter for people in their late thirties around **greater
+Iowa City**. Going-out and culture first — date nights, nights out with friends — with a
+kids-in-tow lane as one tagged facet, not the whole product. Voice: a well-connected
+neighbor with a good memory and a spreadsheet. Curated, not aggregated.
+
+**Tagline (primary):** Ears to the ground on the good stuff around town.
+**Tagline (utility/descriptive):** The good stuff to do in greater Iowa City.
 
 ## Feel
 
-County-fair-meets-college-town. Warm, tactile, a little handmade — not a slick
-SaaS newsletter. Single column, big friendly section headers, emoji dividers,
-generous whitespace. Steal Catskill Crew's *bones* (layout, rhythm, scannability),
-give it an Iowa *skin* (palette, icons, references).
+Modern-editorial with vintage-Midwest warmth. Warm paper, dark ink, one bright kernel of
+gold. Single column, big slab section headers, clean **line-icon dividers (no emoji)**,
+generous whitespace. Confident but never breathless.
 
-## Palette
+## Palette (tokens)
 
 | Token | Hex | Use |
 |---|---|---|
-| `corn-gold` | `#F2B705` | primary accent, dividers, FREE badge |
-| `barn-red` | `#A62B1F` | headers, links, emphasis |
-| `prairie-green` | `#3E6B3A` | secondary accent, age tags |
-| `sky` | `#5B8FB0` | tertiary / cold-weather forecast accents |
-| `cream` | `#FBF7EC` | page/background |
-| `ink` | `#2A2622` | body text |
-| `stone` | `#6E655B` | captions, metadata, "double-check" notes |
+| `corn-gold` | `#D9A408` | primary accent, ampersand, dividers, FREE-adjacent |
+| `prairie-green` | `#345E3B` | links, `FREE` badge fill |
+| `brick` | `#A63A28` | alarm only (deadlines) — rare |
+| `ink` | `#17150F` | body text + dark backgrounds |
+| `paper` | `#F1ECDF` | page background |
+| `gold-wash` | `#F7ECC9` | event-icon chip backgrounds |
+| `stone` | `#6E6454` | meta, captions, "double-check" notes |
+| `hairline` | `#E4DAC6` | borders, rules, card outlines |
+| `card` | `#FFFFFF` | event card / panel background |
 
-Keep contrast AA-legible on `cream`. FREE badge = `corn-gold` bg + `ink` text so
-it pops in the skim.
+Gold is the star and stays rare. Links are green with a gold underline. Brick appears
+maybe once per edition, on a deadline.
 
 ## Type
 
-- Headers: a warm slab or friendly display face (web-safe fallback: Georgia /
-  serif). Confirm what renders in email — for the email build, prefer a system
-  serif stack over a webfont that Gmail may strip.
-- Body: readable sans (system stack: -apple-system, Segoe UI, Roboto, sans-serif).
-- Listings: same body font, bold event name, regular blurb.
+| Role | Web / brand assets | Email-safe (sent newsletter) |
+|---|---|---|
+| Display / masthead / headlines | **Zilla Slab** 600–700 | `Georgia, 'Times New Roman', serif` |
+| Interface / labels / badges / meta | **Work Sans** 700–800, UPPERCASE + letter-spacing | system: `-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif` |
+| Reading prose (Huddle, Deep Dive) | **Newsreader** 400 | `Georgia, serif` |
 
-## Dividers (the Catskill Crew move, Iowa-fied)
+Gmail/Apple Mail strip webfonts — the **email build uses the system stacks**. Zilla Slab /
+Work Sans / Newsreader are for the web archive, signup page, and social images only.
 
-Emoji rule between sections. Primary: 🌽. Rotating supporting cast so editions
-feel alive: 🚜 🐷 🦅 🎪 🧺 🌾. One divider style per edition (pick a "critter of
-the week") is a fun, low-effort signature — mirrors Catskill Crew's animal emoji
-in the subject line (🦅 🐻 🦉).
+## Logo system
+
+Three marks, all in `/assets`:
+- **Primary lockup** — corn-ear emblem + two-line Zilla Slab wordmark, gold ampersand.
+- **Emblem** — stylized ear of corn: gold body, ink **kernel grid** (straight rows/cols,
+  not a diagonal crosshatch), small prairie-green leaf husks at the base. Wide/blunt cob,
+  not a narrow rounded one. Ring/seal variant for covers. Min size 28px; below that use the monogram.
+- **Monogram** — ink `C&C` on a corn-gold rounded square. Primary favicon; avatars, merch.
+- **Popcorn (playful register)** — a puffed-kernel cluster tied to the recurring
+  **"What's poppin'"** device (subject lines, stickers, the Free & Cheap icon). Not the
+  formal logo — the fun counterpart to the serious corn mark.
+
+Rules: keep clear space ≈ the emblem's width; never recolor the corn off gold; never add
+gradients/shadows; never set the wordmark in any face but Zilla Slab.
 
 ## Section header pattern
 
-Each bucket gets: emoji + short ALL-ish-CAPS or title-case label, e.g.
+Hairline rule, then a **gold line-icon + uppercase Work Sans label**. The eight beats:
+The Huddle · The Forecast · Date Night & Out · Community & Outdoors · With the Kids ·
+Free & Cheap Five · The Deep Dive · The Bulletin.
+
+## Event card (the atom)
 
 ```
-🌽  THE WEEK AHEAD
-🆓  FREE & CHEAP FIVE
-🏫  SCHOOL NOTES
+[gold-wash icon chip]  Bold Event Name  [FREE]  [DATE NIGHT] [ALL AGES]
+                       SAT 10:00AM · NORTH LIBERTY   (Work Sans, uppercase, stone)
+                       One punchy sentence on why it's worth it.
+                       details ↗  (green text, gold underline — always source-linked)
 ```
 
-## Event listing block (the atom)
-
-```
-[Bold Event Name]                          [FREE]  [👶 0–4]
-Sat · 10:30am · Iowa Children's Museum, Coralville
-One punchy sentence on why it's worth your Saturday. ↗ source
-```
-
-- Age band chips: `👶 0–4` · `🎒 5–11` · `🎧 12–18` · `👨‍👩‍👧 all`
-- Cost chip: `FREE` (gold) / `$` / `$$`. FREE always visually loudest.
-- Every block ends with a source link — non-negotiable (accuracy = trust).
+- Tags: cost (`FREE` = green fill; `$`/`$$` = hairline outline), mode/age (`DATE NIGHT`,
+  `NIGHT OUT`, `ALL AGES`, `0–4`…). `FREE` is always the loudest.
+- Every block ends with a source link — non-negotiable.
 
 ## Layout tokens
 
-- Max content width ~600px (email-safe).
-- Section spacing generous; dividers give breathing room.
-- Mobile-first: everything single-column, tap targets comfortable, no side-by-side.
-- Images: optional per event; if used, keep small and lazy — email clients are
-  finicky. Alt text always.
-
-## Email-vs-web notes
-
-- Email: inline CSS, table-based layout, no external fonts, test in Gmail +
-  Apple Mail. beehiiv handles a lot of this if we publish there.
-- Web (archive page): same template, can be a touch richer (webfonts, the
-  evergreen standing-events page, an event-submission link).
+- Email max width 600px; card radius 12px; icon chip 38–44px, radius 10–11px.
+- Section dividers: 1px `hairline` rule + 32px top margin.
+- Mobile-first, single column, comfortable tap targets.

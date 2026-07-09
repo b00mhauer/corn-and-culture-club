@@ -1,7 +1,7 @@
 [project]
 name = "corn-and-culture-club"
 version = "0.1.0"
-description = "A weekly newsletter for parents of kids in Johnson County, Iowa"
+description = "A weekly curated newsletter about the good stuff to do in greater Iowa City"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

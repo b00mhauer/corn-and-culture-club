@@ -23,18 +23,23 @@ You do three things, in ascending order of value: **Coverage → Discovery → C
 
 ---
 
-## Step 1 — Coverage (run the floor)
+## Step 1 — Coverage + structured discovery (one command)
 
 ```bash
-uv run python scripts/build_edition.py --start <YYYY-MM-DD of the Monday> --days 7
+uv run python scripts/build_edition.py --start <YYYY-MM-DD> --days 7 --discover
 ```
 
-This writes `data/editions/<start>/candidates.json` (the de-duped, tagged candidate
-pool + NWS weather) and `research.md` (a scaffold). The candidates are calendars
-only. **Do not stop here** — this is the boring part.
+`--discover` pulls the paid sources (uses Scrape Creators credits); drop it for a
+free ICS/HTML-only run. This writes `data/editions/<start>/candidates.json`:
+- **candidates** — de-duped, tagged pool from ICS feeds (ICM), HTML/API sources
+  (Localist where reachable), AND structured **Facebook events** (the biggest
+  coverage source; town + venue queries across the county).
+- **instagram_signals** — recent post captions/images to mine for the non-obvious.
+- **weather** — NWS forecast.
 
-Read `candidates.json`. Skim `dropped_for_review` too; sometimes the junk filter is
-wrong and a real event got dropped.
+Read `candidates.json`. Skim `dropped_for_review` (the junk filter can be wrong).
+The pool is tuned for recall, so it includes some noise on purpose — your curation
+is what makes it precise. **Do not stop here.**
 
 ## Step 2 — Discovery (hunt the non-obvious — this is why people subscribe)
 
@@ -81,9 +86,25 @@ Record each discovery as an event object (same schema as candidates), with
 
 Now be the editor. For every candidate AND discovery:
 
-1. **Would a busy parent actually care?** If not, cut it. Be ruthless — better to send
-   eight great things than forty rows. Cut duplicates, filler, closures, and
-   `age_uncertain` items you can't resolve.
+0. **Cover the whole life, and balance the mix.** The reader is a connected local adult
+   (see `style/voice.md`), not just a parent. Every edition should span the modes:
+   - **Date night / grown-up:** shows, comedy, live music, a dinner, wine-and-paint, a
+     brewery release.
+   - **Out with friends:** trivia, a band, a patio, karaoke, a run club, a festival.
+   - **Family & kids:** storytimes, museums, park programs, kid shows (tag by age).
+   - **Community & outdoors:** festivals, farmers markets, concerts in the park, fairs.
+   Tag each kept event with who it's for (chips like `DATE NIGHT`, `NIGHT OUT`, `KIDS`,
+   `ALL AGES`). Do NOT drop "adult" events — comedy, breweries, bars are in scope.
+   - **Lead with the interesting one-offs**, not the recurring calendar filler. A comedy
+     show, a festival, a concert in the park, a new opening beats the fifth storytime.
+   - **Cap recurring library/storytime items** at ~2–3 in Week Ahead; collapse the rest
+     ("storytimes run most mornings — full list on the standing-events page"). Libraries
+     are the reliable floor, never the whole edition.
+   - Aim for a spread across modes, sources, and towns — not 90% from one calendar.
+1. **Would this reader actually care?** If not, cut it. Be ruthless — better eight great
+   things than forty rows. Cut duplicates, closures, government admin meetings, and
+   private/members-only holds. But do NOT cut a good night-out or social event just
+   because the coarse score is low — those scores under-rate adult and community events.
 2. **Fix the auto-tags.** The Python guesses coarsely. Trust your read of the
    description over the heuristic for `age_bands`, `cost`/`is_free`, `town`.
 3. **Score `interest_score` 1–5.** 5 = "rearrange your Saturday." 1 = "fine, filler."

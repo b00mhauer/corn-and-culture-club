@@ -37,7 +37,8 @@ AGE_BANDS = ("0-4", "5-11", "12-18", "all")
 
 # Towns we cover, plus loose aliases seen in venue/description text.
 TOWNS = {
-    "Iowa City": ["iowa city", "ic ", "downtown ic", "ped mall", "pedestrian mall"],
+    # NB: no bare "ic " alias — it false-matches "botaniC Garden", "musiC ", etc.
+    "Iowa City": ["iowa city", "downtown ic", "ped mall", "pedestrian mall"],
     "Coralville": ["coralville", "coral ridge"],
     "North Liberty": ["north liberty"],
     "Solon": ["solon"],
@@ -90,6 +91,17 @@ _FAMILY_POSITIVE = [
     "story time", "all ages", "youth", "teen", "tween", "preschool", "puppet",
     "craft", "lego", "stem", "petting", "pumpkin", "trick or treat", "santa",
     "egg hunt", "read", "playground", "splash", "carousel", "zoo", "animal",
+]
+# Community/social occasions that are family-friendly even without kid words.
+# These are the *interesting* events (the whole point of the newsletter), and the
+# kid-keyword list above scores them 0, which biases curation toward libraries.
+# This signal keeps them in contention. NB: kept outdoor/community-flavored so it
+# doesn't sweep in bar shows (those get caught by _ADULT_SIGNALS).
+_SOCIAL_POSITIVE = [
+    "festival", "fair", "parade", "farmers market", "market", "in the park",
+    "party in the park", "block party", "bbq", "barbecue", "fireworks",
+    "concert", "live music", "music in the park", "food truck", "celebration",
+    "community", "beef days", "summer social", "art walk", "open house",
 ]
 # Words that suggest adults-only unless "family" also present.
 _ADULT_SIGNALS = [
@@ -218,9 +230,15 @@ def guess_town(text: str, default: str | None = None) -> str | None:
 
 
 def score_family_relevance(text: str, source_audience: str) -> tuple[int, list[str]]:
-    """Coarse 0..3. Flags uncertain calls for the skill/human to review."""
+    """Coarse 0..3. Flags uncertain calls for the skill/human to review.
+
+    Rewards both explicit kid-programming AND community-social occasions, so a
+    free concert-in-the-park isn't scored 0 next to a library storytime. A
+    `social_event` flag marks the community picks so curation can feature them.
+    """
     flags: list[str] = []
     pos = sum(1 for k in _FAMILY_POSITIVE if k in text)
+    social = [k for k in _SOCIAL_POSITIVE if k in text]
     adult = [k for k in _ADULT_SIGNALS if k in text]
     has_family_word = any(k in text for k in ("family", "all ages", "kid", "child"))
 
@@ -228,8 +246,11 @@ def score_family_relevance(text: str, source_audience: str) -> tuple[int, list[s
     if source_audience == "family":
         score += 1  # source is a family venue → baseline lean
     score += min(pos, 2)  # up to +2 for kid words
+    if social:
+        score += 1  # a community/social occasion counts too
+        flags.append("social_event")
 
-    if adult and not has_family_word:
+    if adult and not has_family_word and not social:
         score = max(0, score - 2)
         flags.append(f"adult_signal:{adult[0]}")
     if score == 0:
@@ -308,6 +329,47 @@ def parse_window(start: str | None, days: int) -> tuple[date, date]:
     from datetime import timedelta
 
     return d0, d0 + timedelta(days=days - 1)
+
+
+def search_url(title: str, town: str | None = None, when: str | None = None) -> str:
+    """A Google-search fallback link for when we have no real event page. A search
+    that surfaces the event beats a homepage that buries it."""
+    from urllib.parse import quote_plus
+
+    q = f'"{title}"'
+    if town:
+        q += f" {town}"
+    if when:
+        q += f" {when}"
+    return f"https://www.google.com/search?q={quote_plus(q)}"
+
+
+def to_central(ts: float | None = None, iso: str | None = None) -> str:
+    """Normalize a time to America/Chicago local ISO (no tz suffix).
+
+    Source times arrive in a mess of zones: Facebook gives a UTC unix timestamp,
+    WhoFi/Localist give offset-aware ISO, some feeds give naive strings. Storing
+    UTC put evening events on the wrong DAY (an 8:30pm CDT show became 1:30am the
+    next day). Everything local-Central fixes both the time and the date.
+    """
+    from datetime import datetime, timezone
+    from zoneinfo import ZoneInfo
+
+    central = ZoneInfo("America/Chicago")
+    if ts is not None:
+        dt = datetime.fromtimestamp(ts, tz=timezone.utc)
+    elif iso:
+        from dateutil import parser as _dp
+
+        try:
+            dt = _dp.parse(iso)
+        except (ValueError, TypeError):
+            return iso
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)  # assume UTC when unspecified
+    else:
+        return ""
+    return dt.astimezone(central).replace(tzinfo=None).isoformat()
 
 
 def clean(text: str | None) -> str:
