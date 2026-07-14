@@ -236,15 +236,38 @@ sources:
     audience: family
     notes: Seasonal — apples/pumpkins fall, events year-round. Big family draw.
 
+  # --- Culture / going-out venues (the heart of the newsletter) ---
+  - id: summer-of-the-arts
+    name: Summer of the Arts
+    town: Iowa City
+    url: https://www.summerofthearts.org/events/
+    feed: https://www.summerofthearts.org/events/?ical=1   # VERIFIED (The Events Calendar ICS)
+    method: ics
+    tier: 1
+    audience: general
+    notes: >
+      Friday Night Concerts, Jazz Fest, Music on the Move, free movie nights.
+      Prime going-out/culture content. Confirmed ~25 events on first fetch.
+
+  - id: xtream-arena
+    name: Xtream Arena
+    town: Coralville
+    url: https://www.xtreamarena.com/events/
+    feed: https://www.xtreamarena.com/events/?ical=1   # VERIFIED (The Events Calendar ICS)
+    method: ics
+    tier: 1
+    audience: general
+    notes: Concerts, shows, sports at Iowa River Landing. ~23 events on first fetch.
+
   - id: englert
     name: The Englert Theatre
     town: Iowa City
     url: https://www.englert.org/events
-    feed: null            # VERIFY
+    feed: null            # WP but Tribe REST 404s; uses a ticketing plugin. Covered via FB for now.
     method: html
     tier: 2
     audience: general
-    notes: Filter for family/all-ages shows.
+    notes: Music/comedy/shows. No clean feed found; pulled via Facebook (fb-englert).
 
   - id: filmscene
     name: FilmScene
@@ -445,9 +468,53 @@ sources:
     method: facebook
     tier: 3
     audience: general
-    notes: >
-      Query-based (reliable). The fb_url page-pull variant 500'd on the guessed
-      slug; add fb_url only with a confirmed numeric page id or exact slug.
+    notes: Music/comedy/shows — no clean site feed, so FB is how we get it.
+
+  # Culture / going-out venues without site feeds — surfaced via Facebook.
+  - id: fb-gabes
+    name: "Facebook Events — Gabe's"
+    town: Iowa City
+    fb_query: "Gabe's Iowa City"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: Live music venue.
+
+  - id: fb-big-grove
+    name: "Facebook Events — Big Grove Brewery"
+    town: Iowa City
+    fb_query: "Big Grove Brewery Iowa City"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: Brewery — trivia, live music, release nights. Prime night-out content.
+
+  - id: fb-filmscene
+    name: "Facebook Events — FilmScene"
+    town: Iowa City
+    fb_query: "FilmScene Iowa City"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: Film screenings, special series.
+
+  - id: fb-downtown-ic
+    name: "Facebook Events — Downtown Iowa City"
+    town: Iowa City
+    fb_query: "Downtown Iowa City"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: Block parties, gallery walks, downtown district happenings.
+
+  - id: fb-live-music-ic
+    name: "Facebook Events — Iowa City live music"
+    town: Iowa City
+    fb_query: "Iowa City live music"
+    method: facebook
+    tier: 3
+    audience: general
+    notes: Broad net for shows, bands, bar music not tied to one venue.
 
   - id: eventbrite-ic
     name: Eventbrite — Iowa City area (~20mi)

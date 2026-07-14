@@ -86,21 +86,22 @@ Record each discovery as an event object (same schema as candidates), with
 
 Now be the editor. For every candidate AND discovery:
 
-0. **Cover the whole life, and balance the mix.** The reader is a connected local adult
-   (see `style/voice.md`), not just a parent. Every edition should span the modes:
-   - **Date night / grown-up:** shows, comedy, live music, a dinner, wine-and-paint, a
-     brewery release.
-   - **Out with friends:** trivia, a band, a patio, karaoke, a run club, a festival.
-   - **Family & kids:** storytimes, museums, park programs, kid shows (tag by age).
-   - **Community & outdoors:** festivals, farmers markets, concerts in the park, fairs.
-   Tag each kept event with who it's for (chips like `DATE NIGHT`, `NIGHT OUT`, `KIDS`,
-   `ALL AGES`). Do NOT drop "adult" events — comedy, breweries, bars are in scope.
-   - **Lead with the interesting one-offs**, not the recurring calendar filler. A comedy
-     show, a festival, a concert in the park, a new opening beats the fifth storytime.
-   - **Cap recurring library/storytime items** at ~2–3 in Week Ahead; collapse the rest
-     ("storytimes run most mornings — full list on the standing-events page"). Libraries
-     are the reliable floor, never the whole edition.
-   - Aim for a spread across modes, sources, and towns — not 90% from one calendar.
+0. **Going-out and culture FIRST. Kids/library is ONE lane, not the newsletter.** The
+   brand (`style/design-system.md`) is "going-out and culture first, kids-in-tow as one
+   tagged facet." The pool is heavily library-weighted because libraries publish the most
+   structured events — do NOT let that dictate the edition. Hard rules:
+   - **Lead with culture and going-out:** live music, shows, comedy, breweries, bars,
+     dinners, festivals, gallery/art, farmers markets, concerts in the park. Sources like
+     Summer of the Arts, Xtream Arena, Englert, Gabe's, Big Grove, and the `fb-*` venue
+     queries are your headliners. These come first and fill most of the edition.
+   - **Cap the kids/library lane at ~1 section (roughly a quarter of the edition).**
+     Collapse recurring storytimes to a single Bulletin line ("storytimes most mornings —
+     full list on the standing-events page"). Never build a five-item storytime section.
+   - If a week is genuinely thin on going-out content, say so and lean on the biggest
+     cultural anchor (a festival, a concert series) rather than padding with library items.
+   - Tag each kept event by mode (`DATE NIGHT`, `NIGHT OUT`, `KIDS`, `ALL AGES`). Do NOT
+     drop "adult" events — comedy, breweries, bars are the point.
+   - Aim for a spread across venues and towns, never ~50%+ from library sources.
 1. **Would this reader actually care?** If not, cut it. Be ruthless — better eight great
    things than forty rows. Cut duplicates, closures, government admin meetings, and
    private/members-only holds. But do NOT cut a good night-out or social event just
