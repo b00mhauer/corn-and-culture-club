@@ -16,6 +16,16 @@
       "count": 8
     },
     {
+      "source": "summer-of-the-arts",
+      "status": "ok",
+      "count": 3
+    },
+    {
+      "source": "xtream-arena",
+      "status": "ok",
+      "count": 5
+    },
+    {
       "source": "icpl",
       "status": "ok",
       "parser": "icpl_vbapi",
@@ -112,32 +122,32 @@
     {
       "source": "fb-iowa-city",
       "status": "ok",
-      "raw": 16,
-      "in_window_local": 0
+      "raw": 17,
+      "in_window_local": 3
     },
     {
       "source": "fb-coralville",
       "status": "ok",
-      "raw": 17,
-      "in_window_local": 0
+      "raw": 16,
+      "in_window_local": 1
     },
     {
       "source": "fb-north-liberty",
       "status": "ok",
-      "raw": 7,
+      "raw": 9,
       "in_window_local": 0
     },
     {
       "source": "fb-solon",
       "status": "ok",
-      "raw": 15,
-      "in_window_local": 3
+      "raw": 16,
+      "in_window_local": 4
     },
     {
       "source": "fb-tiffin",
       "status": "ok",
       "raw": 16,
-      "in_window_local": 3
+      "in_window_local": 1
     },
     {
       "source": "fb-johnson-county",
@@ -148,13 +158,13 @@
     {
       "source": "fb-wilsons-orchard",
       "status": "ok",
-      "raw": 1,
-      "in_window_local": 0
+      "raw": 9,
+      "in_window_local": 1
     },
     {
       "source": "fb-childrens-museum",
       "status": "ok",
-      "raw": 6,
+      "raw": 7,
       "in_window_local": 0
     },
     {
@@ -166,14 +176,44 @@
     {
       "source": "fb-englert",
       "status": "ok",
+      "raw": 17,
+      "in_window_local": 0
+    },
+    {
+      "source": "fb-gabes",
+      "status": "ok",
+      "raw": 16,
+      "in_window_local": 3
+    },
+    {
+      "source": "fb-big-grove",
+      "status": "ok",
+      "raw": 0,
+      "in_window_local": 0
+    },
+    {
+      "source": "fb-filmscene",
+      "status": "ok",
+      "raw": 14,
+      "in_window_local": 2
+    },
+    {
+      "source": "fb-downtown-ic",
+      "status": "ok",
+      "raw": 15,
+      "in_window_local": 1
+    },
+    {
+      "source": "fb-live-music-ic",
+      "status": "ok",
       "raw": 15,
       "in_window_local": 0
     }
   ],
   "counts": {
-    "raw": 110,
-    "after_dedupe": 109,
-    "kept_candidates": 106,
+    "raw": 126,
+    "after_dedupe": 123,
+    "kept_candidates": 120,
     "dropped": 3
   },
   "weather": {
@@ -471,6 +511,33 @@
       ],
       "confidence": 0.5,
       "id": "coralville-events:1a7981d380"
+    },
+    {
+      "title": "3ICE",
+      "start": "2026-07-14T11:00:00-05:00",
+      "source": "xtream-arena",
+      "source_name": "Xtream Arena",
+      "end": "2026-07-14T11:00:00-05:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://xtreamarena.com/event/3iceweek1/",
+      "description": "11am Game 1: Philadelphia vs. Chicago Game 2: NY/NJ vs. Buffalo Game 3: Third-Place Game Game 4: First-Place Game This season we\u2019re dropping the puck at the Xtream Arena in Coralville.. Don\u2019t miss your chance to experience the best part of hockey, as teams compete for the coveted Patrick Cup. Hockey, The Way It\u2019s Meant to be Played 3 skaters + 1 goalie for each team No powerplays, straight to penalty shot No challenges or replay for offsides",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [
+        "also:xtream-arena"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "xtream-arena:83ddae513e"
     },
     {
       "title": "Summer Lunch & Fun",
@@ -777,6 +844,33 @@
       "id": "coralville-events:3fd933a9bd"
     },
     {
+      "title": "Modern Calligraphy for Beginners at Bluebird Cafe (Solon)",
+      "start": "2026-07-14T18:30:00",
+      "source": "fb-solon",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Tue, 14 Jul at 18:30 CDT",
+      "venue": "Bluebird Cafe Solon",
+      "town": "Solon",
+      "url": "https://www.facebook.com/events/1674723710518430/",
+      "description": "Tue, 14 Jul at 18:30 CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [
+        "via:facebook"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-solon:6e5337bfb7"
+    },
+    {
       "title": "Let's Talk Books: Fathers & Daughters",
       "start": "2026-07-14T19:00:00",
       "source": "icpl",
@@ -823,6 +917,33 @@
       ],
       "confidence": 0.5,
       "id": "icpl:6a7903e7ce"
+    },
+    {
+      "title": "David P. Donovan and Rose M. Donovan - The Nastiest Saloon in Iowa",
+      "start": "2026-07-14T19:00:00",
+      "source": "fb-filmscene",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Tue, Jul 14 at 7:00 PM CDT",
+      "venue": "15 S Dubuque St, Iowa City, IA, United States, Iowa 52240",
+      "town": "Iowa City",
+      "url": "https://www.facebook.com/events/1044157904983218/",
+      "description": "Tue, Jul 14 at 7:00 PM CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "via:facebook"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-filmscene:8e7cbe1a9e"
     },
     {
       "title": "Coffee & Conversations",
@@ -1025,6 +1146,33 @@
       ],
       "confidence": 0.5,
       "id": "coralville-events:d6c2695da6"
+    },
+    {
+      "title": "3ICE",
+      "start": "2026-07-15T11:00:00-05:00",
+      "source": "xtream-arena",
+      "source_name": "Xtream Arena",
+      "end": "2026-07-15T11:00:00-05:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://xtreamarena.com/event/3ice-week-3/",
+      "description": "Game 1: NY/NJ vs. Minnesota Game 2: Buffalo vs. Chicago Game 3: Third-Place Game Game 4: First-Place Game This season we\u2019re dropping the puck at the Xtream Arena in Coralville. Don\u2019t miss your chance to experience the best part of hockey, as teams compete for the coveted Patrick Cup. Hockey, The Way It\u2019s Meant to be Played 3 skaters + 1 goalie for each team No powerplays, straight to penalty shot No challenges or replay for offsides",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [
+        "also:xtream-arena"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "xtream-arena:abdf248484"
     },
     {
       "title": "Summer Lunch & Fun",
@@ -1325,6 +1473,30 @@
       "id": "icpl:cd5e477cc7"
     },
     {
+      "title": "Goat Hollow Boys",
+      "start": "2026-07-15T18:30:00-05:00",
+      "source": "summer-of-the-arts",
+      "source_name": "Summer of the Arts",
+      "end": "2026-07-15T20:00:00-05:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Happy Hollow Park, 800 Brown St, Iowa City, IA, 52245, United States",
+      "town": "Iowa City",
+      "url": "https://summerofthearts.org/calendar-event/goat-hollow-boys/",
+      "description": "Sponsored by Martin Construction Goat Hollow BoysGoat Hollow Boys are a group of Iowa City based friends who love playing music together. Named after an old unincorporated part of Coralville IA where the poorest of the poor lived, and where songwriter Scott Cochran (Flannel/Slewgrass/Muckrockers) and his grandpa used to pick up a fishing buddy named Rocket, the Goat Hollow Boys play honest, emotional, original Iowa Country-Punk. Featuring members of several local bands-(The Ben Schmidt band, Whiskey Fund, Winterland, Big Begonias, Pigs and Clover), Goat Hollow Boys try to make every show heartfelt and fun. Read More",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "outdoor",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "summer-of-the-arts:150373ca24"
+    },
+    {
       "title": "BA Steering Committee",
       "start": "2026-07-15T19:00:00",
       "source": "icpl",
@@ -1450,6 +1622,36 @@
       ],
       "confidence": 0.5,
       "id": "coralville-events:fb1d55fd27"
+    },
+    {
+      "title": "2026 Summer Sidewalk Sales - Downtown Iowa City",
+      "start": "2026-07-16T10:00:00",
+      "source": "fb-iowa-city",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Thu, Jul 16 - Jul 19",
+      "venue": "Downtown Iowa City",
+      "town": "Iowa City",
+      "url": "https://www.facebook.com/events/2421216491636177/",
+      "description": "Thu, Jul 16 - Jul 19",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "via:facebook",
+        "also:fb-gabes",
+        "also:fb-filmscene",
+        "also:fb-downtown-ic"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-iowa-city:d2e7dea5d6"
     },
     {
       "title": "Wee Read for babies & toddlers",
@@ -1697,6 +1899,31 @@
       "id": "coralville-events:6f5254193a"
     },
     {
+      "title": "3ICE - Patrick Cup Championship",
+      "start": "2026-07-16T16:00:00-05:00",
+      "source": "xtream-arena",
+      "source_name": "Xtream Arena",
+      "end": "2026-07-16T16:00:00-05:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://xtreamarena.com/event/3ice-patrick-cup-championship/",
+      "description": "Patrick Cup Championship",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "xtream-arena:6265685c60"
+    },
+    {
       "title": "Help Hours in the Digital Media Lab",
       "start": "2026-07-16T17:00:00",
       "source": "icpl",
@@ -1847,6 +2074,60 @@
       ],
       "confidence": 0.5,
       "id": "icpl:08e70e6aa4"
+    },
+    {
+      "title": "Sunset Cider Tour For Two",
+      "start": "2026-07-16T19:30:00",
+      "source": "fb-wilsons-orchard",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Thu, 16 Jul at 19:30 CDT",
+      "venue": "4823 Dingleberry RD NE, Iowa City, IA, United States, Iowa 52240",
+      "town": "Iowa City",
+      "url": "https://www.facebook.com/events/1005721328534285/",
+      "description": "Thu, 16 Jul at 19:30 CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "via:facebook"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-wilsons-orchard:4b4d949cfd"
+    },
+    {
+      "title": "Conan at Gabes",
+      "start": "2026-07-16T20:00:00",
+      "source": "fb-gabes",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Thu, Jul 16 at 8:00 PM CDT",
+      "venue": "Gabe's Iowa City",
+      "town": "Iowa City",
+      "url": "https://www.facebook.com/events/1506063031098735/",
+      "description": "Thu, Jul 16 at 8:00 PM CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "via:facebook"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-gabes:16aac10459"
     },
     {
       "title": "Ear Buds: an audiobook walk",
@@ -2028,6 +2309,33 @@
       ],
       "confidence": 0.5,
       "id": "north-liberty-library:45a1f18f47"
+    },
+    {
+      "title": "Iowa City IA \ud83c\udf51Georgia Peaches & Cherry Truckload Sale\ud83c\udf52",
+      "start": "2026-07-17T11:30:00",
+      "source": "fb-iowa-city",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Fri, Jul 17 at 11:30 AM CDT",
+      "venue": "Arona Home Essentials",
+      "town": "Iowa City",
+      "url": "https://www.facebook.com/events/4533077140268317/",
+      "description": "Fri, Jul 17 at 11:30 AM CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "via:facebook"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-iowa-city:84a1e38f00"
     },
     {
       "title": "Summer Lunch & Fun",
@@ -2257,6 +2565,85 @@
       "id": "icpl:d00054fef2"
     },
     {
+      "title": "Dandelion Stompers",
+      "start": "2026-07-17T18:30:00-05:00",
+      "source": "summer-of-the-arts",
+      "source_name": "Summer of the Arts",
+      "end": "2026-07-17T21:00:00-05:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Ped Mall Stage, 210 Dubuque St, Iowa City, IA, 52240, United States",
+      "town": "Iowa City",
+      "url": "https://summerofthearts.org/calendar-event/dandelion-stompers-5/",
+      "description": "Sponsored by OPN Architects About: For more than a decade, the Dandelion Stompers have brought savory horns, spicy vocals and red hot rhythms to eastern Iowa. With their second album under their belt they are ready for ten more years of singing, dancing, and stomping! Lineup: Chris Clark-bar sax; Tim Crumley-percussion; Katie Greenstein-tpt; Brandi Janssen-bass; Marc Janssen-gtr; Katie Roche-voc; Suzanne Smith-cl; Devin van Holsteijn-alto sax Contact Information: Web: https://dandelionstompers.com/ Other links: https://www.facebook.com/dandelionstompers/ https://www.instagram.com/dandelionstompers Summer of the Arts Festivals: None yet!",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "outdoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "summer-of-the-arts:d7a0af6714"
+    },
+    {
+      "title": "501 Bryze live in Iowa City IA at Gabe's!",
+      "start": "2026-07-17T19:00:00",
+      "source": "fb-gabes",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Fri, Jul 17 at 7:00 PM CDT",
+      "venue": "Gabe's Iowa City",
+      "town": "Iowa City",
+      "url": "https://www.facebook.com/events/981594621025177/",
+      "description": "Fri, Jul 17 at 7:00 PM CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "via:facebook"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-gabes:c2281f346e"
+    },
+    {
+      "title": "SALSA NIGHT @ WILDWOOD in Iowa City",
+      "start": "2026-07-17T21:00:00",
+      "source": "fb-iowa-city",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Fri, Jul 17 at 9:00 PM CDT",
+      "venue": "Wildwood BBQ & Saloon",
+      "town": "Iowa City",
+      "url": "https://www.facebook.com/events/1357432836144185/",
+      "description": "Fri, Jul 17 at 9:00 PM CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "via:facebook"
+      ],
+      "family_relevance": 1,
+      "auto_flags": [
+        "social_event",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-iowa-city:04386df10a"
+    },
+    {
       "title": "ICPL Bookmobile at Iowa City Farmers Market",
       "start": "2026-07-18T08:00:00",
       "source": "icpl",
@@ -2316,11 +2703,11 @@
       "source_name": "Facebook Events",
       "end": null,
       "all_day": false,
-      "when_text": "Sat, Jul 18 at 9:00 AM CDT",
+      "when_text": "Sat, 18 Jul at 09:00 CDT",
       "venue": "Stinocher St, Solon, IA 52333, United States",
       "town": "Solon",
       "url": "https://www.facebook.com/events/1513787950233942/",
-      "description": "Sat, Jul 18 at 9:00 AM CDT",
+      "description": "Sat, 18 Jul at 09:00 CDT",
       "age_bands": [],
       "cost": "unknown",
       "is_free": null,
@@ -2409,34 +2796,6 @@
       ],
       "confidence": 0.5,
       "id": "icpl:b6a8620f47"
-    },
-    {
-      "title": "Operation: Body Exploration with the University of Iowa (2nd - 6th Grades Only)",
-      "start": "2026-07-18T10:00:00",
-      "source": "fb-tiffin",
-      "source_name": "Facebook Events",
-      "end": null,
-      "all_day": false,
-      "when_text": "Sat, 18 Jul at 10:00 CDT",
-      "venue": "311 Marengo Road, Tiffin, IA, United States, Iowa 52340",
-      "town": "Tiffin",
-      "url": "https://www.facebook.com/events/1955261351793368/",
-      "description": "Sat, 18 Jul at 10:00 CDT",
-      "age_bands": [],
-      "cost": "unknown",
-      "is_free": null,
-      "indoor_outdoor": "unknown",
-      "tags": [
-        "via:facebook",
-        "also:fb-tiffin"
-      ],
-      "family_relevance": 0,
-      "auto_flags": [
-        "family_relevance_uncertain",
-        "age_uncertain"
-      ],
-      "confidence": 0.5,
-      "id": "fb-tiffin:b6a6499b0f"
     },
     {
       "title": "The Songs of Peter Rabbit",
@@ -2569,17 +2928,44 @@
       "id": "icpl:668cd33428"
     },
     {
+      "title": "Hunt the Pin \u2013 New Release Party at Waggle Coralville",
+      "start": "2026-07-18T11:00:00",
+      "source": "fb-coralville",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Sat, 18 Jul at 11:00 CDT",
+      "venue": "901 E 2nd Ave, Suite 120, Coralville, IA 52241",
+      "town": "Coralville",
+      "url": "https://www.facebook.com/events/1024501163663757/",
+      "description": "Sat, 18 Jul at 11:00 CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "via:facebook"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-coralville:fa4b159139"
+    },
+    {
       "title": "FunkDaddies at Solon Beef Days",
       "start": "2026-07-18T11:00:00",
       "source": "fb-solon",
       "source_name": "Facebook Events",
       "end": null,
       "all_day": false,
-      "when_text": "Sat, Jul 18 at 11:00 AM CDT",
+      "when_text": "Sat, 18 Jul at 11:00 CDT",
       "venue": "Solon, Iowa",
       "town": "Solon",
       "url": "https://www.facebook.com/events/1573057274220120/",
-      "description": "Sat, Jul 18 at 11:00 AM CDT",
+      "description": "Sat, 18 Jul at 11:00 CDT",
       "age_bands": [],
       "cost": "unknown",
       "is_free": null,
@@ -2718,6 +3104,32 @@
       ],
       "confidence": 0.5,
       "id": "fb-tiffin:17939ee8bc"
+    },
+    {
+      "title": "Galaxy Quest",
+      "start": "2026-07-18T21:00:00-05:00",
+      "source": "summer-of-the-arts",
+      "source_name": "Summer of the Arts",
+      "end": "2026-07-18T22:45:00-05:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Iowa City Municipal Airport, 1801 Riverside Dr., Iowa City, 52246",
+      "town": "Iowa City",
+      "url": "https://summerofthearts.org/calendar-event/galaxy-quest/",
+      "description": "Sponsored by Epiphany Dermatology Runtime: 1hr 42min Rating: PG Starring: Tim Allen, Sigourney Weaver and Alan Rickman Plot: The alumni cast of a space opera television series have to play their roles as the real thing when an alien race needs their help. However, they also have to defend both Earth and the alien race from a reptilian warlord. Watch the trailer HERE! *Start times are an estimation based on sunset and are subject to change",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "outdoor",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "adult_signal:gala",
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "summer-of-the-arts:fc85edc2b3"
     },
     {
       "title": "Bawdy Bawdy Ha Ha Posing Class",
@@ -3053,7 +3465,7 @@
   ],
   "instagram_signals": {
     "window_days": 21,
-    "credits_remaining": 6877,
+    "credits_remaining": 6843,
     "report": [
       {
         "handle": "thinkiowacity",
@@ -3092,7 +3504,7 @@
             "url": "https://www.instagram.com/p/DaO5AHEjQHA/",
             "posted": "2026-07-01T01:58:24+00:00",
             "caption": "July\u2019s events are heating up! July 2 \ud83c\uddfa\ud83c\uddf8: Fanfare & Flight @northliberty Hy-Vee Amphitheater July 3 \ud83e\udd20: @bigandrichofficial Coralville 4thFest July 3-5 \ud83c\udfb7: Iowa City Jazz Festival @summerofthearts July 4 \ud83c\udf6c: @cityofcoralville 4thFest Parade July 11 \ud83d\udc1b: BioBlitz @sustainui July 11 \ud83c\udfb6: @themainsqueeze @northliberty Blues & BBQ July 17-18 \ud83c\udf89: Solon Beef Days July 25-26 \ud83c\udfbe: @dockdogs @iowacityscheels July 26 \ud83c\udfaa: Elemental Circus @northliberty \u2b07\ufe0f save this post #ThinkIowaCity",
-            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/731195633_18402325039158570_7241068668791364020_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=slaLUrxVSKYQ7kNvwEB7sE9&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQColScmgsHJQpuu4759ped1ie7RYe6-XM6wfDUP6phzfQ&oe=6A5C208A&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/731195633_18402325039158570_7241068668791364020_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-ord5-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gHqYcHXTtbJoapKjJMY7_queePXVa-_S5V9I9nwrUjYCHnDMrBDoAVALOCUX8ECQJI&_nc_ohc=slaLUrxVSKYQ7kNvwFbb2G3&_nc_gid=D7-ac0jxmOKSAB9wurnSrA&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBYhxvtUaeoof6Xh3FcgluQR6EyIrBQ9oFkP7J0_OIiAA&oe=6A5C208A&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3104,7 +3516,7 @@
             "url": "https://www.instagram.com/p/Davt5HXMdJK/",
             "posted": "2026-07-13T20:00:52+00:00",
             "caption": "\ud83d\udc9b\ud83d\udda4 Kinnick water tower, we\u2019ll never forget you #ThinkIowaCity",
-            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/747122261_18404198572158570_8016692014559805038_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=JvWshCx7e5IQ7kNvwECUniJ&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQABIhM9XLNvXpvW47btSNWGQhR0KD8lW6d74xcO_meH6Q&oe=6A5C200A&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/747122261_18404198572158570_8016692014559805038_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-ord5-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gHqYcHXTtbJoapKjJMY7_queePXVa-_S5V9I9nwrUjYCHnDMrBDoAVALOCUX8ECQJI&_nc_ohc=JvWshCx7e5IQ7kNvwGAQzMT&_nc_gid=D7-ac0jxmOKSAB9wurnSrA&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBhbIDvZBRNKrrZ6NQfkQatl-xOAZbNdXWYkv2EGS_axg&oe=6A5C200A&_nc_sid=bc0c2c",
             "is_video": true,
             "location": "Kinnick Stadium",
             "flagged_upcoming_event": false,
@@ -3116,7 +3528,7 @@
             "url": "https://www.instagram.com/p/DaqWcMmMGty/",
             "posted": "2026-07-11T17:56:15+00:00",
             "caption": "North Liberty Blues & BBQ is happening now! Stop by for some great music, great food, and even better vibes. Open until 10 p.m!",
-            "image_url": "https://scontent-iad3-2.cdninstagram.com/v/t51.71878-15/744534711_1681667693615459_1263414655422686357_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=YqKP8aB2HhQQ7kNvwF_0KgC&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAFz2toS98x5J-Nc9Ko0wmo9H7y_f3GbhQBj9s7MTh47w&oe=6A5C0F92&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-ord5-2.cdninstagram.com/v/t51.71878-15/744534711_1681667693615459_1263414655422686357_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-ord5-2.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2gHqYcHXTtbJoapKjJMY7_queePXVa-_S5V9I9nwrUjYCHnDMrBDoAVALOCUX8ECQJI&_nc_ohc=YqKP8aB2HhQQ7kNvwFu3B5y&_nc_gid=D7-ac0jxmOKSAB9wurnSrA&edm=APU89FABAAAA&ccb=7-5&oh=00_AQDLvlZiEeMskjwnRBh8Ymqp0c2K2PksgQXutcQ4Mb4R0Q&oe=6A5C0F92&_nc_sid=bc0c2c",
             "is_video": true,
             "location": "Centennial Park, North Liberty Iowa",
             "flagged_upcoming_event": false,
@@ -3128,7 +3540,7 @@
             "url": "https://www.instagram.com/p/DanVDZmhGaC/",
             "posted": "2026-07-10T13:45:11+00:00",
             "caption": "A summer day in the Iowa City area\ud83e\udef6",
-            "image_url": "https://scontent-iad3-1.cdninstagram.com/v/t51.71878-15/742711517_2018336022138658_5039838450343669723_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=YvSdipEj9XQQ7kNvwHaDs8M&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBDInWklss3fmpZkSDabpyCy0UgOZuyM8koHaAk6FuYTg&oe=6A5C0119&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-ord5-3.cdninstagram.com/v/t51.71878-15/742711517_2018336022138658_5039838450343669723_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-ord5-3.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gHqYcHXTtbJoapKjJMY7_queePXVa-_S5V9I9nwrUjYCHnDMrBDoAVALOCUX8ECQJI&_nc_ohc=YvSdipEj9XQQ7kNvwH51NRM&_nc_gid=D7-ac0jxmOKSAB9wurnSrA&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCJiT7CfTrc211zRrFrMslXnwuVFa60JKlH8JI2IMeVxA&oe=6A5C0119&_nc_sid=bc0c2c",
             "is_video": true,
             "location": "Iowa City, Iowa",
             "flagged_upcoming_event": false,
@@ -3140,7 +3552,7 @@
             "url": "https://www.instagram.com/p/DalhsKVFnvS/",
             "posted": "2026-07-09T20:57:14+00:00",
             "caption": "\ud83d\udc99 North Liberty Blues & BBQ is this weekend \ud83c\udfb6 North Liberty\u2019s summer tradition is back! Come out to Centennial Park this Saturday beginning at 10 a.m. for live music, Iowa craft beer, mouthwatering barbecue and family fun. The Main Squeeze will headline at 8:30 p.m., capping a full day of exciting live, blues-inspired performances. Admission is free. \ud83d\uddd3\ufe0f: Saturday, July 11 \ud83d\udd59: 10 a.m - 10 p.m. \ud83d\udccd: Hy-Vee Amphitheater at Centennial Park @northliberty \ud83c\udd93: Admission & parking are free",
-            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/743841347_18403629610158570_5986116588958256140_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=b5Baivt09SEQ7kNvwGiFFcC&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCJ0laaKhZ-t9JE2BDkl6Jz3hb2hm7-669JFVcn5sKg0Q&oe=6A5C1E81&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/743841347_18403629610158570_5986116588958256140_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-ord5-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gHqYcHXTtbJoapKjJMY7_queePXVa-_S5V9I9nwrUjYCHnDMrBDoAVALOCUX8ECQJI&_nc_ohc=b5Baivt09SEQ7kNvwFtrJZ2&_nc_gid=D7-ac0jxmOKSAB9wurnSrA&edm=APU89FABAAAA&ccb=7-5&oh=00_AQD-_xhHh0oqM2iS8LzYBvQgtQn50ct7W2D6F7fFPW-Vrg&oe=6A5C1E81&_nc_sid=bc0c2c",
             "is_video": false,
             "location": "North Liberty, Iowa",
             "flagged_upcoming_event": false,
@@ -3152,7 +3564,7 @@
             "url": "https://www.instagram.com/p/DalWOXtCXCI/",
             "posted": "2026-07-09T19:17:14+00:00",
             "caption": "Be there or be square \ud83d\ude01",
-            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/735688798_18403621177158570_8941510462649262325_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=KbQzz8-lwaoQ7kNvwG3fXgA&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCXUDe_YMsmJeRsQKLDH2OWqqLFvm-CVu6d0IadfpFatA&oe=6A5C1A53&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/735688798_18403621177158570_8941510462649262325_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-ord5-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gHqYcHXTtbJoapKjJMY7_queePXVa-_S5V9I9nwrUjYCHnDMrBDoAVALOCUX8ECQJI&_nc_ohc=KbQzz8-lwaoQ7kNvwGDSlgi&_nc_gid=D7-ac0jxmOKSAB9wurnSrA&edm=APU89FABAAAA&ccb=7-5&oh=00_AQDwnCWvASMDZTSW82ZpfTgH1lhu3LWV4KwAm_cULqc6bw&oe=6A5C1A53&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3164,7 +3576,7 @@
             "url": "https://www.instagram.com/p/DajBnp-lm24/",
             "posted": "2026-07-08T21:38:31+00:00",
             "caption": "\u2728makes me want a hot dog realllll bad\u2728 Prepare yourself, next week is National Hot Dog Day (July 15th). We rounded up some hot dog hot spots in the Iowa City area just for you. #thinkiowacity #iowacity #hotdog",
-            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/742712566_18403492513158570_3987308264294969019_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=vItVB9ApKfsQ7kNvwGUsmrk&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQASNwH8e9EgTCRKoj6fufP6uJ_FIB1126ZevxeidgS-fw&oe=6A5C00EE&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/742712566_18403492513158570_3987308264294969019_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-ord5-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gHqYcHXTtbJoapKjJMY7_queePXVa-_S5V9I9nwrUjYCHnDMrBDoAVALOCUX8ECQJI&_nc_ohc=vItVB9ApKfsQ7kNvwGNU_eO&_nc_gid=D7-ac0jxmOKSAB9wurnSrA&edm=APU89FABAAAA&ccb=7-5&oh=00_AQDLBYpd2bIguLjsbEBzeSakCvxtA4xvGQh9Tzmm8Laemg&oe=6A5C00EE&_nc_sid=bc0c2c",
             "is_video": false,
             "location": "Iowa City, Iowa",
             "flagged_upcoming_event": false,
@@ -3176,7 +3588,7 @@
             "url": "https://www.instagram.com/p/DaiXOoNGdx2/",
             "posted": "2026-07-08T15:28:07+00:00",
             "caption": "Some early numbers on a \ud835\udc01\ud835\udc1a\ud835\udc27\ud835\udc1a\ud835\udc27\ud835\udc1a\ud835\udc2c 4th of July weekend \ud83c\udf4c\ud83c\udf4c \u27a1\ufe0f Johnson County recorded 279,000 total visitors from outside the county. \u27a1\ufe0f Kinnick Stadium had 176,400 visitors last weekend, of which 88% traveled from outside Johnson County. Read more about the impact events like this have on Johnson County at link in bio. \ud83d\udcf8 \ud83d\udcf8 @josephwcress | @thinkiowacity",
-            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t39.30808-6/740929816_1673634857897577_617145297194883795_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=tkY1vl1d0MAQ7kNvwGts2bh&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQC8fVtgRZ9uFtmm6j0REfJFvf2K_OBn8B2gIeGs45vFOQ&oe=6A5C298D&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-ord5-3.cdninstagram.com/v/t39.30808-6/740929816_1673634857897577_617145297194883795_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-ord5-3.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2gHqYcHXTtbJoapKjJMY7_queePXVa-_S5V9I9nwrUjYCHnDMrBDoAVALOCUX8ECQJI&_nc_ohc=tkY1vl1d0MAQ7kNvwHoUBZZ&_nc_gid=D7-ac0jxmOKSAB9wurnSrA&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQDvqUDdTrYUMYN6Ro5M00kbD4O_dYCPCZg7WQwH2BDdvA&oe=6A5C298D&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3188,7 +3600,7 @@
             "url": "https://www.instagram.com/p/Dah0FemEelV/",
             "posted": "2026-07-08T10:21:01+00:00",
             "caption": "Vibes. Always with @core4.bike Bikes. Beats. One of the best gravel parties in the biz\u2026 \ud83c\udfa7 DJ lineup: \u2022 PhDJ \u2022 @wolf1200 \u2022 @sdiekie_ \u2022 @theartofansel \ud83d\udd25",
-            "image_url": "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/740753943_18078693083679112_486751136101749044_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=bHGDrY4rL_UQ7kNvwH_6laT&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCgIL8_q6AlrUApSPGK1-ZTsU2noxTUlHX6igCf-WbMMA&oe=6A5C1893&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-ord5-2.cdninstagram.com/v/t51.82787-15/740753943_18078693083679112_486751136101749044_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-ord5-2.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gHqYcHXTtbJoapKjJMY7_queePXVa-_S5V9I9nwrUjYCHnDMrBDoAVALOCUX8ECQJI&_nc_ohc=bHGDrY4rL_UQ7kNvwHzo6E7&_nc_gid=D7-ac0jxmOKSAB9wurnSrA&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAjcT_Rl_Zo4k5AjMqTtLURCopQw1OpFkA6-rpzvBgPKw&oe=6A5C1893&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3200,7 +3612,7 @@
             "url": "https://www.instagram.com/p/Daf7o7DMn6H/",
             "posted": "2026-07-07T16:49:20+00:00",
             "caption": "Think Like a Local episode two: Calyx Creek Lavender and Lodging Lavender season is here, and this is a summer stop you\u2019ll want to add to your list. Stroll through the lavender fields, browse the shop for handcrafted lavender goods, grab a drink or a bite from the caf\u00e9, and take a peek at their brand new treehouses for a truly unique stay. Located right outside Iowa City, this special place is a must-stop. \ud83d\udc9c #ThinkLikeALocal #ThinkIowaCity @calyxcreek",
-            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.71878-15/733396159_1022878243622522_9042868661980250496_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=f8hAMKvnY68Q7kNvwETyd-5&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCZ5I_1BzUsaFyXmea1FSBLHXzJeqaGa5O5eNAi_LuVhw&oe=6A5C1231&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-ord5-2.cdninstagram.com/v/t51.71878-15/733396159_1022878243622522_9042868661980250496_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-ord5-2.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gHqYcHXTtbJoapKjJMY7_queePXVa-_S5V9I9nwrUjYCHnDMrBDoAVALOCUX8ECQJI&_nc_ohc=f8hAMKvnY68Q7kNvwG3LWkJ&_nc_gid=D7-ac0jxmOKSAB9wurnSrA&edm=APU89FABAAAA&ccb=7-5&oh=00_AQDykheH4mzVnTE-WsW9eGLzSYbW4lYy26XU_YmG0OaPDg&oe=6A5C1231&_nc_sid=bc0c2c",
             "is_video": true,
             "location": "Calyx Creek Lavender & Lodging",
             "flagged_upcoming_event": false,
@@ -3212,7 +3624,7 @@
             "url": "https://www.instagram.com/p/Dad03WNMaj4/",
             "posted": "2026-07-06T21:12:37+00:00",
             "caption": "From locals to first-time visitors, here\u2019s what Banana Ball fans love most about Iowa City. What did they miss? Let us know your favorite Iowa City spot in the comments. \ud83d\udc47 #ThinkIowaCity #IowaCity #SavannahBananas",
-            "image_url": "https://scontent-iad3-1.cdninstagram.com/v/t51.71878-15/731465126_1016071291168252_8258371883252237541_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=WZqpt0Oxz9QQ7kNvwHydssG&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQDnU4K2YcAK-IBXBvyEA6BnHnybWwGqKbMigofQTVevOQ&oe=6A5C10D4&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-ord5-2.cdninstagram.com/v/t51.71878-15/731465126_1016071291168252_8258371883252237541_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-ord5-2.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gHqYcHXTtbJoapKjJMY7_queePXVa-_S5V9I9nwrUjYCHnDMrBDoAVALOCUX8ECQJI&_nc_ohc=WZqpt0Oxz9QQ7kNvwEGk4Sa&_nc_gid=D7-ac0jxmOKSAB9wurnSrA&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBEEVzqsWXac3swyo7w2Qtr1iMeWczf7XapWpmdJRrR3Q&oe=6A5C10D4&_nc_sid=bc0c2c",
             "is_video": true,
             "location": "Iowa City, Iowa",
             "flagged_upcoming_event": false,
@@ -3224,7 +3636,7 @@
             "url": "https://www.instagram.com/p/DaZb4P4DWgQ/",
             "posted": "2026-07-05T04:15:34+00:00",
             "caption": "\ud83c\udf86\ud83c\udfb6\u2665\ufe0f @summerofthearts \ud83d\udcf8: #ThinkIowaCity",
-            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/736367150_18402939136158570_8662467754658284740_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=uRwaN6lA0Z4Q7kNvwHBpB_L&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAbew9nUFP92DWfdw7rsTk5drQTa_NhLhJGE7vGQ49p0w&oe=6A5C0A10&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-ord5-1.cdninstagram.com/v/t51.82787-15/736367150_18402939136158570_8662467754658284740_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-ord5-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gHqYcHXTtbJoapKjJMY7_queePXVa-_S5V9I9nwrUjYCHnDMrBDoAVALOCUX8ECQJI&_nc_ohc=uRwaN6lA0Z4Q7kNvwF3HMK2&_nc_gid=D7-ac0jxmOKSAB9wurnSrA&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAcfPq7w8lAJ3dnVeL9F2awwSS7g-7aXWGvUil9snRF_Q&oe=6A5C0A10&_nc_sid=bc0c2c",
             "is_video": false,
             "location": "Iowa City, Iowa",
             "flagged_upcoming_event": false,
@@ -3242,7 +3654,7 @@
             "url": "https://www.instagram.com/p/DaQKkPQlRzz/",
             "posted": "2026-07-01T13:51:07+00:00",
             "caption": "ON STANDS THIS WEEK \u2014 25TH ANNIVERSARY ISSUE \ud83c\udf89 \"Had enough of Mega-this, Super-that and Big-whatever? Fed up with being treated like a dumbass by your local corporate newspaper? Say hello to the first issue of Little Village, your recipe for relief in 32 pages of words and pictures,\" reads a note from publisher @toddkimm55 in the July 2001 magazine. \"Little Village favors the small and local, champions the sustainable, yet believes in considering more than one side of an issue ... Our goal is to start fires and put them out, to raise expectations and lower the limbo bar, to be serious and to be stupid. If you don't like one thing, you might like another.\" The more things change here at Little Village \u2014 longer issues, statewide coverage, a salaried staff of editors \u2014 the more things stay the same. We're still in print, still free, still local, ad-supported, independent, serious and stupid. In this issue: Kimm and other former LV publishers and editors reflect on a quarter century and 354 issues. Plus: Longtime LV music columnist @kembrew recalls his favorite interviews for Prairie Pop over the decades. Also: Ketamine therapy clinics are cropping up in Iowa as a unique UI study utilizing the drug gets underway, and owners of small venues are in agreement with audiences: concert ticket prices are too damn high.",
-            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/730049295_18607519411053370_3661113911231946142_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=pM_wgzc4KrcQ7kNvwG9lQm3&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAedzORBdmC6jiYtrQETWZf2Myo9st3l4g8xFXlqYP62A&oe=6A5C2370&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/730049295_18607519411053370_3661113911231946142_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gF2lYdHe8R-OCFayNwyPTU73LyQB1l3vLRVcGx7-N5Ahn3vm4BUYidAO8dheyKXzmc&_nc_ohc=pM_wgzc4KrcQ7kNvwGRRmfq&_nc_gid=cZT-Jfesiv4QqovVMWvEog&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAmHHPfDUnf-w9oQoqeOwJnb3onhN5Zu6Jy0V8IvlF-zg&oe=6A5C2370&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3254,7 +3666,7 @@
             "url": "https://www.instagram.com/p/DavDRHFmnTO/",
             "posted": "2026-07-13T13:43:54+00:00",
             "caption": "Calling all writers! The Des Moines Public Library is again partnering with Little Village magazine to host a short story competition! All stories must be submitted by August 31 at 12 PM. Learn more about the contest and get started writing: (Link in bio)",
-            "image_url": "https://scontent-sea1-1.cdninstagram.com/v/t51.82787-15/745953036_18608725039054105_4529020260459970234_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-sea1-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=FvW9plWkgsoQ7kNvwFPDY_V&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQDmjnqZUqJwNmxzaw6TF1hDBRMx2A5gR_OLTGzmQG97Qw&oe=6A5C066D&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/745953036_18608725039054105_4529020260459970234_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gF2lYdHe8R-OCFayNwyPTU73LyQB1l3vLRVcGx7-N5Ahn3vm4BUYidAO8dheyKXzmc&_nc_ohc=FvW9plWkgsoQ7kNvwEaRTD8&_nc_gid=cZT-Jfesiv4QqovVMWvEog&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCVroXAt8GBqNhjFJGXLB2V1Sfkg4on-WkwWxegrAVO2w&oe=6A5C066D&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3266,7 +3678,7 @@
             "url": "https://www.instagram.com/p/DavZxiBE7A5/",
             "posted": "2026-07-13T17:00:44+00:00",
             "caption": "LV's most enduring columnist recalls his favorite story to research, some of the icons he's interviewed, and the hot tub party that inspired the title \"Prairie Pop.\" Read the retrospective at the link in our bio, and sign up for LV newsletters to get stories like these delivered directly to your inbox.\u2060 \u2060 \ud83d\udd8b\ufe0f @kembrew\u2060 \ud83d\udcf8 Kembrew McLeod from a photo by Tom Jorgenson; collage by @kdoolittleart",
-            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/743288805_18611219140053370_7164975649130812274_n.jpg?stp=dst-jpg_e15_fr_s1080x1080_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=VI5GWCrkK6QQ7kNvwGJIQ1j&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBfTIEr9Ou0px33hCKy3eIx_H0eRIXisGtS4Z5OqE6IhA&oe=6A5BF9F6&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/743288805_18611219140053370_7164975649130812274_n.jpg?stp=dst-jpg_e15_fr_s1080x1080_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gF2lYdHe8R-OCFayNwyPTU73LyQB1l3vLRVcGx7-N5Ahn3vm4BUYidAO8dheyKXzmc&_nc_ohc=VI5GWCrkK6QQ7kNvwHpr-VL&_nc_gid=cZT-Jfesiv4QqovVMWvEog&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBEbqW2_OytIDco5DWy4FveL1dVUjnkmLZ4dkGPxjxZKw&oe=6A5C3236&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3278,11 +3690,11 @@
             "url": "https://www.instagram.com/p/DavPbquD5RZ/",
             "posted": "2026-07-13T15:30:15+00:00",
             "caption": "Large concentrated hog farms that send manure contamination into local waterways not only impact human health but threaten the existence of more than a dozen endangered species, according to a new study published in the journal Conservation Science and Practice. Read the story at the link in our bio, and sign up for LV newsletters to get the news delivered directly to your inbox.\u2060 \u2060 \ud83d\udd8b\ufe0f Brian Bienkowski/The New Lede\u2060 \ud83d\udcf8 USGS",
-            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/742586470_18611194021053370_6369572328862626249_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=NdNrMlh7yRMQ7kNvwEHtvB8&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBrcTE08lotWpmkAOOaPYwVHA3_6vs43eb4yNn2uQSoRA&oe=6A5C16EF&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/742586470_18611194021053370_6369572328862626249_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gF2lYdHe8R-OCFayNwyPTU73LyQB1l3vLRVcGx7-N5Ahn3vm4BUYidAO8dheyKXzmc&_nc_ohc=NdNrMlh7yRMQ7kNvwHT2376&_nc_gid=cZT-Jfesiv4QqovVMWvEog&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBidfSQIQI0qC2XHQjP60zmV5PM3oEL2qfbS6AQWP6dIw&oe=6A5C16EF&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
-            "likes": 57
+            "likes": 58
           },
           {
             "handle": "littlevillagemag",
@@ -3290,7 +3702,7 @@
             "url": "https://www.instagram.com/p/DanhDWYE3cu/",
             "posted": "2026-07-10T15:30:20+00:00",
             "caption": "While Central Iowa Water Works put more resources than ever into their Nitrate Removal Facility last year, other suppliers of drinking water around the state failed to meet EPA standards. Read the story at the link in our bio, and sign up for LV newsletters to get the news delivered directly to your inbox. \u2060 \u2060 \ud83d\udd8b\ufe0f Cami Koons/Iowa Capital Dispatch\u2060 \ud83d\udcf8 Zak Neumann & @emmamcclatch; collage by @kdoolittleart",
-            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/742786930_18610274863053370_8312336398401236754_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=aKmVHLvds50Q7kNvwEB686a&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQA9BFKvrwjx1er6zJkRJP4DoTEbjZ35WmvclIdsZ9xJ5w&oe=6A5C153C&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/742786930_18610274863053370_8312336398401236754_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gF2lYdHe8R-OCFayNwyPTU73LyQB1l3vLRVcGx7-N5Ahn3vm4BUYidAO8dheyKXzmc&_nc_ohc=aKmVHLvds50Q7kNvwF6OvHp&_nc_gid=cZT-Jfesiv4QqovVMWvEog&edm=APU89FABAAAA&ccb=7-5&oh=00_AQD6KiEXMXDpuTTV3VxF5U62TgQcdhHUj41yMhC6wEDD5A&oe=6A5C153C&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3302,7 +3714,7 @@
             "url": "https://www.instagram.com/p/DalMbTAOiQb/",
             "posted": "2026-07-09T17:56:10+00:00",
             "caption": "The latest issue of @littlevillagemag. See you at One of Us this September!",
-            "image_url": "https://scontent-sea1-1.cdninstagram.com/v/t51.82787-15/734560469_18196667491371258_810104217088198725_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-sea1-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=VFFkcS25gwIQ7kNvwFOcVdh&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQDixbvkOWFQbiZCQD_hDS3MFS3umLQWB1Pg8klfN6I4Cw&oe=6A5C2925&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/734560469_18196667491371258_810104217088198725_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gF2lYdHe8R-OCFayNwyPTU73LyQB1l3vLRVcGx7-N5Ahn3vm4BUYidAO8dheyKXzmc&_nc_ohc=VFFkcS25gwIQ7kNvwFZ9QcF&_nc_gid=cZT-Jfesiv4QqovVMWvEog&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAciG2l6uXM3lRuf3xkXIfC0TAEV0ziffl_ITZ_nhbeHw&oe=6A5C2925&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3314,7 +3726,7 @@
             "url": "https://www.instagram.com/p/DalGmPZmepW/",
             "posted": "2026-07-09T17:00:49+00:00",
             "caption": "Buzz over to the University of Iowa's \"living laboratory\" on Saturday and help researchers spot species for the sake of science. More details at the link in our bio \ud83d\udc1d\u2060 \u2060 \ud83d\udd8b\ufe0f Paul Brennan\u2060 \ud83d\udcf8 Courtesy of APLL (@sees_ui)",
-            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/728991568_18609991675053370_3319763433446222436_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=Ee48cQr8qQUQ7kNvwFA5Zj_&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAfQWy3tUZqezQ-n-8q4Um60AHyIbzHSJ5l2AXIqVAtrQ&oe=6A5C0830&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/728991568_18609991675053370_3319763433446222436_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gF2lYdHe8R-OCFayNwyPTU73LyQB1l3vLRVcGx7-N5Ahn3vm4BUYidAO8dheyKXzmc&_nc_ohc=Ee48cQr8qQUQ7kNvwFx6V0N&_nc_gid=cZT-Jfesiv4QqovVMWvEog&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBoyX-TByL0LiwHaJqKmX2pSdYfbdX7So0vd3NLDXeH8Q&oe=6A5C0830&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3326,7 +3738,7 @@
             "url": "https://www.instagram.com/p/Dakx-LBDom4/",
             "posted": "2026-07-09T14:00:27+00:00",
             "caption": "The Live Nation/Ticketmaster monopoly facilitates price-gouging, reseller scams and the dreaded \"radius clause.\" Nevertheless, Iowa's indie stages persist.\u2060 \u2060 \u201cI think I can speak for other live small venues that support original music: it\u2019s kind of a calling,\u201d said Dave Deibler, owner of @octopuscollegehill. Read the story at the link in our bio, and sign up for LV newsletters to get the news delivered directly to your inbox.\u2060 \u2060 \ud83d\udd8b\ufe0f @emrosa22\u2060 \ud83c\udfa8 Live Nation headquarters in Beverly Hills, California, photo by Coolcaesar, CC BY 4.0; Independent venue illustrations by @lanirosedesigns; Collage by @kdoolittleart",
-            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/741144603_18609940591053370_4451967271729385179_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=I499zL7Mak0Q7kNvwFYeDU9&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQC2pWxJd6xe05pOx3brD66JbuJHh9569XCq3KhqrMFEDg&oe=6A5C21C1&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/741144603_18609940591053370_4451967271729385179_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gF2lYdHe8R-OCFayNwyPTU73LyQB1l3vLRVcGx7-N5Ahn3vm4BUYidAO8dheyKXzmc&_nc_ohc=I499zL7Mak0Q7kNvwFU0X0g&_nc_gid=cZT-Jfesiv4QqovVMWvEog&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAJXknkrZdh2YjUp4k7euEEE5OePFB_9nx13952i_P8Jg&oe=6A5C21C1&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3338,7 +3750,7 @@
             "url": "https://www.instagram.com/p/Daivg6hE0-6/",
             "posted": "2026-07-08T19:00:31+00:00",
             "caption": "Iowa may soon be back to swing-state status, according to ISU political science professor Karen Kedrowski. Read the story at the link in our bio, and sign up for LV newsletters to get the news delivered directly to your inbox.\u2060 \u2060 \ud83d\udcf8 @emmamclatch\u2060 \ud83d\udd8b\ufe0f Kadin Luhmann/Iowa Capital Dispatch",
-            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/740821700_18609739027053370_4435638861528778405_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=pUnA4SuQHrwQ7kNvwHqQPbT&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBFx9UMSB4GAbUbLiI3JOCA2vOr_a4xIsvzz2LZLtJHHA&oe=6A5BFD3A&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/740821700_18609739027053370_4435638861528778405_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gF2lYdHe8R-OCFayNwyPTU73LyQB1l3vLRVcGx7-N5Ahn3vm4BUYidAO8dheyKXzmc&_nc_ohc=pUnA4SuQHrwQ7kNvwG04pfK&_nc_gid=cZT-Jfesiv4QqovVMWvEog&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBAJc__jX9hV8X491mXhRmesujAmiqUDhJ-ok9q5pRh6w&oe=6A5BFD3A&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3350,7 +3762,7 @@
             "url": "https://www.instagram.com/p/DailMI4lGAC/",
             "posted": "2026-07-08T17:33:10+00:00",
             "caption": "This Sunday, the Iowa City Aerohawks (and guest pilots) will show off their tricks at their 33rd Annual Air Show. This may be your last chance to pull up a lawn chair and watch them at their current field, adjacent to the Iowa City Landfill just off IWV road, where they\u2019ve taken to the skies since 1972. Rich DeVepo, who spoke with LV ahead of the event and for a story in LV\u2019s April\u2019s mag, is proud to be part of a club that invites all phases and walks of life, whether truck drivers or rocket scientists, emphasizing that all ages and genders may find interest in soaring to new heights.\u2060 \u2060 DeVepo notes that while some people unexpectedly join the club on a drive to the landfill, drawn in by the sight of planes diving and twisting overhead, the Air Show is an excellent way to discover your interest in the hobby.\u2060 \u2060 If you would like to bring a pop-up canopy for sun cover, DeVepo recommends getting there early. Otherwise, bleachers will be available, though you may need to bring a lawn chair, as the Aerohawks have welcomed as many as 2,000 attendees in previous years.\u2060 \u2060 Find the full story at the link in our bio \u2708\ufe0f\u2060 \u2060 \ud83d\udd8b\ufe0f William Lowell\u2060 \ud83d\udcf9\ufe0f @yeagernc",
-            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.71878-15/741396053_1672191911576270_3062804144801887134_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=rH4dosRkppEQ7kNvwGVkbbF&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBdr3Ec-QWiyF2Sv3eJoQX0i_I12ruEFpvEVGsD-FgisQ&oe=6A5C2566&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.71878-15/741396053_1672191911576270_3062804144801887134_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gF2lYdHe8R-OCFayNwyPTU73LyQB1l3vLRVcGx7-N5Ahn3vm4BUYidAO8dheyKXzmc&_nc_ohc=rH4dosRkppEQ7kNvwEOI4CA&_nc_gid=cZT-Jfesiv4QqovVMWvEog&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCxOrCayfHnmAhDHB0PaBhK8MrAbf7gE3RglpY-NIEHmg&oe=6A5C2566&_nc_sid=bc0c2c",
             "is_video": true,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3362,7 +3774,7 @@
             "url": "https://www.instagram.com/p/Daia-R-kwOJ/",
             "posted": "2026-07-08T16:01:13+00:00",
             "caption": "\"That\u2019s the strange alchemy of building something with the right people, in the right place, at the right time: you make choices and take risks, and then serendipity keeps handing you the collaborators and the moments that make those choices and risks pay off,\" said Alissa Hansen, former LV publisher. Read the retrospective at the link in our bio, and sign up for LV newsletters to get stories like these delivered directly to your inbox.\u2060",
-            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/735761286_18609692620053370_4682302599965913074_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=elyvE0oxRQEQ7kNvwHuKpd8&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBMz6mZd6Q1AWgiOU2bxylrTqpPYMF8zoioYcYgBBIN0Q&oe=6A5C1C40&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/735761286_18609692620053370_4682302599965913074_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gF2lYdHe8R-OCFayNwyPTU73LyQB1l3vLRVcGx7-N5Ahn3vm4BUYidAO8dheyKXzmc&_nc_ohc=elyvE0oxRQEQ7kNvwGLBZIQ&_nc_gid=cZT-Jfesiv4QqovVMWvEog&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCDNKfemB31OenvzBhdjKR1CWhb_LNpNi9RgHvBc0nY_w&oe=6A5C1C40&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3374,7 +3786,7 @@
             "url": "https://www.instagram.com/p/DaiQn-FmfQl/",
             "posted": "2026-07-08T14:30:28+00:00",
             "caption": "Futile Wrath \u2014 July 2026 \ud83c\udf55\u2060 \u2060 \ud83d\udd8b\ufe0f @sam_locke_ward",
-            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/731022531_18609671695053370_3130636247850823774_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=mvxR0BWXdJAQ7kNvwGBS4gU&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQB8K6UDwiYGxhAgMm7fStKV6wdiSqgGo4jZdMVCBV8_2A&oe=6A5C2BBC&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-phl2-1.cdninstagram.com/v/t51.82787-15/731022531_18609671695053370_3130636247850823774_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-phl2-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gF2lYdHe8R-OCFayNwyPTU73LyQB1l3vLRVcGx7-N5Ahn3vm4BUYidAO8dheyKXzmc&_nc_ohc=mvxR0BWXdJAQ7kNvwFDhTSg&_nc_gid=cZT-Jfesiv4QqovVMWvEog&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCgy4euF3qlsDr_SymbgWLfh9flzgAF8BTEzNSILzP3NQ&oe=6A5C2BBC&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3397,7 +3809,7 @@
             "url": "https://www.instagram.com/p/DavWTCKgXFZ/",
             "posted": "2026-07-13T16:30:06+00:00",
             "caption": "Mark your calendars for this week's Music on the Move! Join us this coming Wednesday, July 15, for an incredible evening of live music with the Goat Hollow Boys. They'll be bringing their high-energy, original Iowa Country-Punk sound to the park, and it's a show you won't want to miss! Bring your lawn chairs, blankets, and snacks for a wonderful, family-friendly evening of local music in the community. A huge thank you to Hills Bank, our wonderful presenting sponsor, for making free community events like this possible! When: Wednesday, July 15 | 6:30 PM \u2013 8:00 PM | Where: Happy Hollow Park (800 Brown St, Iowa City, IA) | Cost: FREE! #sotaic26 #sotaic #SummerOfTheArts #MusicOnTheMove #IowaCity #LiveLocalMusic #HillsBank #CommunityArts #FreeEvents #GoatHollowBoys",
-            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/731380108_1437563091741100_3701906300451863156_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=wRRNKRFT3_wQ7kNvwEq_qvO&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQCc9JS-9YpnTeYjnQtFonwhyq4vYnBw2qxv4UUiQDjtDg&oe=6A5C0C28&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/731380108_1437563091741100_3701906300451863156_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gFsVENzcM0A6mg8c4iPpg9HY9G4LvQ6cj9LVkcSU6mEsSlRirFM1vfiFzArd5_IZYQ&_nc_ohc=wRRNKRFT3_wQ7kNvwFNrtvg&_nc_gid=AEoj-Nf9FOlIjH-BvTtnww&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQBEJNoumDv-g-o3zXrtqxkGNSCq9F6yNG3ZTzPYknplIQ&oe=6A5C0C28&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3409,7 +3821,7 @@
             "url": "https://www.instagram.com/p/DaqJR2jiXBe/",
             "posted": "2026-07-11T16:00:08+00:00",
             "caption": "The weather is beautiful and the music is going to be electric tonight! Grab your blankets and lawn chairs and meet us at Riverfront Crossings Park for Rhythms at Riverfront Crossings featuring PhDJ AND Afroband243! Come celebrate community, culture, and high-energy Congolese Rhumba beats starting at 7:00 PM. We have everything you need for the perfect night out: - Beverage Garden: Stop by our Summer of the Arts tent to grab a cold beer or drink! - Dinner is Served: Snag some delicious local eats from Luna's Tacos, MooMoo's, and Marco's Grilled Cheese. - Activities & Tabling: Get to know local groups! Stop by the tables for P&G to see what they have to share. - Cost: FREE admission! We want to send a huge shoutout and thank you to our fantastic evening co-sponsors, McDonald Optical and Accurate Automotive, Inc., for helping us keep these community concerts entirely free for everyone. See you all at the park tonight! #sotaic26 #sotiac #IowaCityArts #SummerOfTheArts #RiverfrontCrossings #Afroband243 #PhDJ #McDonaldOptical #AccurateAutomotive #FreeLiveMusic #SupportLocalArts #ICFoodTrucks",
-            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/728427429_1436045451892864_4298237846600548371_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=OVKJtOFo62EQ7kNvwHPCj-G&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQD_Q2gve5uKF1yLk_nBNgrCryJF0cYoo9eWmMST_12Oag&oe=6A5C2044&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/728427429_1436045451892864_4298237846600548371_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gFsVENzcM0A6mg8c4iPpg9HY9G4LvQ6cj9LVkcSU6mEsSlRirFM1vfiFzArd5_IZYQ&_nc_ohc=OVKJtOFo62EQ7kNvwFRgmXB&_nc_gid=AEoj-Nf9FOlIjH-BvTtnww&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQAuYt6bVIiKsocRd876pUr2qBn2HoG5Qx5ogko5uaWPUA&oe=6A5C2044&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3421,7 +3833,7 @@
             "url": "https://www.instagram.com/p/DanyQJvktpV/",
             "posted": "2026-07-10T18:00:27+00:00",
             "caption": "Found yourself dancing a little too hard and misplaced something? Don\u2019t worry, we\u2019ve got your back! We collected all items left behind at the 2026 Iowa City Jazz Festival. Slide into our DMs or reach out to our team at the Summer of the Arts office to see if we have your missing gear so we can get it back to you! #sotaic26 #sotaic #IowaCityJazz #LostAndFound #FestivalTips #DowntownIowaCity #SummerOfTheArts",
-            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/743699626_1450082483822494_2165025831025930002_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=E3l55ek9m-oQ7kNvwGTmfjF&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQCkdtQ3Vnac7eX_80VpF5rIYDMZGvWFSZhp2njlVaCI3Q&oe=6A5C1075&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/743699626_1450082483822494_2165025831025930002_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gFsVENzcM0A6mg8c4iPpg9HY9G4LvQ6cj9LVkcSU6mEsSlRirFM1vfiFzArd5_IZYQ&_nc_ohc=E3l55ek9m-oQ7kNvwEtlyFz&_nc_gid=AEoj-Nf9FOlIjH-BvTtnww&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQBtMIfl20kb3pXbphysKOemRiYpXkguXf1BBci79kjS-w&oe=6A5C1075&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3433,7 +3845,7 @@
             "url": "https://www.instagram.com/p/Dankf8bjzli/",
             "posted": "2026-07-10T16:00:16+00:00",
             "caption": "TONIGHT IN THE PED MALL! The weekend is officially here, and the weather is perfect for some live music! Join us tonight at the Ped Mall Stage from 6:30 PM \u2013 9:00 PM for an unforgettable performance by Winterland! Come down and experience their soulful tribute to the Grateful Dead. From rhythm and blues roots to experimental psychedelic rock, they capture an incredible era of music with absolute perfection. Every face in the crowd will be smiling\u2014don't miss out on the magic tonight! Time: 6:30 PM \u2013 9:00 PM | Location: Ped Mall Stage (Downtown Iowa City) | Cost: FREE admission! We want to give a special shoutout and thank you to our amazing sponsor, Graduate by Hilton Iowa City, for partnering with us to keep these Friday night concerts free for everyone. See you all downtown tonight! #sotaic26 #sotaic #IowaCityArts #SummerOfTheArts #FridayNightConcertSeries #WinterlandBand #GraduateByHilton #DowntownIC #FreeLiveMusic #SupportLocalArts",
-            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/728315309_1436005038563572_2819756043508693448_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=u_8AO-OJ4cAQ7kNvwH6PcJ2&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQBhzrscLM83kbio8f9B0qnNDW78nYqzdpSk7SYU56EcaQ&oe=6A5C1235&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/728315309_1436005038563572_2819756043508693448_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gFsVENzcM0A6mg8c4iPpg9HY9G4LvQ6cj9LVkcSU6mEsSlRirFM1vfiFzArd5_IZYQ&_nc_ohc=u_8AO-OJ4cAQ7kNvwExGhUT&_nc_gid=AEoj-Nf9FOlIjH-BvTtnww&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQANN7JdAynBcEQBzzVAXheuYbTR4HNE7GvZANr5tLf0sQ&oe=6A5C1235&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3445,7 +3857,7 @@
             "url": "https://www.instagram.com/p/Dal2otdjA5B/",
             "posted": "2026-07-10T00:00:16+00:00",
             "caption": "MARK YOUR CALENDARS FOR SATURDAY! We have an incredible weekend lineup waiting for you! This Saturday, July 11th, join us at Riverfront Crossings Park from 7:00 PM \u2013 9:30 PM for an unforgettable night of live music featuring PhDJ AND Afroband243! Come experience the amazing rhythms of Afro and Congolese Rhumba music. We have a full evening of fun planned beyond the music: - Beverage Garden: Stop by our tent and grab a cold beer or refreshing drink! - Food Vendors: Skip cooking and grab dinner from Luna's Tacos, MooMoo's, and Marco's Grilled Cheese! A massive thank you to our wonderful Series Presenting Sponsor, Kim Schillig, Realtor at Lepic-Kroeger, Realtors, for her incredible support in bringing these free concert series to our community! #IowaCity #SummerOfTheArts #RhythmsAtRiverfrontCrossings #Afroband243 #PhDJ #KimSchilligRealtor #FreeEventsIC #LiveLocalMusic #IowaCityParks #LocalFoodTrucks",
-            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/728580987_1436018735228869_2033144534949588543_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=9VTVuo3BX00Q7kNvwEsaETd&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQB9Ijtn1vM9RZBD0J942ktMRnh6KN2zmDHhXvst5VAPUg&oe=6A5C20CA&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/728580987_1436018735228869_2033144534949588543_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gFsVENzcM0A6mg8c4iPpg9HY9G4LvQ6cj9LVkcSU6mEsSlRirFM1vfiFzArd5_IZYQ&_nc_ohc=9VTVuo3BX00Q7kNvwHCmvOn&_nc_gid=AEoj-Nf9FOlIjH-BvTtnww&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQD5rUEJ0tnFaZob7-sLHDq69TMUuZIr20RpyAxmwktg_g&oe=6A5C20CA&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3457,7 +3869,7 @@
             "url": "https://www.instagram.com/p/DaknqEMIArW/",
             "posted": "2026-07-09T12:30:08+00:00",
             "caption": "Skip cooking tonight and join us for Eat for the Arts at 30hop ! Whether you're grabbing lunch, meeting up for happy hour, or enjoying dinner on the rooftop patio, 15% of your total sales ALL DAY TODAY will be generously donated back to Summer of the Arts. Your meals and drinks directly help us keep our community arts programming free for everyone to enjoy! When: Today! 11:00 AM \u2013 9:00 PM Where: 30HOP Coralville (900 E 2nd Ave) Dine-in and takeout both count! See you on the rooftop! #sotaic26 #IowaCity #CoralvilleIA #SummerOfTheArts #30hop #EatForTheArts #DineOutDoGood #SupportLocalIC",
-            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/729148627_1435951241902285_5502220474579039165_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=bDWZEJQJaCYQ7kNvwHvr_86&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQCMiCRZ15iKXtpWQ1cqU5zEbLAeLtB_UIhJY6-CtxfKCg&oe=6A5C18EE&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/729148627_1435951241902285_5502220474579039165_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gFsVENzcM0A6mg8c4iPpg9HY9G4LvQ6cj9LVkcSU6mEsSlRirFM1vfiFzArd5_IZYQ&_nc_ohc=bDWZEJQJaCYQ7kNvwFcVH4R&_nc_gid=AEoj-Nf9FOlIjH-BvTtnww&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQDXBBoWlJ6uvMnYMGmq2NkZvXP_XSvHU_lw19V8nz570w&oe=6A5C18EE&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3469,7 +3881,7 @@
             "url": "https://www.instagram.com/p/Dai9O2rAeKm/",
             "posted": "2026-07-08T21:00:11+00:00",
             "caption": "Ready to travel back in time to the golden era of rock? Mark your calendars for this Friday, July 10th, because Winterland is taking over the Ped Mall Stage for our Friday Night Concert Series! Specializing in the Grateful Dead's legendary catalog from 1969 through the late '70s, Winterland brings an uncanny authenticity, incredible musicianship, and a beautiful, high-energy connection to the crowd. Bring your friends, grab your lawn chairs, and get ready to dance the night away! A massive thank you to our wonderful presenting sponsor, McGrath Toyota of Iowa City, and our incredible stage co-sponsors, Bread Garden Market & Bakery, ReUnion Brewery, and Joseph's Steakhouse Iowa City, for supporting free live music in our community! #sotaic #sotaic26 #IowaCity #SummerOfTheArts #FridayNightConcertSeries #Winterland #GratefulDead #GraduateIowaCity #FreeEventsIC #DowntownIowaCity",
-            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/730629162_1435996455231097_6456399244473346497_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=e7oqtLZgvywQ7kNvwH4VYIc&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQAjnScy_XVFXh9ygsE079aHYueyj2Z29uc6ylHY9DnH5Q&oe=6A5C0234&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-atl3-2.cdninstagram.com/v/t39.30808-6/730629162_1435996455231097_6456399244473346497_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gFsVENzcM0A6mg8c4iPpg9HY9G4LvQ6cj9LVkcSU6mEsSlRirFM1vfiFzArd5_IZYQ&_nc_ohc=e7oqtLZgvywQ7kNvwH7hqm7&_nc_gid=AEoj-Nf9FOlIjH-BvTtnww&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQDijZbe-nbwh8AWpVMZ7omS9JQqaGJgoyEpUEcO75-aEg&oe=6A5C0234&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3481,7 +3893,7 @@
             "url": "https://www.instagram.com/p/DaiXde1CFfQ/",
             "posted": "2026-07-08T15:30:09+00:00",
             "caption": "TONIGHT IS THE NIGHT! We are heading to the park tonight! Grab your family, friends, and lawn chairs and meet us at the Terry Trueblood Recreation Area for Music on the Move featuring Hard Luck & the Troubles! Come out and enjoy their soulful, gritty Americana and blues-driven energy right here in Iowa City, fronted by the incredible lead vocals and piano of Roland Racevskis. It's the perfect way to spend a beautiful Wednesday summer evening! Time: 6:30 PM \u2013 8:00 PM | Location: Terry Trueblood Recreation Area | Cost: FREE! We want to extend a special thank you to our wonderful band sponsor, @Navigate Homes, for supporting tonight's performance and helping keep the arts thriving in our community! See you all tonight! #IowaCity #SummerOfTheArts #MusicOnTheMove #HardLuckAndTheTroubles #NavigateHomes #IowaCityArts #FreeLiveMusic",
-            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/729186312_1435962098567866_2779949813659299746_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=EWpQObOECeUQ7kNvwFYopXL&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQBd5bEJ4ARPi7xNuBIKZ_5MHA4mS1V2ra8NwGPlvz98Mg&oe=6A5C2FEC&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/729186312_1435962098567866_2779949813659299746_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gFsVENzcM0A6mg8c4iPpg9HY9G4LvQ6cj9LVkcSU6mEsSlRirFM1vfiFzArd5_IZYQ&_nc_ohc=EWpQObOECeUQ7kNvwHFuSHK&_nc_gid=AEoj-Nf9FOlIjH-BvTtnww&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQCIJxSVJph9YjYhGE6OO-lr_QlEVAG6GeXtJFXfMTSN9Q&oe=6A5C2FEC&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
@@ -3493,7 +3905,7 @@
             "url": "https://www.instagram.com/p/DagwdBWDamX/",
             "posted": "2026-07-08T00:30:03+00:00",
             "caption": "Join us on July 9 for Eat for the Arts at 30hop Coralville! Whether you\u2019re stopping in for lunch, grabbing a spot on the rooftop patio, or enjoying a family dinner, 15% of total sales for the day will be donated to Summer of the Arts. Your meal helps support free, family-friendly arts programming across our community! 30 HOP is a local favorite known for: - Modern Industrial Vibe & Rooftop Patio: The perfect atmosphere to relax with great views, excellent cocktails, and friendly service. - American Bites with an Asian Fusion Twist: A fantastic, unique menu with something for everyone. - Incredible Craft Beer Selection: Dozens of draft lines featuring the best local and regional brews. Eat well. Give back. Keep the arts thriving in our community! #sotaic26 #sotaic #30hopCoralville #IowaFoodie #EatForTheArts #SupportTheArts",
-            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/729364289_1435945351902874_5712921111400109700_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=33Q0AvxXLZkQ7kNvwHu4IyI&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQCUvP63FOBRRiWrpvy_lmTI4EQERB8FGwW2ExB30FNXkg&oe=6A5BF8EF&_nc_sid=bc0c2c",
+            "image_url": "https://scontent-atl3-3.cdninstagram.com/v/t39.30808-6/729364289_1435945351902874_5712921111400109700_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gFsVENzcM0A6mg8c4iPpg9HY9G4LvQ6cj9LVkcSU6mEsSlRirFM1vfiFzArd5_IZYQ&_nc_ohc=33Q0AvxXLZkQ7kNvwFYodpo&_nc_gid=AEoj-Nf9FOlIjH-BvTtnww&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQBCg4dbTGMWHx0DECawj787JBZWAYV8UdsrYIdjxYLSCA&oe=6A5C312F&_nc_sid=bc0c2c",
             "is_video": false,
             "location": null,
             "flagged_upcoming_event": false,
