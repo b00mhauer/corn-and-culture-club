@@ -1,0 +1,3511 @@
+{
+  "edition": {
+    "start": "2026-07-14",
+    "end": "2026-07-20",
+    "days": 7
+  },
+  "coverage_report": [
+    {
+      "source": "think-iowa-city",
+      "status": "error",
+      "error": "403 Client Error: Forbidden for url: https://thinkiowacity.com/events-calendar/?ical=1"
+    },
+    {
+      "source": "iowa-childrens-museum",
+      "status": "ok",
+      "count": 8
+    },
+    {
+      "source": "icpl",
+      "status": "ok",
+      "parser": "icpl_vbapi",
+      "count": 50
+    },
+    {
+      "source": "coralville-pl",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "north-liberty-library",
+      "status": "ok",
+      "parser": "whofi",
+      "count": 17
+    },
+    {
+      "source": "solon-pl",
+      "status": "ok",
+      "parser": "whofi",
+      "count": 10
+    },
+    {
+      "source": "ic-parks-rec",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "north-liberty-events",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "coralville-events",
+      "status": "ok",
+      "parser": "civicplus_rss",
+      "count": 27
+    },
+    {
+      "source": "little-village",
+      "status": "ok",
+      "parser": "scenethink",
+      "count": 0
+    },
+    {
+      "source": "johnson-county-gov",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "jc-conservation",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "iccsd",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "clear-creek-amana",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "solon-csd",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "ui-family-events",
+      "status": "error",
+      "parser": "localist",
+      "error": "HTTPSConnectionPool(host='calendar.uiowa.edu', port=443): Max retries exceeded with url: /api/2/events?days=7&start=2026-07-14&pp=100 (Caused by ProxyError('Una"
+    },
+    {
+      "source": "wilsons-orchard",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "englert",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "filmscene",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "gabes",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "hancher",
+      "status": "skipped_no_parser"
+    },
+    {
+      "source": "eventbrite-ic",
+      "status": "skipped_no_parser"
+    }
+  ],
+  "facebook_report": [
+    {
+      "source": "fb-iowa-city",
+      "status": "ok",
+      "raw": 16,
+      "in_window_local": 0
+    },
+    {
+      "source": "fb-coralville",
+      "status": "ok",
+      "raw": 17,
+      "in_window_local": 0
+    },
+    {
+      "source": "fb-north-liberty",
+      "status": "ok",
+      "raw": 7,
+      "in_window_local": 0
+    },
+    {
+      "source": "fb-solon",
+      "status": "ok",
+      "raw": 15,
+      "in_window_local": 3
+    },
+    {
+      "source": "fb-tiffin",
+      "status": "ok",
+      "raw": 16,
+      "in_window_local": 3
+    },
+    {
+      "source": "fb-johnson-county",
+      "status": "ok",
+      "raw": 16,
+      "in_window_local": 0
+    },
+    {
+      "source": "fb-wilsons-orchard",
+      "status": "ok",
+      "raw": 1,
+      "in_window_local": 0
+    },
+    {
+      "source": "fb-childrens-museum",
+      "status": "ok",
+      "raw": 6,
+      "in_window_local": 0
+    },
+    {
+      "source": "fb-summer-of-arts",
+      "status": "ok",
+      "raw": 15,
+      "in_window_local": 0
+    },
+    {
+      "source": "fb-englert",
+      "status": "ok",
+      "raw": 15,
+      "in_window_local": 0
+    }
+  ],
+  "counts": {
+    "raw": 110,
+    "after_dedupe": 109,
+    "kept_candidates": 106,
+    "dropped": 3
+  },
+  "weather": {
+    "location": {
+      "city": "Iowa City",
+      "state": "IA",
+      "grid": "DVN 35,72"
+    },
+    "periods": [
+      {
+        "name": "Today",
+        "start": "2026-07-14T09:00:00-05:00",
+        "is_daytime": true,
+        "temp": 93,
+        "temp_unit": "F",
+        "wind": "0 to 5 mph",
+        "short": "Sunny",
+        "detailed": "Sunny, with a high near 93. Northeast wind 0 to 5 mph.",
+        "precip_pct": 0
+      },
+      {
+        "name": "Tonight",
+        "start": "2026-07-14T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 70,
+        "temp_unit": "F",
+        "wind": "0 to 5 mph",
+        "short": "Mostly Clear",
+        "detailed": "Mostly clear, with a low around 70. Northeast wind 0 to 5 mph.",
+        "precip_pct": 0
+      },
+      {
+        "name": "Wednesday",
+        "start": "2026-07-15T06:00:00-05:00",
+        "is_daytime": true,
+        "temp": 94,
+        "temp_unit": "F",
+        "wind": "0 to 5 mph",
+        "short": "Sunny",
+        "detailed": "Sunny, with a high near 94. Heat index values as high as 100. North wind 0 to 5 mph.",
+        "precip_pct": 0
+      },
+      {
+        "name": "Wednesday Night",
+        "start": "2026-07-15T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 72,
+        "temp_unit": "F",
+        "wind": "0 to 5 mph",
+        "short": "Mostly Clear",
+        "detailed": "Mostly clear, with a low around 72. Heat index values as high as 100. South wind 0 to 5 mph.",
+        "precip_pct": 0
+      },
+      {
+        "name": "Thursday",
+        "start": "2026-07-16T06:00:00-05:00",
+        "is_daytime": true,
+        "temp": 92,
+        "temp_unit": "F",
+        "wind": "0 to 5 mph",
+        "short": "Sunny",
+        "detailed": "Sunny, with a high near 92.",
+        "precip_pct": 8
+      },
+      {
+        "name": "Thursday Night",
+        "start": "2026-07-16T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 73,
+        "temp_unit": "F",
+        "wind": "0 to 5 mph",
+        "short": "Mostly Clear",
+        "detailed": "Mostly clear, with a low around 73.",
+        "precip_pct": 8
+      },
+      {
+        "name": "Friday",
+        "start": "2026-07-17T06:00:00-05:00",
+        "is_daytime": true,
+        "temp": 93,
+        "temp_unit": "F",
+        "wind": "0 to 10 mph",
+        "short": "Chance Showers And Thunderstorms",
+        "detailed": "A chance of showers and thunderstorms after 7am. Sunny, with a high near 93. Chance of precipitation is 40%.",
+        "precip_pct": 39
+      },
+      {
+        "name": "Friday Night",
+        "start": "2026-07-17T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 73,
+        "temp_unit": "F",
+        "wind": "5 to 10 mph",
+        "short": "Chance Showers And Thunderstorms",
+        "detailed": "A chance of showers and thunderstorms before 1am. Partly cloudy, with a low around 73. Chance of precipitation is 40%.",
+        "precip_pct": 39
+      },
+      {
+        "name": "Saturday",
+        "start": "2026-07-18T06:00:00-05:00",
+        "is_daytime": true,
+        "temp": 93,
+        "temp_unit": "F",
+        "wind": "5 to 10 mph",
+        "short": "Sunny then Slight Chance Showers And Thunderstorms",
+        "detailed": "A slight chance of showers and thunderstorms after 1pm. Sunny, with a high near 93.",
+        "precip_pct": 18
+      },
+      {
+        "name": "Saturday Night",
+        "start": "2026-07-18T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 71,
+        "temp_unit": "F",
+        "wind": "5 to 10 mph",
+        "short": "Slight Chance Showers And Thunderstorms then Mostly Clear",
+        "detailed": "A slight chance of showers and thunderstorms before 7pm. Mostly clear, with a low around 71.",
+        "precip_pct": 18
+      },
+      {
+        "name": "Sunday",
+        "start": "2026-07-19T06:00:00-05:00",
+        "is_daytime": true,
+        "temp": 91,
+        "temp_unit": "F",
+        "wind": "5 to 10 mph",
+        "short": "Sunny",
+        "detailed": "Sunny, with a high near 91.",
+        "precip_pct": 11
+      },
+      {
+        "name": "Sunday Night",
+        "start": "2026-07-19T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 69,
+        "temp_unit": "F",
+        "wind": "5 to 10 mph",
+        "short": "Mostly Clear",
+        "detailed": "Mostly clear, with a low around 69.",
+        "precip_pct": 13
+      },
+      {
+        "name": "Monday",
+        "start": "2026-07-20T06:00:00-05:00",
+        "is_daytime": true,
+        "temp": 88,
+        "temp_unit": "F",
+        "wind": "5 to 10 mph",
+        "short": "Sunny",
+        "detailed": "Sunny, with a high near 88.",
+        "precip_pct": 13
+      },
+      {
+        "name": "Monday Night",
+        "start": "2026-07-20T18:00:00-05:00",
+        "is_daytime": false,
+        "temp": 67,
+        "temp_unit": "F",
+        "wind": "5 to 10 mph",
+        "short": "Mostly Clear then Slight Chance Showers And Thunderstorms",
+        "detailed": "A slight chance of showers and thunderstorms after 1am. Mostly clear, with a low around 67.",
+        "precip_pct": 16
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "title": "Storytime",
+      "start": "2026-07-14T09:30:00",
+      "source": "solon-pl",
+      "source_name": "Solon Public Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "Solon Public Library",
+      "town": "Solon",
+      "url": "https://solon-ia.whofi.com/calendar/event/5635055",
+      "description": "Join us as we sing songs, read books, and play games together! Please contact us for access needs. Ph: 319-624-2678 Email: staff@solon.lib.ia.us",
+      "age_bands": [
+        "0-4",
+        "5-11",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [
+        "also:icpl",
+        "also:solon-pl",
+        "also:north-liberty-library"
+      ],
+      "family_relevance": 3,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "solon-pl:7ed4632a69"
+    },
+    {
+      "title": "Chat 'n' Chai",
+      "start": "2026-07-14T10:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17572",
+      "description": "Event date: July 14, 2026 Event Time: 10:00 AM - 11:30 AM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:a0e7ff1171"
+    },
+    {
+      "title": "PreK & K Guest: Tippi Toes",
+      "start": "2026-07-14T10:30:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17684",
+      "description": "Event date: July 14, 2026 Event Time: 10:30 AM - 11:15 AM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [
+        "0-4"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:f0ce375c4b"
+    },
+    {
+      "title": "55+ Connections: Tuesday Gathering",
+      "start": "2026-07-14T10:30:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5620546",
+      "description": "",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:cba8ec899c"
+    },
+    {
+      "title": "ELL Conversation Hour",
+      "start": "2026-07-14T11:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17603",
+      "description": "Event date: July 14, 2026 Event Time: 11:00 AM - 01:00 PM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:1a7981d380"
+    },
+    {
+      "title": "Summer Lunch & Fun",
+      "start": "2026-07-14T11:30:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5688315",
+      "description": "",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [
+        "also:north-liberty-library"
+      ],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:be6345decb"
+    },
+    {
+      "title": "How-To Tuesday: Sew a Stuffie",
+      "start": "2026-07-14T13:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-14T14:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room A",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66448/how-tuesday-sew-stuffie",
+      "description": "Elementary-age kids are invited to join us each Tuesday at 1:00 to learn a little bit about a fun skill or hobby that maybe they haven\u2019t tried before! We have experts from the community here to teach you the basics! Come make your own tiny stuffed animal using felt cutouts and sewing supplies! Learn how to adhere buttons, embroider details, stitch together and stuff some felt animal shapes and more! This project may be tricky for the younger elementary grades, so please have adult supervision for assisting in threading and knots! \u5468\u4e8c\u8ddf\u6211\u5b66: \u7f1d\u5236\u6bdb\u7ed2\u73a9\u5177 \u6bcf\u5468\u4e8c\u4e00\u70b9\u6211\u4eec\u9080\u8bf7\u5c0f\u5b66\u540c\u5b66\u4eec\u4e00\u8d77\u5b66\u4e60\u5c1d\u8bd5\u4e00\u79cd\u5168\u65b0\u7684\u6280\u80fd\u6216\u8005\u5174\u8da3\u7231\u597d\u3002\u6211\u4eec\u6709\u6765\u81ea\u793e\u533a\u7684\u4e13\u5bb6\u6559\u4f60\u5165\u95e8\uff01 \u4e00\u8d77\u6765\u7528\u6bdb\u6be1\u7247\u4eb2\u624b\u5236\u4f5c\u5c5e\u4e8e\u81ea\u5df1\u7684\u8ff7\u4f60\u6bdb\u7ed2\u73a9\u5177\u5427\uff01\u6211\u4eec\u5c06\u5b66\u4e60\u5982\u4f55\u7f1d\u9489\u7ebd\u6263\u3001\u523a\u7ee3\u7ec6\u8282\u3001\u7f1d\u5408\u53ca\u586b\u5145\u6bdb\u6be1\u52a8\u7269\u7b49\u6280\u80fd\u3002\u4f4e\u5e74\u7ea7\u5c0f\u5b66\u751f\u9700\u7531\u6210\u4eba\u966a\u540c\uff0c\u534f\u52a9\u5b8c\u6210\u7f1d\u9488\u548c\u6253\u7ed3\u7b49\u6b65\u9aa4\u3002 \u00a1Ni\u00f1os en edad escolar primaria est\u00e1n invitados a unirse a nosotros cada martes a la 1:00 para aprender un poco sobre una habilidad o pasatiempo divertido que quiz\u00e1s no hayan probado antes! \u00a1Tenemos expertos de la comunidad aqu\u00ed para ense\u00f1arte los conceptos b\u00e1sicos!",
+      "age_bands": [
+        "5-11",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:43ee26298f"
+    },
+    {
+      "title": "Iowa City Math Circle Summer Camp - Math 2",
+      "start": "2026-07-14T13:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-14T16:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room D",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66917/iowa-city-math-circle-summer-camp-math-2",
+      "description": "The Iowa City Math Circle has been enriching students for 8 years. We are holding a free Math Camp for middle schoolers and high schoolers interested in preparing for math competitions, specifically AMC and AIME, as well as math beyond the school curriculum. We recommend a prerequisite of at least Algebra 1 to understand the material. Camp Schedule: Jul 6 - Jul 10: Math 1 Jul 13 - Jul 17: Math 2 Jul 20 - Jul 24: Coding 1 Jul 27 - Jul 31: Coding 2 Registration is required. Go to Iowa City Math Circle to register or if you have any questions. Snacks will be provided during every camp session. Join our instructors for lots of fun and learning this summer! Sponsored by the Iowa City Math Circle and Iowa City Public Library Teen Services.",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:f34ba48ff8"
+    },
+    {
+      "title": "UI REACH Program Tour / Project",
+      "start": "2026-07-14T13:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-14T15:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room E",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67238/ui-reach-program-tour-project",
+      "description": "Students from the UI REACH program will be getting a tour of the library and completing various activities to help them learn what the library has to offer and support the library's mission.",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:1c768bc286"
+    },
+    {
+      "title": "Free Beginning English Language Class for Adults",
+      "start": "2026-07-14T13:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17634",
+      "description": "Event date: July 14, 2026 Event Time: 01:00 PM - 02:00 PM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:014d25665d"
+    },
+    {
+      "title": "ICPL Book Bike at Garden Parties",
+      "start": "2026-07-14T14:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-14T15:30:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Other",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67325/icpl-book-bike-garden-parties",
+      "description": "Visit the Children's Discovery Garden for free, drop-in Discovery Garden Parties hosted by Iowa City Parks and Recreation. These events feature hands-on activities, gardening, and nature exploration for the whole family to enjoy together. The ICPL Book Bike will also be on site and ready to engage with families as they explore nature and learning together! Visit the ICPL Book Bike for readers\u2019 advisory, technology assistance, library card account support, and information about library programs and services. See the Discovery Garden event on Facebook",
+      "age_bands": [
+        "5-11",
+        "0-4",
+        "all"
+      ],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:fb31366306"
+    },
+    {
+      "title": "Kids Switch Party: Mario Kart & Just Dance!",
+      "start": "2026-07-14T15:00:00",
+      "source": "solon-pl",
+      "source_name": "Solon Public Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "Solon Public Library",
+      "town": "Solon",
+      "url": "https://solon-ia.whofi.com/calendar/event/5650830",
+      "description": "Intended for incoming 1st through 8th graders, no registration necessary. The kids have spoken and they want a video game day! We'll be getting the Nintendo Switch out to play Mario Kart and Just Dance together. Curl up in beanbags with snacks while taking turns gaming. Please contact us for access needs. Ph: 319-624-2678 Email: staff@solon.lib.ia.us",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "solon-pl:fd0e4b5cb1"
+    },
+    {
+      "title": "Super Tuesdays",
+      "start": "2026-07-14T16:00:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5643800",
+      "description": "Join us for weekly crafts and activities geared towards K-4th graders, like Dirt & Worms and Sun Prints.",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:0029a7d625"
+    },
+    {
+      "title": "The Financial Wellness Series",
+      "start": "2026-07-14T17:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-14T19:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room B",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67437/financial-wellness-series",
+      "description": "The Financial Wellness Series brings practical tools and information on local resources to staff of childcare facilities and in-home daycares with the goal of supporting the community\u2019s financial stability",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:4012a8d17c"
+    },
+    {
+      "title": "Deer \"Proofing\" Your Yard",
+      "start": "2026-07-14T18:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17777",
+      "description": "Event date: July 14, 2026 Event Time: 06:00 PM - 11:59 PM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:2c85bb0d2a"
+    },
+    {
+      "title": "Flower Painting w/ Austina Scott",
+      "start": "2026-07-14T18:30:00",
+      "source": "solon-pl",
+      "source_name": "Solon Public Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "Solon Public Library",
+      "town": "Solon",
+      "url": "https://solon-ia.whofi.com/calendar/event/5243961",
+      "description": "Intended for adults & young adults (16+), registration is required. As a Summer Reading treat, we've gotten a special guest, Austina Scott, to give us a painting tutorial. Artist Austina Scott will teach us how to paint. Everyone will paint a picture of yellow flowers against a background of sky teaching us the process. We'll provide the canvases, paints, and paintbrushes. This program is free to attend. Please contact us for access needs. Ph: 319-624-2678 | Email: staff@solon.lib.ia.us",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "solon-pl:231aea7f71"
+    },
+    {
+      "title": "Coralville City Council Meeting",
+      "start": "2026-07-14T18:30:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=16789",
+      "description": "Event date: July 14, 2026 Event Time: 06:30 PM - 09:00 PM Location: 1512 7th St. Coralville, IA 52241 Description: A regular meeting of the Coralville City Council is scheduled for the second and fourth Tuesday of the month. A work session follows the meeting.",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:3fd933a9bd"
+    },
+    {
+      "title": "Let's Talk Books: Fathers & Daughters",
+      "start": "2026-07-14T19:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-14T20:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Zoom",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66552/lets-talk-books-fathers-daughters",
+      "description": "Relationships between fathers & daughters can run the spectrum from deeply connected and heartwarming to frought with issues at every turn. Fiction about fathers & daughters can be found in every genre - from general fiction to mysery, science fiction, or even westerns. Gather a few of your favorites and join us for the disscussion. Goodread's Fathers & Daughters list or Father Daughter Relationship lists or an ICPL catalog search for can give lost of inspiration. Not a traditional book group, Let's Talk Books is a series of casual online conversations about books. We meet on the 2nd and 4th Tuesday of each month on Zoom to talk about our favorite books in a specific genre or on a theme that changes each time. We each bring a few titles to share, and by the end of the discussion we all have a few new titles on our to-be-read lists. Register here and you'll receive a confirmation email with the Zoom login details. You'll also get a reminder email a few days before the event. Everyone is welcome!",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "paid",
+      "is_free": false,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:e75decbd0e"
+    },
+    {
+      "title": "Veterans For Peace chapter 161 meeting",
+      "start": "2026-07-14T19:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-14T20:30:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room D",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67588/veterans-peace-chapter-161-meeting",
+      "description": "Regular meeting of the chapter also on Zoom. Visitors, guests and general public are welcome.",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:6a7903e7ce"
+    },
+    {
+      "title": "Coffee & Conversations",
+      "start": "2026-07-15T09:00:00",
+      "source": "solon-pl",
+      "source_name": "Solon Public Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "Solon Public Library",
+      "town": "Solon",
+      "url": "https://solon-ia.whofi.com/calendar/event/5426812",
+      "description": "Partnering with Solon Senior Support, we'll provide Coffee and Discussion Topics each week. These conversations are geared toward Senior Adults in the Solon Area. Please contact us for access needs. | Ph: 319-624-2678 |Email: staff@solon.lib.ia.us",
+      "age_bands": [],
+      "cost": "paid",
+      "is_free": false,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "solon-pl:412c4f6c0c"
+    },
+    {
+      "title": "Member Hour",
+      "start": "2026-07-15T09:00:00-05:00",
+      "source": "iowa-childrens-museum",
+      "source_name": "Iowa Children's Museum",
+      "end": "2026-07-15T10:00:00-05:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Iowa Children\u2019s Museum, 1451 Coral Ridge Ave., Coralville, IA, 52241, United States",
+      "town": "Coralville",
+      "url": "https://theicm.org/event/member-hour-3-2/2026-07-15/",
+      "description": "Members of The Iowa Children\u2019s Museum are invited to come play when The ICM is ONLY open to members! Member Hour is 9-10 a.m. every Wednesday, Thursday, Friday, and Saturday. Come play early and enjoy a less busy environment! Learn more about membership here.",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "iowa-childrens-museum:aafa4896ee"
+    },
+    {
+      "title": "Stories in the Park at Wetherby Park",
+      "start": "2026-07-15T09:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-15T10:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Bookmobile",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67281/stories-park-wetherby-park",
+      "description": "Join us for Stories in the Park all summer long! Note the early Stories in the Park time at 9:30 to beat the midmorning heat! We will offer the same Storytime over the course of the week, so please choose one park location a week to attend. We will be at Willow Creek park on Mondays, Wetherby Park on Wednesdays, Mercer Park on Fridays. Wednesday are in Wetherby Park, at 2398 Taylor Drive, Iowa City. The ICPL Bookmobile will be on site and open for checkout. Library cards can be issued and updated. In the event of rain, the program will be canceled but the Bookmobile will still be on site. \u6691\u671f\u516c\u56ed\u6545\u4e8b\u4f1a\u5c06\u4e8e\u6bcf\u5468\u4e00\uff0c\u4e09\uff0c\u4e94\u4e0a\u53489\uff1a30 \u4e3e\u884c\uff0c\u5468\u4e00\u7684\u6d3b\u52a8\u5730\u70b9\u5728Willow Creek \u516c\u56ed\uff0c\u5468\u4e09\u5728 Wetherby \u516c\u56ed\uff0c\u5468\u4e94\u5728 Mercer \u516c\u56ed\u3002\u4e0d\u540c\u5730\u70b9\u6bcf\u5468\u7684\u6d3b\u52a8\u5185\u5bb9\u57fa\u672c\u4e00\u6837\uff0c\u8bf7\u9009\u62e9\u4e00\u4e2a\u65b9\u4fbf\u7684\u516c\u56ed\u53c2\u52a0\u3002 \u5468\u4e09\u7684\u6545\u4e8b\u4f1a\u5c06\u5728Wetherby\u516c\u56ed\u4e3e\u884c\uff0c\u5730\u5740\u662f2398 Taylor Drive, Iowa City\u3002 ICPL \u56fe\u4e66\u8f66\u4e5f\u5c06\u6765\u5230\u73b0\u573a\u4e3a\u60a8\u63d0\u4f9b\u5f00\u5361\u548c\u501f\u4e66\u670d\u52a1\u3002\u5982\u9047\u96e8\u5929\uff0c\u6545\u4e8b\u4f1a\u5c06\u53d6\u6d88\uff0c\u56fe\u4e66\u8f66\u4ecd\u7167\u5e38\u670d\u52a1\u3002 \u00a1Acomp\u00e1\u00f1anos a Cuentos en el Parque durante todo el verano! \u00a1Ten en cuenta el horario temprano de Cuentos en el Parque a las 9:30 a. m. para evitar el calor de media ma\u00f1ana! Presentaremos la misma hora de cuentos durante toda la semana, as\u00ed que te pedimos que elijas solo una ubicaci\u00f3n por semana para asistir. Estaremos en Willow Creek Park los lunes, en Wetherby Park los mi\u00e9rcoles y en Mercer Park los viernes. Los mi\u00e9rcoles estaremos en Wetherby Park, ubicado en 2398 Taylor Drive, Iowa City. El bibliob\u00fas de ICPL estar\u00e1 presente y disponible para realizar pr\u00e9stamos. Tambi\u00e9n se podr\u00e1n emitir y actualizar tarjetas de la biblioteca. En caso de lluvia, el programa se cancelar\u00e1, pero el bi",
+      "age_bands": [
+        "5-11",
+        "0-4",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:e56c2d8b9e"
+    },
+    {
+      "title": "Chair Yoga",
+      "start": "2026-07-15T10:00:00",
+      "source": "solon-pl",
+      "source_name": "Solon Public Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "Solon Public Library",
+      "town": "Solon",
+      "url": "https://solon-ia.whofi.com/calendar/event/5514974",
+      "description": "What is chair yoga? Chair yoga is a beneficial form of yoga for any fitness level, from active seniors to those recovering from an injury. Chair yoga has the following benefits for older adults: low impact on joints, improves flexibility, and stress reduction. Certified instructor Julie Ellen will lead a FREE hour-long class for Adults every Wednesday at 10 AM, following Coffee & Conversations. The attached PDF waiver must be completed prior to your first participation in Chair Yoga and updated annually. Copies are available at the Library or you may print ahead. Please contact us for access needs. | Ph: 319-624-2678 |Email: staff@solon.lib.ia.us",
+      "age_bands": [],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "solon-pl:8373841d0f"
+    },
+    {
+      "title": "Kirkwood Nursing: IC Cohort",
+      "start": "2026-07-15T10:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-15T12:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room E",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67881/kirkwood-nursing-ic-cohort",
+      "description": "Meeting for Kirkwood nursing students' presentation practice for influenza prevention project",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:7b53e491c6"
+    },
+    {
+      "title": "Author Visit Storytime with Charlotte Gunnufson: Hard Hat Hank, with Habitat for Humanity",
+      "start": "2026-07-15T10:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-15T11:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room A",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67107/author-visit-storytime-charlotte-gunnufson-hard-hat-hank-habitat-humanity",
+      "description": "Come meet author Charlotte Gunnufson and listen to her read her book, \"Hard Hat Hank and the Sky-High Solution.\" Enjoy a fun, construction-themed Storytime, and then stick around for some construction crafts, including an activity with the Iowa Valley Habitat for Humanity for their Frame-A-Thon, in which they invite community members (kids included!) to decorate 2x4s that will be used to frame a new home. Join us in the Storytime Room for Summer Storytime on Monday, Tuesday, Wednesday, Friday and Saturday mornings at 10:30am. The Storytime librarian will vary each week, and every day is open to all ages! Catch the all-ages Thrilling Thursday programs 10:00am in Meeting Room A. This is additional Storytime option to Stories in the Park at 9:30am on Mondays at Willow Creek Park, Wednesdays at Wetherby Park, and Fridays at Mercer Park! \u6691\u671f\u6545\u4e8b\u4f1a\u5c06\u4e8e\u6bcf\u5468\u4e00\uff0c\u4e8c\uff0c \u4e09\uff0c\u4e94, \u516d\u4e0a\u534810\uff1a30\u5728\u56fe\u4e66\u9986\u513f\u7ae5\u6d3b\u52a8\u5ba4\u4e3e\u884c\u3002 \u6bcf\u5468\u5c06\u7531\u4e0d\u540c\u7684\u5de5\u4f5c\u4eba\u5458\u5e26\u6765\u4e0d\u540c\u7684\u6d3b\u52a8\u5185\u5bb9\uff0c\u6b22\u8fce\u6240\u6709\u5e74\u9f84\u6bb5\u7684\u670b\u53cb\u53c2\u4e0e\uff01\u6bcf\u5468\u56db\u4e0a\u534810:00 \u5c06\u5728\u4f1a\u8bae\u5ba4A\u4e3e\u529eThrilling Thursday\u5468\u56db\u7279\u522b\u6d3b\u52a8\u3002 \u6b64\u5916\uff0c\u56fe\u4e66\u9986\u8fd8\u5c06\u4e8e\u6bcf\u5468\u4e00\uff0c\u4e09\uff0c\u4e94\u4e0a\u53489\uff1a30\u4e3e\u529e\u516c\u56ed\u6545\u4e8b\u4f1a\uff0c\u5468\u4e00\u4e0a\u5348\u6d3b\u52a8\u5730\u70b9\u5728 Willow Creek Park\uff0c\u5468\u4e09\u5728 Wetherby Park\uff0c \u5468\u4e94\u5728 Mercer Park\u3002 \u4eca\u65e5\u7279\u522b\u6d3b\u52a8\uff1a\u513f\u7ae5\u4f5c\u5bb6\u590f\u6d1b\u7279\u00b7\u7518\u52aa\u592b\u68ee\uff08Charlotte Gunnufson\uff09\u89c1\u9762\u4f1a\u3002\u4f5c\u8005\u5c06\u5206\u4eab\u81ea\u5df1\u7684\u7ae5\u4e66\u4f5c\u54c1\u300a\u6234\u5b89\u5168\u5e3d\u7684\u6c49\u514b\u4e0e\u201c\u51b2\u4e0a\u4e91\u9704\u201d\u7684\u89e3\u51b3\u65b9\u6848\u300b\uff08*Hard Hat Hank and the Sky-High Solution*\uff09\uff0c\u5e76\u5e26\u6765\u5efa\u7b51\u4e3b\u9898\u7684\u624b\u5de5\u6d3b\u52a8\u3002 \u00danete a nosotros en la Sala de Cuentos para la Hora del Cuento de Verano los lunes, martes, mi\u00e9rcoles y viernes por la ma\u00f1ana a las 10:30 am. \u00a1La bibliotecaria de la Hora del Cuento variar\u00e1 cada semana y todos los d\u00edas est\u00e1n abiertos para todas las edades! \u00a1No te pierdas los emocionantes programas para tod",
+      "age_bands": [
+        "5-11",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "outdoor",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:a6b5fd4035"
+    },
+    {
+      "title": "Help Hours in the Digital Media Lab",
+      "start": "2026-07-15T10:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-15T11:30:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Digital Media Lab",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67648/help-hours-digital-media-lab",
+      "description": "Want some help starting a digital media project like scanning slides, editing a video, or converting a VHS tape? Expect to have questions while you use Adobe software? During Help Hours, a staff member can help you get started with a project, problem-solve struggles with our software and hardware, or just show you what's available in the Digital Media Lab. Individuals interested in the Senior Planet Computer Essentials class that was canceled may also drop in to work through the information at their own pace, with Stacey available for one-on-one instruction whenever demand allows. The Cricut, Elgato digital converters, and 8mm film converter can be reserved during this session. Go to icpl.org/DML to check availability and make your reservation. The inkjet printer is also available for drop-in printing. Note: Ordinary tech questions about using your devices or navigating a website can be asked anytime at the 2nd floor Info Desk.",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:645dd54bf7"
+    },
+    {
+      "title": "ELL Conversation Hour",
+      "start": "2026-07-15T11:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17102",
+      "description": "Event date: July 15, 2026 Event Time: 11:00 AM - 01:00 PM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "also:coralville-events"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:d6c2695da6"
+    },
+    {
+      "title": "Summer Lunch & Fun",
+      "start": "2026-07-15T11:30:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5688316",
+      "description": "",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:eefef89096"
+    },
+    {
+      "title": "World Wednesday: A Taste of Pisa!",
+      "start": "2026-07-15T13:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-15T14:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room A",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/65698/world-wednesday-taste-pisa",
+      "description": "Plant a seed, in every beautiful corner of the world! This summer, school age children and their families are invited to join our weekly World Wednesday program from 6/10 to 8/5. Each week we will go on an adventure to a different part of the world through craft, performance, or activity. This is the perfect opportunity to explore and celebrate the diverse world cultures! Come join us for a taste of Pisa! Yes, you read that right\u2014it's not a typo! Pisa is a city in Italy famous for its iconic Leaning Tower, which has been tilting for over 800 years. Make your own mini version of the tower, then snap a fun photo on our green screen with beautiful Italian scenery\u2014just like visiting Italy! \u79cd\u4e0b\u4e00\u7c92\u79cd\u5b50\uff0c\u5728\u4e16\u754c\u4e0a\u6bcf\u4e00\u4e2a\u7f8e\u4e3d\u7684\u89d2\u843d\uff01\u6691\u5047\u671f\u95f4\u6211\u4eec\u8bda\u9080\u5b66\u9f84\u513f\u7ae5\u53ca\u5bb6\u4eba\u53c2\u52a06\u670810\u65e5\u81f38\u67085\u65e5\u6bcf\u5468\u4e09\u4e3e\u529e\u7684\u201c\u4e16\u754c\u661f\u671f\u4e09\u201d\u6d3b\u52a8\u3002\u6bcf\u671f\u6d3b\u52a8\u4e2d\u6211\u4eec\u5c06\u901a\u8fc7\u624b\u5de5\u3001\u8868\u6f14\u7b49\u5404\u79cd\u6d3b\u52a8\u6765\u5230\u4e0d\u540c\u7684\u56fd\u5bb6\u548c\u5730\u533a\u5f00\u542f\u4e00\u6bb5\u63a2\u7d22\u4e4b\u65c5\uff0c\u5171\u540c\u4e86\u89e3\u548c\u5e86\u795d\u591a\u5143\u7684\u4e16\u754c\u6587\u5316\uff01 \u4eca\u5929\u6765\u548c\u6211\u4eec\u4e00\u8d77\u4f53\u9a8c\u201c\u6bd4\u8428\u201d\u98ce\u60c5\uff01\u6bd4\u8428\uff08Pisa\uff09\u662f\u610f\u5927\u5229\u7684\u4e00\u5ea7\u540d\u57ce\uff0c\u4ee5\u5176\u6807\u5fd7\u6027\u7684\u201c\u6bd4\u8428\u659c\u5854\u201d\u800c\u95fb\u540d\u4e8e\u4e16\u2014\u2014\u8fd9\u5ea7\u5854\u503e\u659c\u5c79\u7acb\u5df2\u903e\u516b\u767e\u5e74\u3002\u6211\u4eec\u5c06\u81ea\u5df1\u52a8\u624b\u5236\u4f5c\u4e00\u5ea7\u8ff7\u4f60\u659c\u5854\u6a21\u578b\uff0c\u5e76\u53ef\u5728\u7eff\u5e55\u524d\u62cd\u6444\u8da3\u5473\u7167\u7247\uff0c\u5c31\u50cf\u771f\u7684\u4eb2\u4e34\u610f\u5927\u5229\u4e00\u822c\uff01",
+      "age_bands": [
+        "5-11",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "outdoor",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:68c988722f"
+    },
+    {
+      "title": "Iowa City Math Circle Summer Camp - Math 2",
+      "start": "2026-07-15T13:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-15T16:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room D",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66918/iowa-city-math-circle-summer-camp-math-2",
+      "description": "The Iowa City Math Circle has been enriching students for 8 years. We are holding a free Math Camp for middle schoolers and high schoolers interested in preparing for math competitions, specifically AMC and AIME, as well as math beyond the school curriculum. We recommend a prerequisite of at least Algebra 1 to understand the material. Camp Schedule: Jul 6 - Jul 10: Math 1 Jul 13 - Jul 17: Math 2 Jul 20 - Jul 24: Coding 1 Jul 27 - Jul 31: Coding 2 Registration is required. Go to Iowa City Math Circle to register or if you have any questions. Snacks will be provided during every camp session. Join our instructors for lots of fun and learning this summer! Sponsored by the Iowa City Math Circle and Iowa City Public Library Teen Services.",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:3b9d2c4342"
+    },
+    {
+      "title": "Wildcard Wednesday: Toad Abode",
+      "start": "2026-07-15T13:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17778",
+      "description": "Event date: July 15, 2026 Event Time: 01:00 PM - 11:59 PM Location: 1401 5th St. Coralville, IA 52241 Description: For children going into grades 1-5.",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "coralville-events:40a123fb62"
+    },
+    {
+      "title": "Pressed Flower Art",
+      "start": "2026-07-15T14:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17779",
+      "description": "Event date: July 15, 2026 Event Time: 02:00 PM - 11:59 PM Location: 1401 5th St. Coralville, IA 52241 Description: For teens going into grades 6-12",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "coralville-events:44896dba94"
+    },
+    {
+      "title": "All Abilities Club: Taekwondo Skills",
+      "start": "2026-07-15T14:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-15T15:30:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room A",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/65650/all-abilities-club-taekwondo-skills",
+      "description": "Mireu Martial Arts provides expert instruction in the arts of Taekwondo, KumDo, Kyudo Renmei, Aikido, and Kali in the Coralville/Iowa City and surrounding areas. Join Grandmaster Lonnie Matthews and other instructors to learn some basic skills in Taekwondo, a version of an ancient form of unarmed combat practiced for many centuries in Asia.",
+      "age_bands": [
+        "12-18",
+        "5-11",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:87bc00b6cb"
+    },
+    {
+      "title": "Cooking Competition",
+      "start": "2026-07-15T15:00:00",
+      "source": "solon-pl",
+      "source_name": "Solon Public Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "Solon Public Library",
+      "town": "Solon",
+      "url": "https://solon-ia.whofi.com/calendar/event/5638637",
+      "description": "Intended for teens, incoming 6th-12th graders. No registration necessary. Test your kitchen skills and compete for the title of Best Teen Library Chef! You'll be set up with a wide range of ingredients for 2 challenges. Please contact us for access needs. Ph: 319-624-2678 Email: staff@solon.lib.ia.us",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "solon-pl:b8c8816856"
+    },
+    {
+      "title": "T&T",
+      "start": "2026-07-15T15:00:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5643823",
+      "description": "Bring a friend for weekly programs this summer for 5th-12th graders, like Fire Coasters and Will it Waffle?",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:7ba53d39f1"
+    },
+    {
+      "title": "Proposal Meeting",
+      "start": "2026-07-15T15:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-15T16:30:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room E",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67874/proposal-meeting",
+      "description": "",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:34dce7d274"
+    },
+    {
+      "title": "Free Beginning English Language Class for Adults",
+      "start": "2026-07-15T17:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=16964",
+      "description": "Event date: July 15, 2026 Event Time: 05:00 PM - 06:00 PM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:2ebb150cb5"
+    },
+    {
+      "title": "DSA Social",
+      "start": "2026-07-15T18:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-15T21:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room E",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67839/dsa-social",
+      "description": "community meeting social",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:e51f803d0a"
+    },
+    {
+      "title": "Knitters and Crocheters",
+      "start": "2026-07-15T18:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-15T21:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room A",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67911/knitters-and-crocheters",
+      "description": "Group meeting about knitting and Crocheting",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:cd5e477cc7"
+    },
+    {
+      "title": "BA Steering Committee",
+      "start": "2026-07-15T19:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-15T21:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room D",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67897/ba-steering-committee",
+      "description": "",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:29da338862"
+    },
+    {
+      "title": "Member Hour",
+      "start": "2026-07-16T09:00:00-05:00",
+      "source": "iowa-childrens-museum",
+      "source_name": "Iowa Children's Museum",
+      "end": "2026-07-16T10:00:00-05:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Iowa Children\u2019s Museum, 1451 Coral Ridge Ave., Coralville, IA, 52241, United States",
+      "town": "Coralville",
+      "url": "https://theicm.org/event/member-hour-3-2/2026-07-16/",
+      "description": "Members of The Iowa Children\u2019s Museum are invited to come play when The ICM is ONLY open to members! Member Hour is 9-10 a.m. every Wednesday, Thursday, Friday, and Saturday. Come play early and enjoy a less busy environment! Learn more about membership here.",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "iowa-childrens-museum:be2ff1e47d"
+    },
+    {
+      "title": "Thrilling Thursday: Balloon Twisting Storytelling with Chris That Twists",
+      "start": "2026-07-16T10:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-16T11:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room A",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66775/thrilling-thursday-balloon-twisting-storytelling-chris-twists",
+      "description": "Chris That Twists is a storyteller and professional balloon twister making his debut at the Iowa City Public Library! Join us for his \"Twisty Tales\", interactive storytelling with balloons, balloon tricks and more! This interactive balloon show will be sure to lift spirits of all ages! Join us for a Thrilling Thursday program at 10am or 1pm every Thursday in the summer! \u6c14\u7403\u5148\u751f Chris That Twists \u5373\u5c06\u4eae\u76f8\u7231\u8377\u534e\u57ce\u516c\u5171\u56fe\u4e66\u9986\uff01\u6b22\u8fce\u53c2\u52a0\u4eca\u5929\u7684\u201c\u6c14\u7403\u5947\u8da3\u6545\u4e8b\u4f1a\u201d\uff08Twisty Tales\uff09\uff0c\u4e00\u573a\u878d\u5408\u4e86\u8bb2\u6545\u4e8b\uff0c\u6c14\u7403\u9020\u578b\uff0c\u9b54\u672f\u8868\u6f14\u7b49\u7cbe\u5f69\u4e92\u52a8\u5185\u5bb9\u7684\u6d3b\u52a8\uff0c\u4e00\u5b9a\u80fd\u8ba9\u5404\u4e2a\u5e74\u9f84\u6bb5\u7684\u89c2\u4f17\u90fd\u4e50\u5728\u5176\u4e2d\uff01 \u6691\u5047\u671f\u95f4\u6bcf\u5468\u56db\u4e0a\u5348 10 \u70b9\u548c\u4e0b\u5348 1 \u70b9\u5c06\u4e3e\u529e\u201c\u7cbe\u5f69\u661f\u671f\u56db\u201d\u7cfb\u5217\u6d3b\u52a8\uff01",
+      "age_bands": [
+        "12-18",
+        "5-11",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [
+        "also:icpl"
+      ],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:2fcbd51d7d"
+    },
+    {
+      "title": "Play Daze at Mercer Park",
+      "start": "2026-07-16T10:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-16T11:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Bookmobile",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67248/play-daze-mercer-park",
+      "description": "Summer PLAY DAZE are here! Enjoy visiting the ICPL Bookmobile, & activities provided by Iowa City Parks and Recreation including: free arts, crafts, theatre, games, nature experiments, and STEAM fun. Sensory tent available! Activities presented by Iowa City Parks and Recreation run from 9:30-11:30am on Thursdays this summer. The ICPL Bookmobile will be present from 10-11am each week. More details can be found on the City of Iowa City webpage .",
+      "age_bands": [
+        "5-11",
+        "0-4",
+        "all"
+      ],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:14e8ac4fc4"
+    },
+    {
+      "title": "Advice on Aging",
+      "start": "2026-07-16T10:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17475",
+      "description": "Event date: July 16, 2026 Event Time: 10:00 AM - 12:00 PM Location: 1401 5th St. Coralville, IA 52241 Description: for older Iowans and caregivers",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:fb1d55fd27"
+    },
+    {
+      "title": "Wee Read for babies & toddlers",
+      "start": "2026-07-16T10:30:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17693",
+      "description": "Event date: July 16, 2026 Event Time: 10:30 AM - 11:00 AM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [
+        "0-4"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "coralville-events:96648a5fc3"
+    },
+    {
+      "title": "ELL Conversation Hour",
+      "start": "2026-07-16T10:30:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17192",
+      "description": "Event date: July 16, 2026 Event Time: 10:30 AM - 11:30 AM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "also:coralville-events"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:16ac750141"
+    },
+    {
+      "title": "Summer Lunch & Fun",
+      "start": "2026-07-16T11:30:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5688317",
+      "description": "",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:ccbb1e658b"
+    },
+    {
+      "title": "Teen Summer: The Collections of the Stanley Art Museum",
+      "start": "2026-07-16T12:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-16T14:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Teen Center",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66695/teen-summer-collections-stanley-art-museum",
+      "description": "Today we\u2019re heading to the Stanley to get our art fix. We\u2019ll meet at the Teen space and meet the art guide who will provide a tour of their collection highlights, then dismiss from the Teen Space.",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:f12895fe81"
+    },
+    {
+      "title": "Free Advanced English Class on Zoom",
+      "start": "2026-07-16T12:30:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17299",
+      "description": "Event date: July 16, 2026 Event Time: 12:30 PM - 01:30 PM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:712c8d749b"
+    },
+    {
+      "title": "Iowa City Math Circle Summer Camp - Math 2",
+      "start": "2026-07-16T13:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-16T16:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room D",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66920/iowa-city-math-circle-summer-camp-math-2",
+      "description": "The Iowa City Math Circle has been enriching students for 8 years. We are holding a free Math Camp for middle schoolers and high schoolers interested in preparing for math competitions, specifically AMC and AIME, as well as math beyond the school curriculum. We recommend a prerequisite of at least Algebra 1 to understand the material. Camp Schedule: Jul 6 - Jul 10: Math 1 Jul 13 - Jul 17: Math 2 Jul 20 - Jul 24: Coding 1 Jul 27 - Jul 31: Coding 2 Registration is required. Go to Iowa City Math Circle to register or if you have any questions. Snacks will be provided during every camp session. Join our instructors for lots of fun and learning this summer! Sponsored by the Iowa City Math Circle and Iowa City Public Library Teen Services.",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:c76cefb69c"
+    },
+    {
+      "title": "TALIA Disability history meeting for presentation",
+      "start": "2026-07-16T13:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-16T15:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room E",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67863/talia-disability-history-meeting-presentation",
+      "description": "Meeting to work on TALIA presentation for Great Plains Action Society",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:1a4d3950f8"
+    },
+    {
+      "title": "Teen Summer: Healthy Relationships",
+      "start": "2026-07-16T14:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-16T16:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Teen Center",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66635/teen-summer-healthy-relationships",
+      "description": "Learn about setting healthy boundaries with people, how to tell if someone is gaslighting you, acting in a way that is toxic, and learn to have constructive and meaningful conversations with family and friends. This program is facilitated by the University of Iowa's Violence Prevention Team.",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:ce07b041f9"
+    },
+    {
+      "title": "Totally Tweens: Under-the-Sea Sensory Jars",
+      "start": "2026-07-16T16:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-16T17:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room A",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/65659/totally-tweens-under-sea-sensory-jars",
+      "description": "It's Disability Pride Month! Join us to learn the amazing story of the disabled daredevil who made a splash in sports history. Charles \"Zimmy the Human Fish\" Zibelman, whose legs were amputated after a childhood accident, became a record-setting endurance swimmer in midcentury New York - and his lively personality was as much a draw for the public as his feats in the water. After hearing a new picture book biography of Zimmy's life, make an \"under-the-sea\" sensory jar that you can take home and think of Zimmy whenever you use it! This event is for kids in grades 3-6. \u516d\u6708\u662f\u201c\u6b8b\u969c\u4eba\u58eb\u81ea\u8c6a\u6708\u201d\uff01\u548c\u6211\u4eec\u4e00\u8d77\u6765\u4e86\u89e3\u4e00\u4f4d\u5728\u4f53\u80b2\u53f2\u4e0a\u5927\u653e\u5f02\u5f69\u7684\u6b8b\u969c\u7279\u6280\u6e38\u6cf3\u5065\u5c06\u67e5\u5c14\u65af\u00b7\u9f50\u8d1d\u5c14\u66fc\uff08Charles Zibelman\uff09\uff0c\u53c8\u540d\u201c\u4eba\u9c7c\u9f50\u7c73\u201d\uff08Zimmy the Human Fish\uff09\u3002\u4ed6\u5728\u7ae5\u5e74\u65f6\u671f\u56e0\u906d\u9047\u4e8b\u6545\u800c\u622a\u80a2\uff0c\u540e\u4e8e20\u4e16\u7eaa\u4e2d\u53f6\u5728\u7ebd\u7ea6\u6210\u4e3a\u4e86\u4e00\u540d\u5c61\u7834\u7eaa\u5f55\u7684\u8010\u529b\u6e38\u6cf3\u8fd0\u52a8\u5458\uff1b\u4ed6\u90a3\u5145\u6ee1\u6d3b\u529b\u7684\u4e2a\u6027\u548c\u6c34\u4e0a\u8fd0\u52a8\u7684\u60ca\u4eba\u6210\u5c31\u6df1\u6df1\u5438\u5f15\u7740\u516c\u4f17\u3002\u6211\u4eec\u5c06\u8046\u542c\u5173\u4e8e\u9f50\u7c73\u751f\u5e73\u7684\u5168\u65b0\u4f20\u8bb0\u7ed8\u672c\u6545\u4e8b\uff0c\u52a8\u624b\u5236\u4f5c\u4e00\u4e2a\u201c\u6d77\u5e95\u4e16\u754c\u201d\u4e3b\u9898\u7684\u611f\u5b98\u74f6\u5e26\u56de\u5bb6\u3002",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:45b5e616f7"
+    },
+    {
+      "title": "Our Soil: Helping Not Hurting",
+      "start": "2026-07-16T16:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17780",
+      "description": "Event date: July 16, 2026 Event Time: 04:00 PM - 11:59 PM Location: 1401 5th St. Coralville, IA 52241 Description: for children going into grades 4-12",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "coralville-events:6f5254193a"
+    },
+    {
+      "title": "Help Hours in the Digital Media Lab",
+      "start": "2026-07-16T17:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-16T21:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Digital Media Lab",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67188/help-hours-digital-media-lab",
+      "description": "Want some help starting a digital media project like scanning slides, editing a video, or converting a VHS tape? Expect to have questions while you use Adobe software? During Help Hours, a staff member can help you get started with a project, problem-solve struggles with our software and hardware, or just show you what's available in the Digital Media Lab. The Cricut, Elgato digital converters, and 8mm film converter can be reserved during this session. Go to icpl.org/DML to check availability and make your reservation. The inkjet printer is also available for drop-in printing. Note: Ordinary tech questions about using your devices or navigating a website can be asked anytime at the 2nd floor Info Desk.",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:37a8d7b3ba"
+    },
+    {
+      "title": "Community Transportation Committee Public Meeting",
+      "start": "2026-07-16T17:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-16T18:30:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room E",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67849/community-transportation-committee-public-meeting",
+      "description": "Informal discussion of public transit in Johnson County.",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:eaaee9691d"
+    },
+    {
+      "title": "Friends of Solon Public Library Meeting",
+      "start": "2026-07-16T18:00:00",
+      "source": "solon-pl",
+      "source_name": "Solon Public Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "Solon Public Library",
+      "town": "Solon",
+      "url": "https://solon-ia.whofi.com/calendar/event/5272437",
+      "description": "The Friends of the Library meet monthly on the third Thursday at 6 PM in the Library meeting room. All Friends members and perspectives are invited to attend. The Friends do not meet in January or July.",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "solon-pl:3742d4c948"
+    },
+    {
+      "title": "Novel Conversations",
+      "start": "2026-07-16T18:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17409",
+      "description": "Event date: July 16, 2026 Event Time: 06:00 PM - 07:00 PM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:de0d5b17e7"
+    },
+    {
+      "title": "Create your own Summer Journal with ICPL pt 4: writing prompts",
+      "start": "2026-07-16T18:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-16T19:30:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room D",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66546/create-your-own-summer-journal-icpl-pt-4-writing-prompts",
+      "description": "Are you curious about journals and journaling? Do Art journals, bullet journals, or writing journals interest your? Want to explore the differences? Join us for a series called \"Creating Your Own Summer Journal\" as part of the Adult Summer Reading Program to explore a variety of fun ways you can create and use your own journal. We will meet the 1st and 3rd Thursday June - August. At the 4th meeting we're going to explore writing in our journals with fun writing prompts. If you didn't attend the first meeting and get a kit, or you already have a journal of your own you can bring that to work on. Or a blank notebook works too. Registration is not required, but suggested if you want an emailed reminder of this event",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:2720d28b5d"
+    },
+    {
+      "title": "Party in the Park at Mercer Park",
+      "start": "2026-07-16T18:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-16T20:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Bookmobile",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67249/party-park-mercer-park",
+      "description": "Gather with neighbors and friends during the annual Party in the Park series! From June 11 through August 13, weekly on Thursdays from 6:30-8:00pm, enjoy live music, visits from the ICPL Bookmobile, and outdoor recreation activities at some of your favorite Iowa City Parks. More details can be found on the City of Iowa City webpage .",
+      "age_bands": [
+        "12-18",
+        "5-11",
+        "0-4",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "outdoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:08e70e6aa4"
+    },
+    {
+      "title": "Ear Buds: an audiobook walk",
+      "start": "2026-07-17T09:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-17T10:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Bookmobile",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66113/ear-buds-audiobook-walk",
+      "description": "Load an audiobook on your device, put on your walking shoes, and join us for a walk in the area around Mercer Park! Most of the time will be spent walking silently among others while you listen to your own audiobook on headphones. Each of us will stroll at our own comfortable pace. At the beginning and end of the event, the headphones will come off and you\u2019re encouraged to chat with others about what you\u2019re reading and swap recommendations. We will meet in the entryway of the Mercer Park Aquatic Center and Scanlon Gym. Our walk will go around the park, across Lower Muscatine, up to the Court Hill Trail, along the creek, and past Heyn's Ice Cream (for a cold treat on us!) on our way back to Mercer. This paved route is approximately 1.75 miles. At the end of the loop, we'll rest with conversation in the ICPL Bookmobile (at Mercer 9:15-10:15am). The Bookmobile has a full browsing collection of books and movies available for checkout on board. Bring any questions to our library staff on the Bookmobile or just stop in to explore and learn. New to digital audiobooks? No problem! Visit the library or Bookmobile before our walk for support accessing Libby or Hoopla with your library card. Whether you\u2019re an introvert or extrovert, we think you\u2019ll find something to enjoy in this outing! Staff: Stacey. Cosponsored with Iowa City Parks & Recreation. Registration is optional if you'd like to receive an email reminder. Note: In the case of inclement weather, the event will be canceled and ",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:cdf5c9ff03"
+    },
+    {
+      "title": "Open from 9 AM to 2 PM",
+      "start": "2026-07-17T09:00:00",
+      "source": "solon-pl",
+      "source_name": "Solon Public Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "Solon Public Library",
+      "town": "Solon",
+      "url": "https://solon-ia.whofi.com/calendar/event/5603872",
+      "description": "We're open from 9 AM to 2 PM due to Solon Beef Days.",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "solon-pl:47e311f46d"
+    },
+    {
+      "title": "Member Hour",
+      "start": "2026-07-17T09:00:00-05:00",
+      "source": "iowa-childrens-museum",
+      "source_name": "Iowa Children's Museum",
+      "end": "2026-07-17T10:00:00-05:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Iowa Children\u2019s Museum, 1451 Coral Ridge Ave., Coralville, IA, 52241, United States",
+      "town": "Coralville",
+      "url": "https://theicm.org/event/member-hour-3-2/2026-07-17/",
+      "description": "Members of The Iowa Children\u2019s Museum are invited to come play when The ICM is ONLY open to members! Member Hour is 9-10 a.m. every Wednesday, Thursday, Friday, and Saturday. Come play early and enjoy a less busy environment! Learn more about membership here.",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "iowa-childrens-museum:2992dec9ca"
+    },
+    {
+      "title": "Stories in the Park at Mercer Park",
+      "start": "2026-07-17T09:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-17T10:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Bookmobile",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67293/stories-park-mercer-park",
+      "description": "Join us for Stories in the Park all summer long! Note the early Stories in the Park time at 9:30 to beat the midmorning heat! We will offer the same Storytime over the course of the week, so please choose one park location a week to attend. We will be at Willow Creek park on Mondays, Wetherby Park on Wednesdays, Mercer Park on Fridays. Fridays are in Mercer Park, near the playground equipment. The ICPL bookmobile will be on site and open for checkout. Library cards can be issued and updated. In the event of rain, the program will be canceled but the bookmobile will still be on site. \u6691\u671f\u516c\u56ed\u6545\u4e8b\u4f1a\u5c06\u4e8e\u6bcf\u5468\u4e00\uff0c\u4e09\uff0c\u4e94\u4e0a\u53489\uff1a30 \u4e3e\u884c\uff0c\u5468\u4e00\u7684\u6d3b\u52a8\u5730\u70b9\u5728Willow Creek \u516c\u56ed\uff0c\u5468\u4e09\u5728 Wetherby \u516c\u56ed\uff0c\u5468\u4e94\u5728 Mercer \u516c\u56ed\u3002\u4e0d\u540c\u5730\u70b9\u6bcf\u5468\u7684\u6d3b\u52a8\u5185\u5bb9\u57fa\u672c\u4e00\u6837\uff0c\u8bf7\u9009\u62e9\u4e00\u4e2a\u65b9\u4fbf\u7684\u516c\u56ed\u53c2\u52a0\u3002 \u5468\u4e94\u7684\u6545\u4e8b\u4f1a\u5c06\u5728Mercer\u516c\u56ed\u7684\u6e38\u4e50\u573a\u65c1\u8fb9\u4e3e\u884c\u3002 ICPL \u56fe\u4e66\u8f66\u4e5f\u5c06\u6765\u5230\u73b0\u573a\u4e3a\u60a8\u63d0\u4f9b\u5f00\u5361\u548c\u501f\u4e66\u670d\u52a1\u3002\u5982\u9047\u96e8\u5929\uff0c\u6545\u4e8b\u4f1a\u5c06\u53d6\u6d88\uff0c\u56fe\u4e66\u8f66\u4ecd\u7167\u5e38\u670d\u52a1\u3002",
+      "age_bands": [
+        "5-11",
+        "0-4",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:b99d5b3498"
+    },
+    {
+      "title": "Summer Storytime",
+      "start": "2026-07-17T10:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-17T11:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Storytime Room",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67108/summer-storytime",
+      "description": "Join us in the Storytime Room for Summer Storytime on Monday, Tuesday, Wednesday, Friday and Saturday mornings at 10:30am. The Storytime librarian will vary each week, and every day is open to all ages! Catch the all-ages Thrilling Thursday programs 10:00am in Meeting Room A. This is additional Storytime option to Stories in the Park at 9:30am on Mondays at Willow Creek Park, Wednesdays at Wetherby Park, and Fridays at Mercer Park! \u6691\u671f\u6545\u4e8b\u4f1a\u5c06\u4e8e\u6bcf\u5468\u4e00\uff0c\u4e8c\uff0c \u4e09\uff0c\u4e94, \u516d\u4e0a\u534810\uff1a30\u5728\u56fe\u4e66\u9986\u513f\u7ae5\u6d3b\u52a8\u5ba4\u4e3e\u884c\u3002 \u6bcf\u5468\u5c06\u7531\u4e0d\u540c\u7684\u5de5\u4f5c\u4eba\u5458\u5e26\u6765\u4e0d\u540c\u7684\u6d3b\u52a8\u5185\u5bb9\uff0c\u6b22\u8fce\u6240\u6709\u5e74\u9f84\u6bb5\u7684\u670b\u53cb\u53c2\u4e0e\uff01\u6bcf\u5468\u56db\u4e0a\u534810:00 \u5c06\u5728\u4f1a\u8bae\u5ba4A\u4e3e\u529eThrilling Thursday\u5468\u56db\u7279\u522b\u6d3b\u52a8\u3002 \u6b64\u5916\uff0c\u56fe\u4e66\u9986\u8fd8\u5c06\u4e8e\u6bcf\u5468\u4e00\uff0c\u4e09\uff0c\u4e94\u4e0a\u53489\uff1a30\u4e3e\u529e\u516c\u56ed\u6545\u4e8b\u4f1a\uff0c\u5468\u4e00\u4e0a\u5348\u6d3b\u52a8\u5730\u70b9\u5728 Willow Creek Park\uff0c\u5468\u4e09\u5728 Wetherby Park\uff0c \u5468\u4e94\u5728 Mercer Park\u3002 \u00danete a nosotros en la Sala de Cuentos para la Hora del Cuento de Verano los lunes, martes, mi\u00e9rcoles y viernes por la ma\u00f1ana a las 10:30 am. \u00a1La bibliotecaria de la Hora del Cuento variar\u00e1 cada semana y todos los d\u00edas est\u00e1n abiertos para todas las edades! \u00a1No te pierdas los emocionantes programas para todas las edades los jueves en un nuevo horario, a las 10:00 am en la Sala de Reuniones A! \u00a1Esta es una opci\u00f3n adicional para la Hora del Cuento en el Parque a las 9:30 am los lunes en el Parque Willow Creek, los mi\u00e9rcoles en el Parque Wetherby y los viernes en el Parque Mercer!",
+      "age_bands": [
+        "5-11",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "outdoor",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:ae3c3e7732"
+    },
+    {
+      "title": "Toddler Storytime",
+      "start": "2026-07-17T10:30:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5625748",
+      "description": "Storytime geared toward 2-3yo",
+      "age_bands": [
+        "0-4",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:55ff94fd6c"
+    },
+    {
+      "title": "55+ Connections: Friday Lunch",
+      "start": "2026-07-17T11:00:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5624105",
+      "description": "",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:45a1f18f47"
+    },
+    {
+      "title": "Summer Lunch & Fun",
+      "start": "2026-07-17T11:30:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5688318",
+      "description": "",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:d806007510"
+    },
+    {
+      "title": "Iowa City Math Circle Summer Camp - Math 2",
+      "start": "2026-07-17T13:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-17T16:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room D",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66931/iowa-city-math-circle-summer-camp-math-2",
+      "description": "The Iowa City Math Circle has been enriching students for 8 years. We are holding a free Math Camp for middle schoolers and high schoolers interested in preparing for math competitions, specifically AMC and AIME, as well as math beyond the school curriculum. We recommend a prerequisite of at least Algebra 1 to understand the material. Camp Schedule: Jul 6 - Jul 10: Math 1 Jul 13 - Jul 17: Math 2 Jul 20 - Jul 24: Coding 1 Jul 27 - Jul 31: Coding 2 Registration is required. Go to Iowa City Math Circle to register or if you have any questions. Snacks will be provided during every camp session. Join our instructors for lots of fun and learning this summer! Sponsored by the Iowa City Math Circle and Iowa City Public Library Teen Services.",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:fb66997205"
+    },
+    {
+      "title": "Teen Summer: Johnson County Conservation Raptor Program",
+      "start": "2026-07-17T13:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-17T14:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Teen Center",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66696/teen-summer-johnson-county-conservation-raptor-program",
+      "description": "YES interns and staff will be on hand to share live raptors and answer your questions. The Johnson County Conservation Department strives to provide county residents access to the highest quality healthy natural areas, outdoor recreation opportunities and conservation education. These services are provided at more than 18 sites throughout Johnson County including natural areas, parks, preserves, and trails. The Conservation Department headquarters are located at the 1,062 acre F.W. Kent Park, with additional operations centers located at Cangleska Wakan, Pechman Creek Delta, and Sutliff.",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:8df47fb09b"
+    },
+    {
+      "title": "Friday Flick: Encanto",
+      "start": "2026-07-17T13:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-17T15:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Storytime Room",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66359/friday-flick-encanto",
+      "description": "Take a break from the summer sun and join us every Friday for a matinee movie showing! Retells the story of the Madrigals, an extraordinary family that lives in the mountains of Colombia in a charmed region called Encanto-a wondrous place whose magic becomes threatened and whose rescue depends on the only member of the Madrigal family who doesn't possess magical gifts. \u5468\u4e94\u5f71\u9662\uff1a\u300a\u9b54\u6cd5\u6ee1\u5c4b\u300b",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:825aac5da3"
+    },
+    {
+      "title": "Stories Between Generations: Letter-Writing Event",
+      "start": "2026-07-17T16:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-17T17:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Storytime Room",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66583/stories-between-generations-letter-writing-event",
+      "description": "***FOR KIDS ALREADY REGISTERED FOR THE \"STORIES BETWEEN GENERATIONS\" BOOK CLUB/PEN PAL PROGRAM.*** Join us in the Storytime Room from 4-5 PM to write to your pen pal! We will provide templates with prompts and fun writing utensils, as well as some individual support with composing your letter. When you're done, leave your letter here and we'll get it to your pen pal at the senior center! Registration for this program occurred May 1-15. This event is only for kids in grades 3-8 already enrolled in the in-progress Stories Between Generations program.",
+      "age_bands": [
+        "12-18",
+        "5-11",
+        "all"
+      ],
+      "cost": "paid",
+      "is_free": false,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:ec84099c69"
+    },
+    {
+      "title": "Teen Summer: Mystery Movie Night",
+      "start": "2026-07-17T17:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-17T19:30:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Teen Center",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66666/teen-summer-mystery-movie-night",
+      "description": "Sometimes we need choices in life. There will be five movie offerings and we can decide as a group what is going on the big screen. Popcorn will be provided.",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:d66ed475b8"
+    },
+    {
+      "title": "Tangle Creek @ Solon BEEF DAYS",
+      "start": "2026-07-17T17:00:00",
+      "source": "fb-solon",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Fri, Jul 17 at 5:00 PM CDT",
+      "venue": "Solon Rd, Solon, IA 52333, United States",
+      "town": "Solon",
+      "url": "https://www.facebook.com/events/1334567485043993/",
+      "description": "Fri, Jul 17 at 5:00 PM CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "via:facebook"
+      ],
+      "family_relevance": 1,
+      "auto_flags": [
+        "social_event",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-solon:2bc47acc9f"
+    },
+    {
+      "title": "Summer T&T After Hours",
+      "start": "2026-07-17T17:30:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5643912",
+      "description": "Bring your friends for pizza, snacks, games, crafts, and fun. Scream, shout, run around with us after hours at the library. Registration Required.",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "paid",
+      "is_free": false,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:030e5c0918"
+    },
+    {
+      "title": "Summer Trivia Night",
+      "start": "2026-07-17T17:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-17T19:30:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room A",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67813/summer-trivia-night",
+      "description": "Join ISSS for a trivia night! Pizza and drinks will be provided, and prizes for trivia winners.",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "adult_signal:trivia night",
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:d00054fef2"
+    },
+    {
+      "title": "ICPL Bookmobile at Iowa City Farmers Market",
+      "start": "2026-07-18T08:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-18T11:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Bookmobile",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67452/icpl-bookmobile-iowa-city-farmers-market",
+      "description": "Iowa City Public Library Bookmobile will be popping up at the Iowa City Farmers Market monthly from 8:00 am to 11:00 am this summer. Various activities will be offered, making this a fun Farmers Market stop for all. Iowa City Farmers Market is located at the Chauncey Swan parking ramp at 405 E Washington Street. The Bookmobile will be open for browsing and holds pick up with your ICPL library card. Don\u2019t have a card? You can sign up for a Library card on the Bookmobile when you bring your photo ID with an example of your current address. The ICPL Bookmobile is wheelchair accessible.",
+      "age_bands": [
+        "12-18",
+        "5-11",
+        "0-4",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:c9380b3a10"
+    },
+    {
+      "title": "Free Beginning English Language Class for Adults",
+      "start": "2026-07-18T09:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17366",
+      "description": "Event date: July 18, 2026 Event Time: 09:00 AM - 10:00 AM Location: 1401 5th St. Coralville, IA 52241 Description: Saturday ELL classes meet on Zoom",
+      "age_bands": [],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:aac5505666"
+    },
+    {
+      "title": "Walk with the Johnson County Democrats - Solon Beef Days",
+      "start": "2026-07-18T09:00:00",
+      "source": "fb-solon",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Sat, Jul 18 at 9:00 AM CDT",
+      "venue": "Stinocher St, Solon, IA 52333, United States",
+      "town": "Solon",
+      "url": "https://www.facebook.com/events/1513787950233942/",
+      "description": "Sat, Jul 18 at 9:00 AM CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "via:facebook"
+      ],
+      "family_relevance": 1,
+      "auto_flags": [
+        "social_event",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-solon:cf0a088b49"
+    },
+    {
+      "title": "Stellar Saturday",
+      "start": "2026-07-18T09:00:00-05:00",
+      "source": "iowa-childrens-museum",
+      "source_name": "Iowa Children's Museum",
+      "end": "2026-07-18T12:00:00-05:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Iowa Children\u2019s Museum, 1451 Coral Ridge Ave., Coralville, IA, 52241, United States",
+      "town": "Coralville",
+      "url": "https://theicm.org/event/stellar-saturday-2/",
+      "description": "Join us on Saturday, July 18, from 9:00 a.m. to noon for a special space-themed celebration at The Iowa Children\u2019s Museum! In partnership with NASA and the Iowa Space Grant Consortium, we\u2019ll explore exciting missions and discoveries through hands-on activities in our party room. Guests can learn about NASA\u2019s work and experience the fun of space science in action. Activities included with museum admission. Additional details coming soon\u2014mark your calendar and get ready for some out-of-this-world fun!",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "paid",
+      "is_free": false,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "iowa-childrens-museum:c1effad677"
+    },
+    {
+      "title": "Member Hour",
+      "start": "2026-07-18T09:00:00-05:00",
+      "source": "iowa-childrens-museum",
+      "source_name": "Iowa Children's Museum",
+      "end": "2026-07-18T10:00:00-05:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Iowa Children\u2019s Museum, 1451 Coral Ridge Ave., Coralville, IA, 52241, United States",
+      "town": "Coralville",
+      "url": "https://theicm.org/event/member-hour-3-2/2026-07-18/",
+      "description": "Members of The Iowa Children\u2019s Museum are invited to come play when The ICM is ONLY open to members! Member Hour is 9-10 a.m. every Wednesday, Thursday, Friday, and Saturday. Come play early and enjoy a less busy environment! Learn more about membership here.",
+      "age_bands": [
+        "5-11"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "iowa-childrens-museum:fce998afba"
+    },
+    {
+      "title": "William Morris, Beatrix Potter, and the World of Victorian England",
+      "start": "2026-07-18T10:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-18T11:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room D",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67558/william-morris-beatrix-potter-and-world-victorian-england",
+      "description": "Join the University of Iowa Libraries\u2019 Special Collections and Archives, in partnership with The Beatrix Potter Society and Iowa City Public Library, as we host a full day of events celebrating Beatrix Potter\u2019s 160th birthday. This recorded talk with professor emerita and founder of the William Morris Archive Florence Boos as she discusses the intersections of William Morris and the life of Beatrix Potter in the evolving world of Victorian England.",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:b6a8620f47"
+    },
+    {
+      "title": "Operation: Body Exploration with the University of Iowa (2nd - 6th Grades Only)",
+      "start": "2026-07-18T10:00:00",
+      "source": "fb-tiffin",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Sat, 18 Jul at 10:00 CDT",
+      "venue": "311 Marengo Road, Tiffin, IA, United States, Iowa 52340",
+      "town": "Tiffin",
+      "url": "https://www.facebook.com/events/1955261351793368/",
+      "description": "Sat, 18 Jul at 10:00 CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "via:facebook",
+        "also:fb-tiffin"
+      ],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-tiffin:b6a6499b0f"
+    },
+    {
+      "title": "The Songs of Peter Rabbit",
+      "start": "2026-07-18T10:30:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-18T11:30:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room A",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/65888/songs-peter-rabbit",
+      "description": "Enjoy a special interactive storytelling of the Beatrix Potter's Tale of Peter Rabbit, featuring the Songs of Peter Rabbit by Dudley Glass and a full reading of the story. Come by to see and hear Peter Rabbit like never before with movement, live music and crafts to follow the story! On July 18th, 2026, The University of Iowa Special Collections & Archives, in partnership with The Beatrix Potter Society, will be hosting a full-day series of events to celebrate 160 years of Beatrix Potter. Enjoy an open house of rare Beatrix Potter and other children\u2019s literature materials housed within the archives, an interactive presentation with a Beatrix Potter impersonator, a tea party, and an academic panel. \u6b22\u8fce\u53c2\u52a0\u522b\u5f00\u751f\u9762\u7684\u4e92\u52a8\u5f0f\u5f7c\u5f97\u5154\u6545\u4e8b\u4f1a\uff01\u6d3b\u52a8\u5c06\u5b8c\u6574\u6717\u8bfbBeatrix Potter\u7b14\u4e0b\u7684\u300a\u5f7c\u5f97\u5154\u7684\u6545\u4e8b\u300b\uff0c\u5e76\u6559\u5531Dudley Glass\u521b\u4f5c\u7684\u300a\u5f7c\u5f97\u5154\u4e4b\u6b4c\u300b\uff0c\u901a\u8fc7\u80a2\u4f53\u52a8\u4f5c\u3001\u73b0\u573a\u97f3\u4e50\u4ee5\u53ca\u624b\u5de5\u5236\u4f5c\u7b49\u73af\u8282\uff0c\u5e26\u60a8\u4f53\u9a8c\u5f7c\u5f97\u5154\u7684\u4e16\u754c\uff01 2026\u5e747\u670818\u65e5\uff0c\u7231\u8377\u534e\u5927\u5b66\uff08University of Iowa\uff09\u7279\u85cf\u4e0e\u6863\u6848\u9986\u5c06\u643a\u624b\u78a7\u7fe0\u4e1d\u00b7\u6ce2\u7279\u534f\u4f1a\uff08The Beatrix Potter Society\uff09\u4e3e\u529e\u4e00\u7cfb\u5217\u5168\u5929\u6d3b\u52a8\uff0c\u4ee5\u7eaa\u5ff5\u78a7\u7fe0\u4e1d\u00b7\u6ce2\u7279\u8bde\u8fb0160\u5468\u5e74\u3002\u5c4a\u65f6\uff0c\u60a8\u5c06\u6709\u673a\u4f1a\u53c2\u89c2\u6863\u6848\u9986\u73cd\u85cf\u7684\u78a7\u7fe0\u4e1d\u00b7\u6ce2\u7279\u4f5c\u54c1\u53ca\u5176\u4ed6\u513f\u7ae5\u6587\u5b66\u6587\u732e\uff0c\u6b23\u8d4f\u7531\u626e\u6f14\u8005\u5448\u73b0\u7684\u78a7\u7fe0\u4e1d\u00b7\u6ce2\u7279\u4e92\u52a8\u5c55\u793a\uff0c\u5e76\u53c2\u52a0\u8336\u4f1a\u53ca\u5b66\u672f\u7814\u8ba8\u4f1a\u3002",
+      "age_bands": [
+        "5-11",
+        "0-4",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:4d170d5a49"
+    },
+    {
+      "title": "Saturday Storytime",
+      "start": "2026-07-18T10:30:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5694800",
+      "description": "table {mso-displayed-decimal-separator:\"\\.\"; mso-displayed-thousand-separator:\"\\,\";} tr {mso-height-source:auto;} col {mso-width-source:auto;} td {padding-top:1px; padding-right:1px; padding-left:1px; mso-ignore:padding; color:black; font-size:10.0pt; font-weight:400; font-style:normal; text-decoration:none; font-family:Arial; mso-generic-font-family:auto; mso-font-charset:0; text-align:general; vertical-align:bottom; border:none; white-space:nowrap; mso-rotate:0;} .xl168 {vertical-align:top; border:.5pt solid black; white-space:normal;} Saturday Storytime will have books, songs and fun for children 5 and under. Join in the Library's Learning Center, located in the children's area.",
+      "age_bands": [
+        "0-4",
+        "5-11",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:a53147ff2f"
+    },
+    {
+      "title": "Family Storytime",
+      "start": "2026-07-18T10:30:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17702",
+      "description": "Event date: July 18, 2026 Event Time: 10:30 AM - 11:00 AM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [
+        "0-4",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "coralville-events:435af23db9"
+    },
+    {
+      "title": "UI Mobile Clinic",
+      "start": "2026-07-18T11:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17781",
+      "description": "Event date: July 18, 2026 Event Time: 11:00 AM - 03:00 PM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:c81a8f3401"
+    },
+    {
+      "title": "National Federation of the Blind Monthly Meeting",
+      "start": "2026-07-18T11:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-18T13:30:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room E",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67880/national-federation-blind-monthly-meeting",
+      "description": "The regular meeting of the Local Chapter of the National Federation of the Blind.",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:668cd33428"
+    },
+    {
+      "title": "FunkDaddies at Solon Beef Days",
+      "start": "2026-07-18T11:00:00",
+      "source": "fb-solon",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Sat, Jul 18 at 11:00 AM CDT",
+      "venue": "Solon, Iowa",
+      "town": "Solon",
+      "url": "https://www.facebook.com/events/1573057274220120/",
+      "description": "Sat, Jul 18 at 11:00 AM CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "via:facebook"
+      ],
+      "family_relevance": 1,
+      "auto_flags": [
+        "social_event",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-solon:66d765f44a"
+    },
+    {
+      "title": "ICPL Summer Puzzle Palooza: A Team Puzzle Competition",
+      "start": "2026-07-18T13:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-18T15:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room A",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66369/icpl-summer-puzzle-palooza-team-puzzle-competition",
+      "description": "Are you a dissectologist? Do you love jigsaw puzzles? Join ICPL's Summer Puzzle Palooza event for adults. Puzzle Palooza is a Team Puzzle Competiton made of 12 four-person teams, who will have 120 minutes to assemble the same 500-piece puzzle. The first team to finish wins. If at the end of 120 minutes no one has completed the puzzle the team with the fewest free pieces will be declared the winner. Members of the winning team will receive a new puzzle as a prize. Team Pre-registration is required and will begin on June 2. There is a limit of 12 four-person teams. Please have only one member of your team register. This event is part of the ICPL Adult Summer Reading Program.",
+      "age_bands": [],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:7123057102"
+    },
+    {
+      "title": "Socially Anxious Board Games",
+      "start": "2026-07-18T14:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-18T17:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room D",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67744/socially-anxious-board-games",
+      "description": "Are you socially anxious, introverted, new in town, or just looking for an easy way to meet new people? Come join our Socially Anxious Hangout Group to play some games and have a bit of fun! (Knowing how to play games is not required.) Our group on MeetUp.com is for adults in the Iowa City-Cedar Rapids corridor looking to meet new people, and we host regular events to play various board, card, and party games. Have a specific game that you'd like to play? Feel free to bring it along, as our hosts have a limited game selection. Interested in more? Find us on MeetUp at http://www.meetup.com/meetup-group-xzwuwaiu",
+      "age_bands": [],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:e93635f53d"
+    },
+    {
+      "title": "Mexican Cooking with the Three Sisters",
+      "start": "2026-07-18T14:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17549",
+      "description": "Event date: July 18, 2026 Event Time: 02:00 PM - 03:00 PM Location: 1401 5th St. Coralville, IA 52241 Description: Free traditional Mexican cooking classes using the Library's Charlie Cart. Registration required.",
+      "age_bands": [],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:4bdb9c0132"
+    },
+    {
+      "title": "Teen Summer: Paint and Take a Birdhouse",
+      "start": "2026-07-18T15:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-18T16:30:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Teen Center",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66702/teen-summer-paint-and-take-birdhouse",
+      "description": "Birdhouses will come pre-built and participants will design and paint their own to take. All supplies will be provided. Wear clothes you don't mind potentially getting paint on.",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:192310aaef"
+    },
+    {
+      "title": "Tiffin Summer Social: Parties in the Park",
+      "start": "2026-07-18T18:00:00",
+      "source": "fb-tiffin",
+      "source_name": "Facebook Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "Sat, 18 Jul at 18:00 CDT",
+      "venue": "City Park Tiffin Iowa",
+      "town": "Tiffin",
+      "url": "https://www.facebook.com/events/1666811211214651/",
+      "description": "Sat, 18 Jul at 18:00 CDT",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "outdoor",
+      "tags": [
+        "via:facebook"
+      ],
+      "family_relevance": 1,
+      "auto_flags": [
+        "social_event",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "fb-tiffin:17939ee8bc"
+    },
+    {
+      "title": "Bawdy Bawdy Ha Ha Posing Class",
+      "start": "2026-07-19T12:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-19T14:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room E",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67915/bawdy-bawdy-ha-ha-posing-class",
+      "description": "One of our instructors will be leading our group members through an informative class.",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:bd8bad11bd"
+    },
+    {
+      "title": "IC Pride Meeting",
+      "start": "2026-07-19T13:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-19T15:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Meeting Room D",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/67417/ic-pride-meeting",
+      "description": "Fundraising planning session",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "icpl:38d676b227"
+    },
+    {
+      "title": "Sunday Fun Day: Cupcake Liner Flowers",
+      "start": "2026-07-19T14:00:00",
+      "source": "icpl",
+      "source_name": "Iowa City Public Library",
+      "end": "2026-07-19T16:00:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "Storytime Room",
+      "town": "Iowa City",
+      "url": "https://www.icpl.org/events/66795/sunday-fun-day-cupcake-liner-flowers",
+      "description": "Today we're making flowers with cupcake liners and popsicle sticks! Sunday Fun Days are suitable for all-ages, but younger children should make the crafts together with caregivers. One craft per child please. \u661f\u671f\u5929\u624b\u5de5\u574a\uff1a \u7528\u7eb8\u676f\u86cb\u7cd5\u6258\u548c\u6728\u68d2\u505a\u4e94\u5f69\u82b1\u6735",
+      "age_bands": [
+        "0-4",
+        "5-11",
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "icpl:f442452129"
+    },
+    {
+      "title": "Question Of The Week",
+      "start": "2026-07-20T00:00:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5428504",
+      "description": "",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:eacd113c4a"
+    },
+    {
+      "title": "ICM2Go",
+      "start": "2026-07-20T09:30:00-05:00",
+      "source": "iowa-childrens-museum",
+      "source_name": "Iowa Children's Museum",
+      "end": "2026-07-20T11:00:00-05:00",
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Ridge Park, 2250 Holiday Rd, Coralville, 52241, United States",
+      "town": "Coralville",
+      "url": "https://theicm.org/event/icm2go-3/",
+      "description": "Come play in the park with us! Museum educators and PLAYologists will provide outdoor activities in North Ridge Park (just a short walk from the museum) throughout the summer. Our friends from the Coralville Public Library will also join us with the Book Bike. Enjoy some free, family activities as we learn through play! ICM2Go dates: June 22nd (with Toadally Awesome Pets) July 6th July 20th (with Iowa Worm Farm) August 3rd (with the Coralville Fire Department) You can also find us at a variety of outreach events throughout the summer months!",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "unknown",
+      "tags": [
+        "also:coralville-events"
+      ],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "iowa-childrens-museum:953b54c532"
+    },
+    {
+      "title": "Coffee Hour",
+      "start": "2026-07-20T10:00:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5635667",
+      "description": "",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "paid",
+      "is_free": false,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:a676c87396"
+    },
+    {
+      "title": "Summer Lunch & Fun",
+      "start": "2026-07-20T11:30:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5688319",
+      "description": "",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 2,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:68cd823a2c"
+    },
+    {
+      "title": "Chair Yoga",
+      "start": "2026-07-20T12:30:00",
+      "source": "solon-pl",
+      "source_name": "Solon Public Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "Solon Public Library",
+      "town": "Solon",
+      "url": "https://solon-ia.whofi.com/calendar/event/5272284",
+      "description": "What is chair yoga? Chair yoga is a beneficial form of yoga for any fitness level, from active seniors to those recovering from an injury. Chair yoga has the following benefits for older adults: low impact on joints, improves flexibility, and stress reduction. Certified instructor Julie Ellen will lead a FREE hour-long class every Monday at 12:30 PM. The attached PDF waiver must be completed prior to your first participation in Chair Yoga and updated annually. Copies are available at the Library or you may print ahead. Please contact us for access needs. | Ph: 319-624-2678 |Email: staff@solon.lib.ia.us",
+      "age_bands": [],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "solon-pl:aee045106b"
+    },
+    {
+      "title": "Writing Workshop",
+      "start": "2026-07-20T14:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17783",
+      "description": "Event date: July 20, 2026 Event Time: 02:00 PM - 11:59 PM Location: 1401 5th St. Coralville, IA 52241 Description: For teens going into 6-12 grades.",
+      "age_bands": [
+        "12-18"
+      ],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [],
+      "confidence": 0.5,
+      "id": "coralville-events:de41303fdb"
+    },
+    {
+      "title": "Movie Mondays",
+      "start": "2026-07-20T15:00:00",
+      "source": "north-liberty-library",
+      "source_name": "North Liberty Library",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": "North Liberty Community Library",
+      "town": "North Liberty",
+      "url": "https://northliberty-ia.whofi.com/calendar/event/5643789",
+      "description": "It's movie day at the library! Come enjoy a movie, like Elio and Zootopia 2, each Monday this summer. Light snacks will be provided and feel free to bring along lidded drinks and additional snacks along with pillows and blankets for your comfort.",
+      "age_bands": [
+        "all"
+      ],
+      "cost": "free",
+      "is_free": true,
+      "indoor_outdoor": "indoor",
+      "tags": [],
+      "family_relevance": 3,
+      "auto_flags": [
+        "social_event"
+      ],
+      "confidence": 0.5,
+      "id": "north-liberty-library:e7016299b6"
+    },
+    {
+      "title": "Craft & Chat",
+      "start": "2026-07-20T17:30:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=17726",
+      "description": "Event date: July 20, 2026 Event Time: 05:30 PM - 06:30 PM Location: 1401 5th St. Coralville, IA 52241",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "unknown",
+      "tags": [],
+      "family_relevance": 1,
+      "auto_flags": [
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:3665771ca7"
+    },
+    {
+      "title": "Parks and Recreation Commission Meeting",
+      "start": "2026-07-20T19:00:00",
+      "source": "coralville-events",
+      "source_name": "City of Coralville \u2014 Events",
+      "end": null,
+      "all_day": false,
+      "when_text": "",
+      "venue": null,
+      "town": "Coralville",
+      "url": "https://www.coralville.org/Calendar.aspx?EID=16765",
+      "description": "Event date: July 20, 2026 Event Time: 07:00 PM - 08:30 PM Location: Coralville, IA 52241 Description: The Coralville Parks and Recreation Commission meets on the third Monday of the month (subject to change), with no meeting in February and August unless otherwise determined. Meetings are open to the public.",
+      "age_bands": [],
+      "cost": "unknown",
+      "is_free": null,
+      "indoor_outdoor": "outdoor",
+      "tags": [],
+      "family_relevance": 0,
+      "auto_flags": [
+        "family_relevance_uncertain",
+        "age_uncertain"
+      ],
+      "confidence": 0.5,
+      "id": "coralville-events:e879acce23"
+    }
+  ],
+  "dropped_for_review": [
+    {
+      "title": "Museum Closed",
+      "start": "2026-07-20",
+      "source": "iowa-childrens-museum",
+      "flags": [
+        "likely_non_event"
+      ]
+    },
+    {
+      "title": "Summer Camp: Engineering Explorers Camp - SOLD OUT",
+      "start": "2026-07-20T09:00:00-05:00",
+      "source": "iowa-childrens-museum",
+      "flags": [
+        "likely_non_event"
+      ]
+    },
+    {
+      "title": "Board of Adjustment Meeting - CANCELLED",
+      "start": "2026-07-20T18:00:00",
+      "source": "coralville-events",
+      "flags": [
+        "family_relevance_uncertain",
+        "likely_non_event",
+        "age_uncertain"
+      ]
+    }
+  ],
+  "instagram_signals": {
+    "window_days": 21,
+    "credits_remaining": 6877,
+    "report": [
+      {
+        "handle": "thinkiowacity",
+        "status": "ok",
+        "recent_posts": 12
+      },
+      {
+        "handle": "littlevillagemag",
+        "status": "ok",
+        "recent_posts": 12
+      },
+      {
+        "handle": "theicm",
+        "status": "ok",
+        "recent_posts": 0
+      },
+      {
+        "handle": "summerofthearts",
+        "status": "ok",
+        "recent_posts": 9
+      },
+      {
+        "handle": "northlibertyiowa",
+        "status": "ok",
+        "recent_posts": 0
+      }
+    ],
+    "signals": [
+      {
+        "source": "ig-think-iowa-city",
+        "handle": "thinkiowacity",
+        "posts": [
+          {
+            "handle": "thinkiowacity",
+            "shortcode": "DaO5AHEjQHA",
+            "url": "https://www.instagram.com/p/DaO5AHEjQHA/",
+            "posted": "2026-07-01T01:58:24+00:00",
+            "caption": "July\u2019s events are heating up! July 2 \ud83c\uddfa\ud83c\uddf8: Fanfare & Flight @northliberty Hy-Vee Amphitheater July 3 \ud83e\udd20: @bigandrichofficial Coralville 4thFest July 3-5 \ud83c\udfb7: Iowa City Jazz Festival @summerofthearts July 4 \ud83c\udf6c: @cityofcoralville 4thFest Parade July 11 \ud83d\udc1b: BioBlitz @sustainui July 11 \ud83c\udfb6: @themainsqueeze @northliberty Blues & BBQ July 17-18 \ud83c\udf89: Solon Beef Days July 25-26 \ud83c\udfbe: @dockdogs @iowacityscheels July 26 \ud83c\udfaa: Elemental Circus @northliberty \u2b07\ufe0f save this post #ThinkIowaCity",
+            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/731195633_18402325039158570_7241068668791364020_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=slaLUrxVSKYQ7kNvwEB7sE9&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQColScmgsHJQpuu4759ped1ie7RYe6-XM6wfDUP6phzfQ&oe=6A5C208A&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 99
+          },
+          {
+            "handle": "thinkiowacity",
+            "shortcode": "Davt5HXMdJK",
+            "url": "https://www.instagram.com/p/Davt5HXMdJK/",
+            "posted": "2026-07-13T20:00:52+00:00",
+            "caption": "\ud83d\udc9b\ud83d\udda4 Kinnick water tower, we\u2019ll never forget you #ThinkIowaCity",
+            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/747122261_18404198572158570_8016692014559805038_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=JvWshCx7e5IQ7kNvwECUniJ&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQABIhM9XLNvXpvW47btSNWGQhR0KD8lW6d74xcO_meH6Q&oe=6A5C200A&_nc_sid=bc0c2c",
+            "is_video": true,
+            "location": "Kinnick Stadium",
+            "flagged_upcoming_event": false,
+            "likes": 119
+          },
+          {
+            "handle": "thinkiowacity",
+            "shortcode": "DaqWcMmMGty",
+            "url": "https://www.instagram.com/p/DaqWcMmMGty/",
+            "posted": "2026-07-11T17:56:15+00:00",
+            "caption": "North Liberty Blues & BBQ is happening now! Stop by for some great music, great food, and even better vibes. Open until 10 p.m!",
+            "image_url": "https://scontent-iad3-2.cdninstagram.com/v/t51.71878-15/744534711_1681667693615459_1263414655422686357_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=YqKP8aB2HhQQ7kNvwF_0KgC&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAFz2toS98x5J-Nc9Ko0wmo9H7y_f3GbhQBj9s7MTh47w&oe=6A5C0F92&_nc_sid=bc0c2c",
+            "is_video": true,
+            "location": "Centennial Park, North Liberty Iowa",
+            "flagged_upcoming_event": false,
+            "likes": 57
+          },
+          {
+            "handle": "thinkiowacity",
+            "shortcode": "DanVDZmhGaC",
+            "url": "https://www.instagram.com/p/DanVDZmhGaC/",
+            "posted": "2026-07-10T13:45:11+00:00",
+            "caption": "A summer day in the Iowa City area\ud83e\udef6",
+            "image_url": "https://scontent-iad3-1.cdninstagram.com/v/t51.71878-15/742711517_2018336022138658_5039838450343669723_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=YvSdipEj9XQQ7kNvwHaDs8M&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBDInWklss3fmpZkSDabpyCy0UgOZuyM8koHaAk6FuYTg&oe=6A5C0119&_nc_sid=bc0c2c",
+            "is_video": true,
+            "location": "Iowa City, Iowa",
+            "flagged_upcoming_event": false,
+            "likes": 41
+          },
+          {
+            "handle": "thinkiowacity",
+            "shortcode": "DalhsKVFnvS",
+            "url": "https://www.instagram.com/p/DalhsKVFnvS/",
+            "posted": "2026-07-09T20:57:14+00:00",
+            "caption": "\ud83d\udc99 North Liberty Blues & BBQ is this weekend \ud83c\udfb6 North Liberty\u2019s summer tradition is back! Come out to Centennial Park this Saturday beginning at 10 a.m. for live music, Iowa craft beer, mouthwatering barbecue and family fun. The Main Squeeze will headline at 8:30 p.m., capping a full day of exciting live, blues-inspired performances. Admission is free. \ud83d\uddd3\ufe0f: Saturday, July 11 \ud83d\udd59: 10 a.m - 10 p.m. \ud83d\udccd: Hy-Vee Amphitheater at Centennial Park @northliberty \ud83c\udd93: Admission & parking are free",
+            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/743841347_18403629610158570_5986116588958256140_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=b5Baivt09SEQ7kNvwGiFFcC&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCJ0laaKhZ-t9JE2BDkl6Jz3hb2hm7-669JFVcn5sKg0Q&oe=6A5C1E81&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": "North Liberty, Iowa",
+            "flagged_upcoming_event": false,
+            "likes": 26
+          },
+          {
+            "handle": "thinkiowacity",
+            "shortcode": "DalWOXtCXCI",
+            "url": "https://www.instagram.com/p/DalWOXtCXCI/",
+            "posted": "2026-07-09T19:17:14+00:00",
+            "caption": "Be there or be square \ud83d\ude01",
+            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/735688798_18403621177158570_8941510462649262325_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=KbQzz8-lwaoQ7kNvwG3fXgA&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCXUDe_YMsmJeRsQKLDH2OWqqLFvm-CVu6d0IadfpFatA&oe=6A5C1A53&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 37
+          },
+          {
+            "handle": "thinkiowacity",
+            "shortcode": "DajBnp-lm24",
+            "url": "https://www.instagram.com/p/DajBnp-lm24/",
+            "posted": "2026-07-08T21:38:31+00:00",
+            "caption": "\u2728makes me want a hot dog realllll bad\u2728 Prepare yourself, next week is National Hot Dog Day (July 15th). We rounded up some hot dog hot spots in the Iowa City area just for you. #thinkiowacity #iowacity #hotdog",
+            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/742712566_18403492513158570_3987308264294969019_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=vItVB9ApKfsQ7kNvwGUsmrk&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQASNwH8e9EgTCRKoj6fufP6uJ_FIB1126ZevxeidgS-fw&oe=6A5C00EE&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": "Iowa City, Iowa",
+            "flagged_upcoming_event": false,
+            "likes": 124
+          },
+          {
+            "handle": "thinkiowacity",
+            "shortcode": "DaiXOoNGdx2",
+            "url": "https://www.instagram.com/p/DaiXOoNGdx2/",
+            "posted": "2026-07-08T15:28:07+00:00",
+            "caption": "Some early numbers on a \ud835\udc01\ud835\udc1a\ud835\udc27\ud835\udc1a\ud835\udc27\ud835\udc1a\ud835\udc2c 4th of July weekend \ud83c\udf4c\ud83c\udf4c \u27a1\ufe0f Johnson County recorded 279,000 total visitors from outside the county. \u27a1\ufe0f Kinnick Stadium had 176,400 visitors last weekend, of which 88% traveled from outside Johnson County. Read more about the impact events like this have on Johnson County at link in bio. \ud83d\udcf8 \ud83d\udcf8 @josephwcress | @thinkiowacity",
+            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t39.30808-6/740929816_1673634857897577_617145297194883795_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=tkY1vl1d0MAQ7kNvwGts2bh&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQC8fVtgRZ9uFtmm6j0REfJFvf2K_OBn8B2gIeGs45vFOQ&oe=6A5C298D&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": -1
+          },
+          {
+            "handle": "thinkiowacity",
+            "shortcode": "Dah0FemEelV",
+            "url": "https://www.instagram.com/p/Dah0FemEelV/",
+            "posted": "2026-07-08T10:21:01+00:00",
+            "caption": "Vibes. Always with @core4.bike Bikes. Beats. One of the best gravel parties in the biz\u2026 \ud83c\udfa7 DJ lineup: \u2022 PhDJ \u2022 @wolf1200 \u2022 @sdiekie_ \u2022 @theartofansel \ud83d\udd25",
+            "image_url": "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/740753943_18078693083679112_486751136101749044_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=bHGDrY4rL_UQ7kNvwH_6laT&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCgIL8_q6AlrUApSPGK1-ZTsU2noxTUlHX6igCf-WbMMA&oe=6A5C1893&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 47
+          },
+          {
+            "handle": "thinkiowacity",
+            "shortcode": "Daf7o7DMn6H",
+            "url": "https://www.instagram.com/p/Daf7o7DMn6H/",
+            "posted": "2026-07-07T16:49:20+00:00",
+            "caption": "Think Like a Local episode two: Calyx Creek Lavender and Lodging Lavender season is here, and this is a summer stop you\u2019ll want to add to your list. Stroll through the lavender fields, browse the shop for handcrafted lavender goods, grab a drink or a bite from the caf\u00e9, and take a peek at their brand new treehouses for a truly unique stay. Located right outside Iowa City, this special place is a must-stop. \ud83d\udc9c #ThinkLikeALocal #ThinkIowaCity @calyxcreek",
+            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.71878-15/733396159_1022878243622522_9042868661980250496_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=f8hAMKvnY68Q7kNvwETyd-5&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQCZ5I_1BzUsaFyXmea1FSBLHXzJeqaGa5O5eNAi_LuVhw&oe=6A5C1231&_nc_sid=bc0c2c",
+            "is_video": true,
+            "location": "Calyx Creek Lavender & Lodging",
+            "flagged_upcoming_event": false,
+            "likes": 47
+          },
+          {
+            "handle": "thinkiowacity",
+            "shortcode": "Dad03WNMaj4",
+            "url": "https://www.instagram.com/p/Dad03WNMaj4/",
+            "posted": "2026-07-06T21:12:37+00:00",
+            "caption": "From locals to first-time visitors, here\u2019s what Banana Ball fans love most about Iowa City. What did they miss? Let us know your favorite Iowa City spot in the comments. \ud83d\udc47 #ThinkIowaCity #IowaCity #SavannahBananas",
+            "image_url": "https://scontent-iad3-1.cdninstagram.com/v/t51.71878-15/731465126_1016071291168252_8258371883252237541_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=WZqpt0Oxz9QQ7kNvwHydssG&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQDnU4K2YcAK-IBXBvyEA6BnHnybWwGqKbMigofQTVevOQ&oe=6A5C10D4&_nc_sid=bc0c2c",
+            "is_video": true,
+            "location": "Iowa City, Iowa",
+            "flagged_upcoming_event": false,
+            "likes": 152
+          },
+          {
+            "handle": "thinkiowacity",
+            "shortcode": "DaZb4P4DWgQ",
+            "url": "https://www.instagram.com/p/DaZb4P4DWgQ/",
+            "posted": "2026-07-05T04:15:34+00:00",
+            "caption": "\ud83c\udf86\ud83c\udfb6\u2665\ufe0f @summerofthearts \ud83d\udcf8: #ThinkIowaCity",
+            "image_url": "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/736367150_18402939136158570_8662467754658284740_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGM6tcftkjDLQtB42eDLyjklA4VP3LNDW7yL2LB1dl_IpgNlujgzS2i-xrg_ScZtoDxk2Pp8PmMPB4WHDm92qye&_nc_ohc=uRwaN6lA0Z4Q7kNvwHBpB_L&_nc_gid=uvoHDIRajopAEqhSF4oqgw&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAbew9nUFP92DWfdw7rsTk5drQTa_NhLhJGE7vGQ49p0w&oe=6A5C0A10&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": "Iowa City, Iowa",
+            "flagged_upcoming_event": false,
+            "likes": 328
+          }
+        ]
+      },
+      {
+        "source": "ig-little-village",
+        "handle": "littlevillagemag",
+        "posts": [
+          {
+            "handle": "littlevillagemag",
+            "shortcode": "DaQKkPQlRzz",
+            "url": "https://www.instagram.com/p/DaQKkPQlRzz/",
+            "posted": "2026-07-01T13:51:07+00:00",
+            "caption": "ON STANDS THIS WEEK \u2014 25TH ANNIVERSARY ISSUE \ud83c\udf89 \"Had enough of Mega-this, Super-that and Big-whatever? Fed up with being treated like a dumbass by your local corporate newspaper? Say hello to the first issue of Little Village, your recipe for relief in 32 pages of words and pictures,\" reads a note from publisher @toddkimm55 in the July 2001 magazine. \"Little Village favors the small and local, champions the sustainable, yet believes in considering more than one side of an issue ... Our goal is to start fires and put them out, to raise expectations and lower the limbo bar, to be serious and to be stupid. If you don't like one thing, you might like another.\" The more things change here at Little Village \u2014 longer issues, statewide coverage, a salaried staff of editors \u2014 the more things stay the same. We're still in print, still free, still local, ad-supported, independent, serious and stupid. In this issue: Kimm and other former LV publishers and editors reflect on a quarter century and 354 issues. Plus: Longtime LV music columnist @kembrew recalls his favorite interviews for Prairie Pop over the decades. Also: Ketamine therapy clinics are cropping up in Iowa as a unique UI study utilizing the drug gets underway, and owners of small venues are in agreement with audiences: concert ticket prices are too damn high.",
+            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/730049295_18607519411053370_3661113911231946142_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=pM_wgzc4KrcQ7kNvwG9lQm3&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAedzORBdmC6jiYtrQETWZf2Myo9st3l4g8xFXlqYP62A&oe=6A5C2370&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 127
+          },
+          {
+            "handle": "littlevillagemag",
+            "shortcode": "DavDRHFmnTO",
+            "url": "https://www.instagram.com/p/DavDRHFmnTO/",
+            "posted": "2026-07-13T13:43:54+00:00",
+            "caption": "Calling all writers! The Des Moines Public Library is again partnering with Little Village magazine to host a short story competition! All stories must be submitted by August 31 at 12 PM. Learn more about the contest and get started writing: (Link in bio)",
+            "image_url": "https://scontent-sea1-1.cdninstagram.com/v/t51.82787-15/745953036_18608725039054105_4529020260459970234_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-sea1-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=FvW9plWkgsoQ7kNvwFPDY_V&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQDmjnqZUqJwNmxzaw6TF1hDBRMx2A5gR_OLTGzmQG97Qw&oe=6A5C066D&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 47
+          },
+          {
+            "handle": "littlevillagemag",
+            "shortcode": "DavZxiBE7A5",
+            "url": "https://www.instagram.com/p/DavZxiBE7A5/",
+            "posted": "2026-07-13T17:00:44+00:00",
+            "caption": "LV's most enduring columnist recalls his favorite story to research, some of the icons he's interviewed, and the hot tub party that inspired the title \"Prairie Pop.\" Read the retrospective at the link in our bio, and sign up for LV newsletters to get stories like these delivered directly to your inbox.\u2060 \u2060 \ud83d\udd8b\ufe0f @kembrew\u2060 \ud83d\udcf8 Kembrew McLeod from a photo by Tom Jorgenson; collage by @kdoolittleart",
+            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/743288805_18611219140053370_7164975649130812274_n.jpg?stp=dst-jpg_e15_fr_s1080x1080_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=VI5GWCrkK6QQ7kNvwGJIQ1j&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBfTIEr9Ou0px33hCKy3eIx_H0eRIXisGtS4Z5OqE6IhA&oe=6A5BF9F6&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 16
+          },
+          {
+            "handle": "littlevillagemag",
+            "shortcode": "DavPbquD5RZ",
+            "url": "https://www.instagram.com/p/DavPbquD5RZ/",
+            "posted": "2026-07-13T15:30:15+00:00",
+            "caption": "Large concentrated hog farms that send manure contamination into local waterways not only impact human health but threaten the existence of more than a dozen endangered species, according to a new study published in the journal Conservation Science and Practice. Read the story at the link in our bio, and sign up for LV newsletters to get the news delivered directly to your inbox.\u2060 \u2060 \ud83d\udd8b\ufe0f Brian Bienkowski/The New Lede\u2060 \ud83d\udcf8 USGS",
+            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/742586470_18611194021053370_6369572328862626249_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=NdNrMlh7yRMQ7kNvwEHtvB8&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBrcTE08lotWpmkAOOaPYwVHA3_6vs43eb4yNn2uQSoRA&oe=6A5C16EF&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 57
+          },
+          {
+            "handle": "littlevillagemag",
+            "shortcode": "DanhDWYE3cu",
+            "url": "https://www.instagram.com/p/DanhDWYE3cu/",
+            "posted": "2026-07-10T15:30:20+00:00",
+            "caption": "While Central Iowa Water Works put more resources than ever into their Nitrate Removal Facility last year, other suppliers of drinking water around the state failed to meet EPA standards. Read the story at the link in our bio, and sign up for LV newsletters to get the news delivered directly to your inbox. \u2060 \u2060 \ud83d\udd8b\ufe0f Cami Koons/Iowa Capital Dispatch\u2060 \ud83d\udcf8 Zak Neumann & @emmamcclatch; collage by @kdoolittleart",
+            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/742786930_18610274863053370_8312336398401236754_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=aKmVHLvds50Q7kNvwEB686a&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQA9BFKvrwjx1er6zJkRJP4DoTEbjZ35WmvclIdsZ9xJ5w&oe=6A5C153C&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 513
+          },
+          {
+            "handle": "littlevillagemag",
+            "shortcode": "DalMbTAOiQb",
+            "url": "https://www.instagram.com/p/DalMbTAOiQb/",
+            "posted": "2026-07-09T17:56:10+00:00",
+            "caption": "The latest issue of @littlevillagemag. See you at One of Us this September!",
+            "image_url": "https://scontent-sea1-1.cdninstagram.com/v/t51.82787-15/734560469_18196667491371258_810104217088198725_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-sea1-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=VFFkcS25gwIQ7kNvwFOcVdh&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQDixbvkOWFQbiZCQD_hDS3MFS3umLQWB1Pg8klfN6I4Cw&oe=6A5C2925&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 33
+          },
+          {
+            "handle": "littlevillagemag",
+            "shortcode": "DalGmPZmepW",
+            "url": "https://www.instagram.com/p/DalGmPZmepW/",
+            "posted": "2026-07-09T17:00:49+00:00",
+            "caption": "Buzz over to the University of Iowa's \"living laboratory\" on Saturday and help researchers spot species for the sake of science. More details at the link in our bio \ud83d\udc1d\u2060 \u2060 \ud83d\udd8b\ufe0f Paul Brennan\u2060 \ud83d\udcf8 Courtesy of APLL (@sees_ui)",
+            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/728991568_18609991675053370_3319763433446222436_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=Ee48cQr8qQUQ7kNvwFA5Zj_&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQAfQWy3tUZqezQ-n-8q4Um60AHyIbzHSJ5l2AXIqVAtrQ&oe=6A5C0830&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 48
+          },
+          {
+            "handle": "littlevillagemag",
+            "shortcode": "Dakx-LBDom4",
+            "url": "https://www.instagram.com/p/Dakx-LBDom4/",
+            "posted": "2026-07-09T14:00:27+00:00",
+            "caption": "The Live Nation/Ticketmaster monopoly facilitates price-gouging, reseller scams and the dreaded \"radius clause.\" Nevertheless, Iowa's indie stages persist.\u2060 \u2060 \u201cI think I can speak for other live small venues that support original music: it\u2019s kind of a calling,\u201d said Dave Deibler, owner of @octopuscollegehill. Read the story at the link in our bio, and sign up for LV newsletters to get the news delivered directly to your inbox.\u2060 \u2060 \ud83d\udd8b\ufe0f @emrosa22\u2060 \ud83c\udfa8 Live Nation headquarters in Beverly Hills, California, photo by Coolcaesar, CC BY 4.0; Independent venue illustrations by @lanirosedesigns; Collage by @kdoolittleart",
+            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/741144603_18609940591053370_4451967271729385179_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=I499zL7Mak0Q7kNvwFYeDU9&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQC2pWxJd6xe05pOx3brD66JbuJHh9569XCq3KhqrMFEDg&oe=6A5C21C1&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 949
+          },
+          {
+            "handle": "littlevillagemag",
+            "shortcode": "Daivg6hE0-6",
+            "url": "https://www.instagram.com/p/Daivg6hE0-6/",
+            "posted": "2026-07-08T19:00:31+00:00",
+            "caption": "Iowa may soon be back to swing-state status, according to ISU political science professor Karen Kedrowski. Read the story at the link in our bio, and sign up for LV newsletters to get the news delivered directly to your inbox.\u2060 \u2060 \ud83d\udcf8 @emmamclatch\u2060 \ud83d\udd8b\ufe0f Kadin Luhmann/Iowa Capital Dispatch",
+            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/740821700_18609739027053370_4435638861528778405_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=pUnA4SuQHrwQ7kNvwHqQPbT&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBFx9UMSB4GAbUbLiI3JOCA2vOr_a4xIsvzz2LZLtJHHA&oe=6A5BFD3A&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 11
+          },
+          {
+            "handle": "littlevillagemag",
+            "shortcode": "DailMI4lGAC",
+            "url": "https://www.instagram.com/p/DailMI4lGAC/",
+            "posted": "2026-07-08T17:33:10+00:00",
+            "caption": "This Sunday, the Iowa City Aerohawks (and guest pilots) will show off their tricks at their 33rd Annual Air Show. This may be your last chance to pull up a lawn chair and watch them at their current field, adjacent to the Iowa City Landfill just off IWV road, where they\u2019ve taken to the skies since 1972. Rich DeVepo, who spoke with LV ahead of the event and for a story in LV\u2019s April\u2019s mag, is proud to be part of a club that invites all phases and walks of life, whether truck drivers or rocket scientists, emphasizing that all ages and genders may find interest in soaring to new heights.\u2060 \u2060 DeVepo notes that while some people unexpectedly join the club on a drive to the landfill, drawn in by the sight of planes diving and twisting overhead, the Air Show is an excellent way to discover your interest in the hobby.\u2060 \u2060 If you would like to bring a pop-up canopy for sun cover, DeVepo recommends getting there early. Otherwise, bleachers will be available, though you may need to bring a lawn chair, as the Aerohawks have welcomed as many as 2,000 attendees in previous years.\u2060 \u2060 Find the full story at the link in our bio \u2708\ufe0f\u2060 \u2060 \ud83d\udd8b\ufe0f William Lowell\u2060 \ud83d\udcf9\ufe0f @yeagernc",
+            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.71878-15/741396053_1672191911576270_3062804144801887134_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=rH4dosRkppEQ7kNvwGVkbbF&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBdr3Ec-QWiyF2Sv3eJoQX0i_I12ruEFpvEVGsD-FgisQ&oe=6A5C2566&_nc_sid=bc0c2c",
+            "is_video": true,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 34
+          },
+          {
+            "handle": "littlevillagemag",
+            "shortcode": "Daia-R-kwOJ",
+            "url": "https://www.instagram.com/p/Daia-R-kwOJ/",
+            "posted": "2026-07-08T16:01:13+00:00",
+            "caption": "\"That\u2019s the strange alchemy of building something with the right people, in the right place, at the right time: you make choices and take risks, and then serendipity keeps handing you the collaborators and the moments that make those choices and risks pay off,\" said Alissa Hansen, former LV publisher. Read the retrospective at the link in our bio, and sign up for LV newsletters to get stories like these delivered directly to your inbox.\u2060",
+            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/735761286_18609692620053370_4682302599965913074_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=elyvE0oxRQEQ7kNvwHuKpd8&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQBMz6mZd6Q1AWgiOU2bxylrTqpPYMF8zoioYcYgBBIN0Q&oe=6A5C1C40&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 47
+          },
+          {
+            "handle": "littlevillagemag",
+            "shortcode": "DaiQn-FmfQl",
+            "url": "https://www.instagram.com/p/DaiQn-FmfQl/",
+            "posted": "2026-07-08T14:30:28+00:00",
+            "caption": "Futile Wrath \u2014 July 2026 \ud83c\udf55\u2060 \u2060 \ud83d\udd8b\ufe0f @sam_locke_ward",
+            "image_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/731022531_18609671695053370_3130636247850823774_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gEbQH0hvYm3pVEyc1ZpvJIbOYkYiy7OAIiSYe1cjSGdsddzuS-UPOsic3hiWvo7Cow&_nc_ohc=mvxR0BWXdJAQ7kNvwGBS4gU&_nc_gid=Ulv8ddPbyBwkzg6ze5ELZg&edm=APU89FABAAAA&ccb=7-5&oh=00_AQB8K6UDwiYGxhAgMm7fStKV6wdiSqgGo4jZdMVCBV8_2A&oe=6A5C2BBC&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 651
+          }
+        ]
+      },
+      {
+        "source": "ig-theicm",
+        "handle": "theicm",
+        "posts": []
+      },
+      {
+        "source": "ig-summer-of-the-arts",
+        "handle": "summerofthearts",
+        "posts": [
+          {
+            "handle": "summerofthearts",
+            "shortcode": "DavWTCKgXFZ",
+            "url": "https://www.instagram.com/p/DavWTCKgXFZ/",
+            "posted": "2026-07-13T16:30:06+00:00",
+            "caption": "Mark your calendars for this week's Music on the Move! Join us this coming Wednesday, July 15, for an incredible evening of live music with the Goat Hollow Boys. They'll be bringing their high-energy, original Iowa Country-Punk sound to the park, and it's a show you won't want to miss! Bring your lawn chairs, blankets, and snacks for a wonderful, family-friendly evening of local music in the community. A huge thank you to Hills Bank, our wonderful presenting sponsor, for making free community events like this possible! When: Wednesday, July 15 | 6:30 PM \u2013 8:00 PM | Where: Happy Hollow Park (800 Brown St, Iowa City, IA) | Cost: FREE! #sotaic26 #sotaic #SummerOfTheArts #MusicOnTheMove #IowaCity #LiveLocalMusic #HillsBank #CommunityArts #FreeEvents #GoatHollowBoys",
+            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/731380108_1437563091741100_3701906300451863156_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=wRRNKRFT3_wQ7kNvwEq_qvO&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQCc9JS-9YpnTeYjnQtFonwhyq4vYnBw2qxv4UUiQDjtDg&oe=6A5C0C28&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 1
+          },
+          {
+            "handle": "summerofthearts",
+            "shortcode": "DaqJR2jiXBe",
+            "url": "https://www.instagram.com/p/DaqJR2jiXBe/",
+            "posted": "2026-07-11T16:00:08+00:00",
+            "caption": "The weather is beautiful and the music is going to be electric tonight! Grab your blankets and lawn chairs and meet us at Riverfront Crossings Park for Rhythms at Riverfront Crossings featuring PhDJ AND Afroband243! Come celebrate community, culture, and high-energy Congolese Rhumba beats starting at 7:00 PM. We have everything you need for the perfect night out: - Beverage Garden: Stop by our Summer of the Arts tent to grab a cold beer or drink! - Dinner is Served: Snag some delicious local eats from Luna's Tacos, MooMoo's, and Marco's Grilled Cheese. - Activities & Tabling: Get to know local groups! Stop by the tables for P&G to see what they have to share. - Cost: FREE admission! We want to send a huge shoutout and thank you to our fantastic evening co-sponsors, McDonald Optical and Accurate Automotive, Inc., for helping us keep these community concerts entirely free for everyone. See you all at the park tonight! #sotaic26 #sotiac #IowaCityArts #SummerOfTheArts #RiverfrontCrossings #Afroband243 #PhDJ #McDonaldOptical #AccurateAutomotive #FreeLiveMusic #SupportLocalArts #ICFoodTrucks",
+            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/728427429_1436045451892864_4298237846600548371_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=OVKJtOFo62EQ7kNvwHPCj-G&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQD_Q2gve5uKF1yLk_nBNgrCryJF0cYoo9eWmMST_12Oag&oe=6A5C2044&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 3
+          },
+          {
+            "handle": "summerofthearts",
+            "shortcode": "DanyQJvktpV",
+            "url": "https://www.instagram.com/p/DanyQJvktpV/",
+            "posted": "2026-07-10T18:00:27+00:00",
+            "caption": "Found yourself dancing a little too hard and misplaced something? Don\u2019t worry, we\u2019ve got your back! We collected all items left behind at the 2026 Iowa City Jazz Festival. Slide into our DMs or reach out to our team at the Summer of the Arts office to see if we have your missing gear so we can get it back to you! #sotaic26 #sotaic #IowaCityJazz #LostAndFound #FestivalTips #DowntownIowaCity #SummerOfTheArts",
+            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/743699626_1450082483822494_2165025831025930002_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=E3l55ek9m-oQ7kNvwGTmfjF&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQCkdtQ3Vnac7eX_80VpF5rIYDMZGvWFSZhp2njlVaCI3Q&oe=6A5C1075&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 5
+          },
+          {
+            "handle": "summerofthearts",
+            "shortcode": "Dankf8bjzli",
+            "url": "https://www.instagram.com/p/Dankf8bjzli/",
+            "posted": "2026-07-10T16:00:16+00:00",
+            "caption": "TONIGHT IN THE PED MALL! The weekend is officially here, and the weather is perfect for some live music! Join us tonight at the Ped Mall Stage from 6:30 PM \u2013 9:00 PM for an unforgettable performance by Winterland! Come down and experience their soulful tribute to the Grateful Dead. From rhythm and blues roots to experimental psychedelic rock, they capture an incredible era of music with absolute perfection. Every face in the crowd will be smiling\u2014don't miss out on the magic tonight! Time: 6:30 PM \u2013 9:00 PM | Location: Ped Mall Stage (Downtown Iowa City) | Cost: FREE admission! We want to give a special shoutout and thank you to our amazing sponsor, Graduate by Hilton Iowa City, for partnering with us to keep these Friday night concerts free for everyone. See you all downtown tonight! #sotaic26 #sotaic #IowaCityArts #SummerOfTheArts #FridayNightConcertSeries #WinterlandBand #GraduateByHilton #DowntownIC #FreeLiveMusic #SupportLocalArts",
+            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/728315309_1436005038563572_2819756043508693448_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=u_8AO-OJ4cAQ7kNvwH6PcJ2&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQBhzrscLM83kbio8f9B0qnNDW78nYqzdpSk7SYU56EcaQ&oe=6A5C1235&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 3
+          },
+          {
+            "handle": "summerofthearts",
+            "shortcode": "Dal2otdjA5B",
+            "url": "https://www.instagram.com/p/Dal2otdjA5B/",
+            "posted": "2026-07-10T00:00:16+00:00",
+            "caption": "MARK YOUR CALENDARS FOR SATURDAY! We have an incredible weekend lineup waiting for you! This Saturday, July 11th, join us at Riverfront Crossings Park from 7:00 PM \u2013 9:30 PM for an unforgettable night of live music featuring PhDJ AND Afroband243! Come experience the amazing rhythms of Afro and Congolese Rhumba music. We have a full evening of fun planned beyond the music: - Beverage Garden: Stop by our tent and grab a cold beer or refreshing drink! - Food Vendors: Skip cooking and grab dinner from Luna's Tacos, MooMoo's, and Marco's Grilled Cheese! A massive thank you to our wonderful Series Presenting Sponsor, Kim Schillig, Realtor at Lepic-Kroeger, Realtors, for her incredible support in bringing these free concert series to our community! #IowaCity #SummerOfTheArts #RhythmsAtRiverfrontCrossings #Afroband243 #PhDJ #KimSchilligRealtor #FreeEventsIC #LiveLocalMusic #IowaCityParks #LocalFoodTrucks",
+            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/728580987_1436018735228869_2033144534949588543_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=9VTVuo3BX00Q7kNvwEsaETd&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQB9Ijtn1vM9RZBD0J942ktMRnh6KN2zmDHhXvst5VAPUg&oe=6A5C20CA&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 2
+          },
+          {
+            "handle": "summerofthearts",
+            "shortcode": "DaknqEMIArW",
+            "url": "https://www.instagram.com/p/DaknqEMIArW/",
+            "posted": "2026-07-09T12:30:08+00:00",
+            "caption": "Skip cooking tonight and join us for Eat for the Arts at 30hop ! Whether you're grabbing lunch, meeting up for happy hour, or enjoying dinner on the rooftop patio, 15% of your total sales ALL DAY TODAY will be generously donated back to Summer of the Arts. Your meals and drinks directly help us keep our community arts programming free for everyone to enjoy! When: Today! 11:00 AM \u2013 9:00 PM Where: 30HOP Coralville (900 E 2nd Ave) Dine-in and takeout both count! See you on the rooftop! #sotaic26 #IowaCity #CoralvilleIA #SummerOfTheArts #30hop #EatForTheArts #DineOutDoGood #SupportLocalIC",
+            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/729148627_1435951241902285_5502220474579039165_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=bDWZEJQJaCYQ7kNvwHvr_86&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQCMiCRZ15iKXtpWQ1cqU5zEbLAeLtB_UIhJY6-CtxfKCg&oe=6A5C18EE&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 8
+          },
+          {
+            "handle": "summerofthearts",
+            "shortcode": "Dai9O2rAeKm",
+            "url": "https://www.instagram.com/p/Dai9O2rAeKm/",
+            "posted": "2026-07-08T21:00:11+00:00",
+            "caption": "Ready to travel back in time to the golden era of rock? Mark your calendars for this Friday, July 10th, because Winterland is taking over the Ped Mall Stage for our Friday Night Concert Series! Specializing in the Grateful Dead's legendary catalog from 1969 through the late '70s, Winterland brings an uncanny authenticity, incredible musicianship, and a beautiful, high-energy connection to the crowd. Bring your friends, grab your lawn chairs, and get ready to dance the night away! A massive thank you to our wonderful presenting sponsor, McGrath Toyota of Iowa City, and our incredible stage co-sponsors, Bread Garden Market & Bakery, ReUnion Brewery, and Joseph's Steakhouse Iowa City, for supporting free live music in our community! #sotaic #sotaic26 #IowaCity #SummerOfTheArts #FridayNightConcertSeries #Winterland #GratefulDead #GraduateIowaCity #FreeEventsIC #DowntownIowaCity",
+            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/730629162_1435996455231097_6456399244473346497_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=e7oqtLZgvywQ7kNvwH4VYIc&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQAjnScy_XVFXh9ygsE079aHYueyj2Z29uc6ylHY9DnH5Q&oe=6A5C0234&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 1
+          },
+          {
+            "handle": "summerofthearts",
+            "shortcode": "DaiXde1CFfQ",
+            "url": "https://www.instagram.com/p/DaiXde1CFfQ/",
+            "posted": "2026-07-08T15:30:09+00:00",
+            "caption": "TONIGHT IS THE NIGHT! We are heading to the park tonight! Grab your family, friends, and lawn chairs and meet us at the Terry Trueblood Recreation Area for Music on the Move featuring Hard Luck & the Troubles! Come out and enjoy their soulful, gritty Americana and blues-driven energy right here in Iowa City, fronted by the incredible lead vocals and piano of Roland Racevskis. It's the perfect way to spend a beautiful Wednesday summer evening! Time: 6:30 PM \u2013 8:00 PM | Location: Terry Trueblood Recreation Area | Cost: FREE! We want to extend a special thank you to our wonderful band sponsor, @Navigate Homes, for supporting tonight's performance and helping keep the arts thriving in our community! See you all tonight! #IowaCity #SummerOfTheArts #MusicOnTheMove #HardLuckAndTheTroubles #NavigateHomes #IowaCityArts #FreeLiveMusic",
+            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/729186312_1435962098567866_2779949813659299746_n.jpg?stp=dst-jpg_e35_s1080x1080_sh2.08_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=EWpQObOECeUQ7kNvwFYopXL&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQBd5bEJ4ARPi7xNuBIKZ_5MHA4mS1V2ra8NwGPlvz98Mg&oe=6A5C2FEC&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 0
+          },
+          {
+            "handle": "summerofthearts",
+            "shortcode": "DagwdBWDamX",
+            "url": "https://www.instagram.com/p/DagwdBWDamX/",
+            "posted": "2026-07-08T00:30:03+00:00",
+            "caption": "Join us on July 9 for Eat for the Arts at 30hop Coralville! Whether you\u2019re stopping in for lunch, grabbing a spot on the rooftop patio, or enjoying a family dinner, 15% of total sales for the day will be donated to Summer of the Arts. Your meal helps support free, family-friendly arts programming across our community! 30 HOP is a local favorite known for: - Modern Industrial Vibe & Rooftop Patio: The perfect atmosphere to relax with great views, excellent cocktails, and friendly service. - American Bites with an Asian Fusion Twist: A fantastic, unique menu with something for everyone. - Incredible Craft Beer Selection: Dozens of draft lines featuring the best local and regional brews. Eat well. Give back. Keep the arts thriving in our community! #sotaic26 #sotaic #30hopCoralville #IowaFoodie #EatForTheArts #SupportTheArts",
+            "image_url": "https://scontent-det1-1.cdninstagram.com/v/t39.30808-6/729364289_1435945351902874_5712921111400109700_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2gHduj2gJRhqnqwhy-XnQ9pGKnKw-K27T1wK55EI00Wy2_EIfbnuq-UeGrG9dzFnJRI&_nc_ohc=33Q0AvxXLZkQ7kNvwHu4IyI&_nc_gid=XUBlg7Ofj6VmP5VJwAd9uQ&edm=APU89FAAAAAA&ccb=7-5&oh=00_AQCUvP63FOBRRiWrpvy_lmTI4EQERB8FGwW2ExB30FNXkg&oe=6A5BF8EF&_nc_sid=bc0c2c",
+            "is_video": false,
+            "location": null,
+            "flagged_upcoming_event": false,
+            "likes": 3
+          }
+        ]
+      },
+      {
+        "source": "ig-north-liberty",
+        "handle": "northlibertyiowa",
+        "posts": []
+      }
+    ]
+  }
+}
